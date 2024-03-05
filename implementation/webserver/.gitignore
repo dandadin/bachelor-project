@@ -1,0 +1,7 @@
+*~
+*.log
+.git
+DEADJOE
+certbot/*
+mysql/*
+mysql

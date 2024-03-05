@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:1.23.3
+    volumes:
+      - ./html:/var/www/html/:ro
+      - ./conf:/etc/nginx/conf.d/:ro
+    ports:
+      - 80:80
+    networks:
+      - internal
+  php:
+    image: php:fpm-alpine
+    networks:
+      - internal
+    volumes:
+      - ./php:/var/www/html/
+    command:
+      - sh
+      - -c
+      - "docker-php-ext-install pdo pdo_mysql; exec php-fpm"
+  db:
+    image: mysql:8.0.32
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - internal
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root-heslo'
+    ports:
+      - 3366:3306
+  adminer:
+    image: adminer:4.8.1
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    networks:
+      - internal
+    ports:
+      - 8888:8080
+networks:
+  internal:
+    driver: bridge
+
