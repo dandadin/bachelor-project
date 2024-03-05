@@ -19,10 +19,20 @@
 %---------------------------------------------------------------
 
 %---------------------------------------------------------------
-\section{Bakalářské práce FIT ČVUT na podobné téma}
+\section{Závěrečné práce studentů FIT ČVUT na podobné téma}
 %---------------------------------------------------------------
 
-\subsection{Práce 1}
+\subsection{Bc. Jakub Vejr - Webové prostředí pro správu a konfiguraci IoT projektů}
+
+V této diplmové práci autor popisuje jím vytvořenou aplikaci, která má za úkol zaznamenávat příchozí data ze senzorů, zpracovávat je, a tyto data a trendy z nich vycházející poté zobrazovat pomocí webového rozhraní. Autor si vybral jako hlavní platformu projektu jazyk JavaScript, přesněji řečeno Node.js a frameworku Express. Jednotlivá zařízení komunikují s backendovou částí projektu pomocí REST API, která poté data rozklíčuje z příchozích souborů a pomocí databáze MongoDB je uchovává. Uživatelé této aplikace jsou rozděleni na správce s možností přidávat uživatele i IOT zařízení, a běžné uživatele, kteří pracují jen s omezenou množinou dat. Frontendová část aplikace je napsaná pomocí Next.js a knihovny React. Aplikace tedy funguje především směrem od zařízení k cílovému uživateli, který nemá možnost své IOT zařízení ovládat. 
+
+\subsection{Bc. Jan Prášil - Webová aplikace pro sběr a zpracování dat IoT}
+
+Diplomová práce pana Prášila popisuje a vytváří aplikaci, která má být na frontendové straně de facto upravenou a personalizovanou úpravou JavaScript knihovny Grafana, která se používá k analýze a zobrazování nejrůznějších typů dat s možností notifikace uživatelů, na backendové straně se poté využívá Node.JS, který provozuje REST API, přes který se poté připojuje klientské rozhraní. Backend také komunikuje se službou Microsoft SharePoint Server 2013, což bylo jedním z požadavků při zadávání této práce. Jedná se o podnikovou aplikaci dělanou na míru, díky které mohou uživatelé s pravomocemi v aplikaci rozdělenými dle typu jejich účtu provádět správu IOT zařízení, nebo si zobrazovat údaje z nich získané. Tato aplikace také funguje spíše jako jednosměrný kanál informací.
+
+\subsection{Martin Skalický - IoT platforma s webovým rozhraním}
+
+
 
 %---------------------------------------------------------------
 \section{Existující řešení}
@@ -50,13 +60,9 @@ Projekt Particle vznikl v roce 2013 v americkém městě San Francisco. Zakladat
 
 Particle je řešení především pro začínající firmy, které mají zařízení, které dosud není možné propojit s žádnou stávající (a to ani vlastní) chytrou platformou. Particle takovým zařízením zprostředkuje to, co odlišuje chytré IOT zařízení od běžného zařízení a zbytek už nechává na implementaci zákazníkem. V té se mu ale alespoň snaží asistovat nabídkou rozsáhlé dokumentace několika API, kterými s Particle cloudem můžou aplikace zákazníka komunikovat, ale také v neposlední řadě i vlastním programovacím prostředím založeným na produktu firmy Microsoft zvaném Visual Studio. Dále také nabízí doplňkové služby jako je nepřetržitý monitoring dostupnosti zařízení a případný servis, který ať už vzdáleně, nebo přímo na místě zkusí vyřešit případný problém s konektivitou zařízení.
 
-porovnání s arduinem
+Produkty Particle jsou dostupné v několika balíčkách, od nejlevnějšího balíčku "Free", který je zadarmo, nabízí až 100 zařízení a na nich až 100000 vykonaných operací, a je doporučován pro seznámení se s touto platformou, přes balíček "Plus", který nabízí stejný počet zařízení, ale až 5 milionů vykonaných operací, až po balíčky "Professional" a "Enterprise", které předem nejsou naceněné a zákazník si je může vyjednat dle jeho specifických požadavků.  
 
-opensource? zdrojové kódy
-
-cena
-
-Produkty Particke jsou využívány například společnostmi Zoomo nebo Olulo (výroba elektrických vozidel), Watsco a Intellihot (HVAC systémy), Qube (kontrola emisí), nebo Dentalez a Amper (obecný monitoring industriálních nástrojů).
+Produkty Particle jsou využívány například společnostmi Zoomo nebo Olulo (výroba elektrických vozidel), Watsco a Intellihot (HVAC systémy), Qube (kontrola emisí), nebo Dentalez a Amper (obecný monitoring industriálních nástrojů).
 
 \subsection{ThingsBoard}
 
