@@ -22,7 +22,7 @@ abstract class VList extends VView {
         $v->render();
     }
 
-    protected function registerController($cc) {
+    protected function registerController(ControllerCollection $cc) {
         foreach ($this->items as $i) {
             $i->registerController($cc);
         }

@@ -9,7 +9,7 @@ class VCollection extends VList {
         $o=$sqls->fetchObject();
         $this->add(new VText("Collection: "));
         $this->add(new VLink($o->name, "/edit.php?type=co&id=$o->id"));
-        $this->add(new VText(" $o->name (id=$o->id,name=$o->name,domain=$o->domain_id)"));
+        $this->add(new VText(" (id=$o->id,name=$o->name,domain=$o->domain_id)"));
         $this->add(new VLink("delete", "/delete.php?type=co&id=$o->id"));
         $sqls->closeCursor();
     }
