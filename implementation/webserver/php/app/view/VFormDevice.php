@@ -10,7 +10,7 @@ class VFormDevice extends VForm {
         $this->add(new VFormFieldText($this->model->location, "location"));
         $this->add(new VFfDdDeviceGateways($this->model->gatewayId, "gateway"));
         $this->add(new VFormFieldDateTime($this->model->lastChanged, "last changed DEMO")); // TODO: remove this
-        $this->add(new VRTCollection($this->model->collections, "collections"));
+        $this->add(new VRTCollInDevice($this->model->collections, "collections"));
         $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
     }
 

@@ -3,7 +3,7 @@
 /**
  * View for table-row of relative table rendering collections.
  */
-class VRTRCollection extends VRelTabRow {
+class VRTRCollInDevice extends VRelTabRow {
 
     /**
      * Constructs views for every cell and adds it to the table.
@@ -15,7 +15,7 @@ class VRTRCollection extends VRelTabRow {
         $o=$sqls->fetchObject();
         if ($o) {
             $this->add(new VText($o->name));
-        } else $this->add(new VFormFieldDropdownCollection($itemModel->collId));
+        } else $this->add(new VFfDdCollection($itemModel->collId));
         parent::__construct($itemModel, $tableModel);
     }
 }

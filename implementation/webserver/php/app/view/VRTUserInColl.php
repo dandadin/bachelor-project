@@ -3,7 +3,7 @@
 /**
  * View for relative table listing users.
  */
-class VRTUser extends VRelTable {
+class VRTUserInColl extends VRelTable {
     /**
      * List of names for columns.
      */
@@ -11,5 +11,5 @@ class VRTUser extends VRelTable {
     /**
      * Name of method used for viewing single row.
      */
-    const RowClass = VRTRUser::class;
+    const RowClass = VRTRUserInColl::class;
 }

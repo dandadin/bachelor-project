@@ -3,6 +3,6 @@
 /**
  * View of dropdown item specified for listing collections.
  */
-class VFormFieldDropdownCollection extends VFormFieldDropdown {
+class VFfDdCollection extends VFormFieldDropdown {
     const Sql = "SELECT * FROM collections";
 }

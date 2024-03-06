@@ -35,7 +35,7 @@ class MDevice extends MModel {
      */
     public $lastChanged;
     /**
-     * @var MRelTableCollection $collections
+     * @var MRTCollInDevice $collections
      * List of models of every collection this device is a part of.
      */
     public $collections;
@@ -62,7 +62,7 @@ class MDevice extends MModel {
                 $this->lastChanged = $o->last_changed;
             }
         }
-        $this->collections = new MRelTableCollection($id);
+        $this->collections = new MRTCollInDevice($id);
     }
 
     /**

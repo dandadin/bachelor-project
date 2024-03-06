@@ -3,7 +3,7 @@
 /**
  * View for relative table listing collections.
  */
-class VRTCollection extends VRelTable {
+class VRTCollInDevice extends VRelTable {
     /**
      * List of names for columns.
      */
@@ -11,5 +11,5 @@ class VRTCollection extends VRelTable {
     /**
      * Name of method used for viewing single row.
      */
-    const RowClass = VRTRCollection::class;
+    const RowClass = VRTRCollInDevice::class;
 }

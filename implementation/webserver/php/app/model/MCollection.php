@@ -20,7 +20,7 @@ class MCollection extends MModel {
      */
     public $domainId;
     /**
-     * @var MRelTableUser $users
+     * @var MRTUserInColl $users
      * List of models of every user belonging in this collection.
      */
     public $users;
@@ -44,7 +44,7 @@ class MCollection extends MModel {
                 $this->domainId = $o->domain_id;
             }
         }
-        $this->users = new MRelTableUser($id);
+        $this->users = new MRTUserInColl($id);
     }
 
     /**

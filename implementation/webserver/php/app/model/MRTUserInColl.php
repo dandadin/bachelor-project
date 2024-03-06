@@ -3,9 +3,9 @@
 /**
  * Model for relative table of users. Used to store list of users that are included in specific collection.
  */
-class MRelTableUser extends MModel {
+class MRTUserInColl extends MModel {
     /**
-     * @var MRTRUser $items
+     * @var MRTRUserInColl $items
      * Array of table-row models. One table-row corresponds to one user.
      */
     public $items = array();
@@ -19,7 +19,7 @@ class MRelTableUser extends MModel {
             $sqls=DB::query("SELECT * FROM collection_users WHERE coll_id=$collId");
 
             while($o=$sqls->fetchObject()) {
-                $this->items[] = new MRTRUser($o->user_id);
+                $this->items[] = new MRTRUserInColl($o->user_id);
             }
         }
     }
@@ -43,7 +43,7 @@ class MRelTableUser extends MModel {
 
     /**
      * Removes one specific row from the table.
-     * @param MRTRUser $itemModel Model of the deleted row.
+     * @param MRTRUserInColl $itemModel Model of the deleted row.
      * @return void
      */
     public function deleteItem(&$itemModel) {
@@ -57,6 +57,6 @@ class MRelTableUser extends MModel {
      * @return void
      */
     public function addItem() {
-        $this->items[] = new MRTRUser(0);
+        $this->items[] = new MRTRUserInColl(0);
     }
 }

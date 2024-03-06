@@ -3,7 +3,7 @@
 /**
  * View for table-row of relative table rendering users.
  */
-class VRTRUser extends VRelTabRow {
+class VRTRUserInColl extends VRelTabRow {
 
     /**
      * Constructs views for every cell and adds it to the table.
@@ -15,7 +15,7 @@ class VRTRUser extends VRelTabRow {
         $o=$sqls->fetchObject();
         if ($o) {
             $this->add(new VText($o->login));
-        } else $this->add(new VFormFieldDropdownUser($itemModel->userId));
+        } else $this->add(new VFfDdUser($itemModel->userId));
         parent::__construct($itemModel, $tableModel);
     }
 }

@@ -3,7 +3,7 @@
 /**
  * Model of table-row of relative table of collections. Stores single collection.
  */
-class MRTRCollection extends MModel {
+class MRTRCollInDevice extends MModel {
     /**
      * @var $collId
      * Id of collection this row used for creation.

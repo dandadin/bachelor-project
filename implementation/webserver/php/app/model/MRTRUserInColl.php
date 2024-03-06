@@ -2,7 +2,7 @@
 /**
  * Model of table-row of relative table of users. Stores single user.
  */
-class MRTRUser extends MModel {
+class MRTRUserInColl extends MModel {
     /**
      * @var $userId
      * Id of user this row used for creation.
