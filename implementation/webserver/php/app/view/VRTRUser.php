@@ -1,9 +1,9 @@
 <?php
 
 /**
- * View for table-row of relative table rendering collections.
+ * View for table-row of relative table rendering users.
  */
-class VRTRCollection extends VRelTabRow {
+class VRTRUser extends VRelTabRow {
 
     /**
      * Constructs views for every cell and adds it to the table.
@@ -11,11 +11,11 @@ class VRTRCollection extends VRelTabRow {
      * @param $tableModel Should be an instance of MRelTable<type> this row is created for.
      */
     public function __construct(&$itemModel, &$tableModel) {
-        $sqls=DB::query("SELECT * FROM collections WHERE id=$itemModel->collId");
+        $sqls=DB::query("SELECT * FROM users WHERE id=$itemModel->userId");
         $o=$sqls->fetchObject();
         if ($o) {
-            $this->add(new VText($o->name));
-        } else $this->add(new VFormFieldDropdownCollection($itemModel->collId));
+            $this->add(new VText($o->login));
+        } else $this->add(new VFormFieldDropdownUser($itemModel->userId));
         parent::__construct($itemModel, $tableModel);
     }
 }

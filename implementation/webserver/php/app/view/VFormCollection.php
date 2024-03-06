@@ -8,6 +8,7 @@ class VFormCollection extends VForm {
         parent::__construct($collId);
         $this->add(new VFormFieldText($this->model->name, "name"));
         $this->add(new VFfDdCollectionDomains($this->model->domainId, "domain"));
+        $this->add(new VRTUser($this->model->users, "users"));
         $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
     }
 
