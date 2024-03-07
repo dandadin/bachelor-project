@@ -25,7 +25,7 @@ class MRTRUserInColl extends MModel {
     public function store($collId = NULL) {
         if (!$collId) return false;
         $sql = "INSERT INTO collection_users (coll_id, user_id) ".
-               "SELECT id,:collId FROM users WHERE id=:userId";
+               "SELECT :collId,id FROM users WHERE id=:userId";
 
         $sqls=DB::prepare($sql);
         if (!$sqls->execute(["collId" => $collId, "userId" => $this->userId]))
