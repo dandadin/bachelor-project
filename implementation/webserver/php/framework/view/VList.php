@@ -1,6 +1,6 @@
 <?php
 
-abstract class VList extends VView {
+class VList extends VView {
     protected $items = array();
 
     public function add(VView $v) {
