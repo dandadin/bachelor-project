@@ -3,7 +3,7 @@
  * @brief Universal model class template, that is used for storing objects between loads.
  */
 class MModel {
-    public function store($arg = NULL) {return true;}
+    public function store(int $arg = 0) {return true;}
     /**
      * @brief Used when storing in database was successful. Usually commits changes to model and database.
      * @return void
