@@ -49,8 +49,13 @@ class MDomain extends MModel {
         $sql.=" domains SET name=:name";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

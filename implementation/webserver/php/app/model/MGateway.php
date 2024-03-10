@@ -51,8 +51,13 @@ class MGateway extends MModel {
         $sql.=" gateways SET name=:name, address=:address";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name, "address" => $this->address]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name, "address" => $this->address]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

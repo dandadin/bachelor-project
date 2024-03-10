@@ -53,8 +53,13 @@ class MUser extends MModel {
         $sql.=" users SET login=:login, pwdHash=:pwdHash";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["login" => $this->login, "pwdHash" => $this->pwdHash]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["login" => $this->login, "pwdHash" => $this->pwdHash]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

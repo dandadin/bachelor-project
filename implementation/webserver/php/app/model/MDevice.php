@@ -77,10 +77,15 @@ class MDevice extends MModel {
         ." last_changed=:last_changed";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name, "location" => $this->location,
-            "gateway_id" => $this->gatewayId,
-            "last_changed" => $this->lastChanged]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name, "location" => $this->location,
+                "gateway_id" => $this->gatewayId,
+                "last_changed" => $this->lastChanged]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

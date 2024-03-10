@@ -58,9 +58,14 @@ class MRole extends MModel {
         $sql.=" roles SET name=:name, can_edit_groups=:can_edit_groups, can_edit_users=:can_edit_users";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name, "can_edit_groups" => $this->canEditGroups,
-            "can_edit_users" => $this->canEditUsers]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name, "can_edit_groups" => $this->canEditGroups,
+                "can_edit_users" => $this->canEditUsers]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

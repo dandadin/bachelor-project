@@ -58,8 +58,13 @@ class MCollection extends MModel {
         $sql.=" collections SET name=:name, domain_id=:domain_id";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name, "domain_id" => $this->domainId]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name, "domain_id" => $this->domainId]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

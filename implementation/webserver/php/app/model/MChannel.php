@@ -74,10 +74,15 @@ class MChannel extends MModel {
         " value_type=:value_type, update_freq=:update_freq";
         if ($this->id) $sql.=" WHERE id=$this->id";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["name" => $this->name, "device_id" => $this->deviceId,
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $this->name, "device_id" => $this->deviceId,
             "comm_type" => $this->commType, "value_type" => $this->valueType,
-            "update_freq" => $this->updateFreq]))
-        {
+            "update_freq" => $this->updateFreq]);
+        } catch (PDOException) {
+            $res = false;
+        }
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }
