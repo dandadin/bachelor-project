@@ -47,11 +47,3 @@ a.button-link:link, a.button-link:visited {
 a.button-link:hover, a.button-link:active {
     background-color: #45a049;
 }
-
-button[type=submit] {
-    border: none;
-    border-radius: 4px;
-    float: right;
-    margin-top: 12px;
-    font-weight: bold;
-}

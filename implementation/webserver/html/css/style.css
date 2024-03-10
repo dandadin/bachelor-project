@@ -1,6 +1,7 @@
 @import "menu.css";
 @import "table.css";
 @import "form.css";
+@import "notif.css";
 
 img.icon-small {
     width: 30px;
@@ -10,9 +11,7 @@ img.icon-small {
 a.home-link:link, a.home-link:visited {
     color: black;
     padding: 12px 20px;
-    border: gray;
-    border-style: solid;
-    border-width: thin;
+    border: thin solid gray;
     border-radius: 4px;
     margin-top: 12px;
     font-weight: bold;

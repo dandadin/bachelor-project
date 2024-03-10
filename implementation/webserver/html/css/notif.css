@@ -1,0 +1,32 @@
+div.notif {
+    border: thin solid;
+    margin: 5px 0px;
+    max-width: 600px;
+}
+
+div.notif span {
+    padding: 12px 20px;
+    display: block;
+}
+
+div.notif i {
+    padding-right: 8px;
+}
+
+div.notif-success {
+    border-color: darkgreen;
+    background-color: rgba(0, 100, 0, 0.2);
+    color: darkgreen;
+}
+
+div.notif-error {
+    border-color: red;
+    background-color: rgba(139, 0, 0, 0.2);
+    color: red;
+}
+
+div.notif-info {
+    border-color: blue;
+    background-color: rgba(0, 0, 139, 0.2);
+    color: blue;
+}
