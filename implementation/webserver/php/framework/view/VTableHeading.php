@@ -1,17 +1,17 @@
 <?php
 
-class VRelTableHeading extends VList {
-    public function __construct($columns) {
+class VTableHeading extends VList {
+    public function __construct($columns, $makeRemoveCol = false) {
         foreach ($columns as $col) {
             $this->add(new VText($col));
         }
-        $this->add(new VText("remove"));
+        if ($makeRemoveCol) $this->add(new VText("remove"));
     }
 
     protected function renderItem(VView $v) {
         echo "<th>";
         parent::renderItem($v);
-        echo "</th>";
+        echo "</th>\n";
     }
 
 
