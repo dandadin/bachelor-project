@@ -14,10 +14,12 @@ if (isset($_GET["type"])) {
 
     if(isset($_GET["id"])) {
         $id = $_GET["id"];
-        echo "<h3>ID je ".$id."</h3>";
-        $name = "VPageDelete".$type[$_GET["type"]];
-        $page = new $name($id);
-        $page->render();
+        $modelName = "M".$type[$_GET["type"]];
+        $model = new $modelName($id);
+        $model->delete();
+
+        header("Location: /list.php?type=".$_GET["type"]);
+        exit();
     } else {
         echo "<h3>ID NENI</h3>";
     }

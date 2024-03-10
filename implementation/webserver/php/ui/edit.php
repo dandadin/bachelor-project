@@ -14,7 +14,6 @@ if (isset($_GET["type"])) {
 
     if(isset($_GET["id"])) {
         $id = $_GET["id"];
-        echo "<h3>ID je ".$id."</h3>";
         $name = "VPageEdit".$type[$_GET["type"]];
         $page = new $name($id);
         $page->render();
