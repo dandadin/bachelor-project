@@ -12,9 +12,9 @@ class MRTRCollInDevice extends MModel {
 
     /**
      * Constructs model using data from database.
-     * @param $collId Id of device this model is created for.
+     * @param int $collId Id of device this model is created for.
      */
-    public function __construct($collId) {
+    public function __construct(int $collId = 0) {
         $this->collId = $collId;
     }
 
@@ -23,10 +23,11 @@ class MRTRCollInDevice extends MModel {
      * @param $deviceId Id of device this collection should be paired with.
      * @return bool Storing was successful.
      */
-    public function store($deviceId = NULL) {
+    public function store(int $deviceId = 0) {
         if (!$deviceId) return false;
         $sql = "INSERT INTO collection_devices (coll_id, device_id) ".
-               "SELECT id,:deviceId FROM collections WHERE id=:collId";
+               "SELECT id,:deviceId FROM collections WHERE id=:collId ".
+               "ON DUPLICATE KEY UPDATE coll_id=coll_id";
 
         $sqls=DB::prepare($sql);
         if (!$sqls->execute(["deviceId" => $deviceId, "collId" => $this->collId]))

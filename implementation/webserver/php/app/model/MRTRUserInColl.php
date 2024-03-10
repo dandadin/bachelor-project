@@ -13,7 +13,7 @@ class MRTRUserInColl extends MModel {
      * Constructs model using data from database.
      * @param $userId Id of user this model is created for.
      */
-    public function __construct($userId) {
+    public function __construct($userId = 0) {
         $this->userId = $userId;
     }
 
@@ -22,10 +22,11 @@ class MRTRUserInColl extends MModel {
      * @param null $collId Id of collection this user should be paired with.
      * @return bool Storing was successful.
      */
-    public function store($collId = NULL) {
+    public function store(int $collId = 0) {
         if (!$collId) return false;
         $sql = "INSERT INTO collection_users (coll_id, user_id) ".
-               "SELECT :collId,id FROM users WHERE id=:userId";
+               "SELECT :collId,id FROM users WHERE id=:userId ".
+               "ON DUPLICATE KEY UPDATE user_id=user_id";
 
         $sqls=DB::prepare($sql);
         if (!$sqls->execute(["collId" => $collId, "userId" => $this->userId]))
