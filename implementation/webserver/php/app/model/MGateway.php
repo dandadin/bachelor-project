@@ -93,7 +93,8 @@ class MGateway extends MModel {
      * @return void
      */
     public function clickedSubmit() {
-        $this->persist();
+        if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Gateway was saved."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Gateway could not have been saved!"));
     }
 
 

@@ -123,6 +123,7 @@ class MDevice extends MModel {
      * @return void
      */
     public function clickedSubmit() {
-        $this->persist();
+        if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Device was saved."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Device could not have been saved!"));
     }
 }

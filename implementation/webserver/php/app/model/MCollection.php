@@ -102,6 +102,7 @@ class MCollection extends MModel {
      * @return void
      */
     public function clickedSubmit() {
-        $this->persist();
+        if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Collection was saved."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Collection could not have been saved!"));
     }
 }

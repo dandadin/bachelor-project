@@ -62,7 +62,8 @@ class MLogin extends MModel {
      * @return void
      */
     public function clickedSubmit() {
-        $this->persist();
+        if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Successfully logged in!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Username or password was wrong!"));
     }
 
 

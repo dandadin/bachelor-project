@@ -118,7 +118,8 @@ class MChannel extends MModel {
      * @return void
      */
     public function clickedSubmit() {
-        $this->persist();
+        if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Channel was saved."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Channel could not have been saved!"));
     }
 
 
