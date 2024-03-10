@@ -1,0 +1,39 @@
+nav {
+    background-color: rgba(4, 157, 101, 0.16);
+    color: white;
+    font-weight: bold;
+}
+
+nav li {
+    display: block;
+}
+
+nav ul {
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px 2px;
+}
+
+nav a {
+    color: white;
+    overflow: scroll;
+    white-space: nowrap;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+
+nav ul {
+    display: flex;
+}
+
+
+nav a {
+    padding: 20px;
+}

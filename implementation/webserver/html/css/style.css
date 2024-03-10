@@ -1,4 +1,28 @@
+@import "menu.css";
+@import "table.css";
+@import "form.css";
+
 img.icon-small {
     width: 30px;
     height: 30px;
+}
+
+a.home-link:link, a.home-link:visited {
+    color: black;
+    padding: 12px 20px;
+    border: gray;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 4px;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 50%;
+    max-width: 200px;
+}
+
+a.home-link:hover, a.home-link:active {
+    background-color: #45a049;
 }
