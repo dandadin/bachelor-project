@@ -6,8 +6,8 @@ class VFormLogin extends VForm {
 
     public function __construct() {
         parent::__construct(NULL);
-        $this->add(new VFormFieldText($this->model->login, "username"));
-        $this->add(new VFormFieldPassword($this->model->pwdHash, "password"));
+        $this->add(new VFormFieldText($this->model->login, "Username"));
+        $this->add(new VFormFieldPassword($this->model->pwdHash, "Password"));
         $this->add(new VFormFieldButtonSubmit($this->model, new VText("Log in!"), ""));
     }
 }

@@ -12,7 +12,7 @@ class VMenuBar extends VList {
     public function renderHeader() {
         echo <<<END
     <nav>
-        <ul>
+        <ul>\n
 END;
 
     }
@@ -20,13 +20,13 @@ END;
     public function renderFooter() {
         echo <<<END
         </ul>
-    </nav>
+    </nav>\n
 END;
     }
 
     public function renderItem(VView $v) {
         echo "<li>";
         parent::renderItem($v);
-        echo "</li>";
+        echo "</li>\n";
     }
 }

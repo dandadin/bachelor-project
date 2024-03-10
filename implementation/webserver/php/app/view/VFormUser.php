@@ -6,9 +6,9 @@ class VFormUser extends VForm {
 
     public function __construct($userId) {
         parent::__construct($userId);
-        $this->add(new VFormFieldText($this->model->login, "username"));
-        $this->add(new VFormFieldPassword($this->model->pwdHash, "password"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
+        $this->add(new VFormFieldText($this->model->login, "Username"));
+        $this->add(new VFormFieldPassword($this->model->pwdHash, "Password"));
+        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
 

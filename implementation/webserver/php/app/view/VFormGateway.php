@@ -6,9 +6,9 @@ class VFormGateway extends VForm {
 
     public function __construct($gwId) {
         parent::__construct($gwId);
-        $this->add(new VFormFieldText($this->model->name, "name"));
-        $this->add(new VFormFieldText($this->model->address, "address"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
+        $this->add(new VFormFieldText($this->model->name, "Name"));
+        $this->add(new VFormFieldText($this->model->address, "Address"));
+        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
 

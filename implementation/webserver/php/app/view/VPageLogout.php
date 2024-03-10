@@ -9,7 +9,7 @@ class VPageLogout extends VPageHollow {
         $m->delete();
 
         $this->add(new VText("You have been logged out."));
-        $this->add(new VLink("login", "/login.php"));
+        $this->add(new VLink(new VText("login"), "/login.php"));
     }
 
 

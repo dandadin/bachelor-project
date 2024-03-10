@@ -6,10 +6,10 @@ class VFormRole extends VForm {
 
     public function __construct($roleId) {
         parent::__construct($roleId);
-        $this->add(new VFormFieldText($this->model->name, "name"));
-        $this->add(new VFormFieldBoolean($this->model->canEditGroups, "can edit groups"));
-        $this->add(new VFormFieldBoolean($this->model->canEditUsers, "can edit users"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
+        $this->add(new VFormFieldText($this->model->name, "Name"));
+        $this->add(new VFormFieldBoolean($this->model->canEditGroups, "Can Edit Groups?"));
+        $this->add(new VFormFieldBoolean($this->model->canEditUsers, "Can Edit Users?"));
+        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
 

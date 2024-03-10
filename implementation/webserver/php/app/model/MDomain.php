@@ -12,6 +12,11 @@ class MDomain extends MModel {
      */
     public $name;
     /**
+     * @var MRTUserRoleInDom $userroles
+     * List of models of every user and their roles belonging in this domain.
+     */
+    public $userroles;
+    /**
      * @var $tmpId
      * Id that is used during storing phase, if storing is successful, $id is set to $tmpId.
      */
@@ -30,6 +35,7 @@ class MDomain extends MModel {
                 $this->name = $o->name;
             }
         }
+        $this->userroles = new MRTUserRoleInDom($this->id);
     }
 
     /**

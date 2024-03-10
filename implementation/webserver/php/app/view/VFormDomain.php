@@ -6,8 +6,9 @@ class VFormDomain extends VForm {
 
     public function __construct($domainId) {
         parent::__construct($domainId);
-        $this->add(new VFormFieldText($this->model->name, "name"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
+        $this->add(new VFormFieldText($this->model->name, "Name"));
+        $this->add(new VRTUserRoleInDom($this->model->userroles, "Users and Roles"));
+        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
 

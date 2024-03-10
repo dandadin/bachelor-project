@@ -1,17 +1,23 @@
 <?php
 
 class VLink extends VView {
-    protected $title;
+    protected VView $title;
     protected $url;
+    protected $class;
 
-    public function __construct($title, $url) {
+    public function __construct(VView $title, $url, $class = "") {
         $this->title = $title;
         $this->url = $url;
+        $this->class = $class;
     }
 
 
     public function renderBody() {
-        echo "<a href='$this->url'>$this->title</a>";
+        echo "<a href='$this->url'";
+        if ($this->class) echo " class='$this->class'";
+        echo ">";
+        $this->title->render();
+        echo "</a>";
     }
 
 

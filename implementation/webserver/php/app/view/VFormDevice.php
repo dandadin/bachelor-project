@@ -6,12 +6,12 @@ class VFormDevice extends VForm {
 
     public function __construct($deviceId) {
         parent::__construct($deviceId);
-        $this->add(new VFormFieldText($this->model->name, "name"));
-        $this->add(new VFormFieldText($this->model->location, "location"));
-        $this->add(new VFfDdDeviceGateways($this->model->gatewayId, "gateway"));
+        $this->add(new VFormFieldText($this->model->name, "Name"));
+        $this->add(new VFormFieldText($this->model->location, "Physical Location"));
+        $this->add(new VFfDdDeviceGateways($this->model->gatewayId, "Gateway"));
         $this->add(new VFormFieldDateTime($this->model->lastChanged, "last changed DEMO")); // TODO: remove this
-        $this->add(new VRTCollInDevice($this->model->collections, "collections"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Odesli!"), "odesilaci buttonek"));
+        $this->add(new VRTCollInDevice($this->model->collections, "Collections"));
+        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
 

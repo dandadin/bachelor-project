@@ -14,7 +14,7 @@ class VPageHome extends VPage {
             "ga" => "Gateway",
             "ro" => "Role"];
         foreach ($type as $k => $v) {
-            $this->add(new VLink($v."s", "/list.php?type=".$k));
+            $this->add(new VLink(new VText($v."s"), "/list.php?type=".$k, "home-link"));
             $this->add(new VText("<br>"));
         }
     }
