@@ -43,8 +43,11 @@ class MRTRUserRoleInDom extends MModel {
 
         $sql = "SELECT id FROM users WHERE id=:userId OR (:userId = 0 AND login=:login)";
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["userId" => $this->userId, "login" => $this->login]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["userId" => $this->userId, "login" => $this->login]);
+        } catch (PDOException) {$res = false;}
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }
@@ -58,12 +61,16 @@ class MRTRUserRoleInDom extends MModel {
         $this->userId = $o->id;
         error_log("Provedlo se nastaveni:userId = o->id; $this->userId = $o->id;");
 
+
         $sql = "INSERT INTO domain_users (domain_id, user_id, role_id) ".
                "SELECT :domainId,:userId,id FROM roles WHERE id=:roleId";
 
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["domainId" => $domainId, "userId" => $this->userId, "roleId" => $this->roleId]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["domainId" => $domainId, "userId" => $this->userId, "roleId" => $this->roleId]);
+        } catch (PDOException) {$res = false;}
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

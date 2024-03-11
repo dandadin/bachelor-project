@@ -30,8 +30,11 @@ class MRTRCollInDevice extends MModel {
                "ON DUPLICATE KEY UPDATE coll_id=coll_id";
 
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["deviceId" => $deviceId, "collId" => $this->collId]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["deviceId" => $deviceId, "collId" => $this->collId]);
+        } catch (PDOException) {$res = false;}
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }

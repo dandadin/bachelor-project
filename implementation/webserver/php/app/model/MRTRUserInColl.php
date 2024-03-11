@@ -29,8 +29,11 @@ class MRTRUserInColl extends MModel {
                "ON DUPLICATE KEY UPDATE user_id=user_id";
 
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute(["collId" => $collId, "userId" => $this->userId]))
-        {
+        $res = true;
+        try {
+            $res = $sqls->execute(["collId" => $collId, "userId" => $this->userId]);
+        } catch (PDOException) {$res = false;}
+        if (!$res) {
             error_log(get_called_class().": SQL Error.");
             return false;
         }
