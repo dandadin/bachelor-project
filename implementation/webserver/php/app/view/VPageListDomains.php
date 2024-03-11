@@ -5,7 +5,7 @@ class VPageListDomains extends VPage {
         parent::__construct();
         $this->add(new VText("<h1>Domains</h1>"));
         $this->add(new VPlainTable(["ID", "Name"], "SELECT * FROM domains", VPTRDomain::class));
-        $this->add(new VLink(new VText("add new"), "/edit.php?type=do&id=0"));
+        $this->add(new VLink(new VText("Add New"), "/edit.php?type=do&id=0", "button-link"));
     }
 
 }
