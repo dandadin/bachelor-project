@@ -82,6 +82,8 @@ class MGateway extends MModel {
         if (!$this->id) return TRUE;
         $sql = "DELETE FROM gateways WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM devices WHERE gateway_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
         $this->tmpId = NULL;
         return TRUE;

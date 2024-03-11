@@ -82,6 +82,10 @@ class MDomain extends MModel {
         if (!$this->id) return TRUE;
         $sql = "DELETE FROM domains WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM collections WHERE domain_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM devices WHERE domain_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
         $this->tmpId = NULL;
         return TRUE;
