@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @brief Model for collection object.
+ * @brief Model for device object.
  */
 class MDevice extends MModel {
     /**
