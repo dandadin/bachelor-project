@@ -12,7 +12,11 @@ class VPageHome extends VPage {
             "de" => "Device",
             "ch" => "Channel",
             "ga" => "Gateway",
-            "ro" => "Role"];
+            "ro" => "Role",
+            "se" => "Sequence",
+            "st" => "Step",
+            "in" => "Instance",
+            "pl" => "Plan"];
         foreach ($type as $k => $v) {
             $this->add(new VLink(new VText($v."s"), "/list.php?type=".$k, "home-link"));
             $this->add(new VText("<br>"));

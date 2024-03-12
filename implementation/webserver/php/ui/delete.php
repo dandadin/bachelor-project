@@ -10,7 +10,11 @@ if (isset($_GET["type"])) {
         "de" => "Device",
         "ch" => "Channel",
         "ga" => "Gateway",
-        "ro" => "Role"];
+        "ro" => "Role",
+        "se" => "Sequence",
+        "st" => "Step",
+        "in" => "Instance",
+        "pl" => "Plan"];
 
     if(isset($_GET["id"])) {
         $id = $_GET["id"];
