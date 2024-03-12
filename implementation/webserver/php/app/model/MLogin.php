@@ -58,7 +58,7 @@ class MLogin extends MModel {
 
     /**
      * Starts checking process.
-     * Called when button in edit form using this model is pressed.
+     * Called when button in edit form using this model is pressed. Adds notification to user about result.
      * @return void
      */
     public function clickedSubmit() {

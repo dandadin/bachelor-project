@@ -114,12 +114,24 @@ class MChannel extends MModel {
 
     /**
      * Starts saving process to database.
-     * Called when button in edit form using this model is pressed.
+     * Called when button in edit form using this model is pressed. Adds notification to user about result.
      * @return void
      */
     public function clickedSubmit() {
         if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Channel was saved."));
         else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Channel could not have been saved!"));
+    }
+
+    /**
+     * Starts deleting process in database.
+     * If not successful, reverts changes made. Adds notification to user about result.
+     * @return bool
+     */
+    public function unpersist() {
+        $ret = parent::unpersist();
+        if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Channel was deleted."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Channel could not have been saved!"));
+        return $ret;
     }
 
 

@@ -16,7 +16,7 @@ if (isset($_GET["type"])) {
         $id = $_GET["id"];
         $modelName = "M".$type[$_GET["type"]];
         $model = new $modelName($id);
-        $model->delete();
+        $model->unpersist();
 
         header("Location: /list.php?type=".$_GET["type"]);
         exit();

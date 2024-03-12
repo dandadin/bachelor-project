@@ -8,7 +8,9 @@ class MModel {
      * @brief Used when storing in database was successful. Usually commits changes to model and database.
      * @return void
      */
-    public function storeCommit() {}
+    protected function storeCommit() {}
+
+    protected function deleteCommit() {}
 
     public function delete($arg = NULL) {return true;}
     /**
@@ -20,6 +22,21 @@ class MModel {
         if($this->store()) {
             DB::commit();
             $this->storeCommit();
+            return true;
+        } else {
+            DB::rollBack();
+            return false;
+        }
+    }
+    /**
+     * @brief Used to remove data from database. If removing fails, reverts back.
+     * @return bool Removal was successful
+     */
+    public function unpersist() {
+        DB::beginTransaction();
+        if($this->delete()) {
+            DB::commit();
+            $this->deleteCommit();
             return true;
         } else {
             DB::rollBack();

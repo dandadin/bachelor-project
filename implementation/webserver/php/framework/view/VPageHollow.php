@@ -6,13 +6,11 @@ class VPageHollow extends VList {
     protected const Header = "";
     protected $title;
     protected $header;
-    static protected $NotifList;
 
     public function __construct() {
         $this->title = static::Title;
         $this->header = static::Header;
-        if(!static::$NotifList) static::$NotifList = new VList();
-        $this->add(static::$NotifList);
+        $this->add($_SESSION["notifications"]);
     }
 
     public function renderHeader() {
@@ -29,15 +27,22 @@ class VPageHollow extends VList {
 END;
     }
 
+    public function render() {
+        parent::render();
+        $_SESSION["notifications"] = new VList();
+    }
+
     public function renderFooter() {
         echo "    </body></html>\n";
     }
 
-    public const NT_Error = 0;
-    public const NT_Success = 1;
-    public const NT_Info = 2;
+    public static function loadNotifications() {
+        if(isset($_SESSION["notifications"])) if ($_SESSION["notifications"] instanceof VList) return;
+        $_SESSION["notifications"] = new VList();
+    }
+
 
     public static function addNotification(VNotification $notification) {
-        static::$NotifList->add($notification);
+        $_SESSION["notifications"]->add($notification);
     }
 }
