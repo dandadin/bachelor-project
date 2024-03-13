@@ -7,7 +7,7 @@ class VFormSequence extends VForm {
     public function __construct($sequenceId) {
         parent::__construct($sequenceId);
         $this->add(new VFormFieldText($this->model->name, "Name"));
-        $this->add(new VFormFieldNumber($this->model->firstStepId, "First Step"));
+        $this->add(new VFfDdSequenceSteps($this->model->firstStepId, "First Step"));
         $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
     }
 
