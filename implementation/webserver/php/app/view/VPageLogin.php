@@ -6,7 +6,7 @@ class VPageLogin extends VPageHollow {
 
     public function __construct() {
         parent::__construct();
-        if(isset($_SESSION["loginId"])) $this->add(new VPageHome());
+        if(isset($_SESSION["loginId"])) {header("Location: /"); exit();}
         else {
             $this->add(new VText("<h1>IoTHome</h1>"));
             $this->add(new VFormLogin());

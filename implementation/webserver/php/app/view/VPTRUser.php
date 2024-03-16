@@ -11,7 +11,7 @@ class VPTRUser extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->login), "/edit.php?type=us&id=$o->id"));
-        parent::__construct("/delete.php?type=us&id=$o->id");
+        $this->add(new VLink(new VText($o->login), "/user/$o->id/edit"));
+        parent::__construct("/user/$o->id/delete");
     }
 }

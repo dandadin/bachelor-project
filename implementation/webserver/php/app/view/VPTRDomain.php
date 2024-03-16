@@ -11,7 +11,7 @@ class VPTRDomain extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=do&id=$o->id"));
-        parent::__construct("/delete.php?type=do&id=$o->id");
+        $this->add(new VLink(new VText($o->name), "/domain/$o->id/edit"));
+        parent::__construct("/domain/$o->id/delete");
     }
 }

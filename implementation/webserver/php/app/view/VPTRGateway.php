@@ -11,8 +11,8 @@ class VPTRGateway extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=ga&id=$o->id"));
+        $this->add(new VLink(new VText($o->name), "/gateway/$o->id/edit"));
         $this->add(new VText($o->address));
-        parent::__construct("/delete.php?type=ga&id=$o->id");
+        parent::__construct("/gateway/$o->id/delete");
     }
 }

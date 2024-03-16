@@ -3,12 +3,12 @@
 /**
  * @brief Model for user object.
  */
-class MUser extends MModel {
+class MUser extends MObjectModel {
     /**
-     * @var $id
-     * Id of user loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'user';
     /**
      * @var $login
      * Username of user loaded from database.
@@ -30,7 +30,8 @@ class MUser extends MModel {
      * Constructs model using data from database.
      * @param $id Id of user in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM users WHERE id=$id");
             $o=$sqls->fetchObject();

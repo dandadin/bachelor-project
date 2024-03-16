@@ -35,7 +35,7 @@ class MRTRUserRoleInDom extends MModel {
      * @param int $domainId Id of domain this user and role should be paired with.
      * @return bool Storing was successful.
      */
-    public function store(int $domainId = 0) {
+    public function store(int $domainId = 0, int $index = 0) {
         if (!$domainId) {
             error_log(get_called_class().": Empty domainId");
             return false;

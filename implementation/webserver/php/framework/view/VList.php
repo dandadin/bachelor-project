@@ -22,9 +22,9 @@ class VList extends VView {
         $v->render();
     }
 
-    protected function registerController(ControllerCollection $cc) {
+    public function registerController(FormContext $c) {
         foreach ($this->items as $i) {
-            $i->registerController($cc);
+            $i->registerController($c);
         }
     }
 }

@@ -12,7 +12,7 @@ class MRTRCollInDevice extends MModel {
 
     /**
      * Constructs model using data from database.
-     * @param int $collId Id of device this model is created for.
+     * @param int $collId Id of collection this model is created for.
      */
     public function __construct(int $collId = 0) {
         $this->collId = $collId;
@@ -23,7 +23,7 @@ class MRTRCollInDevice extends MModel {
      * @param $deviceId Id of device this collection should be paired with.
      * @return bool Storing was successful.
      */
-    public function store(int $deviceId = 0) {
+    public function store(int $deviceId = 0, int $index = 0) {
         if (!$deviceId) return false;
         $sql = "INSERT INTO collection_devices (coll_id, device_id) ".
                "SELECT id,:deviceId FROM collections WHERE id=:collId ".

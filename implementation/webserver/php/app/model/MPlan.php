@@ -3,12 +3,12 @@
 /**
  * @brief Model for plan object.
  */
-class MPlan extends MModel {
+class MPlan extends MObjectModel {
     /**
-     * @var $id
-     * Id of plan loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'plan';
     /**
      * @var $seqId
      * Id of sequence planned in this model, loaded from database.
@@ -41,7 +41,8 @@ class MPlan extends MModel {
      * Constructs model using data from database.
      * @param $id Id of plan in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM plans WHERE id=$id");
             $o=$sqls->fetchObject();

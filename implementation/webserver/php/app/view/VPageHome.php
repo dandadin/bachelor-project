@@ -18,7 +18,7 @@ class VPageHome extends VPage {
             "in" => "Instance",
             "pl" => "Plan"];
         foreach ($type as $k => $v) {
-            $this->add(new VLink(new VText($v."s"), "/list.php?type=".$k, "home-link"));
+            $this->add(new VLink(new VText($v."s"), "/".strtolower($v)."s", "home-link"));
             $this->add(new VText("<br>"));
         }
     }

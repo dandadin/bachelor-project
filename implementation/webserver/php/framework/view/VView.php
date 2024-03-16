@@ -12,5 +12,5 @@ abstract class VView {
     protected function renderBody() {}
     protected function renderFooter() {}
 
-    protected function registerController(ControllerCollection $cc) {}
+    protected function registerController(FormContext $c) {}
 }

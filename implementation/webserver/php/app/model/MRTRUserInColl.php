@@ -22,7 +22,7 @@ class MRTRUserInColl extends MModel {
      * @param null $collId Id of collection this user should be paired with.
      * @return bool Storing was successful.
      */
-    public function store(int $collId = 0) {
+    public function store(int $collId = 0, int $index = 0) {
         if (!$collId) return false;
         $sql = "INSERT INTO collection_users (coll_id, user_id) ".
                "SELECT :collId,id FROM users WHERE id=:userId ".

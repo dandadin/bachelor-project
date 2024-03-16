@@ -3,12 +3,12 @@
 /**
  * @brief Model for role object.
  */
-class MRole extends MModel {
+class MRole extends MObjectModel {
     /**
-     * @var $id
-     * Id of role loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'role';
     /**
      * @var $name
      * Name of role loaded from database.
@@ -49,7 +49,8 @@ class MRole extends MModel {
      * Constructs model using data from database.
      * @param $id Id of role in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM roles WHERE id=$id");
             $o=$sqls->fetchObject();

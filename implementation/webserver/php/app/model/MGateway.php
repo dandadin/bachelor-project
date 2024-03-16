@@ -3,12 +3,12 @@
 /**
  * @brief Model for gateway object.
  */
-class MGateway extends MModel {
+class MGateway extends MObjectModel {
     /**
-     * @var $id
-     * Id of gateway loaded form database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'gateway';
     /**
      * @var $name
      * Name of gateway loaded from database.
@@ -28,7 +28,8 @@ class MGateway extends MModel {
      * Constructs model using data from database.
      * @param $id Id of gateway in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM gateways WHERE id=$id");
             $o=$sqls->fetchObject();

@@ -11,11 +11,11 @@ class VPTRDevice extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=de&id=$o->id"));
+        $this->add(new VLink(new VText($o->name), "/device/$o->id/edit"));
         $this->add(new VText($o->location));
-        $this->add(new VLink(new VText($o->gname), "/edit.php?type=ga&id=$o->gateway_id"));
+        $this->add(new VLink(new VText($o->gname), "/gateway/$o->gateway_id/edit"));
         $this->add(new VText($o->created));
         $this->add(new VText($o->last_changed));
-        parent::__construct("/delete.php?type=de&id=$o->id");
+        parent::__construct("/device/$o->id/delete");
     }
 }

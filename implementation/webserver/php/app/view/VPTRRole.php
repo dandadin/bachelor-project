@@ -11,12 +11,12 @@ class VPTRRole extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=ro&id=$o->id"));
+        $this->add(new VLink(new VText($o->name), "/role/$o->id/edit"));
         $this->add(new VText($o->can_edit_colls ? "<span data-tag='Yes'>Yes</span>" : "<span data-tag='No'>No</span>"));
         $this->add(new VText($o->can_edit_users ? "<span data-tag='Yes'>Yes</span>" : "<span data-tag='No'>No</span>"));
         $this->add(new VText($o->can_edit_devices ? "<span data-tag='Yes'>Yes</span>" : "<span data-tag='No'>No</span>"));
         $this->add(new VText($o->can_edit_gateways ? "<span data-tag='Yes'>Yes</span>" : "<span data-tag='No'>No</span>"));
         $this->add(new VText($o->can_edit_all ? "<span data-tag='Yes'>Yes</span>" : "<span data-tag='No'>No</span>"));
-        parent::__construct("/delete.php?type=ro&id=$o->id");
+        parent::__construct("/role/$o->id/delete");
     }
 }

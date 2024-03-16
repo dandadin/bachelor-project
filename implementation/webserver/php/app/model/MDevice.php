@@ -3,12 +3,12 @@
 /**
  * @brief Model for device object.
  */
-class MDevice extends MModel {
+class MDevice extends MObjectModel {
     /**
-     * @var $id
-     * Id of device loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'device';
     /**
      * @var $name
      * Name of device loaded from database.
@@ -49,7 +49,8 @@ class MDevice extends MModel {
      * Constructs model using data from database.
      * @param $id Id of device in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM devices WHERE id=$id");
             $o=$sqls->fetchObject();

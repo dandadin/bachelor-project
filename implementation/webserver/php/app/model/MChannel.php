@@ -3,12 +3,12 @@
 /**
  * @brief Model for channel object.
  */
-class MChannel extends MModel {
+class MChannel extends MObjectModel {
     /**
-     * @var $id
-     * Id of channel loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'channel';
     /**
      * @var $name
      * Name od channel loaded from database.
@@ -48,7 +48,8 @@ class MChannel extends MModel {
      * @brief Constructs model using data from database.
      * @param $id Id of channel in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM channels WHERE id=$id");
             $o=$sqls->fetchObject();

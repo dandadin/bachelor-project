@@ -11,11 +11,11 @@ class VPTRChannel extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=ch&id=$o->id"));
-        $this->add(new VLink(new VText($o->dname), "/edit.php?type=de&id=$o->device_id"));
+        $this->add(new VLink(new VText($o->name), "/channel/$o->id/edit"));
+        $this->add(new VLink(new VText($o->dname), "/device/$o->device_id/edit"));
         $this->add(new VText($o->comm_type));
         $this->add(new VText($o->value_type));
         $this->add(new VText($o->update_freq));
-        parent::__construct("/delete.php?type=ch&id=$o->id");
+        parent::__construct("/channel/$o->id/delete");
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-class MDomain extends MModel {
+class MDomain extends MObjectModel {
     /**
-     * @var $id
-     * Id of domain loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'domain';
     /**
      * @var $name
      * Name of domain loaded from database.
@@ -26,7 +26,8 @@ class MDomain extends MModel {
      * Constructs model using data from database.
      * @param $id Id of domain in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM domains WHERE id=$id");
             $o=$sqls->fetchObject();
@@ -80,11 +81,13 @@ class MDomain extends MModel {
      */
     public function delete($arg = NULL) {
         if (!$this->id) return TRUE;
-        $sql = "DELETE FROM domains WHERE id=$this->id";
-        if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM collections WHERE domain_id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM devices WHERE domain_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM domain_users WHERE domain_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM domains WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
         $this->tmpId = NULL;

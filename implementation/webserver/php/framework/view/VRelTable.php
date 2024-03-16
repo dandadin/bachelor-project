@@ -52,11 +52,11 @@ class VRelTable extends VTable {
 
     /**
      * Registers controller of the adding button for parsing POST input.
-     * @param $cc ControllerCollection Collection of all registered controllers.
+     * @param $c FormContext Coontext containing collection of all registered controllers.
      * @return void
      */
-    protected function registerController(ControllerCollection $cc) {
-        parent::registerController($cc);
-        if($this->addButton) $this->addButton->registerController($cc);
+    public function registerController(FormContext $c) {
+        parent::registerController($c);
+        if($this->addButton) $this->addButton->registerController($c);
     }
 }

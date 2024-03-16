@@ -11,8 +11,8 @@ class VPTRCollection extends VPTableRow {
      */
     public function __construct($o) {
         $this->add(new VText($o->id));
-        $this->add(new VLink(new VText($o->name), "/edit.php?type=co&id=$o->id"));
-        $this->add(new VLink(new VText($o->dname), "/edit.php?type=do&id=$o->domain_id"));
-        parent::__construct("/delete.php?type=co&id=$o->id");
+        $this->add(new VLink(new VText($o->name), "/collection/$o->id/edit"));
+        $this->add(new VLink(new VText($o->dname), "/domain/$o->domain_id/edit"));
+        parent::__construct("/collection/$o->id/delete");
     }
 }

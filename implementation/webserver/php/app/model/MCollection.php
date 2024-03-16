@@ -5,10 +5,10 @@
  */
 class MCollection extends MModel {
     /**
-     * @var $id
-     * Id of collection loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'collection';
     /**
      * @var $name
      * Name of collection loaded from database.
@@ -34,7 +34,8 @@ class MCollection extends MModel {
      * Constructs model using data from database.
      * @param $id Id of collection in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM collections WHERE id=$id");
             $o=$sqls->fetchObject();

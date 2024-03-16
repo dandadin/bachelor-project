@@ -13,20 +13,29 @@ function autoload($name) {
         }
     }
 }
-spl_autoload_register("autoload");
-
-session_start();
 
 function genFieldId() {
     if (!isset($_SESSION["genId"])) $_SESSION["genId"] = 0;
     return "f".++$_SESSION["genId"];
 }
 
+spl_autoload_register("autoload");
+
+session_start();
+
 if(!isset($_SESSION["loginId"]) || !$_SESSION["loginId"]) {
-    if ($_SERVER["REQUEST_URI"] != "/login.php") {
-        header("Location: /login.php");
+    if ($_SERVER["REQUEST_URI"] != "/login") {
+        header("Location: /login");
         exit();
     }
+}
+
+new DB();
+
+$m=PageContext::loadAllModels();
+if ($m) if ($m->getUrl() !=$_SERVER["REQUEST_URI"]) {
+    header("Location: ".$m->getUrl());
+    exit();
 }
 
 VPageHollow::loadNotifications();

@@ -3,12 +3,12 @@
 /**
  * @brief Model for instance object.
  */
-class MInstance extends MModel {
+class MInstance extends MObjectModel {
     /**
-     * @var $id
-     * Id of instance loaded from database.
+     * @const urlPrefix
+     * Used for generating url for this model.
      */
-    public $id;
+    const urlPrefix = 'instance';
     /**
      * @var $seqId
      * Id of sequence this is an instance of, loaded from database.
@@ -34,7 +34,8 @@ class MInstance extends MModel {
      * Constructs model using data from database.
      * @param $id Id of instance in database.
      */
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM instances WHERE id=$id");
             $o=$sqls->fetchObject();
