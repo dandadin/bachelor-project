@@ -1,0 +1,14 @@
+[ communication type ]
+1 = unidirectional to server
+    Used only for channels that should inform server about a value, for example room temperature.
+    Server only periodically asks for new value and the device answers.
+2 = unidirectional to device
+    Used only for channels that are for receiving commands without an option of asking for state.
+3 = bidirectional
+
+
+
+[ value type ]
+1 = int
+2 = string
+3 = rgb

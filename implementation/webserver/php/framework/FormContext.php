@@ -5,10 +5,10 @@
  */
 class FormContext {
     /**
-     * @var MObjectModel $model
+     * @var MModel $model
      * Model of specific form.
      */
-    public MObjectModel $model;
+    public MModel $model;
     /**
      * @var array $controllerCollection
      * Array of controllers of fields in a specific form.
@@ -31,9 +31,9 @@ class FormContext {
     /**
      * Calls update method for every controller of this form.
      * The controllers load new data from $_POST and save it to $this->>model.
-     * @return MObjectModel Updated model of this form.
+     * @return MModel Updated model of this form.
      */
-    public function updateModel() : MObjectModel {
+    public function updateModel() : MModel {
         foreach ($this->controllerCollection as $c) $c->update();
         return $this->model;
     }
@@ -41,9 +41,9 @@ class FormContext {
     /**
      * Returns model for specific form, defined by $formId.
      * @param string $formId Id of specific form we want the model of.
-     * @return MObjectModel|null Model of specific form, null if model not found.
+     * @return MModel|null Model of specific form, null if model not found.
      */
-    public static function getFormModel(string $formId) : MObjectModel|null {
+    public static function getFormModel(string $formId) : MModel|null {
         return static::$modelCollection[$formId] ?? null;
     }
 

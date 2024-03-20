@@ -1,6 +1,7 @@
 <?php
     require_once "../app/library.php";
     $res = explode('/', parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
+    require_once "../app/init.php";
 
     $objects = [
     "user" => "User",
@@ -53,8 +54,8 @@
         "logout" => "VPageLogout",
         "" => "VPageHome"
     ];
-    error_log(var_export($otherPages,true));
-    error_log("res[1] je '$res[1]'");
+
+    //error_log("res[1] je '$res[1]'");
     foreach ($otherPages as $urlName => $cname) {
         error_log("urlName==$urlName");
         if ($res[1]==$urlName) {

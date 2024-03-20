@@ -3,6 +3,7 @@ version: '3'
 services:
   nginx:
     image: nginx:1.23.3
+    restart: always
     volumes:
       - ./html:/var/www/html/:ro
       - ./conf:/etc/nginx/conf.d/:ro
@@ -12,6 +13,7 @@ services:
       - internal
   php:
     image: php:fpm-alpine
+    restart: always
     networks:
       - internal
     volumes:
@@ -22,6 +24,7 @@ services:
       - "docker-php-ext-install pdo pdo_mysql; exec php-fpm"
   db:
     image: mysql:8.0.32
+    restart: always
     volumes:
       - ./mysql:/var/lib/mysql
     networks:
@@ -38,6 +41,14 @@ services:
       - internal
     ports:
       - 8888:8080
+  executor:
+    image: busybox:1.36.1
+    command: /executor
+    restart: always
+    networks:
+      - internal
+    volumes:
+      - ./executor:/executor
 networks:
   internal:
     driver: bridge

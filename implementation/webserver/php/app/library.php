@@ -19,23 +19,12 @@ function genFieldId() {
     return "f".++$_SESSION["genId"];
 }
 
-spl_autoload_register("autoload");
 
-session_start();
-
-if(!isset($_SESSION["loginId"]) || !$_SESSION["loginId"]) {
-    if ($_SERVER["REQUEST_URI"] != "/login") {
-        header("Location: /login");
-        exit();
-    }
+/**
+ * Inverse function for strtotime().
+ * @param int $time Time in [s] from Unix epoch.
+ * @return string Time in format for TIMESTAMP data type for MySQL.
+ */
+function timetostr(int $time) : string {
+    return gmdate("Y-m-d H:i:s", $time);
 }
-
-new DB();
-
-$m=PageContext::loadAllModels();
-if ($m) if ($m->getUrl() !=$_SERVER["REQUEST_URI"]) {
-    header("Location: ".$m->getUrl());
-    exit();
-}
-
-VPageHollow::loadNotifications();

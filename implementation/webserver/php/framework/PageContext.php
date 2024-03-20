@@ -23,9 +23,9 @@ class PageContext {
 
     /**
      * Checks which page was sent to server, then loads all models of that page.
-     * @return MObjectModel|null Model matching submitted form. Null if formId was not found in $_POST. (Bad/no form submitted).
+     * @return MModel|null Model matching submitted form. Null if formId was not found in $_POST. (Bad/no form submitted).
      */
-    public static function loadAllModels():MObjectModel|null {
+    public static function loadAllModels():MModel|null {
         if (isset($_POST["pageId"])) {
             $pageId = $_POST["pageId"];
             return static::getPageContext($pageId)->loadPageModels();
@@ -47,9 +47,9 @@ class PageContext {
     /**
      * Unserializes all models of this page (stored in $contexts, previously loaded from $_SESSION),
      * then updates their data.
-     * @return MObjectModel|null Model matching submitted form. Null if formId was not found in $_POST. (Bad/no form submitted).
+     * @return MModel|null Model matching submitted form. Null if formId was not found in $_POST. (Bad/no form submitted).
      */
-    public function loadPageModels() : MObjectModel|null {
+    public function loadPageModels() : MModel|null {
         $ret = null;
         foreach($this->contexts as $formId=>$ctx) {
             $context = unserialize($ctx); //FormContext
