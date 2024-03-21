@@ -46,6 +46,16 @@ services:
       - internal
     volumes:
       - ./executor:/executor
+  mqttbroker:
+    image: eclipse-mosquitto:2.0.0
+    restart: always
+    networks:
+      - internal
+    volumes:
+      - ./mqtt:/mosquitto
+    ports:
+      - 1883:1883
+      - 9001:9001
 networks:
   internal:
     driver: bridge
