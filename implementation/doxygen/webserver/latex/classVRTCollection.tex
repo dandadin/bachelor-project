@@ -1,0 +1,123 @@
+\doxysection{VRTCollection Class Reference}
+\hypertarget{classVRTCollection}{}\label{classVRTCollection}\index{VRTCollection@{VRTCollection}}
+
+
+View for relative table listing collections.  
+
+
+Inheritance diagram for VRTCollection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classVRTCollection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classVRTCollection_ae0fc13643a26869b393c8d991962f9aa}{Heading}} = \mbox{[}\"{}Collection\"{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of names for columns. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classVRTCollection_a090afbd6365b2f67eb8d738e5c2e7afd}{Row\+Class}} = VRTRCollection\+::class
+\begin{DoxyCompactList}\small\item\em Name of method used for viewing single row. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classVRelTable}{VRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classVRelTable_ae0fc13643a26869b393c8d991962f9aa}{Heading}} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of names for columns. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classVRelTable_a090afbd6365b2f67eb8d738e5c2e7afd}{Row\+Class}} = VRel\+Tab\+Row\+::class
+\begin{DoxyCompactList}\small\item\em Name of method used for viewing single row. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVRelTable}{VRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVRelTable_ab788b378e5b13a2e371debf561a5e1ba}{\+\_\+\+\_\+construct}} (\&\$model, \$label=NULL)
+\begin{DoxyCompactList}\small\item\em Creates view for header of the table and adds rows for items passed in \$model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVRelTable}{VRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVRelTable_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\begin{DoxyCompactList}\small\item\em Renders single row of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVRelTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Renders the beginning of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVRelTable_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVRelTable_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\begin{DoxyCompactList}\small\item\em Registers controller of the adding button for parsing POST input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\item 
+\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for relative table listing collections. 
+
+Definition at line \mbox{\hyperlink{VRTCollection_8php_source_l00006}{6}} of file \mbox{\hyperlink{VRTCollection_8php_source}{VRTCollection.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classVRTCollection_ae0fc13643a26869b393c8d991962f9aa}\label{classVRTCollection_ae0fc13643a26869b393c8d991962f9aa} 
+\index{VRTCollection@{VRTCollection}!Heading@{Heading}}
+\index{Heading@{Heading}!VRTCollection@{VRTCollection}}
+\doxysubsubsection{\texorpdfstring{Heading}{Heading}}
+{\footnotesize\ttfamily const Heading = \mbox{[}\"{}Collection\"{}\mbox{]}}
+
+
+
+List of names for columns. 
+
+
+
+Definition at line \mbox{\hyperlink{VRTCollection_8php_source_l00010}{10}} of file \mbox{\hyperlink{VRTCollection_8php_source}{VRTCollection.\+php}}.
+
+\Hypertarget{classVRTCollection_a090afbd6365b2f67eb8d738e5c2e7afd}\label{classVRTCollection_a090afbd6365b2f67eb8d738e5c2e7afd} 
+\index{VRTCollection@{VRTCollection}!RowClass@{RowClass}}
+\index{RowClass@{RowClass}!VRTCollection@{VRTCollection}}
+\doxysubsubsection{\texorpdfstring{RowClass}{RowClass}}
+{\footnotesize\ttfamily const Row\+Class = VRTRCollection\+::class}
+
+
+
+Name of method used for viewing single row. 
+
+
+
+Definition at line \mbox{\hyperlink{VRTCollection_8php_source_l00014}{14}} of file \mbox{\hyperlink{VRTCollection_8php_source}{VRTCollection.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/\mbox{\hyperlink{VRTCollection_8php}{VRTCollection.\+php}}\end{DoxyCompactItemize}

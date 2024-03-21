@@ -1,0 +1,70 @@
+\doxysection{MDevice.\+php}
+\hypertarget{MDevice_8php_source}{}\label{MDevice_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MDevice.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MDevice.php}}
+\mbox{\hyperlink{MDevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00006}\mbox{\hyperlink{classMDevice}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMDevice}{MDevice}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00011}\mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{\$id}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00016}\mbox{\hyperlink{classMDevice_ab2fc40d43824ea3e1ce5d86dee0d763b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00021}\mbox{\hyperlink{classMDevice_ac319193077976bb217112e5a7b7b8022}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_ac319193077976bb217112e5a7b7b8022}{\$location}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00026}\mbox{\hyperlink{classMDevice_aaa0ac04a1bb5fb136941ff1e73d71c66}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_aaa0ac04a1bb5fb136941ff1e73d71c66}{\$gatewayId}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00031}\mbox{\hyperlink{classMDevice_a7053d2e0b9d626b7657a8f5077a64879}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_a7053d2e0b9d626b7657a8f5077a64879}{\$created}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00036}\mbox{\hyperlink{classMDevice_a9a0cfe3b5f3aca6432a49ba66dfea8fc}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_a9a0cfe3b5f3aca6432a49ba66dfea8fc}{\$lastChanged}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00041}\mbox{\hyperlink{classMDevice_a8bc25c68288d47f6c1dde6f82c6549f6}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMDevice_a8bc25c68288d47f6c1dde6f82c6549f6}{\$collections}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00052}\mbox{\hyperlink{classMDevice_a1340871f436b81e1f225567b6cce4e79}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMDevice_a1340871f436b81e1f225567b6cce4e79}{\_\_construct}}(\mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ devices\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$o)\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$o-\/>id;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>name\ =\ \$o-\/>name;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>location\ =\ \$o-\/>location;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>gatewayId\ =\ \$o-\/>gateway\_id;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>created\ =\ \$o-\/>created;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>lastChanged\ =\ \$o-\/>last\_changed;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \$this-\/>collections\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRelTableCollection}{MRelTableCollection}}(\mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00073}\mbox{\hyperlink{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}}(\$arg\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!parent::store())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \$sql\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \$sql.=\textcolor{stringliteral}{"{}\ devices\ SET\ name=:name,\ location=:location,\ gateway\_id=:gateway\_id,"{}}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ .\textcolor{stringliteral}{"{}\ last\_changed=:last\_changed"{}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \$sql.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([\textcolor{stringliteral}{"{}name"{}}\ =>\ \$this-\/>name,\ \textcolor{stringliteral}{"{}location"{}}\ =>\ \$this-\/>location,}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}gateway\_id"{}}\ =>\ \$this-\/>gatewayId,}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}last\_changed"{}}\ =>\ \$this-\/>lastChanged]))}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00095}\mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00104}\mbox{\hyperlink{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ devices\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\$sql))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00118}\mbox{\hyperlink{classMDevice_ac4c6197ed4b50517efa72f4a50f1a7ab}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMDevice_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00119}00119\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}}();}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MDevice_8php_source_l00121}00121\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,216 @@
+\doxysection{MUser Class Reference}
+\hypertarget{classMUser}{}\label{classMUser}\index{MUser@{MUser}}
+
+
+Model for user object.  
+
+
+Inheritance diagram for MUser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMUser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMUser_a1340871f436b81e1f225567b6cce4e79}{\+\_\+\+\_\+construct}} (\$id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMUser_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of user loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_afc31993e855f9631572adfedcfe6f34b}{\$login}}
+\begin{DoxyCompactList}\small\item\em Username of user loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMUser_a57a4419fcafc5924ae77e7c35528cbc8}{\$pwd\+Hash}}
+\begin{DoxyCompactList}\small\item\em Hash of chosen password loaded from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for user object. 
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00006}{6}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMUser_a1340871f436b81e1f225567b6cce4e79}\label{classMUser_a1340871f436b81e1f225567b6cce4e79} 
+\index{MUser@{MUser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of user in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00033}{33}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMUser_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMUser_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MUser@{MUser}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00092}{92}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+\Hypertarget{classMUser_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMUser_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MUser@{MUser}!delete@{delete}}
+\index{delete@{delete}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00078}{78}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+\Hypertarget{classMUser_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMUser_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\index{MUser@{MUser}!store@{store}}
+\index{store@{store}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00050}{50}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+\Hypertarget{classMUser_a02d2c9c72b394f734cea3181fc76719e}\label{classMUser_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MUser@{MUser}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00069}{69}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMUser_ae97941710d863131c700f069b109991e}\label{classMUser_ae97941710d863131c700f069b109991e} 
+\index{MUser@{MUser}!\$id@{\$id}}
+\index{\$id@{\$id}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \$id}
+
+
+
+Id of user loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00011}{11}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+\Hypertarget{classMUser_afc31993e855f9631572adfedcfe6f34b}\label{classMUser_afc31993e855f9631572adfedcfe6f34b} 
+\index{MUser@{MUser}!\$login@{\$login}}
+\index{\$login@{\$login}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{\$login}{\$login}}
+{\footnotesize\ttfamily \$login}
+
+
+
+Username of user loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00016}{16}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+\Hypertarget{classMUser_a57a4419fcafc5924ae77e7c35528cbc8}\label{classMUser_a57a4419fcafc5924ae77e7c35528cbc8} 
+\index{MUser@{MUser}!\$pwdHash@{\$pwdHash}}
+\index{\$pwdHash@{\$pwdHash}!MUser@{MUser}}
+\doxysubsubsection{\texorpdfstring{\$pwdHash}{\$pwdHash}}
+{\footnotesize\ttfamily \$pwd\+Hash}
+
+
+
+Hash of chosen password loaded from database. 
+
+Password is hashed on server, in controller of password form input. 
+
+Definition at line \mbox{\hyperlink{MUser_8php_source_l00022}{22}} of file \mbox{\hyperlink{MUser_8php_source}{MUser.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MUser_8php}{MUser.\+php}}\end{DoxyCompactItemize}

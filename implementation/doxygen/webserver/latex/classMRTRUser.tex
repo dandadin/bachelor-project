@@ -1,0 +1,122 @@
+\doxysection{MRTRUser Class Reference}
+\hypertarget{classMRTRUser}{}\label{classMRTRUser}\index{MRTRUser@{MRTRUser}}
+
+
+Model of table-\/row of relative table of users.  
+
+
+Inheritance diagram for MRTRUser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRTRUser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRUser_a44cf1e181de5b0ac34fa04f429d3ba7c}{\+\_\+\+\_\+construct}} (\$user\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRUser_a42c299d5822c331fa62331a75427aa59}{store}} (\$coll\+Id=NULL)
+\begin{DoxyCompactList}\small\item\em If coll\+Id is specified, inserts this row into database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}{\$user\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of user this row used for creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model of table-\/row of relative table of users. 
+
+Stores single user. 
+
+Definition at line \mbox{\hyperlink{MRTRUser_8php_source_l00005}{5}} of file \mbox{\hyperlink{MRTRUser_8php_source}{MRTRUser.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTRUser_a44cf1e181de5b0ac34fa04f429d3ba7c}\label{classMRTRUser_a44cf1e181de5b0ac34fa04f429d3ba7c} 
+\index{MRTRUser@{MRTRUser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTRUser@{MRTRUser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$user\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$user\+Id} & Id of user this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTRUser_8php_source_l00016}{16}} of file \mbox{\hyperlink{MRTRUser_8php_source}{MRTRUser.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTRUser_a42c299d5822c331fa62331a75427aa59}\label{classMRTRUser_a42c299d5822c331fa62331a75427aa59} 
+\index{MRTRUser@{MRTRUser}!store@{store}}
+\index{store@{store}!MRTRUser@{MRTRUser}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$coll\+Id = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+If coll\+Id is specified, inserts this row into database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$coll\+Id} & Id of collection this user should be paired with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRTRUser_8php_source_l00025}{25}} of file \mbox{\hyperlink{MRTRUser_8php_source}{MRTRUser.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}\label{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104} 
+\index{MRTRUser@{MRTRUser}!\$userId@{\$userId}}
+\index{\$userId@{\$userId}!MRTRUser@{MRTRUser}}
+\doxysubsubsection{\texorpdfstring{\$userId}{\$userId}}
+{\footnotesize\ttfamily \$user\+Id}
+
+
+
+Id of user this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRUser_8php_source_l00010}{10}} of file \mbox{\hyperlink{MRTRUser_8php_source}{MRTRUser.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MRTRUser_8php}{MRTRUser.\+php}}\end{DoxyCompactItemize}

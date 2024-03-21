@@ -1,0 +1,52 @@
+\doxysection{DB.\+php}
+\hypertarget{DB_8php_source}{}\label{DB_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/DB.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/DB.php}}
+\mbox{\hyperlink{DB_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00003}\mbox{\hyperlink{classDB}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDB}{DB}}\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00004}\mbox{\hyperlink{classDB_a066b2be6d042f01d67b1ed352d7b77f2}{00004}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classDB_a066b2be6d042f01d67b1ed352d7b77f2}{\$Pdo}};}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00005}\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{00005}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{prepare}}(\$query,\ array\ \$options\ =\ [])\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>prepare(\$query,\ \$options);}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00007}00007\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00009}\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{00009}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{query}}(\$query)\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>query(\$query);}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00013}\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{00013}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{exec}}(\$statement)\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>exec(\$statement);}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00017}\mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{00017}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{lastInsertId}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>lastInsertId();}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00021}\mbox{\hyperlink{classDB_acede846ed83753b53f6b99ad1c4df87c}{00021}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_acede846ed83753b53f6b99ad1c4df87c}{beginTransaction}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>beginTransaction();}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00025}\mbox{\hyperlink{classDB_af657076a4e4db3e3aec5d4a1a7494310}{00025}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_af657076a4e4db3e3aec5d4a1a7494310}{commit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>commit();}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00029}\mbox{\hyperlink{classDB_a0a7792c3bfcee5ac7122ff9bd1d80b62}{00029}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_a0a7792c3bfcee5ac7122ff9bd1d80b62}{rollBack}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$Pdo-\/>rollBack();}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00033}\mbox{\hyperlink{classDB_a095c5d389db211932136b53f25f39685}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classDB_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \$db=\textcolor{stringliteral}{'iothome'};}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$user=\textcolor{stringliteral}{'root'};}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \$password=\textcolor{stringliteral}{'root-\/heslo'};}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \$dsn=\textcolor{stringliteral}{"{}mysql:host=db;port=3306;dbname=\$db;charset=UTF8"{}};}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ static::\$Pdo\ =\ \textcolor{keyword}{new}\ Pdo(\$dsn,\$user,\$password);}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\ PDOException\ \$Exc\ )\ \{}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ die(\textcolor{stringliteral}{"{}Error:\ DB\ init"{}});}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{DB_8php_source_l00046}00046\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+\doxysection{MRTRUser.\+php}
+\hypertarget{MRTRUser_8php_source}{}\label{MRTRUser_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRTRUser.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRTRUser.php}}
+\mbox{\hyperlink{MRTRUser_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00005}\mbox{\hyperlink{classMRTRUser}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRUser}{MRTRUser}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00010}\mbox{\hyperlink{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00016}\mbox{\hyperlink{classMRTRUser_a44cf1e181de5b0ac34fa04f429d3ba7c}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUser_a44cf1e181de5b0ac34fa04f429d3ba7c}{\_\_construct}}(\mbox{\hyperlink{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$this-\/>userId\ =\ \mbox{\hyperlink{classMRTRUser_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00025}\mbox{\hyperlink{classMRTRUser_a42c299d5822c331fa62331a75427aa59}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUser_a42c299d5822c331fa62331a75427aa59}{store}}(\$collId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$collId)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ collection\_users\ (coll\_id,\ user\_id)\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ id,:collId\ FROM\ users\ WHERE\ id=:userId"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([\textcolor{stringliteral}{"{}collId"{}}\ =>\ \$collId,\ \textcolor{stringliteral}{"{}userId"{}}\ =>\ \$this-\/>userId]))}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUser_8php_source_l00038}00038\ \}}
+
+\end{DoxyCode}

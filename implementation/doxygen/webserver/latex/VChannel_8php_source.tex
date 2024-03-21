@@ -1,0 +1,23 @@
+\doxysection{VChannel.\+php}
+\hypertarget{VChannel_8php_source}{}\label{VChannel_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VChannel.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VChannel.php}}
+\mbox{\hyperlink{VChannel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00003}\mbox{\hyperlink{classVChannel}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVChannel}{VChannel}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVList}{VList}}\ \{}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00004}\mbox{\hyperlink{classVChannel_a3e19ebc8136495366091a9cacd592973}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVChannel_a3e19ebc8136495366091a9cacd592973}{\_\_construct}}(\textcolor{keywordtype}{int}\ \$channelId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$sql=\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ channels\ WHERE\ id="{}}.\$channelId;}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Channel:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\$o-\/>name,\ \textcolor{stringliteral}{"{}/edit.php?type=ch\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}\ (id=\$o-\/>id,name=\$o-\/>name,device=\$o-\/>device\_id,comm\_t=\$o-\/>comm\_type,val\_t=\$o-\/>value\_type,update\_freq=\$o-\/>update\_freq)"{}}));}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}delete"{}},\ \textcolor{stringliteral}{"{}/delete.php?type=ch\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$sqls-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VChannel_8php_source_l00017}00017\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,14 @@
+\doxysection{handler.\+php}
+\hypertarget{handler_8php_source}{}\label{handler_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php}}
+\mbox{\hyperlink{handler_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00003}\mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{00003}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ parse\_url(\$\_SERVER[\textcolor{stringliteral}{"{}REQUEST\_URI"{}}],\ PHP\_URL\_PATH);}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00005}00005\ \ \ \ \ \textcolor{comment}{//header("{}Location:\ \$url"{});}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ ==\ \textcolor{stringliteral}{"{}/"{}})\ \mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{"{}/index.php"{}};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00008}00008\ \ \ \ \ include\ \textcolor{stringliteral}{"{}."{}}.\$url;}
+
+\end{DoxyCode}

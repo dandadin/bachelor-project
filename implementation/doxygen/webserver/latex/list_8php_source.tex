@@ -1,0 +1,28 @@
+\doxysection{list.\+php}
+\hypertarget{list_8php_source}{}\label{list_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/list.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/list.php}}
+\mbox{\hyperlink{list_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00002}00002\ require\_once\ \textcolor{stringliteral}{"{}../app/library.php"{}};}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00003}00003\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classDB}{DB}}();}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00005}00005\ \textcolor{keywordflow}{if}\ (isset(\$\_GET[\textcolor{stringliteral}{"{}type"{}}]))\ \{}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00006}00006\ \ \ \ \ \$type\ =\ [}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}us"{}}\ =>\ \textcolor{stringliteral}{"{}User"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}do"{}}\ =>\ \textcolor{stringliteral}{"{}Domain"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}co"{}}\ =>\ \textcolor{stringliteral}{"{}Collection"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}de"{}}\ =>\ \textcolor{stringliteral}{"{}Device"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ch"{}}\ =>\ \textcolor{stringliteral}{"{}Channel"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ga"{}}\ =>\ \textcolor{stringliteral}{"{}Gateway"{}},}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ro"{}}\ =>\ \textcolor{stringliteral}{"{}Role"{}}];}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00015}00015\ \ \ \ \ \$name\ =\ \textcolor{stringliteral}{"{}VPageList"{}}.\$type[\$\_GET[\textcolor{stringliteral}{"{}type"{}}]].\textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{editdevice_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}}\ =\ \textcolor{keyword}{new}\ \$name();}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{editdevice_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}}-\/>render();}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00018}\mbox{\hyperlink{list_8php_aa02dc23c1a31272d065de13e07c0ff91}{00018}}\ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00019}00019\ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h3>TYPE\ NENI</h3>"{}};}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{list_8php_source_l00022}00022\ }
+
+\end{DoxyCode}

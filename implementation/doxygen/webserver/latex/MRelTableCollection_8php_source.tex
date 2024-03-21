@@ -1,0 +1,42 @@
+\doxysection{MRel\+Table\+Collection.\+php}
+\hypertarget{MRelTableCollection_8php_source}{}\label{MRelTableCollection_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRelTableCollection.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRelTableCollection.php}}
+\mbox{\hyperlink{MRelTableCollection_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00006}\mbox{\hyperlink{classMRelTableCollection}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRelTableCollection}{MRelTableCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00011}\mbox{\hyperlink{classMRelTableCollection_a8a1548abcd30bd45a0718911f532c1d1}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRelTableCollection_a8a1548abcd30bd45a0718911f532c1d1}{\$items}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00017}\mbox{\hyperlink{classMRelTableCollection_ae53e66405dec54fedc24469a7cd9cb93}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableCollection_ae53e66405dec54fedc24469a7cd9cb93}{\_\_construct}}(\$deviceId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$deviceId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collection\_devices\ WHERE\ device\_id=\$deviceId"{}});}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\$o=\$sqls-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRCollection}{MRTRCollection}}(\$o-\/>coll\_id);}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00033}\mbox{\hyperlink{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}{store}}(\$deviceId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$deviceId)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ collection\_devices\ WHERE\ device\_id=\$deviceId"{}};}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{false}===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\$sql))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>items\ as\ \$item)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\$item-\/>store(\$deviceId))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00049}\mbox{\hyperlink{classMRelTableCollection_a08f0bc1c30336c9983b29c97a8f86ff9}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableCollection_a08f0bc1c30336c9983b29c97a8f86ff9}{deleteItem}}(\&\$itemModel)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\$key\ =\ array\_search(\$itemModel,\ \$this-\/>items))\ !==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ unset(\$this-\/>items[\$key]);}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00059}\mbox{\hyperlink{classMRelTableCollection_a5efb5dcde452935a8fda7d00e3ce2fbe}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableCollection_a5efb5dcde452935a8fda7d00e3ce2fbe}{addItem}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRCollection}{MRTRCollection}}(0);}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableCollection_8php_source_l00062}00062\ \}}
+
+\end{DoxyCode}

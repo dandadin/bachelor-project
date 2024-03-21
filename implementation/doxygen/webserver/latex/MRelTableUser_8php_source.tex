@@ -1,0 +1,42 @@
+\doxysection{MRel\+Table\+User.\+php}
+\hypertarget{MRelTableUser_8php_source}{}\label{MRelTableUser_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRelTableUser.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRelTableUser.php}}
+\mbox{\hyperlink{MRelTableUser_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00006}\mbox{\hyperlink{classMRelTableUser}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRelTableUser}{MRelTableUser}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00011}\mbox{\hyperlink{classMRelTableUser_ae059f19b48cbf2c902d22db13264bb90}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRelTableUser_ae059f19b48cbf2c902d22db13264bb90}{\$items}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00017}\mbox{\hyperlink{classMRelTableUser_a047d4bacd8b8a83150fe205514bfaa97}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableUser_a047d4bacd8b8a83150fe205514bfaa97}{\_\_construct}}(\$collId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$collId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collection\_users\ WHERE\ coll\_id=\$collId"{}});}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\$o=\$sqls-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRUser}{MRTRUser}}(\$o-\/>user\_id);}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00033}\mbox{\hyperlink{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}{store}}(\$collId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$collId)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ collection\_users\ WHERE\ coll\_id=\$collId"{}};}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\$sql))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>items\ as\ \$item)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\$item-\/>store(\$collId))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00049}\mbox{\hyperlink{classMRelTableUser_a08f0bc1c30336c9983b29c97a8f86ff9}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableUser_a08f0bc1c30336c9983b29c97a8f86ff9}{deleteItem}}(\&\$itemModel)\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\$key\ =\ array\_search(\$itemModel,\ \$this-\/>items))\ !==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ unset(\$this-\/>items[\$key]);}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00059}\mbox{\hyperlink{classMRelTableUser_a5efb5dcde452935a8fda7d00e3ce2fbe}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRelTableUser_a5efb5dcde452935a8fda7d00e3ce2fbe}{addItem}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRUser}{MRTRUser}}(0);}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRelTableUser_8php_source_l00062}00062\ \}}
+
+\end{DoxyCode}

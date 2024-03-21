@@ -1,0 +1,280 @@
+\doxysection{MDevice Class Reference}
+\hypertarget{classMDevice}{}\label{classMDevice}\index{MDevice@{MDevice}}
+
+
+Model for collection object.  
+
+
+Inheritance diagram for MDevice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMDevice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDevice_a1340871f436b81e1f225567b6cce4e79}{\+\_\+\+\_\+construct}} (\$id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMDevice_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of device loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}}
+\begin{DoxyCompactList}\small\item\em Name of device loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_ac319193077976bb217112e5a7b7b8022}{\$location}}
+\begin{DoxyCompactList}\small\item\em Physical location of device loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_aaa0ac04a1bb5fb136941ff1e73d71c66}{\$gateway\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of gateway used for communication with device, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_a7053d2e0b9d626b7657a8f5077a64879}{\$created}}
+\begin{DoxyCompactList}\small\item\em Timestamp of moment of creation of device in the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_a9a0cfe3b5f3aca6432a49ba66dfea8fc}{\$last\+Changed}}
+\begin{DoxyCompactList}\small\item\em Timestamp of last update to the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMDevice_a8bc25c68288d47f6c1dde6f82c6549f6}{\$collections}}
+\begin{DoxyCompactList}\small\item\em List of models of every collection this device is a part of. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for collection object. 
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00006}{6}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMDevice_a1340871f436b81e1f225567b6cce4e79}\label{classMDevice_a1340871f436b81e1f225567b6cce4e79} 
+\index{MDevice@{MDevice}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of device in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00052}{52}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMDevice_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMDevice_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MDevice@{MDevice}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00118}{118}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MDevice@{MDevice}!delete@{delete}}
+\index{delete@{delete}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00104}{104}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\index{MDevice@{MDevice}!store@{store}}
+\index{store@{store}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00073}{73}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_a02d2c9c72b394f734cea3181fc76719e}\label{classMDevice_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MDevice@{MDevice}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00095}{95}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMDevice_a8bc25c68288d47f6c1dde6f82c6549f6}\label{classMDevice_a8bc25c68288d47f6c1dde6f82c6549f6} 
+\index{MDevice@{MDevice}!\$collections@{\$collections}}
+\index{\$collections@{\$collections}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$collections}{\$collections}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMRelTableCollection}{MRel\+Table\+Collection}} \$collections}
+
+
+
+List of models of every collection this device is a part of. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00041}{41}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_a7053d2e0b9d626b7657a8f5077a64879}\label{classMDevice_a7053d2e0b9d626b7657a8f5077a64879} 
+\index{MDevice@{MDevice}!\$created@{\$created}}
+\index{\$created@{\$created}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$created}{\$created}}
+{\footnotesize\ttfamily \$created}
+
+
+
+Timestamp of moment of creation of device in the database. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00031}{31}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_aaa0ac04a1bb5fb136941ff1e73d71c66}\label{classMDevice_aaa0ac04a1bb5fb136941ff1e73d71c66} 
+\index{MDevice@{MDevice}!\$gatewayId@{\$gatewayId}}
+\index{\$gatewayId@{\$gatewayId}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$gatewayId}{\$gatewayId}}
+{\footnotesize\ttfamily \$gateway\+Id}
+
+
+
+Id of gateway used for communication with device, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00026}{26}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_ae97941710d863131c700f069b109991e}\label{classMDevice_ae97941710d863131c700f069b109991e} 
+\index{MDevice@{MDevice}!\$id@{\$id}}
+\index{\$id@{\$id}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \$id}
+
+
+
+Id of device loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00011}{11}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_a9a0cfe3b5f3aca6432a49ba66dfea8fc}\label{classMDevice_a9a0cfe3b5f3aca6432a49ba66dfea8fc} 
+\index{MDevice@{MDevice}!\$lastChanged@{\$lastChanged}}
+\index{\$lastChanged@{\$lastChanged}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$lastChanged}{\$lastChanged}}
+{\footnotesize\ttfamily \$last\+Changed}
+
+
+
+Timestamp of last update to the device. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00036}{36}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_ac319193077976bb217112e5a7b7b8022}\label{classMDevice_ac319193077976bb217112e5a7b7b8022} 
+\index{MDevice@{MDevice}!\$location@{\$location}}
+\index{\$location@{\$location}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$location}{\$location}}
+{\footnotesize\ttfamily \$location}
+
+
+
+Physical location of device loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00021}{21}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+\Hypertarget{classMDevice_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{classMDevice_ab2fc40d43824ea3e1ce5d86dee0d763b} 
+\index{MDevice@{MDevice}!\$name@{\$name}}
+\index{\$name@{\$name}!MDevice@{MDevice}}
+\doxysubsubsection{\texorpdfstring{\$name}{\$name}}
+{\footnotesize\ttfamily \$name}
+
+
+
+Name of device loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MDevice_8php_source_l00016}{16}} of file \mbox{\hyperlink{MDevice_8php_source}{MDevice.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MDevice_8php}{MDevice.\+php}}\end{DoxyCompactItemize}

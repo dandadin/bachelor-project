@@ -1,0 +1,165 @@
+\doxysection{MRel\+Table\+User Class Reference}
+\hypertarget{classMRelTableUser}{}\label{classMRelTableUser}\index{MRelTableUser@{MRelTableUser}}
+
+
+Model for relative table of users.  
+
+
+Inheritance diagram for MRel\+Table\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRelTableUser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTableUser_a047d4bacd8b8a83150fe205514bfaa97}{\+\_\+\+\_\+construct}} (\$coll\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}{store}} (\$coll\+Id=NULL)
+\begin{DoxyCompactList}\small\item\em If coll\+Id is supplied, removes all records between this collection and any user, and then re-\/adds them using data supplied in POST by user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableUser_a08f0bc1c30336c9983b29c97a8f86ff9}{delete\+Item}} (\&\$item\+Model)
+\begin{DoxyCompactList}\small\item\em Removes one specific row from the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableUser_a5efb5dcde452935a8fda7d00e3ce2fbe}{add\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Adds new default row to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTableUser_ae059f19b48cbf2c902d22db13264bb90}{\$items}} = array()
+\begin{DoxyCompactList}\small\item\em Array of table-\/row models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for relative table of users. 
+
+Used to store list of users that are included in specific collection. 
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRelTableUser_a047d4bacd8b8a83150fe205514bfaa97}\label{classMRelTableUser_a047d4bacd8b8a83150fe205514bfaa97} 
+\index{MRelTableUser@{MRelTableUser}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRelTableUser@{MRelTableUser}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$coll\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$coll\+Id} & Id of collection this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00017}{17}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRelTableUser_a5efb5dcde452935a8fda7d00e3ce2fbe}\label{classMRelTableUser_a5efb5dcde452935a8fda7d00e3ce2fbe} 
+\index{MRelTableUser@{MRelTableUser}!addItem@{addItem}}
+\index{addItem@{addItem}!MRelTableUser@{MRelTableUser}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily add\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds new default row to the table. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00059}{59}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+\Hypertarget{classMRelTableUser_a08f0bc1c30336c9983b29c97a8f86ff9}\label{classMRelTableUser_a08f0bc1c30336c9983b29c97a8f86ff9} 
+\index{MRelTableUser@{MRelTableUser}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!MRelTableUser@{MRelTableUser}}
+\doxysubsubsection{\texorpdfstring{deleteItem()}{deleteItem()}}
+{\footnotesize\ttfamily delete\+Item (\begin{DoxyParamCaption}\item[{\&}]{\$item\+Model }\end{DoxyParamCaption})}
+
+
+
+Removes one specific row from the table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classMRTRUser}{MRTRUser} & {\em \$item\+Model} & Model of the deleted row. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00049}{49}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+\Hypertarget{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}\label{classMRelTableUser_a42c299d5822c331fa62331a75427aa59} 
+\index{MRelTableUser@{MRelTableUser}!store@{store}}
+\index{store@{store}!MRelTableUser@{MRelTableUser}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$coll\+Id = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+If coll\+Id is supplied, removes all records between this collection and any user, and then re-\/adds them using data supplied in POST by user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$coll\+Id} & Id of collection this model is created for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00033}{33}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRelTableUser_ae059f19b48cbf2c902d22db13264bb90}\label{classMRelTableUser_ae059f19b48cbf2c902d22db13264bb90} 
+\index{MRelTableUser@{MRelTableUser}!\$items@{\$items}}
+\index{\$items@{\$items}!MRelTableUser@{MRelTableUser}}
+\doxysubsubsection{\texorpdfstring{\$items}{\$items}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMRTRUser}{MRTRUser}} \$items = array()}
+
+
+
+Array of table-\/row models. 
+
+One table-\/row corresponds to one user. 
+
+Definition at line \mbox{\hyperlink{MRelTableUser_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRelTableUser_8php_source}{MRel\+Table\+User.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MRelTableUser_8php}{MRel\+Table\+User.\+php}}\end{DoxyCompactItemize}

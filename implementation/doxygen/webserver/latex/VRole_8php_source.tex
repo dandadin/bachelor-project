@@ -1,0 +1,23 @@
+\doxysection{VRole.\+php}
+\hypertarget{VRole_8php_source}{}\label{VRole_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VRole.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VRole.php}}
+\mbox{\hyperlink{VRole_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00003}\mbox{\hyperlink{classVRole}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVRole}{VRole}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVList}{VList}}\ \{}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00004}\mbox{\hyperlink{classVRole_a7c78214cc4945f69a676b9b8b2afa52b}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVRole_a7c78214cc4945f69a676b9b8b2afa52b}{\_\_construct}}(\textcolor{keywordtype}{int}\ \$roleId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$sql=\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ roles\ WHERE\ id="{}}.\$roleId;}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Role:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\$o-\/>name,\ \textcolor{stringliteral}{"{}/edit.php?type=ro\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}\ (id=\$o-\/>id,name=\$o-\/>name,canEditGroups=\$o-\/>can\_edit\_groups,canEditUsers=\$o-\/>can\_edit\_users)"{}}));}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}delete"{}},\ \textcolor{stringliteral}{"{}/delete.php?type=ro\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$sqls-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VRole_8php_source_l00017}00017\ \}}
+
+\end{DoxyCode}

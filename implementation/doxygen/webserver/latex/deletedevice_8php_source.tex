@@ -1,0 +1,18 @@
+\doxysection{deletedevice.\+php}
+\hypertarget{deletedevice_8php_source}{}\label{deletedevice_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/deletedevice.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/deletedevice.php}}
+\mbox{\hyperlink{deletedevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00002}00002\ require\_once\ \textcolor{stringliteral}{"{}../app/library.php"{}};}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00003}00003\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classDB}{DB}}();}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00005}00005\ \textcolor{keywordflow}{if}(isset(\$\_GET[\textcolor{stringliteral}{"{}id"{}}]))\ \{}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00006}00006\ \ \ \ \ \$id\ =\ \$\_GET[\textcolor{stringliteral}{"{}id"{}}];}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00007}00007\ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h3>ID\ je\ "{}}.\$id.\textcolor{stringliteral}{"{}</h3>"{}};}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{editdevice_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVPageDeleteDevice}{VPageDeleteDevice}}(\$id);}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{editdevice_8php_a0a44e6760141442bb439b1ab1395d8ff}{\$page}}-\/>render();}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00010}\mbox{\hyperlink{deletedevice_8php_ad37dac5d268c7c6f2489ec6dff376510}{00010}}\ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00011}00011\ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<h3>ID\ NENI</h3>"{}};}
+\DoxyCodeLine{\Hypertarget{deletedevice_8php_source_l00012}00012\ \}}
+
+\end{DoxyCode}

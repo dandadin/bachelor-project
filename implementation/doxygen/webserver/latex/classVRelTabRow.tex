@@ -1,0 +1,132 @@
+\doxysection{VRel\+Tab\+Row Class Reference}
+\hypertarget{classVRelTabRow}{}\label{classVRelTabRow}\index{VRelTabRow@{VRelTabRow}}
+
+
+View for default table-\/row of relative table.  
+
+
+Inheritance diagram for VRel\+Tab\+Row\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classVRelTabRow}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVRelTabRow_addbc1491d5e10e3a8ae50c809ec47c1b}{\+\_\+\+\_\+construct}} (\&\$item\+Model, \&\$table\+Model)
+\begin{DoxyCompactList}\small\item\em Constructs delete button view and adds it to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVRelTabRow_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\begin{DoxyCompactList}\small\item\em Renders single cell of the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\item 
+\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for default table-\/row of relative table. 
+
+This table\textquotesingle{}s rows can be added or deleted by user. 
+
+Definition at line \mbox{\hyperlink{VRelTabRow_8php_source_l00006}{6}} of file \mbox{\hyperlink{VRelTabRow_8php_source}{VRel\+Tab\+Row.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVRelTabRow_addbc1491d5e10e3a8ae50c809ec47c1b}\label{classVRelTabRow_addbc1491d5e10e3a8ae50c809ec47c1b} 
+\index{VRelTabRow@{VRelTabRow}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!VRelTabRow@{VRelTabRow}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$item\+Model,  }\item[{\&}]{\$table\+Model }\end{DoxyParamCaption})}
+
+
+
+Constructs delete button view and adds it to the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$item\+Model} & This model is passed to on-\/click method as an argument. Should be an instance of MRTR$<$type$>$. \\
+\hline
+{\em \$table\+Model} & A method of this model will be called when the button is pressed. Should be an instance of MRel\+Table$<$type$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classVRTRCollection_addbc1491d5e10e3a8ae50c809ec47c1b}{VRTRCollection}}, and \mbox{\hyperlink{classVRTRUser_addbc1491d5e10e3a8ae50c809ec47c1b}{VRTRUser}}.
+
+
+
+Definition at line \mbox{\hyperlink{VRelTabRow_8php_source_l00013}{13}} of file \mbox{\hyperlink{VRelTabRow_8php_source}{VRel\+Tab\+Row.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVRelTabRow_a14a421516c24b7d17bbeb0f2d325750d}\label{classVRelTabRow_a14a421516c24b7d17bbeb0f2d325750d} 
+\index{VRelTabRow@{VRelTabRow}!renderItem@{renderItem}}
+\index{renderItem@{renderItem}!VRelTabRow@{VRelTabRow}}
+\doxysubsubsection{\texorpdfstring{renderItem()}{renderItem()}}
+{\footnotesize\ttfamily render\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVView}{VView}}}]{\$v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Renders single cell of the table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classVView}{VView} & {\em \$v} & View of single cell of table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{VList}}.
+
+
+
+Definition at line \mbox{\hyperlink{VRelTabRow_8php_source_l00022}{22}} of file \mbox{\hyperlink{VRelTabRow_8php_source}{VRel\+Tab\+Row.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VRelTabRow_8php}{VRel\+Tab\+Row.\+php}}\end{DoxyCompactItemize}

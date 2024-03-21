@@ -1,0 +1,23 @@
+\doxysection{VForm\+Collection.\+php}
+\hypertarget{VFormCollection_8php_source}{}\label{VFormCollection_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VFormCollection.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VFormCollection.php}}
+\mbox{\hyperlink{VFormCollection_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00003}\mbox{\hyperlink{classVFormCollection}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVFormCollection}{VFormCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVForm}{VForm}}\ \{}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00004}\mbox{\hyperlink{classVFormCollection_a61cc4fd27dff496fc2cb2b400beacf8b}{00004}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormCollection_a61cc4fd27dff496fc2cb2b400beacf8b}{FormId}}\ =\ \textcolor{stringliteral}{"{}editCollection"{}};}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00005}\mbox{\hyperlink{classVFormCollection_aa79a0809d73a53f7a593685678c08569}{00005}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormCollection_aa79a0809d73a53f7a593685678c08569}{ModelClass}}\ =\ MCollection::class;}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00007}\mbox{\hyperlink{classVFormCollection_a047d4bacd8b8a83150fe205514bfaa97}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVFormCollection_a047d4bacd8b8a83150fe205514bfaa97}{\_\_construct}}(\$collId)\ \{}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$collId);}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldText}{VFormFieldText}}(\$this-\/>model-\/>name,\ \textcolor{stringliteral}{"{}name"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdCollectionDomains}{VFfDdCollectionDomains}}(\$this-\/>model-\/>domainId,\ \textcolor{stringliteral}{"{}domain"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVRTUser}{VRTUser}}(\$this-\/>model-\/>users,\ \textcolor{stringliteral}{"{}users"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldButtonSubmit}{VFormFieldButtonSubmit}}(\$this-\/>model,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Odesli!"{}}),\ \textcolor{stringliteral}{"{}odesilaci\ buttonek"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VFormCollection_8php_source_l00017}00017\ \}}
+
+\end{DoxyCode}

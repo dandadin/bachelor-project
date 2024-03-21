@@ -1,0 +1,23 @@
+\doxysection{VGateway.\+php}
+\hypertarget{VGateway_8php_source}{}\label{VGateway_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VGateway.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VGateway.php}}
+\mbox{\hyperlink{VGateway_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00003}\mbox{\hyperlink{classVGateway}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVGateway}{VGateway}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVList}{VList}}\ \{}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00004}\mbox{\hyperlink{classVGateway_abdf647a6a98c1d9fab325438b63aae25}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVGateway_abdf647a6a98c1d9fab325438b63aae25}{\_\_construct}}(\textcolor{keywordtype}{int}\ \$gatewayId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$sql=\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ gateways\ WHERE\ id="{}}.\$gatewayId;}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Gateway:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\$o-\/>name,\ \textcolor{stringliteral}{"{}/edit.php?type=ga\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}\ (id=\$o-\/>id,name=\$o-\/>name,address=\$o-\/>address)"{}}));}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}delete"{}},\ \textcolor{stringliteral}{"{}/delete.php?type=ga\&id=\$o-\/>id"{}}));}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$sqls-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VGateway_8php_source_l00017}00017\ \}}
+
+\end{DoxyCode}

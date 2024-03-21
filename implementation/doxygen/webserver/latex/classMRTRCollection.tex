@@ -1,0 +1,122 @@
+\doxysection{MRTRCollection Class Reference}
+\hypertarget{classMRTRCollection}{}\label{classMRTRCollection}\index{MRTRCollection@{MRTRCollection}}
+
+
+Model of table-\/row of relative table of collections.  
+
+
+Inheritance diagram for MRTRCollection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRTRCollection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRCollection_a047d4bacd8b8a83150fe205514bfaa97}{\+\_\+\+\_\+construct}} (\$coll\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}{store}} (\$device\+Id=NULL)
+\begin{DoxyCompactList}\small\item\em If device\+Id is specified, inserts this row into database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}{\$coll\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of collection this row used for creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model of table-\/row of relative table of collections. 
+
+Stores single collection. 
+
+Definition at line \mbox{\hyperlink{MRTRCollection_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRTRCollection_8php_source}{MRTRCollection.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTRCollection_a047d4bacd8b8a83150fe205514bfaa97}\label{classMRTRCollection_a047d4bacd8b8a83150fe205514bfaa97} 
+\index{MRTRCollection@{MRTRCollection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTRCollection@{MRTRCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$coll\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$coll\+Id} & Id of device this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTRCollection_8php_source_l00017}{17}} of file \mbox{\hyperlink{MRTRCollection_8php_source}{MRTRCollection.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}\label{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74} 
+\index{MRTRCollection@{MRTRCollection}!store@{store}}
+\index{store@{store}!MRTRCollection@{MRTRCollection}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$device\+Id = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+If device\+Id is specified, inserts this row into database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$device\+Id} & Id of device this collection should be paired with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRTRCollection_8php_source_l00026}{26}} of file \mbox{\hyperlink{MRTRCollection_8php_source}{MRTRCollection.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}\label{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0} 
+\index{MRTRCollection@{MRTRCollection}!\$collId@{\$collId}}
+\index{\$collId@{\$collId}!MRTRCollection@{MRTRCollection}}
+\doxysubsubsection{\texorpdfstring{\$collId}{\$collId}}
+{\footnotesize\ttfamily \$coll\+Id}
+
+
+
+Id of collection this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRCollection_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRTRCollection_8php_source}{MRTRCollection.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MRTRCollection_8php}{MRTRCollection.\+php}}\end{DoxyCompactItemize}

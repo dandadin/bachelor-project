@@ -1,0 +1,19 @@
+\doxysection{VRTRCollection.\+php}
+\hypertarget{VRTRCollection_8php_source}{}\label{VRTRCollection_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VRTRCollection.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VRTRCollection.php}}
+\mbox{\hyperlink{VRTRCollection_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00006}\mbox{\hyperlink{classVRTRCollection}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVRTRCollection}{VRTRCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVRelTabRow}{VRelTabRow}}\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00013}\mbox{\hyperlink{classVRTRCollection_addbc1491d5e10e3a8ae50c809ec47c1b}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVRTRCollection_addbc1491d5e10e3a8ae50c809ec47c1b}{\_\_construct}}(\&\$itemModel,\ \&\$tableModel)\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collections\ WHERE\ id=\$itemModel-\/>collId"{}});}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$o)\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\$o-\/>name));}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldDropdownCollection}{VFormFieldDropdownCollection}}(\$itemModel-\/>collId));}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$itemModel,\ \$tableModel);}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VRTRCollection_8php_source_l00021}00021\ \}}
+
+\end{DoxyCode}

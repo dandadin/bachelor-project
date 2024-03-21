@@ -1,0 +1,22 @@
+\doxysection{VDomain\+List.\+php}
+\hypertarget{VDomainList_8php_source}{}\label{VDomainList_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VDomainList.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VDomainList.php}}
+\mbox{\hyperlink{VDomainList_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00003}\mbox{\hyperlink{classVDomainList}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVDomainList}{VDomainList}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVList}{VList}}\ \{}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00004}\mbox{\hyperlink{classVDomainList_a31050dddf820d8b5e8517bfe3ace6a09}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVDomainList_a31050dddf820d8b5e8517bfe3ace6a09}{\_\_construct}}(\$filter\ =\ \textcolor{stringliteral}{"{}1=1"{}})\ \{\ \textcolor{comment}{//\ model\ is\ an\ SQL\ condition}}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$sql=\textcolor{stringliteral}{"{}SELECT\ id\ FROM\ domains\ WHERE\ "{}}.\$filter;}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$o=\$sqls-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVDomain}{VDomain}}(\$o-\/>id));}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<br>"{}}));}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$sqls-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{VDomainList_8php_source_l00016}00016\ \}}
+
+\end{DoxyCode}

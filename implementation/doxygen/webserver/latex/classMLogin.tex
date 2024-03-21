@@ -1,0 +1,148 @@
+\doxysection{MLogin Class Reference}
+\hypertarget{classMLogin}{}\label{classMLogin}\index{MLogin@{MLogin}}
+
+
+Model for login object.  
+
+
+Inheritance diagram for MLogin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMLogin}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Tries to find inputted data in database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Used for logging off. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMLogin_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts checking process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMLogin_afc31993e855f9631572adfedcfe6f34b}{\$login}} = \"{}\"{}
+\item 
+\mbox{\hyperlink{classMLogin_a57a4419fcafc5924ae77e7c35528cbc8}{\$pwd\+Hash}} = \"{}\"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for login object. 
+
+This object is used on login page. 
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00006}{6}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMLogin_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMLogin_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MLogin@{MLogin}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts checking process. 
+
+Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00057}{57}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+\Hypertarget{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MLogin@{MLogin}!delete@{delete}}
+\index{delete@{delete}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Used for logging off. 
+
+Removes SESSION variable login\+Id. \begin{DoxyReturn}{Returns}
+bool Removal was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00047}{47}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+\Hypertarget{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\index{MLogin@{MLogin}!store@{store}}
+\index{store@{store}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Tries to find inputted data in database. 
+
+If successful, sets SESSION variable \"{}login\+Id\"{} to id of logged-\/in user. If not, unsets this SESSION variable. 
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Check was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00023}{23}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMLogin_afc31993e855f9631572adfedcfe6f34b}\label{classMLogin_afc31993e855f9631572adfedcfe6f34b} 
+\index{MLogin@{MLogin}!\$login@{\$login}}
+\index{\$login@{\$login}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{\$login}{\$login}}
+{\footnotesize\ttfamily \$login = \"{}\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00010}{10}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+\Hypertarget{classMLogin_a57a4419fcafc5924ae77e7c35528cbc8}\label{classMLogin_a57a4419fcafc5924ae77e7c35528cbc8} 
+\index{MLogin@{MLogin}!\$pwdHash@{\$pwdHash}}
+\index{\$pwdHash@{\$pwdHash}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{\$pwdHash}{\$pwdHash}}
+{\footnotesize\ttfamily \$pwd\+Hash = \"{}\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00014}{14}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MLogin_8php}{MLogin.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\doxysection{MRole Class Reference}
+\hypertarget{classMRole}{}\label{classMRole}\index{MRole@{MRole}}
+
+
+Model for role object.  
+
+
+Inheritance diagram for MRole\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRole}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRole_a1340871f436b81e1f225567b6cce4e79}{\+\_\+\+\_\+construct}} (\$id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRole_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of role loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}}
+\begin{DoxyCompactList}\small\item\em Name of role loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_a47a22d0a403af5a2dec57c438a39a902}{\$can\+Edit\+Groups}}
+\begin{DoxyCompactList}\small\item\em Boolean flag determining if this role can edit groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRole_acb471d09d889d471e88ec42ef0e92557}{\$can\+Edit\+Users}}
+\begin{DoxyCompactList}\small\item\em Boolean flag determining if this role can edit users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for role object. 
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRole_a1340871f436b81e1f225567b6cce4e79}\label{classMRole_a1340871f436b81e1f225567b6cce4e79} 
+\index{MRole@{MRole}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of role in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00037}{37}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRole_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMRole_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MRole@{MRole}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00098}{98}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMRole_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MRole@{MRole}!delete@{delete}}
+\index{delete@{delete}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00084}{84}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMRole_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\index{MRole@{MRole}!store@{store}}
+\index{store@{store}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00055}{55}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_a02d2c9c72b394f734cea3181fc76719e}\label{classMRole_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MRole@{MRole}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00075}{75}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRole_a47a22d0a403af5a2dec57c438a39a902}\label{classMRole_a47a22d0a403af5a2dec57c438a39a902} 
+\index{MRole@{MRole}!\$canEditGroups@{\$canEditGroups}}
+\index{\$canEditGroups@{\$canEditGroups}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{\$canEditGroups}{\$canEditGroups}}
+{\footnotesize\ttfamily \$can\+Edit\+Groups}
+
+
+
+Boolean flag determining if this role can edit groups. 
+
+Loaded from database. 
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00021}{21}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_acb471d09d889d471e88ec42ef0e92557}\label{classMRole_acb471d09d889d471e88ec42ef0e92557} 
+\index{MRole@{MRole}!\$canEditUsers@{\$canEditUsers}}
+\index{\$canEditUsers@{\$canEditUsers}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{\$canEditUsers}{\$canEditUsers}}
+{\footnotesize\ttfamily \$can\+Edit\+Users}
+
+
+
+Boolean flag determining if this role can edit users. 
+
+Loaded from database. 
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00026}{26}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_ae97941710d863131c700f069b109991e}\label{classMRole_ae97941710d863131c700f069b109991e} 
+\index{MRole@{MRole}!\$id@{\$id}}
+\index{\$id@{\$id}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \$id}
+
+
+
+Id of role loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+\Hypertarget{classMRole_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{classMRole_ab2fc40d43824ea3e1ce5d86dee0d763b} 
+\index{MRole@{MRole}!\$name@{\$name}}
+\index{\$name@{\$name}!MRole@{MRole}}
+\doxysubsubsection{\texorpdfstring{\$name}{\$name}}
+{\footnotesize\ttfamily \$name}
+
+
+
+Name of role loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRole_8php_source_l00016}{16}} of file \mbox{\hyperlink{MRole_8php_source}{MRole.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MRole_8php}{MRole.\+php}}\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\doxysection{MRTRCollection.\+php}
+\hypertarget{MRTRCollection_8php_source}{}\label{MRTRCollection_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRTRCollection.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MRTRCollection.php}}
+\mbox{\hyperlink{MRTRCollection_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00006}\mbox{\hyperlink{classMRTRCollection}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRCollection}{MRTRCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00011}\mbox{\hyperlink{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}{\$collId}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00017}\mbox{\hyperlink{classMRTRCollection_a047d4bacd8b8a83150fe205514bfaa97}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRCollection_a047d4bacd8b8a83150fe205514bfaa97}{\_\_construct}}(\mbox{\hyperlink{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}{\$collId}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$this-\/>collId\ =\ \mbox{\hyperlink{classMRTRCollection_a90868d5b80c7c4c61fce23111def48a0}{\$collId}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00026}\mbox{\hyperlink{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}{store}}(\$deviceId\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$deviceId)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ collection\_devices\ (coll\_id,\ device\_id)\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ id,:deviceId\ FROM\ collections\ WHERE\ id=:collId"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([\textcolor{stringliteral}{"{}deviceId"{}}\ =>\ \$deviceId,\ \textcolor{stringliteral}{"{}collId"{}}\ =>\ \$this-\/>collId]))}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollection_8php_source_l00039}00039\ \}}
+
+\end{DoxyCode}

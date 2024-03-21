@@ -1,0 +1,70 @@
+\doxysection{MChannel.\+php}
+\hypertarget{MChannel_8php_source}{}\label{MChannel_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MChannel.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MChannel.php}}
+\mbox{\hyperlink{MChannel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00006}\mbox{\hyperlink{classMChannel}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMChannel}{MChannel}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00011}\mbox{\hyperlink{classMChannel_ae97941710d863131c700f069b109991e}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_ae97941710d863131c700f069b109991e}{\$id}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00016}\mbox{\hyperlink{classMChannel_ab2fc40d43824ea3e1ce5d86dee0d763b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00021}\mbox{\hyperlink{classMChannel_ab19700be224849027add3fdde9222a9a}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_ab19700be224849027add3fdde9222a9a}{\$deviceId}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00029}\mbox{\hyperlink{classMChannel_a6055c72efb237210c1e9e0626df45857}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_a6055c72efb237210c1e9e0626df45857}{\$commType}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00035}\mbox{\hyperlink{classMChannel_a80b1385532c69dc513ebf44d28922c2f}{00035}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_a80b1385532c69dc513ebf44d28922c2f}{\$valueType}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00040}\mbox{\hyperlink{classMChannel_acda38927a520140430ef36e961f70e22}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMChannel_acda38927a520140430ef36e961f70e22}{\$updateFreq}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00045}00045\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00051}\mbox{\hyperlink{classMChannel_a1340871f436b81e1f225567b6cce4e79}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMChannel_a1340871f436b81e1f225567b6cce4e79}{\_\_construct}}(\mbox{\hyperlink{classMChannel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMChannel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ channels\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$o)\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$o-\/>id;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>name\ =\ \$o-\/>name;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>deviceId\ =\ \$o-\/>device\_id;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>commType\ =\ \$o-\/>comm\_type;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>valueType\ =\ \$o-\/>value\_type;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>updateFreq\ =\ \$o-\/>update\_freq;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00070}\mbox{\hyperlink{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}}(\$arg\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!parent::store())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \$sql\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \$sql.=\textcolor{stringliteral}{"{}\ channels\ SET\ name=:name,\ device\_id=:device\_id,\ comm\_type=:comm\_type,"{}}.}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ value\_type=:value\_type,\ update\_freq=:update\_freq"{}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \$sql.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([\textcolor{stringliteral}{"{}name"{}}\ =>\ \$this-\/>name,\ \textcolor{stringliteral}{"{}device\_id"{}}\ =>\ \$this-\/>deviceId,}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}comm\_type"{}}\ =>\ \$this-\/>commType,\ \textcolor{stringliteral}{"{}value\_type"{}}\ =>\ \$this-\/>valueType,}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}update\_freq"{}}\ =>\ \$this-\/>updateFreq]))}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00092}\mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00101}\mbox{\hyperlink{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}{00101}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\$this-\/>\textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ channels\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\$sql))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00115}\mbox{\hyperlink{classMChannel_ac4c6197ed4b50517efa72f4a50f1a7ab}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMChannel_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}}();}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{MChannel_8php_source_l00120}00120\ \}}
+
+\end{DoxyCode}

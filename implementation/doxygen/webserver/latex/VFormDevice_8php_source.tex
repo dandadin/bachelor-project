@@ -1,0 +1,25 @@
+\doxysection{VForm\+Device.\+php}
+\hypertarget{VFormDevice_8php_source}{}\label{VFormDevice_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VFormDevice.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VFormDevice.php}}
+\mbox{\hyperlink{VFormDevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00003}\mbox{\hyperlink{classVFormDevice}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVFormDevice}{VFormDevice}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVForm}{VForm}}\ \{}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00004}\mbox{\hyperlink{classVFormDevice_a61cc4fd27dff496fc2cb2b400beacf8b}{00004}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormDevice_a61cc4fd27dff496fc2cb2b400beacf8b}{FormId}}\ =\ \textcolor{stringliteral}{"{}editDevice"{}};}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00005}\mbox{\hyperlink{classVFormDevice_aa79a0809d73a53f7a593685678c08569}{00005}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormDevice_aa79a0809d73a53f7a593685678c08569}{ModelClass}}\ =\ MDevice::class;}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00007}\mbox{\hyperlink{classVFormDevice_ae53e66405dec54fedc24469a7cd9cb93}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVFormDevice_ae53e66405dec54fedc24469a7cd9cb93}{\_\_construct}}(\$deviceId)\ \{}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$deviceId);}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldText}{VFormFieldText}}(\$this-\/>model-\/>name,\ \textcolor{stringliteral}{"{}name"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldText}{VFormFieldText}}(\$this-\/>model-\/>location,\ \textcolor{stringliteral}{"{}location"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdDeviceGateways}{VFfDdDeviceGateways}}(\$this-\/>model-\/>gatewayId,\ \textcolor{stringliteral}{"{}gateway"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldDateTime}{VFormFieldDateTime}}(\$this-\/>model-\/>lastChanged,\ \textcolor{stringliteral}{"{}last\ changed\ DEMO"{}}));\ \textcolor{comment}{//\ TODO:\ remove\ this}}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVRTCollection}{VRTCollection}}(\$this-\/>model-\/>collections,\ \textcolor{stringliteral}{"{}collections"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldButtonSubmit}{VFormFieldButtonSubmit}}(\$this-\/>model,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Odesli!"{}}),\ \textcolor{stringliteral}{"{}odesilaci\ buttonek"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{VFormDevice_8php_source_l00019}00019\ \}}
+
+\end{DoxyCode}

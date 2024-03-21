@@ -1,0 +1,165 @@
+\doxysection{MRel\+Table\+Collection Class Reference}
+\hypertarget{classMRelTableCollection}{}\label{classMRelTableCollection}\index{MRelTableCollection@{MRelTableCollection}}
+
+
+Model for relative table of collections.  
+
+
+Inheritance diagram for MRel\+Table\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRelTableCollection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTableCollection_ae53e66405dec54fedc24469a7cd9cb93}{\+\_\+\+\_\+construct}} (\$device\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}{store}} (\$device\+Id=NULL)
+\begin{DoxyCompactList}\small\item\em If device\+Id is supplied, removes all records between this device and any collection, and then re-\/adds them using data supplied in POST by user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableCollection_a08f0bc1c30336c9983b29c97a8f86ff9}{delete\+Item}} (\&\$item\+Model)
+\begin{DoxyCompactList}\small\item\em Removes one specific row from the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTableCollection_a5efb5dcde452935a8fda7d00e3ce2fbe}{add\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Adds new default row to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTableCollection_a8a1548abcd30bd45a0718911f532c1d1}{\$items}} = array()
+\begin{DoxyCompactList}\small\item\em Array of table-\/row models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for relative table of collections. 
+
+Used to store list of collections that include specific device. 
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRelTableCollection_ae53e66405dec54fedc24469a7cd9cb93}\label{classMRelTableCollection_ae53e66405dec54fedc24469a7cd9cb93} 
+\index{MRelTableCollection@{MRelTableCollection}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRelTableCollection@{MRelTableCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$device\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$device\+Id} & Id of device this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00017}{17}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRelTableCollection_a5efb5dcde452935a8fda7d00e3ce2fbe}\label{classMRelTableCollection_a5efb5dcde452935a8fda7d00e3ce2fbe} 
+\index{MRelTableCollection@{MRelTableCollection}!addItem@{addItem}}
+\index{addItem@{addItem}!MRelTableCollection@{MRelTableCollection}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily add\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds new default row to the table. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00059}{59}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+\Hypertarget{classMRelTableCollection_a08f0bc1c30336c9983b29c97a8f86ff9}\label{classMRelTableCollection_a08f0bc1c30336c9983b29c97a8f86ff9} 
+\index{MRelTableCollection@{MRelTableCollection}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!MRelTableCollection@{MRelTableCollection}}
+\doxysubsubsection{\texorpdfstring{deleteItem()}{deleteItem()}}
+{\footnotesize\ttfamily delete\+Item (\begin{DoxyParamCaption}\item[{\&}]{\$item\+Model }\end{DoxyParamCaption})}
+
+
+
+Removes one specific row from the table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classMRTRCollection}{MRTRCollection} & {\em \$item\+Model} & Model of the deleted row. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00049}{49}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+\Hypertarget{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}\label{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74} 
+\index{MRelTableCollection@{MRelTableCollection}!store@{store}}
+\index{store@{store}!MRelTableCollection@{MRelTableCollection}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$device\+Id = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+If device\+Id is supplied, removes all records between this device and any collection, and then re-\/adds them using data supplied in POST by user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$device\+Id} & Id of device this model is created for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00033}{33}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRelTableCollection_a8a1548abcd30bd45a0718911f532c1d1}\label{classMRelTableCollection_a8a1548abcd30bd45a0718911f532c1d1} 
+\index{MRelTableCollection@{MRelTableCollection}!\$items@{\$items}}
+\index{\$items@{\$items}!MRelTableCollection@{MRelTableCollection}}
+\doxysubsubsection{\texorpdfstring{\$items}{\$items}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMRTRCollection}{MRTRCollection}} \$items = array()}
+
+
+
+Array of table-\/row models. 
+
+One table-\/row corresponds to one collection. 
+
+Definition at line \mbox{\hyperlink{MRelTableCollection_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRelTableCollection_8php_source}{MRel\+Table\+Collection.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MRelTableCollection_8php}{MRel\+Table\+Collection.\+php}}\end{DoxyCompactItemize}

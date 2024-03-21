@@ -1,0 +1,108 @@
+\doxysection{MModel Class Reference}
+\hypertarget{classMModel}{}\label{classMModel}\index{MModel@{MModel}}
+
+
+Universal model class template, that is used for storing objects between loads.  
+
+
+Inheritance diagram for MModel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classMModel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Universal model class template, that is used for storing objects between loads. 
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00005}{5}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMModel_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MModel@{MModel}!delete@{delete}}
+\index{delete@{delete}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}{MChannel}}, \mbox{\hyperlink{classMCollection_ab0ead11b6d715bce13bdec33c24e5d05}{MCollection}}, \mbox{\hyperlink{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}{MDevice}}, \mbox{\hyperlink{classMDomain_ab0ead11b6d715bce13bdec33c24e5d05}{MDomain}}, \mbox{\hyperlink{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05}{MGateway}}, \mbox{\hyperlink{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}{MLogin}}, \mbox{\hyperlink{classMRole_ab0ead11b6d715bce13bdec33c24e5d05}{MRole}}, and \mbox{\hyperlink{classMUser_ab0ead11b6d715bce13bdec33c24e5d05}{MUser}}.
+
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00013}{13}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+\Hypertarget{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}\label{classMModel_a7ea8510f21be99e0602d0cf7f452b15e} 
+\index{MModel@{MModel}!persist@{persist}}
+\index{persist@{persist}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{persist()}{persist()}}
+{\footnotesize\ttfamily persist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used to store data from model to database. 
+
+If storing fails, reverts back. \begin{DoxyReturn}{Returns}
+bool Storing was successful 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00018}{18}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+\Hypertarget{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\index{MModel@{MModel}!store@{store}}
+\index{store@{store}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MChannel}}, \mbox{\hyperlink{classMCollection_aae32a9dc4dc7eefbcb86bd32477cb67c}{MCollection}}, \mbox{\hyperlink{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}{MDevice}}, \mbox{\hyperlink{classMDomain_aae32a9dc4dc7eefbcb86bd32477cb67c}{MDomain}}, \mbox{\hyperlink{classMGateway_aae32a9dc4dc7eefbcb86bd32477cb67c}{MGateway}}, \mbox{\hyperlink{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}{MLogin}}, \mbox{\hyperlink{classMRole_aae32a9dc4dc7eefbcb86bd32477cb67c}{MRole}}, \mbox{\hyperlink{classMUser_aae32a9dc4dc7eefbcb86bd32477cb67c}{MUser}}, \mbox{\hyperlink{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}{MRel\+Table\+User}}, \mbox{\hyperlink{classMRTRUser_a42c299d5822c331fa62331a75427aa59}{MRTRUser}}, \mbox{\hyperlink{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}{MRel\+Table\+Collection}}, and \mbox{\hyperlink{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}{MRTRCollection}}.
+
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00006}{6}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+\Hypertarget{classMModel_a02d2c9c72b394f734cea3181fc76719e}\label{classMModel_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MModel@{MModel}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Usually commits changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{MChannel}}, \mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{MCollection}}, \mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{MDevice}}, \mbox{\hyperlink{classMDomain_a02d2c9c72b394f734cea3181fc76719e}{MDomain}}, \mbox{\hyperlink{classMGateway_a02d2c9c72b394f734cea3181fc76719e}{MGateway}}, \mbox{\hyperlink{classMRole_a02d2c9c72b394f734cea3181fc76719e}{MRole}}, and \mbox{\hyperlink{classMUser_a02d2c9c72b394f734cea3181fc76719e}{MUser}}.
+
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00011}{11}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/model/\mbox{\hyperlink{MModel_8php}{MModel.\+php}}\end{DoxyCompactItemize}
