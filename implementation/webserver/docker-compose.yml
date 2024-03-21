@@ -12,16 +12,13 @@ services:
     networks:
       - internal
   php:
-    image: php:fpm-alpine
+    image: dandadin/iothome-php:8.3.4
+#    image: test:latest
     restart: always
     networks:
       - internal
     volumes:
       - ./php:/var/www/html/
-    command:
-      - sh
-      - -c
-      - "docker-php-ext-install pdo pdo_mysql; exec php-fpm"
   db:
     image: mysql:8.0.32
     restart: always
