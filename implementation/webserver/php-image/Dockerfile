@@ -5,5 +5,4 @@ COPY composer.json /var/www/html/composer.json
 RUN docker-php-ext-install pdo pdo_mysql \
     && composer require php-mqtt/client \
     && composer update \
-    && composer install \
-    && echo Completed.
+    && composer install
