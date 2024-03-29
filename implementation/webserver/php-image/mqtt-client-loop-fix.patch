@@ -1,0 +1,22 @@
+--- php-mqtt.old/client/src/MqttClient.php
++++ php-mqtt/client/src/MqttClient.php
+@@ -614,13 +614,13 @@
+                 if ($this->allQueuesAreEmpty()) {
+                     break;
+                 }
+-
+-                // The time limit is reached. This most likely means the outgoing queues could not be emptied in time.
+-                // Probably the server did not respond with an acknowledgement.
+-                if ($queueWaitLimit !== null && (microtime(true) - $loopStartedAt) > $queueWaitLimit) {
+-                    break;
+-                }
+             }
++            // The time limit is reached. This most likely means the outgoing queues could not be emptied in time.
++            // Probably the server did not respond with an acknowledgement.
++            if ($queueWaitLimit !== null && (microtime(true) - $loopStartedAt) > $queueWaitLimit) {
++                break;
++            }
++            
+         }
+     }
+ 
