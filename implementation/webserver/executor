@@ -1,8 +1,19 @@
 #!/bin/sh
+
+PORT=9999	# trigger port
+
+nc -kl  -p $PORT -e kill -USR1 $$ &	# TCP
+nc -klu -p $PORT -e kill -USR1 $$ &	# UDP
+
+trap 'echo TRIGGER;kill $sl_pid' USR1	# signal from nc
+trap 'exit' TERM			# graceful shutdown
+
 while true
 do
-	DELAY=$(wget -O - -q http://nginx/execute)
-	[ -z "$DELAY" ] && DELAY=1
-	echo "ZZZzzzz...  sleeping, delay $DELAY s"
-	sleep $DELAY
+   echo "[$$]sleeping...."
+   DELAY=10
+#  DELAY=$(wget -O - -q http://nginx/execute)
+   sleep $DELAY &
+   sl_pid=$!
+   wait $sl_pid
 done
