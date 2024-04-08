@@ -10,7 +10,7 @@ class VTable extends VList {
      * @param $label Not used.
      */
     public function __construct($heading, $removeCol = "", $label = NULL) {
-        $this->add(new VTableHeading($heading, $removeCol));
+        if ($heading) $this->add(new VTableHeading($heading, $removeCol));
     }
     /**
      * Renders single row of the table.

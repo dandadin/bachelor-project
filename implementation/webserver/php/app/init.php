@@ -1,10 +1,12 @@
 <?php
 global $res;
 spl_autoload_register("autoload");
+require "/var/www/vendor/autoload.php";
 
 session_start();
 
 new DB();
+new MQTTWS();
 
 if (isset($res[1])) if($res[1]=="execute") {
     include "../ui/executor.php";

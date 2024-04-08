@@ -28,6 +28,8 @@ button[type=submit] {
     cursor: pointer;
     float: right;
     margin-top: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
     font-weight: bold;
 }
 

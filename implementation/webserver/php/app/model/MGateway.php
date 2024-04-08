@@ -19,6 +19,10 @@ class MGateway extends MObjectModel {
      */
     public $address;
     /**
+     * @var $config Json structure consisting of data describing gateway and its settings. It is loaded from gateway config obtained directly from gateway.
+     */
+    public $config;
+    /**
      * @var $tmpId
      * Id that is used during storing phase, if storing is successful, $id is set to $tmpId.
      */
@@ -63,7 +67,8 @@ class MGateway extends MObjectModel {
             return false;
         }
         if (!$this->id) $this->tmpId = DB::lastInsertId();
-        return true;
+
+        return $this->applyConfig();
     }
 
     /**
@@ -98,6 +103,17 @@ class MGateway extends MObjectModel {
     public function clickedSubmit() {
         if ($this->persist()) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Gateway was saved."));
         else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Gateway could not have been saved!"));
+
+    }
+
+    /**
+     * Starts saving process to database.
+     * Called when button in edit form using this model is pressed. Adds notification to user about result.
+     * @return void
+     */
+    public function clickedLoad() {
+        if (Communicator::loadGatewayConfig($this)) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Gateway config was loaded."));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Gateway config could not have been loaded!"));
     }
 
     /**
@@ -110,5 +126,139 @@ class MGateway extends MObjectModel {
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Gateway was deleted."));
         else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Gateway could not have been saved!"));
         return $ret;
+    }
+
+    /**
+     * Takes loaded gateway config and tries to apply it to MQTT broker and database.
+     * @return bool True if successful.
+     */
+    private function applyConfig() {
+        $sql = "SELECT * FROM devices WHERE name=$this->id";
+        $sqls=DB::query($sql);
+        $o=$sqls->fetchObject();
+
+        if (!$this->config) return true;
+
+        $updatedDevices = array();
+        foreach ($this->config["devices"] as $device) if(!$this->updateOrInsertDevice($device, $updatedDevices)) {
+            error_log("Error: UpdateOrInsert of device(id:".$device["name"]." not successful!");
+            return false;
+        }
+        if(!$this->deleteNotUpdated("SELECT id FROM devices WHERE gateway_id=$this->id", $updatedDevices, "MDevice")) {
+            error_log("Error: DeleteNotUpdated failed!");
+            return false;
+        }
+        MQTTWS::createGW($this->config["address"], $this->config["token"]);
+        return true;
+    }
+
+    /**
+     * Tries to update/insert a device to database, takes data from $device JSON-like array.
+     * @param array $device Imported JSON device config
+     * @param array $updatedDevices Array of booleans indexed by deviceId. Value is TRUE, if the device was mentioned in the config. Used for removing old devices that are no longer present in config (using deleteNotUpdated function).
+     * @return bool True if process was successful
+     */
+    private function updateOrInsertDevice(array $device, array &$updatedDevices) : bool {
+        $sql = "SELECT * FROM devices WHERE name='".$device["name"]."' AND gateway_id=$this->id";
+        $sqls=DB::query($sql);
+        $o=$sqls->fetchObject();
+
+        $sql = $o ? "UPDATE" : "INSERT INTO";
+        $sql.=" devices SET name=:name, location=:location, gateway_id=:gateway_id,"
+            ." last_changed=:last_changed, domain_id=1";
+        if ($o) $sql.=" WHERE id=$o->id";
+        $sqls=DB::prepare($sql);
+
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $device["name"], "location" => $device["location"],
+                "gateway_id" => $this->id,
+                "last_changed" => timetostr(time())]);
+        } catch (PDOException $e) {
+            $res = false;
+            error_log($e->getMessage());
+        }
+        if (!$res) {
+            error_log(get_called_class().": SQL Error.");
+            return false;
+        }
+        $id = ($o ? $o->id : DB::lastInsertId());
+        $updatedDevices[$id] = true;
+
+        $updatedChannels = array();
+        foreach ($device["channels"] as $channel) if(!$this->updateOrInsertChannel($id, $channel, $updatedChannels)) {
+            error_log("Error: UpdateOrInsert of channel(id:".$channel["name"]." not successful!");
+            return false;
+        }
+        return $this->deleteNotUpdated("SELECT id FROM channels WHERE device_id=$id", $updatedChannels, "MChannel");
+    }
+
+    /**
+     * Tries to update/insert a channel to database, takes data from $channel JSON-like array.
+     * @param int $deviceId Id of device this channel should be part of
+     * @param array $channel Imported JSON channel config
+     * @param array $updatedChannels Array of booleans indexed by channelId. Value is TRUE, if the channel was mentioned in the config. Used for removing old channels that are no longer present in config (using deleteNotUpdated function).
+     * @return bool True if process was successful
+     */
+    private function updateOrInsertChannel(int $deviceId, array $channel, array &$updatedChannels) : bool {
+        $sql = "SELECT * FROM channels WHERE name='".$channel["name"]."' AND device_id=$deviceId";
+        $sqls=DB::query($sql);
+        $o=$sqls->fetchObject();
+
+        $sql = $o ? "UPDATE" : "INSERT INTO";
+        $sql.=" channels SET name=:name, device_id=:device_id, comm_type=:comm_type,".
+            " value_type=:value_type, update_freq=:update_freq";
+        if ($o) $sql.=" WHERE id=$o->id";
+        $sqls=DB::prepare($sql);
+
+        $res = true;
+        try {
+            $res = $sqls->execute(["name" => $channel["name"],
+                "device_id" => $deviceId,
+                "comm_type" => $channel["comm"],
+                "value_type" => $channel["value"],
+                "update_freq" => $channel["update_freq"]]);
+        } catch (PDOException $e) {
+            error_log($e->getMessage());
+            $res = false;
+        }
+        if (!$res) {
+            error_log(get_called_class().": SQL Error.");
+            return false;
+        }
+        $id = ($o ? $o->id : DB::lastInsertId());
+        $updatedChannels[$id] = true;
+        return true;
+    }
+
+    /**
+     * Deletes model of type $modelClass with id $id from database.
+     * @param int $id Id of model to be deleted.
+     * @param string $modelClass Model class of model to be deleted.
+     * @return bool True if deletion was successful
+     */
+    private function deleteModel(int $id, string $modelClass) : bool {
+        $model = new $modelClass($id);
+        return $model->delete();
+    }
+
+    /**
+     * Deletes all results of $sql query, that are not also present in the $updatedArray array. Used for removing no-longer-needed records from the database.
+     * @param string $sql SQL query that selects all records to be evaluated.
+     * @param array $updatedArray Array of booleans indexed by Id of records used in $sql query. $updatedArray[$Id]=FALSE if model($Id) should be deleted from database.
+     * @param string $modelClass Model class of records in $sql
+     * @return bool True if everything successful
+     */
+    private function deleteNotUpdated(string $sql, array $updatedArray, string $modelClass) : bool {
+        $sqls=DB::query($sql);
+        while($o=$sqls->fetchObject()) {
+            if (!(isset($updatedArray[$o->id]) && $updatedArray[$o->id] == true)) {
+                if (!$this->deleteModel($o->id, $modelClass)) {
+                    error_log("Error: Deletion of $modelClass(id:$o->id) not successful!");
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
