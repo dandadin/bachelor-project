@@ -1,0 +1,7 @@
+*.so
+*.o
+*.o.d
+bin/*
+src/modules/*
+!src/modules/demo.*
+src/gateway_example_config2.json

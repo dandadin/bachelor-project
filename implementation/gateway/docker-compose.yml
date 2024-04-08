@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  executor:
+    image: busybox:1.36.1
+    command: /executor
+    restart: always
+    networks:
+      - internal
+    volumes:
+      - ./executor:/executor
+      - token:/token
+    ports:
+      - 1883:1883
+      - 9001:9001
+networks:
+  internal:
+    driver: bridge
+volumes:
+  token:
+

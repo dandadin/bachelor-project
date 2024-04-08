@@ -1,0 +1,45 @@
+{
+  "name": "pokus",
+  "address": "A1:B2:C3",
+  "token": "Token123",
+  "devices": [
+    {
+      "name": "automaticke",
+      "location": "Danuv pokoj",
+      "comm_module": "demo",
+      "channels": [
+        {
+          "name": "Zapinani",
+          "comm": 3,
+          "value": 1,
+          "update_freq": 100
+        },
+        {
+          "name": "Barva",
+          "comm": 3,
+          "value": 3,
+          "update_freq": 100
+        }
+      ]
+    },
+    {
+      "name": "automaticke zarizeni 2",
+      "location": "Misin pokoj",
+      "comm_module": "demo",
+      "channels": [
+        {
+          "name": "Vypinani",
+          "comm": 3,
+          "value": 1,
+          "update_freq": 100
+        },
+        {
+          "name": "Barva",
+          "comm": 3,
+          "value": 3,
+          "update_freq": 100
+        }
+      ]
+    }
+  ]
+}
