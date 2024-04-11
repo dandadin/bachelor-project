@@ -53,7 +53,7 @@ class FormContext {
      * @param MObjectModel $model Model of form.
      * @return void
      */
-    public static function setFormModel(string $formId, MObjectModel $model) {
+    public static function setFormModel(string $formId, MModel $model) {
         static::$modelCollection[$formId] = $model;
     }
 

@@ -3,7 +3,7 @@
 /**
  * @brief Model for collection object.
  */
-class MCollection extends MModel {
+class MCollection extends MObjectModel {
     /**
      * @const urlPrefix
      * Used for generating url for this model.
@@ -35,7 +35,6 @@ class MCollection extends MModel {
      * @param $id Id of collection in database.
      */
     public function __construct($id = 0) {
-        parent::__construct();
         if($id) {
             $sqls=DB::query("SELECT * FROM collections WHERE id=$id");
             $o=$sqls->fetchObject();
