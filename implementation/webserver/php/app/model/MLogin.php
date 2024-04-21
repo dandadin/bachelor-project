@@ -39,10 +39,12 @@ class MLogin extends MModel {
         if ($o) {
             header("Location: /");
             $_SESSION["loginId"] = $o->id;
+            self::reloadPerms();
             exit();
         }
         else {
             unset($_SESSION["loginId"]);
+            self::reloadPerms();
             return false;
         }
     }
@@ -52,7 +54,10 @@ class MLogin extends MModel {
      * @return bool Removal was successful.
      */
     public function delete($arg = NULL) {
-        if(isset($_SESSION["loginId"])) unset($_SESSION["loginId"]);
+        if(isset($_SESSION["loginId"])) {
+            unset($_SESSION["loginId"]);
+            self::reloadPerms();
+        }
         return TRUE;
     }
 
@@ -66,5 +71,17 @@ class MLogin extends MModel {
         else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Username or password was wrong!"));
     }
 
-
+    /**
+     * Loads active roles of logged-in user and saves their permissions to $_SESSION["perms"].
+     * @return void
+     */
+    public static function reloadPerms() {
+        if (!isset($_SESSION["loginId"])) {
+            error_log(get_called_class().": No logged in.");
+            $_SESSION["perms"] = new PermissionManager(-1);
+            return;
+        }
+        error_log(get_called_class().": Logged in present.");
+        $_SESSION["perms"] = new PermissionManager($_SESSION["loginId"]);
+    }
 }

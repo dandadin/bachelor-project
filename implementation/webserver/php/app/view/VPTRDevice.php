@@ -16,6 +16,6 @@ class VPTRDevice extends VPTableRow {
         $this->add(new VLink(new VText($o->gname), "/gateway/$o->gateway_id/edit"));
         $this->add(new VText($o->created));
         $this->add(new VText($o->last_changed));
-        parent::__construct("/device/$o->id/delete");
+        parent::__construct($_SESSION["perms"]->checkDomainPerm($o->domain_id, "can_edit_devices") ? "/device/$o->id/delete" : null);
     }
 }

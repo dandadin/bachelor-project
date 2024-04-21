@@ -6,4 +6,8 @@ class VPageEditStep extends VPage {
         $this->add(new VFormStep($stepId));
     }
 
+    public static function checkPermissions(?int $id = null): string {
+        if (!$_SESSION["perms"]->canEditAll()) return "/";
+        return "";
+    }
 }

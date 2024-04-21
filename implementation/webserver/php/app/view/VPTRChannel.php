@@ -16,6 +16,6 @@ class VPTRChannel extends VPTableRow {
         $this->add(new VText($o->comm_type));
         $this->add(new VText($o->value_type));
         $this->add(new VText($o->update_freq));
-        parent::__construct("/channel/$o->id/delete");
+        parent::__construct( $_SESSION["perms"]->checkDomainPerm($o->domid, "can_edit_devices") ? "/channel/$o->id/delete" : null);
     }
 }

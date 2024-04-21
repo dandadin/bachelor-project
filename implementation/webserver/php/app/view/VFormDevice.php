@@ -6,12 +6,13 @@ class VFormDevice extends VForm {
 
     public function __construct($deviceId) {
         parent::__construct($deviceId);
-        $this->add(new VFormFieldText($this->model->name, "Name"));
-        $this->add(new VFormFieldText($this->model->location, "Physical Location"));
-        $this->add(new VFfDdDeviceGateways($this->model->gatewayId, "Gateway"));
-        $this->add(new VFormFieldDateTime($this->model->lastChanged, "last changed DEMO")); // TODO: remove this
-        $this->add(new VRTCollInDevice($this->model->collections, "Collections"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
+        $canEdit = (isset($_SESSION["perms"]->getDomainsByPerm("can_edit_colls")[$this->model->domainId]));
+        $this->add((new VFormFieldText($this->model->name, "Name"))->disable(!$canEdit));
+        $this->add((new VFormFieldText($this->model->location, "Physical Location"))->disable(!$canEdit));
+        $this->add((new VFfDdDeviceGateways($this->model->gatewayId, "Gateway"))->disable(!$canEdit));
+        //$this->add(new VFormFieldDateTime($this->model->lastChanged, "last changed DEMO")); // TODO: remove this
+        $this->add((new VRTCollInDevice($this->model->collections, "Collections"))->disable(!$canEdit));
+        $this->add((new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""))->disable(!$canEdit));
     }
 
 

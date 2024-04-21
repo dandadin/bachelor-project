@@ -16,11 +16,15 @@
     "instance" => "Instance",
     "plan" => "Plan"];
 
+    $id = extractId($res);
+
     foreach($objects as $urlName => $cname) {
         if ($res[1]==$urlName) {
             if (!isset($res[2])) continue;
             if ($res[2]=='new') {
                 $className = "VPageEdit".$cname;
+                $newUrl = $className::checkPermissions($id);
+                if ($newUrl !== "") {header("Location: ".$newUrl); exit();}
                 $page = new $className(0);
                 $page->render();
                 exit();
@@ -30,10 +34,15 @@
                 if (!isset($res[3])) continue;
                 if ($res[3]=='edit') {
                     $className = "VPageEdit".$cname;
+                    $newUrl = $className::checkPermissions($id);
+                    if ($newUrl != "") {header("Location: ".$newUrl); exit();}
                     $page = new $className($id);
                     $page->render();
                     exit();
                 } elseif ($res[3]=='delete') {
+                    $className = "VPageEdit".$cname;
+                    $newUrl = $className::checkPermissions($id);
+                    if ($newUrl != "") {header("Location: ".$newUrl); exit();}
                     $modelName = "M".$cname;
                     $model = new $modelName($id);
                     $model->unpersist();
@@ -43,6 +52,9 @@
             }
         } elseif ($res[1]==$urlName."s") {
             $className = "VPageList".$cname."s";
+            $newUrl = $className::checkPermissions($id);
+            error_log("NEWURL:[".$newUrl."]");
+            if ($newUrl != "") {header("Location: ".$newUrl); exit();}
             $page = new $className();
             $page->render();
             exit();
@@ -57,7 +69,6 @@
 
     //error_log("res[1] je '$res[1]'");
     foreach ($otherPages as $urlName => $cname) {
-        error_log("urlName==$urlName");
         if ($res[1]==$urlName) {
             $page = new $cname();
             $page->render();

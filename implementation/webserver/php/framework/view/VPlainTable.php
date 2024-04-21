@@ -5,8 +5,8 @@
  */
 class VPlainTable extends VTable {
 
-    public function __construct($heading, $sql, $rowClass, $label = NULL) {
-        parent::__construct($heading, "delete", $label);
+    public function __construct($heading, $sql, $rowClass, $deleteCol = "delete", $label = NULL) {
+        parent::__construct($heading, $deleteCol, $label);
         $sqls=DB::prepare($sql);
         if (!$sqls->execute([])) die(get_called_class().": SQL Error.");
 

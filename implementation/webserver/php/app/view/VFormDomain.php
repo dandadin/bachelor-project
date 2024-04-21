@@ -6,9 +6,11 @@ class VFormDomain extends VForm {
 
     public function __construct($domainId) {
         parent::__construct($domainId);
-        $this->add(new VFormFieldText($this->model->name, "Name"));
-        $this->add(new VRTUserRoleInDom($this->model->userroles, "Users and Roles"));
-        $this->add(new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""));
+        $canEdit = ($_SESSION["perms"]->canEditAll());
+        $canEditUsers = (isset($_SESSION["perms"]->getDomainsByPerm("can_edit_users")[$domainId]));
+        $this->add((new VFormFieldText($this->model->name, "Name"))->disable(!$canEdit));
+        $this->add((new VRTUserRoleInDom($this->model->userroles, "Users and Roles"))->disable(!$canEditUsers));
+        $this->add((new VFormFieldButtonSubmit($this->model, new VText("Apply"), ""))->disable(!$canEdit && !$canEditUsers));
     }
 
 

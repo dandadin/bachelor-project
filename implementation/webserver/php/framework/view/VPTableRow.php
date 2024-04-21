@@ -7,6 +7,7 @@ class VPTableRow extends VList {
 
     public function __construct($deleteLink = null) {
         if ($deleteLink) $this->add(new VLink(new VIcon("/icon/delete.png", "delete this record"), $deleteLink));
+        else $this->add(new VText(""));
     }
 
     /**

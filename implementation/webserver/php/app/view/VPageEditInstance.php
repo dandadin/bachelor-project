@@ -6,4 +6,8 @@ class VPageEditInstance extends VPage {
         $this->add(new VFormInstance($instanceId));
     }
 
+    public static function checkPermissions(?int $id = null): string {
+        if (!$_SESSION["perms"]->canEditAll()) return "/";
+        return "";
+    }
 }

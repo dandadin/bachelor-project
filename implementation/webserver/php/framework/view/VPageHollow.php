@@ -45,4 +45,15 @@ END;
     public static function addNotification(VNotification $notification) {
         $_SESSION["notifications"]->add($notification);
     }
+
+    /**
+     * Checks if currently logged-in user can view the page.
+     * Should be overridden by every implementation of page (aside of publicly available pages).
+     * @param int|null $id int ID of object the page was created for (NULL if there is not an object).
+     * @return string Location, where the user should be redictered, if they cant see this page.
+     * Null if they can see the page.
+     */
+    public static function checkPermissions(int|null $id = null) : string {
+        return "";
+    }
 }

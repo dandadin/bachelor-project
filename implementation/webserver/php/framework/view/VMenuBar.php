@@ -1,10 +1,9 @@
 <?php
 
 class VMenuBar extends VList {
-    const Menu = [];
 
     public function __construct() {
-        foreach (static::Menu as $k => $v) {
+        foreach ($this->getMenu() as $k => $v) {
             $this->add(new VMenuItem($k, $v));
         }
     }
@@ -28,5 +27,9 @@ END;
         echo "<li>";
         parent::renderItem($v);
         echo "</li>\n";
+    }
+
+    protected function getMenu() : array {
+        return array();
     }
 }

@@ -13,6 +13,6 @@ class VPTRGateway extends VPTableRow {
         $this->add(new VText($o->id));
         $this->add(new VLink(new VText($o->name), "/gateway/$o->id/edit"));
         $this->add(new VText($o->address));
-        parent::__construct("/gateway/$o->id/delete");
+        parent::__construct($_SESSION["perms"]->canEditAll() ? "/gateway/$o->id/delete" : "");
     }
 }

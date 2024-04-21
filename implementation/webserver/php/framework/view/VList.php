@@ -27,4 +27,11 @@ class VList extends VView {
             $i->registerController($c);
         }
     }
+
+    public function disable(bool $disable = true) {
+        foreach($this->items as $item) {
+            $item->disable($disable);
+        }
+        return $this;
+    }
 }
