@@ -142,3 +142,219 @@ Blynk nabízí řešení zdarma, které je zamýšleno primárně pro účely se
 %---------------------------------------------------------------
 \section{Porovnání}
 %---------------------------------------------------------------
+
+%---------------------------------------------------------------
+\chapter{Analýza (10)}
+%---------------------------------------------------------------
+
+%---------------------------------------------------------------
+\section{co chci, aby appka uměla}
+%---------------------------------------------------------------
+
+funkční požadavky
+nefunkční požadavky
+uživatelské role
+případy užití
+doménová analýza
+
+{ % Enumeration of functional requirements
+\renewcommand{\labelenumi}{F\arabic{enumi}}
+\renewcommand{\labelenumii}{F\arabic{enumi}.\arabic{enumii}}
+\renewcommand{\labelenumiii}{F\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand{\labelenumiv}{F\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+
+%---------------------------------------------------------------
+\section{Funkční požadavky}
+%---------------------------------------------------------------
+
+\subsection{Funkční požadavky uživatele}
+
+\begin{enumerate}
+\item{Přihlášení uživatele}
+Uživatel se bude moci přihlásit zadáním svého předem zvoleného uživatelského jména a hesla. Bez přihlášení bude mít přístup pouze k veřejně dostupným stránkám. Po přihlášení se mu zobrazí ovládací prvky portálu, které budou upravené dle jeho aktuálních práv. Tyto práva budou také kontrolovány při drtivé většině akcí, které bude uživatel při používání webu provádět. 
+\item{Vytvoření nového uživatele}
+Nový uživatel si bude moci vytvořit svůj vlastní účet bez nutnosti předchozí přípravy portálu jiným, už zaregistrovaným uživatelem. K registraci stačí, pokud zadá své přihlašovací údaje, které budou platné. Platné uživatelské jméno musí být unikátní identifikátor složený z alfanumerických znaků s délkou mezi jedním a třiceti dvěma znaky. Platné heslo musí být posloupnost znaků v počtu mezi osmi a šedesáti čtyřmi.
+\item{Změna přihlašovacích údajů}
+Přihlášený uživatel si může změnit své přihlašovací údaje, pokud nové hodnoty stále splňují potřebná kritéria.
+\item{Odhlášení uživatele}
+Uživatel se bude moci ze svého účtu odhlásit ručně, ale zároveň bude nastavený časovač, který ho po uplynutí předem specifikovaného času, ve kterém uživatel neprovede žádnou akci, automaticky odhlásí z portálu. Přihlášení bude platné napříč všemy okny prohlížeče, aby si uživatel mohl jednoduše otevřít několik záložek s různým obsahem, zároveň ale umožňuje více přihlášených účtů z jednoho zařízení, aby uživatel se uživatel nemusel opakovaně přihlašovat a odhlašovat, pokud by potřeboval přistupovat najednou z více účtů.
+
+\subsection{Funkční požadavky pro správu zařízení a skupin}
+Pro účely následujícího seznamu chápejme pojmem ověřený uživatel uživatele, který je úspěšně přihlášen a systém ověřil, že má na akci, kterou se chystá provést, dostatečná práva.
+\item{Přidání a úpravy zařízení}
+Ověřený uživatel může pomocí webového portálu přidat nové zařízení do systému. Danému zařízení je poté přiřazena doména, do které zařízení patří, a všichni ověření uživatelé v této doméně ho od toho momentu mohou upravovat. Zařízení je možné změnit nejen jeho identifikační údaje, ale i mu upravovat jeho komunikační kanály.
+\item{Odebrání zařízení}
+Ověřený uživatel může odebrat zařízení ze systému. Takové zařízení bude smazáno a s ním i všechny další struktury na něm závisející.
+\item{Přidání a úpravy zařízení ve skupině}
+Ověřený uživatel může vytvořit novou skupinu. Této skupině je přiřazena její doména, ve které může být od té chvíle spravovaná všemi přihlášenými uživateli s dostatečnými právy. Do skupiny mohou uživatelé s adekvátní rolí přidávat zařízení.
+\item{Odebrání zařízení ze skupiny}
+Ověřený uživate může odebrat zařízení ze skupiny. Zařízení z ní budou odebrána, celkově však smazána nebudou. Skupina zařízení může zůstat prázdná.
+\item{Přidání komunikační brány}
+Ověřený uživatel může vytvořit novou komunikační bránu v systému. Poté, co jí nastaví základní údaje, potřebné k jejímu kontaktování a ověření identity, může z brány načíst její aktuální konfiguraci, která se poté uloží do databáze, a vytvoří, upraví nebo smaže zařízení a jejich kanály dle aktuálních údajů.
+\item{Odebrání komunikační brány}
+Ověřený uživatel může smazat komunikační bránu. K této události může dojít pouze v případě, že brána není pužívana pro komunikaci s žádným ze zařízení.
+\item{Aktualizace zařízení připojených na komunikační bránu}
+Ověřený uživatel může upravovat detaily konkrétní komunikační brány, především opakovaně načíst konfigurační soubor z brány a aktualizovat podle něj záznamy v systému.
+\subsection{Funkční požadavky pro správu práv a přístupu uživatelů}
+\item{Vytvoření skupiny}
+\item{Úprava uživatelů ve skupině}
+\item{Odebrání skupiny}
+\item{Přidělení role uživateli}
+\item{Odebrání role uživateli}
+\end{enumerate}
+} % End of enumeration of functional requirements
+
+\section{Nefunkční požadavky}
+{ % Enumeration of non-functional requirements
+\renewcommand{\labelenumi}{N\arabic{enumi}}
+
+\begin{enumerate}
+\item{Portál je webová aplikace}
+Aplikace je pro uživatele dostupná jako webový portál, který lze spustit na serveru a po dokončení potřebného nastavení k němu přistupují uživatelé pomocí svých webových prohlížečů i z jiných zařízení. Aplikace je plánovaná tak, aby v budoucnu byla možnost přidat jiné způsoby obsluhy, jako je například aplikace pro mobilní telefony.
+\item{Aplikace je jednoduše instalovatelná}
+Projekt je vytvořený ve formě několika Docker image, díky kterým se zvětší univerzálnost a přenositelnost projektu mezi různými zařízeními a architekturami, byť za cenu mírně sníženého výkonu. Tyto image jsou tvořeny z co nejskromnějších zdrojových image, aby obsahovaly vše potřebné k běhu, ale zároveň umožňovaly použití hardwaru, který je náročnější například na množství použitého úložiště. Docker image, které jsou vytvořeny na míru pro tuto aplikaci, jsou nahrané na veřejně přístupné úložiště DockerHub, kde budou i v budoucnu dostupné ke stažení.
+\item{Aplikace bude počítat s nedostupností využívaných komponent}
+Projekt využívá externí knihovny. Všechny tyto knihovny mohou být v průběhu následujících let odebrány z depozitářů, odkud byly v tobě tvorby projektu stahovány, a kvůli tomu se poté mohou objevit problémy. Proto jsou aktuální verze použitých knihoven zapouzdřeny spolu se systémem, ať už jde o knihovny pro kód v jazyce C/C++, které jsou součástí Docker images, nebo knihovny pro kód v jazyce PHP, které jsou uloženy pomocí systému Composer v souboru composer.lock.
+\item{Aplikace podporuje rozšiřování funkcionality uživateli}
+\item{Podpora webových prohlížečů}
+Webové rozhraní aplikace bude možné zobrazit a používat bez žádných změn na funkcionalitě v následujících nejznámějších internetových prohlížečích:
+\begin{itemize}
+\item{Microsoft Edge}
+\item{Google Chrome}
+\item{Mozilla Firefox}
+\item{Safari}
+\end{itemize}
+\end{enumerate}
+} % End of enumeration of non-functional requirements
+
+\section{Uživatelské role}
+Uživatelská role je kombinací udělených práv, která má svůj název a je přepřipravena poskytovatelem portálu. Tato role poté může být přidělena uživateli, a to jak v kontextu určité domény, tak i jako role globální. Pokud je od uživatele vyžadováno, aby měl k určité akci příslušné právo, je otestován seznam všech jeho rolí v dané doméně a jeho rolí globálních, a pokud alespoň jedna tato role obsahuje příslušné právo, je uživateli umožněno vykonat akci. Jednotlivé přidělené role jsou tak mezi sebou v disjunktním stavu, a jakmile alespoň jedna role dané právo uživateli umožňuje, nelze mu ho jinou rolí odebrat.
+
+\subsection{Práva}
+Následující seznam popisuje atomická práva, která mohou být přisuzována rolím.
+
+{ % Enumeration of atomic rights
+\renewcommand{\labelenumi}{P\arabic{enumi}}
+\begin{enumerate}
+\item{Can List Users}
+Uživatel s tímto právem může zobrazit seznam všech uživatelů, kteří mají alespoň jednu roli v doméně, ve které mu bylo uděleno. Může si také zobrazit detaily datého uživatele.
+\item{Can List Collections}
+Toto právo uživatele opravňuje zobrazovat všechny skupiny patřící do dané domény. Může si zobrazit jejich členy, zařízení přidané ke skupině, ale i jiné její detaily.
+\item{Can List Devices}
+Uživatel s tímto právem může zobrazit seznam všech zařízení v doméně, ve které mu bylo uděleno. Může také vidět detaily zařízení, jako je jeho lokace, jméno, ale také seznam kanálů s detaily.
+\item{Can List Gateways}
+Díky tomuto právu si může uživatel zobrazit seznam všech komunikačních bran. V aktuální verzi systému lze v seznamu zobrazit všechny komunikační brány, nehledě na zařízení, která jsou přes ni připojená, ale v budoucnu by se mohl systém rozšířit o možnost přidělení brány uživateli, který ji registruje. Ten by měl poté možnost nastavit přístup k bráně například v závislosti na roli v doméně, nebo obsažení v určité skupině.
+\item{Can Edit Users}
+Role s tímto právem umožňují uživateli přidávání a odebírání rolí uživatelům v doméně, ke které se váže daná role.
+\item{Can Edit Collections}
+Uživatel s rolí obsahující toto právo může vytvářet nové skupiny v rámci domény dané role. Může také skupiny upravovat, jmenovitě pak především přidávat a odebírat uživatele nebo zařízení. Skupiny v doméně může také smazat.
+\item{Can Edit Devices}
+Díky tomuto právu je uživateli umožněno vytvářet, odebírat a upravovat zařízení a jejich kanály ve všech doménách, ve kterých má dané právo.
+\item{Can Edit Gateways}
+Právo Can Edit Gateways uživateli umožňuje vytvářet, mazat, ale i upravovat komunikační brány.
+\item{Can Edit All}
+Toto právo je rezervováno pouze pro provozovatele systému. Je to univerzální klíč ke všem omezením, který zajistí, že uživatel, který tuto roli má, automaticky získává všechna práva. Díky němu lze také zobrazit mnoho stránek, které jsou určeny především pro účely vývoje softwaru, popřípadě kontrolu funkčnosti. Role, obsahující toto právo, by měla být přidělena mimo kontext domény - aplikuje se totiž automaticky globálně nehledě na konkrétní doménu.
+\end{enumerate}
+} % End of enumeration of atomic rights
+
+\subsection{Předpřipravené role}
+
+Aby byla prvotní instalace systému jednodušší, obsahuje systém tři předem připravené role, obsahující práva zobrazená v tabulce. Těmito rolemi jsou role Developer, Admin a User. Role Developer je zamýšlena pouze pro účty provozovatele systému, jelikož má práva na veškeré akce a měla by tedy být přidělena pouze lidem, kteří ji nezneužijí. Role Admin je potom vyhrazena pro řadového administrátora určité domény, který poté může spravovat téměř veškeré objekty vázané na tuto doménu. Role User je poté připravena pro řadového uživatele, který by neměl mít přístup k nastavení.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & Developer & Admin & User \\ \hline
+Can List Users & Ne & Ano & Ano \\ \hline
+Can List Collections & Ne & Ano & Ano \\ \hline
+Can List Devices & Ne & Ano & Ano \\ \hline
+Can List Gateways & Ne & Ano & Ano \\ \hline
+Can Edit Users & Ne & Ano & Ne \\ \hline
+Can Edit Collections & Ne & Ano & Ne \\ \hline
+Can Edit Devices & Ne & Ano & Ne \\ \hline
+Can Edit Gateways & Ne & Ano & Ne \\ \hline
+Can Edit All & Ano & Ne & Ne \\ \hline
+\end{tabular}
+
+\section{Příklady použití}
+Tato kapitola se zabývá několika konkrétními příklady, jak bude projekt využíván běžnými uživateli. Vybrané příklady jsou poté detailněji rozebrány. 
+
+{ % Enumeration of use cases
+\renewcommand{\labelenumi}{UC\arabic{enumi}}
+\begin{enumerate}
+\item{Registrace uživatele} 
+Nový, zatím nepřihlášený uživatel načte jakoukoliv URL stránku aplikace, díky čemuž bude jako nepřihlášený uživatel přesměrován na přihlašovací stránku. Zde klikne na tlačítko "Registrer", které uživatele přesměruje na formulář pro tvorbu nového uživatelského účtu. Po vyplnění potřebných údajů uživatel odešle formulář, server ověří platnost jednotlivých vyplněných formulářových polí, v případě nalezeného problému uživatele nechá údaje ve formuláři upravit a nad formulářem zobrazí notifikaci o neúspěšném vytvoření účtu. V případě úspěchu uživatele automaticky přihlásí a zobrazí notifikaci o úspěšném vytvoření účtu.
+\item{Změna hesla}
+Uživatel se přihlásí pomocí svých přihlašovacích údajů, které jsou ověřeny. Poté zobrazí detail svého účtu, případně cizího účtu, který chce upravovat, má-li na tuto akci dostatečná práva. Do zobrazeného formuláře pro úpravu uživatelského účtu vyplní nové heslo a formulář odešle. Server validuje pole příchozího formuláře a v závislosti na této validaci heslo změní a zobrazí notifikaci o úspěšné akci, či vrátí předvyplněný formulář k úpravě uživateli a zobrazí notifikaci oznamující neúspěch.
+\item{Změna detailu zařízení}
+Přihlášený uživatel zobrazí stránku se seznamem všech zařízení, které má právo zobrazit. Z nich vybere jedno, u kterého bude chtít změnit údaj, například jeho lokaci. V seznamu klikne na identifikační prvek zařízení, jako je jeho jméno, a tím zobrazí detail daného zařízení. Před zobrazením tohoto detailu jsou uživateli zkontrolovány jeho pravomoce, a dle nich se poté detaily zobrazí jako editovatelný nebo needitovatelný formulář. Uživatel změní požadované údaje a klikne na tlačítko "Submit". Tím je formulář odeslán ke kontrole, a to jak vyplněných údajů, tak opakované kontrole práv odesílajícího uživatele. V závislosti na výsledku těchto kontrol jsou změny popřípadě uloženy. Uživatel je o výsledku informován příslušnou notifikací ve vrchní části obrazovky.
+\item{Zobrazení parametru komunikačního kanálu}
+Přihlášený uživatel má více způsobů, jak se úspěšně odnavigovat na stránku zobrazující detail komunikačního kanálu. Pokud kanál není jednoduše identifikovatelný od ostatních kanálů, uživatel nejprve načte stránku seznamu jemu dostupných zařízení. Na ní vybere zařízení obsahující hledaný kanál. Na stránce zobrazující detail zařízení se poté pokomí kliknutí na odkaz v seznamu kanálů daného zařízení dostane na stránku zobrazující detail komunikačního kanálu, na kterém si může uživatel zobrazit všechny parametry.
+Pokud ale uživatel zvládne přímo identifikovat hledaný kanál ze seznamu všech kanálů, může využít stránku se seznamem kanálů a díky odkazu ve jméně kanálu přejít na detailní zobrazení komunikačního kanálu v méně krocích. V obou případech však platí, že stránky se uživateli načtou pouze v případě, že má k jejich zobrazení právo. V opačném případě je uživatel přesměrován na domovskou stránku.
+\item{Přidání role v doméně uživateli}
+Uživatel se přihlásí do aplikace, zobrazí stránku s detailem domény, do které chce roli přidávat. Tuto stránku může najít například pomocí odkazu na stránce obsahující seznam domén. Před načtením tohoto formuláře se však zkontrolují práva uživatele na editaci rolí, a formulář je zobrazen v editovatelném módu pouze v přítomnosti těchto práv. Poté uživatel vyplní přihlašovací jméno účtu, kterému je role přidávána a z menu rolí vybere požadovanou roli. Tento proces může před odesláním formuláře opakovat. Po odeslání formuláře pomocí tlačítka "Submit" jsou hodnoty ve formuláři zkontrolovány vůči předem požadovaným podmínkám, všechny role zmíněné ve formuláři jsou poté zkontrolovány na přítomnost duplikátů, které jsou případně odebrány, a pokud jsou všechny podmínky splněny, nová data jsou uložena do databáze. Zadávající uživatel je o výsledku operace informován notifikací.
+\item{Odebrání uživatele ze skupiny}
+Přihlášený uživatel zobrazí seznam skupin. V něm vybere skupinu, do které chce přidat uživatele, a zobrazí stránku s jejím detailem pomocí kliknutí na odkaz v názvu skupiny. V tomto detailním zobrazení se uživateli zobrazí mimo jiné tabulka, která obsahuje všechny uživatelské účty, které jsou aktuálně součástí této skupiny. Do tohoto seznamu lze přidat nového uživatele kliknutím na tlačítko "Add" a vyplněním jeho uživatelského jména. Po odeslání formuláře server zkontroluje, zda uživatel s tímto jménem existuje, a při nalezení uživatele a dostatečných právech zadávajícího uživatele je změna uložena do databáze. Zadávající uživatel je poté informován o výsledku operace notifikací.
+\item{Vytvoření nové sekvence příkazů}
+Přihlášený uživatel zobrazí stránku se sezamem sekvencí. Zde klikne na tlačítko "Add" a tím se přesune na stránku s formulářem, kde může vyplnit detaily nové sekvence. Ve spodní části stránky je dynamicky vytvářená tabulka obsahující jednotlivé kroky sekvence, které mohou být přidávány a odebírány pomocí tlačítka "Add", resp. "Delete", které je znázorněno ikonou odpadkového koše. V okamžiku, kdy je uživatel s detaily sekvence spokojen, odešle formulář tlačítkem "Apply". Server před zapsáním dat do databáze zvaliduje jednotlivé položky a zkontroluje práva odesílajícího uživatele, pokud jsou v pořádku, operaci umožní. O výsledku je uživatel informován příslušnou notifikací.
+\end{enumerate}
+} % End of enumeration of use cases
+\subsection{Detail příkladu využití UC}
+
+%---------------------------------------------------------------
+\chapter{Návrh (10)}
+%---------------------------------------------------------------
+
+\section{Části projektu}
+Projekt můžeme rozdělit na serverovou část, běžící u poskytovatele, a klientskou část, jejíž běh zajišťuje na svých lokálních zařízeních uživatel. V následující sekci se budeme zabývat jednotlivými komponentami obou těchto částí, důvody jejich vyčlenění a rozdělení a jejich funkcionalitou.
+
+\subsection{Serverová část}
+Serverová část aplikace je bezpochyby komplikovanější a kvůli tomu se skládá z několika komponent. Tou hlavní je NGINX webserver, který pomocí vyhodnocování PHP kódu při načtení stránky zajišťuje prezenční a business vrstvu. Dalšími jsou ale i databáze nebo exekutor.
+
+Celá serverová část aplikace je řešená jako kolekce OCI obrazů, které jsou veřejně publikované. Tato kolekce je popsána v souboru docker-compose.yml, díky kterému poté můžeme ke spouštění celé serverové části využít jediný příkaz. Utilita Docker Compose je jednou z dostupných alternativ, jelikož známých aplikací pro stavbu, spouštění a managment OCI kontejnerů je mnoho - zmínit můžeme například Docker Swarm, Podman nebo Containerd. V této aplikaci jsem se ale rozhodl využít Docker Compose, jelikož výkonností a funkcionalitou je s konkurenčním softwarem na podobné úrovni, ale z mé zkušenosti je v projektech nejpolulárnější a mám s ní největší zkušenosti.
+
+\subsubsection{Webserver}
+Samotný webserver je dvojicí úzce spolupracujících OCI kontejnerů, a to kontejneru Nginx obsahující stejnojmenný software pro zpracovávání příchozích webových požadavků, a kontejneru PHP, umožňující interpretaci skriptů napsaných v jazyce PHP.
+
+Nginx slouží jako první vlna validace dotazované URL. Nginx řídí své chování mimo jiné podle předpisů popsaných v souboru default.conf. Každé z těchto pravidel má deklarovaný identifikátor a poté akci, která má být provedena. Nginx poté tyto pravidla prochází, porovnává jednotlivé identifikátory s dotazovanou URL a snaží se najít co nejkonkrétnější identifikátor. Podle něj poté provede akci.
+
+V našem případě Nginx filtruje od všech dotazovaných URL dotazy na statické zdroje, které se na našem portálu vyskytují ve dvou formách, obrázky a kaskádové styly CSS. Každá z těchto forem má vlastní pravidlo. Zbytek dotazů už filtrován není a předpokládá se, že půjde o dotazy na samotné PHP stránky. Tyto dotazy jsou poté předány kontejneru PHP, od kterého očekáváme, že bude adekvátně nastavený a poradí si s filtrováním validních dotazů.
+
+\subsubsection{Databáze}
+Databáze je řešena kontejnerem používající obraz MySQL. Rozhodl jsem se využít relační databázi, jelikož data jsou lehce strukturovatelná do tabulek a v těchto tabulkách můžeme jednodušeji využívat kontrolu vstupních datových typů a hodnot. Nyní bylo na místě vybrat jednu z implementací relačních databází. Z mých předchozích osobních zkušeností i recenzí na internetu jsem se rozhodoval především mezi PostgreSQL a MySQL. Obě varianty mají své pro a proti, ve prospěch PostgreSQL hraje například skutečnost, že narozdíl od MySQL umožňuje větší množství specifických výrazů, jako je například "OUTER JOIN" nebo "INTERSECT", nebo i různé datové typy. PostgreSQL je také rychlejší varianta pro větší datasety nebo složitější výrazy. Naše využití ale nepočítá s velkými datasety, ani se složitými výrazy, jelikož ve velké míře používáme výrazy pracující pouze s jednou tabulkou a jednou podmínkou. Ačkoliv jsou PostgreSQL i MySQL oblíbenými řešeními s velkými aktivní komunitami a kvalitní dokumentací, z předchozích projektů jsem nabyl pocitu, že hledání řešení pro problémy s MySQL je jednodušší. V závislosti na těchto porovnáních jsem usoudil, že v případě našeho projektu se hodí využít výhod MySQL.
+
+Databáze je v samostatném kontejneru, který má umožněnou komunikaci s ostatními kontejnery na specifickém portu. Pro jednodušší práci s databází při vývoji nebo údržbě je v projektu přítomen také kontejner Adminer, který umožňuje správo databáze pomocí webového rozhraní. Po přihlášení se administrátorským přístupem lze upravovat schéma databáze i hodnoty v ní uložené.
+
+\subsubsection{Exekutor}
+
+Exekutor je jednoduchý skript psaný v jazyce Shell, který má za úkol eliminovat nevýhodu mého rozhodnutí využít k implementaci hlavní logiky serveru skripty PHP spouštěné pouze z požadavků přijmutých webserverem. Toto rozhodnutí totiž znamená, že s příchozím požadavkem je spuštěn kód, jehož primárním cílem je generace obsahu vebové stránky, a tento kód je po splnění tohoto cíle ukončen. Server tedy v tuto chvíli nemá možnost cokoliv vykonávat, pokud nepřijde žádný požadavek. Součástí povinností serveru je ale i vykonávání sekvencí, tedy hlídání správného momentu pro vykonání dalšího kroku, a odeslání tohoto kroku zařízení právě ve správný moment, což by bez tohoto skriptu nešlo.
+
+Webserver má naimplementovanou stránku, při jejíž načtení zkontroluje všechny plánované sekvence a kroky a rozhodne, za kolik sekund by měla v ideálním případě proběhnout aktivace serveru, neboli přijmutí nového požadavku. Tento údaj poté server vloží do obsahu stránky. Skript Exekutor má jediný úkol, a tím je periodicky načítat tuto stránku, vyjmout z ní údaj o příštím potřebném načtení, počkat na správný moment a poté znovu načíst právě tuto stránku, a tím aktivovat kód serveru. Laicky bychom tedy mohli tento skript popsat jako jakýsi budík, který si sám webserver průběžně nastavuje, a který zajistí, že webserver je ve správný moment probuzen a může tak vykonat svůj úkol.
+
+Tento skript je spouštěn v kontejneru využívající obraz BusyBox, což je obraz který implementuje některé základní prvky linuxového prostředí, díky nimž můžeme skript spustit, ale zároveň nám nepotřebné knihovny a funkcionality nezabírají úložiště ani výkon.
+
+\subsubsection{MQTT Broker}
+
+MQTT Broker je kontejner postavený na obrazu Eclipse Mosquitto, který implementuje komunikaci mezi webserverem a jednotlivými komunikačními branami, které slouží k zprostředkování komunikace s jednotlivými IOT zařízeními. Každá z těchto bran se autoamticky připojí k tomuto serveru, který se v terminologii MQTT nazývá Broker neboli zprostředkovatel, a přihlásí se k odběru kanálů příslušících zařízením, která jsou přes danou bránu obsluhována. Tyto fronty pak slouží k předávání informací mezi zařízeními a webserverem a zajišťují, aby se zprávy mezi těmito samostatnými celky úspěšně doručily, i když v moment odesílání zprávy příjemce není dosažitelný. Ve směru ze zařízení k webserveru tato situace nastane, pokud zrovna nebude běžet vyhodnocování stránky PHP ať už uživatelem, nebo pomocí automatizovaného exekutor skriptu, ve směru z webserveru k zařízení potom takový stav nastává především ve chvíli, kdy je přístup z internetu ke komunikační bráně omezen, a to například nastavením sítě, firewallem, nebo pokud komunikace probíhá přes NAT, jenž zajistí, že komunikace je jednodušeji navazována od klienta směrem k serveru.
+
+\subsection{Klientská část}
+
+Klientská část se skládá pouze z jednoho kontejneru, a tím je kontejner postavený nad obrazem []. Tento kontejner spouští kód aplikace komunikační brány, který je napsaný v jazyce C++. Tato aplikace komunikuje se serverem, přesněji řečeno s kontejnerem MQTT zprostředkovatele, jako MQTT klient, a jejím úkolem je předávat zprávy z odebíraných témat správným zařízením a naopak. Jelikož chceme zajistit, že tato brána bude umět komunikovat s co největším množstvím jednotlivých zařízení, aplikace podporuje dynamické načítaní knihoven implementujících funkce pro komunikaci mezi bránou a zařízením. Tyto knihovny může vytvořit a přidat k projektu sám uživatel.
+
+
+\section{}
+
+%---------------------------------------------------------------
+\chapter{Realizace (13)}
+%---------------------------------------------------------------
+
+%---------------------------------------------------------------
+\section{detailni popisovani kodu, problemu pri tvorbe, reseni}
+%---------------------------------------------------------------
+
+%---------------------------------------------------------------
+\chapter{Testovani (2)}
+%---------------------------------------------------------------
+
+%---------------------------------------------------------------
+\section{testovani}
+%---------------------------------------------------------------
