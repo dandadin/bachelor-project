@@ -9,7 +9,7 @@ new DB();
 new MQTTWS();
 
 if (isset($res[1])) if($res[1]=="execute") {
-    include "../ui/executor.php";
+    include "../executor.php";
     exit();
 }
 
