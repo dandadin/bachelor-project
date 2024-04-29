@@ -8,12 +8,12 @@ class Communicator {
     }
 
     public static function send(int $channelId, string $data) : void {
-        $sql = "SELECT g.address AS gaddress, c.name AS cname FROM channels c LEFT JOIN devices d on d.id = c.device_id LEFT JOIN gateways g on g.id = d.gateway_id WHERE c.id=$channelId";
+        $sql = "SELECT g.address AS gaddress, c.name AS cname, d.name AS dname FROM channels c LEFT JOIN devices d on d.id = c.device_id LEFT JOIN gateways g on g.id = d.gateway_id WHERE c.id=$channelId";
         error_log($sql);
         $sqls=DB::query($sql);
         $o=$sqls->fetchObject();
-        echo ">>>>>>>>COMM: Odesilam \"$data\" na adresu \"$o->gaddress\". <br>";
-        MQTTWS::sendStep($o->gaddress, $o->cname, $data);
+        echo ">>>>>>>>COMM: Odesilam \"$data\" na adresu \"$o->gaddress\". Prijemcem je zarizeni \"$o->dname\" na kanal \"$o->cname\".<br>";
+        MQTTWS::sendStep($o->gaddress, $o->dname, $o->cname, $data);
     }
 
     /**

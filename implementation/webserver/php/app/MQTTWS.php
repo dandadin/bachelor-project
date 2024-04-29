@@ -46,7 +46,7 @@ class MQTTWS extends MQTT {
         return $configs;
     }
 
-    static function sendStep(string $gwMAC, string $channelName, string $data) {
-        MQTTWS::send("GW/".$gwMAC."/".$channelName, $data);
+    static function sendStep(string $gwMAC, string $deviceName, string $channelName, string $data) {
+        MQTTWS::send("GW/".$gwMAC."/".$deviceName."/".$channelName, $data);
     }
 }
