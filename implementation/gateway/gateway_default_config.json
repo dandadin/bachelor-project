@@ -2,5 +2,19 @@
   "name": "default",
   "address": "00:00:00:00:00",
   "token": "Default123",
-  "devices": [ ]
+  "devices": [
+    {
+      "name": "default_device",
+      "location": "Device Location",
+      "comm_module": "demo",
+      "channels": [
+        {
+          "name": "Power",
+          "comm": 3,
+          "value": 1,
+          "update_freq": 100
+        }
+      ]
+    }
+  ]
 }

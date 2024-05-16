@@ -42,7 +42,10 @@ class Communicator {
         foreach ($configs as $c) {
             if ($c["address"] == $address) {
                 if (!$res) $res = $c;
-                else return null;
+                else {
+                    error_log("ERROR: Duplicate Configs found for '$address'!");
+                    return null;
+                }
             }
         }
         return $res;

@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
 # User can pass specific config to the container using this lines:
-#    volumes:
-#      - ./gateway_example_config.json:/config.json
+    volumes:
+      - ./gateway_example_config.json:/config.json
     command: /opt/gateway/gateway "$MQTT_HOST" /config.json
 
