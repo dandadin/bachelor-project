@@ -39,7 +39,7 @@ services:
       - 8888:8080
   executor:
     image: busybox:1.36.1
-    command: /executor
+    command: sh /executor
     restart: always
     networks:
       - internal

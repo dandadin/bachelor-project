@@ -1,3 +1,7 @@
+CREATE DATABASE iothome;
+
+-- MariaDB dump 10.19  Distrib 10.5.23-MariaDB, for Linux (x86_64)
+--
 -- Host: iothome.cz    Database: iothome
 -- ------------------------------------------------------
 -- Server version	8.0.32
@@ -12,16 +16,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Current Database: `iothome`
---
-
-/*!40000 DROP DATABASE IF EXISTS `iothome`*/;
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `iothome` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-
-USE `iothome`;
 
 --
 -- Table structure for table `channels`
@@ -40,7 +34,7 @@ CREATE TABLE `channels` (
   PRIMARY KEY (`id`),
   KEY `device_id` (`device_id`),
   CONSTRAINT `channels_ibfk_1` FOREIGN KEY (`device_id`) REFERENCES `devices` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,6 +43,7 @@ CREATE TABLE `channels` (
 
 LOCK TABLES `channels` WRITE;
 /*!40000 ALTER TABLE `channels` DISABLE KEYS */;
+INSERT INTO `channels` VALUES (57,'Vypinani',35,3,1,100),(58,'Barva',35,3,3,100),(59,'Zapinani',36,3,1,100),(60,'Barva',36,3,3,100),(61,'Vypinani',37,3,1,100),(62,'Barva',37,3,3,100),(63,'Zapinani',38,3,1,100),(64,'Barva',38,3,3,100);
 /*!40000 ALTER TABLE `channels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,6 +96,7 @@ CREATE TABLE `collection_users` (
 
 LOCK TABLES `collection_users` WRITE;
 /*!40000 ALTER TABLE `collection_users` DISABLE KEYS */;
+INSERT INTO `collection_users` VALUES (1,1),(2,1),(3,1),(1,2),(2,2),(1,4);
 /*!40000 ALTER TABLE `collection_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,6 +123,7 @@ CREATE TABLE `collections` (
 
 LOCK TABLES `collections` WRITE;
 /*!40000 ALTER TABLE `collections` DISABLE KEYS */;
+INSERT INTO `collections` VALUES (1,'Skupina 1',1),(2,'Skupina 2',1),(3,'Skupina 3',1);
 /*!40000 ALTER TABLE `collections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +147,7 @@ CREATE TABLE `devices` (
   KEY `devices_ibfk_2` (`domain_id`),
   CONSTRAINT `devices_ibfk_1` FOREIGN KEY (`gateway_id`) REFERENCES `gateways` (`id`),
   CONSTRAINT `devices_ibfk_2` FOREIGN KEY (`domain_id`) REFERENCES `domains` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,6 +156,7 @@ CREATE TABLE `devices` (
 
 LOCK TABLES `devices` WRITE;
 /*!40000 ALTER TABLE `devices` DISABLE KEYS */;
+INSERT INTO `devices` VALUES (35,'automaticke zarizeni 2','Misin pokoj','2024-03-29 20:40:06','2024-04-07 22:11:08',3,2),(36,'automaticke zarizenicko malickate','Danuv pokoj','2024-03-29 20:48:22','2024-03-29 20:50:01',4,2),(37,'automaticke zarizeni 2','Misin pokoj','2024-03-29 20:48:22','2024-03-29 20:50:01',4,1),(38,'automaticke','Danuv pokoj','2024-03-29 20:50:07','2024-04-07 22:11:08',3,1);
 /*!40000 ALTER TABLE `devices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,7 +185,7 @@ CREATE TABLE `domain_users` (
 
 LOCK TABLES `domain_users` WRITE;
 /*!40000 ALTER TABLE `domain_users` DISABLE KEYS */;
-INSERT INTO `domain_users` VALUES (0,2,6),(2,2,1),(1,4,1),(1,40,3),(0,41,6);
+INSERT INTO `domain_users` VALUES (0,2,6),(1,2,1),(1,2,2),(2,2,1),(2,2,2),(1,4,1),(1,4,2),(2,4,5),(1,39,3),(2,39,3);
 /*!40000 ALTER TABLE `domain_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +209,7 @@ CREATE TABLE `domains` (
 
 LOCK TABLES `domains` WRITE;
 /*!40000 ALTER TABLE `domains` DISABLE KEYS */;
-INSERT INTO `domains` VALUES (1,'Firma 1'),(2,'Firma 2');
+INSERT INTO `domains` VALUES (1,'Firma 11'),(2,'Firma 2'),(4,'Domain 3');
 /*!40000 ALTER TABLE `domains` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -236,7 +234,7 @@ CREATE TABLE `gateways` (
 
 LOCK TABLES `gateways` WRITE;
 /*!40000 ALTER TABLE `gateways` DISABLE KEYS */;
-INSERT INTO `gateways` VALUES (3,'brana','A1:B2:C3');
+INSERT INTO `gateways` VALUES (1,'GW 1','192.168.1.2'),(2,'GW 2','gw.google.com:12345'),(3,'pokus','A1:B2:C3'),(4,'pokusik','A1:B2:C3:D4'),(5,'danda','http://dandadin.eu/personal');
 /*!40000 ALTER TABLE `gateways` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -266,6 +264,7 @@ CREATE TABLE `instances` (
 
 LOCK TABLES `instances` WRITE;
 /*!40000 ALTER TABLE `instances` DISABLE KEYS */;
+INSERT INTO `instances` VALUES (11,5,2,'2037-12-19 06:06:37'),(13,5,2,'2037-12-19 06:15:07');
 /*!40000 ALTER TABLE `instances` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,7 +325,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'admin',1,1,1,1,0,1,1,1,1),(3,'user',0,0,0,0,0,1,1,1,1),(6,'developer',0,0,0,0,1,0,0,0,0);
+INSERT INTO `roles` VALUES (1,'admin',1,1,1,1,0,1,1,1,1),(2,'local',1,1,1,1,0,1,1,1,1),(3,'user',0,0,0,0,0,1,1,1,1),(5,'nuzak',0,0,0,0,0,0,0,0,0),(6,'developer',0,0,0,0,1,0,0,0,0);
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -353,6 +352,7 @@ CREATE TABLE `sequences` (
 
 LOCK TABLES `sequences` WRITE;
 /*!40000 ALTER TABLE `sequences` DISABLE KEYS */;
+INSERT INTO `sequences` VALUES (5,'sequence',4),(6,'seq',4),(10,'test',4),(11,'tst teq',4),(12,'testovaci',4);
 /*!40000 ALTER TABLE `sequences` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -384,6 +384,7 @@ CREATE TABLE `steps` (
 
 LOCK TABLES `steps` WRITE;
 /*!40000 ALTER TABLE `steps` DISABLE KEYS */;
+INSERT INTO `steps` VALUES (1,1,5,57,'offfffffff',4),(2,2,5,57,'stop',1000),(6,1,10,57,'1sgsb',22),(7,1,11,57,'avadv',11),(8,1,12,57,'value1',60),(9,2,12,57,'value2',60),(10,3,12,57,'value3',60);
 /*!40000 ALTER TABLE `steps` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -401,7 +402,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_uniq` (`login`),
   UNIQUE KEY `id_uniq` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -410,7 +411,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (2,'admin1','25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7'),(4,'admin2','1c142b2d01aa34e9a36bde480645a57fd69e14155dacfab5a3f9257b77fdc8d8'),(40,'user','04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb'),(41,'developer','88fa0d759f845b47c044c2cd44e29082cf6fea665c30c146374ec7c8f3d699e3');
+INSERT INTO `users` VALUES (1,'1111','6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b'),(2,'admin','8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'),(4,'test','9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'),(39,'karel','973607a4ae7b4cf7d96a100b0fb07e8519cc4f70441d41214a9f811577bb06cc');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -423,4 +424,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-16 22:09:42
+-- Dump completed on 2024-05-16 18:05:56
