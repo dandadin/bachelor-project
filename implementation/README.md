@@ -14,7 +14,7 @@ Rychlé spuštění celé aplikace (s daty na testování):
 
 3)  inicializace databáze
 
-        mysql < webserver/db-example.sql
+        docker exec -ti webserver_db_1 mysql < webserver/db-example.sql
 
 4)  spuštění brány
 
@@ -43,8 +43,8 @@ Spuštění celé aplikace (s minimálními počátečními daty):
 
 3)  inicializace databáze
 
-        mysql < webserver/db-schema.sql
-        mysql < webserver/db-init-data.sql
+        docker exec -ti webserver_db_1 mysql < webserver/db-schema.sql
+        docker exec -ti webserver_db_1 mysql < webserver/db-init-data.sql
 
 4)  spuštění brány
 

@@ -1,3 +1,7 @@
+CREATE USER root@'%' IDENTIFIED BY 'root-heslo';
+GRANT ALL PRIVILEGES ON *.* TO root@'%';
+FLUSH PRIVILEGES;
+
 -- Host: iothome.cz    Database: iothome
 -- ------------------------------------------------------
 -- Server version	8.0.32
