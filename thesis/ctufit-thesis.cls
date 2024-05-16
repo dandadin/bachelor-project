@@ -190,7 +190,8 @@
 	
 	\vspace{1em}
 	
-	\noindent \thectufitcitationlabel: \thectufitauthorsurnames{} \thectufitauthorgivennames. \textit{\thectufittitle}. \thectufitthesistype. \thectufituniversity, \thectufitfaculty, \thectufityear.
+	\noindent \thectufitcitationlabel: \thectufitauthorsurnames{} \thectufitauthorgivennames. \textit{\thectufittitle}. \thectufitthesistype. \thectufituniversity, \thectufitfaculty, \thectufityear. Dostupný také z WWW: 
+    $\langle$\lstinline{https://github.com/dandadin/bachelor-project}$\rangle$
    }
 }
 % IMPRINT END
