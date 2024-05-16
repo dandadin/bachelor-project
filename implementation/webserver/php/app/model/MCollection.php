@@ -89,6 +89,8 @@ class MCollection extends MObjectModel {
      */
     public function delete($arg = NULL) : bool {
         if (!$this->id) return TRUE;
+        $sql = "DELETE FROM collection_users WHERE coll_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM collections WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
@@ -114,7 +116,7 @@ class MCollection extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Collection was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Collection could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Collection could not have been deleted!"));
         return $ret;
     }
 }

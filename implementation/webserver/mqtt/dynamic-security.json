@@ -10,8 +10,8 @@
 			"roles":	[{
 					"rolename":	"GW/A1:B2:C3"
 				}],
-			"password":	"IrkN/RaWdGa89jXTc+nKF6gKsHCu1R5nLOIt53uosJVCkO/8Og45T63YRkJ7PqLbHIAAhtiLGXHx/UhGv9Vk1w==",
-			"salt":	"2Vd82y2VAG0G4UVW",
+			"password":	"d8Ss+I4eDdcqcgtjFQD1Dw+3LHPZY2B4glmMvDYSIDtuoAvGP8W7QS60q0DEsZ7/i85Rwx+ApZ4YpibOvl6ELw==",
+			"salt":	"XvDTev74gRTuWdu9",
 			"iterations":	101
 		}, {
 			"username":	"administrator",
@@ -21,22 +21,6 @@
 				}],
 			"password":	"cGzbVxTebhz0IUwDpulhEemMLstDkkCIqwN1hAzAuQCN8k8q/h7gapAbm7RXNZafnVZ+xyZc+n43U/w2ohiglg==",
 			"salt":	"um6hKvB0zawTQUn7",
-			"iterations":	101
-		}, {
-			"username":	"all",
-			"roles":	[{
-					"rolename":	"all"
-				}],
-			"password":	"2yVQN+YlJ2Hb6Js6VfTbB1QQEV5Q10EwxNWkatTpVpbKpsHANJ8CFY0uSN/LalOaqeicOQItMVp6afca1ma38A==",
-			"salt":	"KbJlaqRzuPVOhpbH",
-			"iterations":	101
-		}, {
-			"username":	"ctest",
-			"roles":	[{
-					"rolename":	"gwall"
-				}],
-			"password":	"FZavMzuncNdHypIGysIxHN96FEihdKE/qy9G4+AZ+F/qscqsRXDTKfLD5clDZ4JUCsyu1o/KaQfAmx2z7yAIHQ==",
-			"salt":	"SNm5bXNEyuhRhasl",
 			"iterations":	101
 		}, {
 			"username":	"webserver",
@@ -158,29 +142,6 @@
 					"allow":	true
 				}]
 		}, {
-			"rolename":	"all",
-			"acls":	[{
-					"acltype":	"publishClientSend",
-					"topic":	"#",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientReceive",
-					"topic":	"#",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"subscribeLiteral",
-					"topic":	"#",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"subscribePattern",
-					"topic":	"#",
-					"priority":	10,
-					"allow":	true
-				}]
-		}, {
 			"rolename":	"anonymous",
 			"acls":	[{
 					"acltype":	"publishClientSend",
@@ -215,29 +176,6 @@
 				}, {
 					"acltype":	"subscribePattern",
 					"topic":	"RegisteredGW",
-					"priority":	10,
-					"allow":	true
-				}]
-		}, {
-			"rolename":	"gwall",
-			"acls":	[{
-					"acltype":	"publishClientSend",
-					"topic":	"Configs",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientReceive",
-					"topic":	"GetConfigs",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"subscribeLiteral",
-					"topic":	"GetConfigs",
-					"priority":	10,
-					"allow":	true
-				}, {
-					"acltype":	"subscribePattern",
-					"topic":	"GetConfigs",
 					"priority":	10,
 					"allow":	true
 				}]

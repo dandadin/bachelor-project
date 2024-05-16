@@ -110,6 +110,10 @@ class MDevice extends MObjectModel {
      */
     public function delete($arg = NULL) : bool {
         if (!$this->id) return TRUE;
+        $sql = "SELECT COUNT(*) AS c FROM steps WHERE channel_id IN (SELECT id FROM channels where device_id=$this->id)";
+        $sqls=DB::query($sql);
+        $o=$sqls->fetchObject();
+        if ($o->c) return FALSE;
         $sql = "DELETE FROM channels WHERE device_id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM collection_devices WHERE device_id=$this->id";
@@ -139,7 +143,7 @@ class MDevice extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Device was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Device could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Device could not have been deleted!"));
         return $ret;
     }
 }

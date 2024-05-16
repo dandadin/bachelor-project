@@ -138,6 +138,8 @@ class MRole extends MObjectModel {
      */
     public function delete($arg = NULL) : bool {
         if (!$this->id) return TRUE;
+        $sql = "DELETE FROM domain_users WHERE role_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM roles WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
@@ -163,7 +165,7 @@ class MRole extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Role was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Role could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Role could not have been deleted!"));
         return $ret;
     }
 }

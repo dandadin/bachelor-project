@@ -13,6 +13,6 @@ class VPTRCollection extends VPTableRow {
         $this->add(new VText($o->id));
         $this->add(new VLink(new VText($o->name), "/collection/$o->id/edit"));
         $this->add(new VLink(new VText($o->dname), "/domain/$o->domain_id/edit"));
-        parent::__construct($_SESSION["perms"]->checkDomainPerm($o->domain_id, "can_edit_colls") ? "/collection/$o->id/delete" : null);
+        parent::__construct(($_SESSION["perms"]->checkDomainPerm($o->domain_id, "can_edit_colls") || $_SESSION["perms"]->canEditAll()) ? "/collection/$o->id/delete" : null);
     }
 }

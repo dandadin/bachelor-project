@@ -76,6 +76,7 @@ class PermissionManager {
     }
 
     public function checkDomainPerm(int $domainId, string $permName) : bool {
+        if ($_SESSION["perms"]->canEditAll()) return true;
         if (!isset($this->permissions)) return false;
         if (!isset($this->permissions[$domainId])) return false;
         if (!isset($this->permissions[$domainId][$permName])) return false;

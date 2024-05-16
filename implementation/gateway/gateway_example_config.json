@@ -1,11 +1,11 @@
 {
-  "name": "pokus",
+  "name": "brana",
   "address": "A1:B2:C3",
   "token": "Token123",
   "devices": [
     {
-      "name": "automaticke",
-      "location": "Danuv pokoj",
+      "name": "zarizeni1",
+      "location": "pokoj1",
       "comm_module": "demo",
       "channels": [
         {
@@ -23,8 +23,8 @@
       ]
     },
     {
-      "name": "automaticke zarizeni 2",
-      "location": "Misin pokoj",
+      "name": "zarizeni2",
+      "location": "pokoj2",
       "comm_module": "demo",
       "channels": [
         {

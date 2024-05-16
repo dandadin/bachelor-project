@@ -115,7 +115,7 @@ class MInstance extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Instance was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Instance could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Instance could not have been deleted!"));
         return $ret;
     }
 

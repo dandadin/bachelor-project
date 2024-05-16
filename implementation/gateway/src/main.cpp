@@ -60,6 +60,7 @@ void changeIdentity(struct mosquitto *mosq, bool anonymous = true, const string&
 }
 
 void multiSubscribe(struct mosquitto *mosq, bool anonymous = true) {
+    cerr << "subscribing..." << endl;
     mosquitto_subscribe(mosq, NULL, MQTT_GETCONFIG_TOPIC, 0);
     mosquitto_subscribe(mosq, NULL, MQTT_REGISTEREDGW_TOPIC, 0);
     if (!anonymous) {
@@ -155,8 +156,8 @@ void connect_callback(struct mosquitto *mosq, void *obj, int result) {
     printf("connect callback, returnCode=%d (%s)\n", result, mosquitto_connack_string(result));
     if(result == 5 && !anonymousConnect) {
         changeIdentity(mosq, true);
-        multiSubscribe(mosq, true);
     }
+    multiSubscribe(mosq, true);
 }
 
 string getRoleName() {
@@ -189,7 +190,7 @@ void message_callback(struct mosquitto *mosq, void *obj, const struct mosquitto_
 
     mosquitto_topic_matches_sub(("GW/" + address + "/#").c_str(), message->topic, &match);
     if (match) {
-        cout << "Detekoval jsem zpravu v topicu GW/" << endl;
+        cout << "Message detected in topic GW/" << endl;
         vector<string> topic = splitString(message->topic, '/');
         if (topic.at(1) != address) {
             cerr << "Warn: Received MQTT message was addressed to a different gateway! ('" + topic.at(1) + "', but my name is '" + address + "')" << endl;
@@ -198,7 +199,7 @@ void message_callback(struct mosquitto *mosq, void *obj, const struct mosquitto_
         if (!devices) {cerr << "Error: Device map not set! Exiting..." << endl; exit(3);}
         if(!devices->contains(topic.at(2))) {
             cerr << "Warn: Received MQTT message was addressed to an unknown device! ('" + topic.at(2) + "')" << endl;
-            cerr << "ZNAM POUZE: ";
+            cerr << "Known devices: ";
             for (const auto& [name, handler] : *devices ) {
                 cerr << "(" << name << ") ";
             }
@@ -255,24 +256,19 @@ int main(int argc, char* argv[]) {
 
         mosquitto_username_pw_set(mosq, getRoleName().c_str(), token.c_str());
         //mosquitto_username_pw_set(mosq, nullptr, nullptr);
-        cout << "1RetCode:[" << retCode << "]" << endl;
         cout << "connecting to MQTT " << mqtt_host << ":" << mqtt_port << endl;
         mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
-        cout << "2RetCode:[" << retCode << "]" << endl;
         multiSubscribe(mosq, false);
 //        mosquitto_subscribe(mosq, NULL, MQTT_GETCONFIG_TOPIC, 0);
 //        mosquitto_subscribe(mosq, NULL, MQTT_REGISTEREDGW_TOPIC, 0);
 //        mosquitto_subscribe(mosq, NULL, ("GW/" + address + "/#").c_str(), 0);
-//        cout << "3RetCode:[" << retCode << "]" << endl;
-        cout << "RETVAL:[" << retVal << "]" << endl;
-        cout << "jsem pred while" << endl;
 
         wantToRun=1;
         while(wantToRun){
             retVal = mosquitto_loop(mosq, 1000, 1);
             if(wantToRun && retVal){
-                printf("Connection error!\n");
-                sleep(10);
+                printf("Connection error! (Return value:%d)\n", retVal);
+                sleep(1);
                 mosquitto_reconnect(mosq);
             }
         }

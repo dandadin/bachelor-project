@@ -83,6 +83,10 @@ class MUser extends MObjectModel {
      */
     public function delete($arg = NULL) : bool {
         if (!$this->id) return TRUE;
+        $sql = "DELETE FROM collection_users WHERE user_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
+        $sql = "DELETE FROM domain_users WHERE user_id=$this->id";
+        if (FALSE===DB::exec($sql)) return FALSE;
         $sql = "DELETE FROM users WHERE id=$this->id";
         if (FALSE===DB::exec($sql)) return FALSE;
         if (FALSE===parent::delete()) return FALSE;
@@ -108,7 +112,7 @@ class MUser extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "User was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "User could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "User could not have been deleted!"));
         return $ret;
     }
 }

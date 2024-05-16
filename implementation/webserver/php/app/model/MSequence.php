@@ -42,7 +42,7 @@ class MSequence extends MObjectModel {
             if ($o) {
                 $this->id = $o->id;
                 $this->name = $o->name;
-                $this->userId = $o->users_id;
+                $this->userId = $o->user_id;
             }
         }
         $this->steps = new MRTStepsInSequence($id);
@@ -123,7 +123,7 @@ class MSequence extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Sequence was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Sequence could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Sequence could not have been deleted!"));
         return $ret;
     }
 }

@@ -128,7 +128,7 @@ class MStep extends MObjectModel {
     public function unpersist() : bool {
         $ret = parent::unpersist();
         if ($ret) VPageHollow::addNotification(new VNotification(VNotification::NT_Success, "Step was deleted."));
-        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Step could not have been saved!"));
+        else VPageHollow::addNotification(new VNotification(VNotification::NT_Error, "Step could not have been deleted!"));
         return $ret;
     }
 }
