@@ -9,23 +9,24 @@
 #include <dlfcn.h>
 #include <vector>
 #include <sstream>
+#include <unistd.h>
 #include "device.h"
-
-#define mqtt_host "iothome.cz"
-#define mqtt_port 1883
 
 #define MQTT_GETCONFIG_TOPIC "GetConfigs"
 #define MQTT_SENDCONFIG_TOPIC "Configs"
 #define MQTT_REGISTEREDGW_TOPIC "RegisteredGW"
-#define MQTT_CONFIG_FILE "/win/Users/dansi/bachelor-project/implementation/gateway/src/gateway_example_config.json"
+#define MQTT_DEFAULT_CONFIG_FILE "./gateway_config.json"
+#define MQTT_DEFAULT_PORT 1883
 
 using namespace std;
 
-static int wantToRun = 1;
+static int wantToRun;
 static bool anonymousConnect = false;
 static int retCode = 69;
-string configFile = MQTT_CONFIG_FILE;
-static mosquitto* mosqq;
+string configFile = MQTT_DEFAULT_CONFIG_FILE;
+char *mqtt_host;
+int mqtt_port = MQTT_DEFAULT_PORT;
+
 
 string address, tmpAddress;
 string token, tmpToken;
@@ -147,7 +148,7 @@ bool reloadCachedConfig(const string& filename) {
 
 
 void handle_signal(int s) {
-    wantToRun = 0;
+    if (wantToRun) wantToRun = 0; else exit(1);
 }
 
 void connect_callback(struct mosquitto *mosq, void *obj, int result) {
@@ -215,10 +216,26 @@ void message_callback(struct mosquitto *mosq, void *obj, const struct mosquitto_
 }
 
 int main(int argc, char* argv[]) {
-    if (argc > 1) configFile = argv[1];
+    if (argc <=1 ) {
+        cerr << "Error: MQTT host must be specified!" << endl;
+        exit(5);
+    }
+    char *arg_port=strchr(argv[1], ':');
+    if (arg_port) {
+      mqtt_port = atoi(arg_port+1);
+      *arg_port=0;
+    }
+    mqtt_host=argv[1];
+    
+    if (argc > 2) configFile = argv[2];
+    
+    if (argc > 3) {
+        cerr << "Error: too many arguments!" << endl;
+        exit(5);
+    }
+    
     char clientId[24];
     struct mosquitto *mosq;
-    mosqq = mosq;
     int retVal = 0;
 
     signal(SIGINT, handle_signal);
@@ -239,6 +256,7 @@ int main(int argc, char* argv[]) {
         mosquitto_username_pw_set(mosq, getRoleName().c_str(), token.c_str());
         //mosquitto_username_pw_set(mosq, nullptr, nullptr);
         cout << "1RetCode:[" << retCode << "]" << endl;
+        cout << "connecting to MQTT " << mqtt_host << ":" << mqtt_port << endl;
         mosquitto_connect(mosq, mqtt_host, mqtt_port, 60);
         cout << "2RetCode:[" << retCode << "]" << endl;
         multiSubscribe(mosq, false);
@@ -249,6 +267,7 @@ int main(int argc, char* argv[]) {
         cout << "RETVAL:[" << retVal << "]" << endl;
         cout << "jsem pred while" << endl;
 
+        wantToRun=1;
         while(wantToRun){
             retVal = mosquitto_loop(mosq, 1000, 1);
             if(wantToRun && retVal){

@@ -9,12 +9,14 @@ gateway: bin/gateway
 modules: $(MODS) 
   
 bin/gateway: $(OBJS)
+	mkdir -p bin
 	g++ $(CFLAGS) $^ -o $@ -Wl,-E -lmosquitto
 
 %.o: %.cpp
 	g++ $(CFLAGS) $(DEPFLAGS) -c $< -o $@
 
 bin/%.so: src/modules/%.cpp src/device.h
+	mkdir -p bin
 	g++ $(CFLAGS) -shared -fPIC $< -o $@ -iquote src
 
 clean:

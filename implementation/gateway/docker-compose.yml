@@ -1,21 +1,11 @@
 version: '3'
 
 services:
-  executor:
-    image: busybox:1.36.1
-    command: /executor
+  gateway:
+    build: .
     restart: always
-    networks:
-      - internal
-    volumes:
-      - ./executor:/executor
-      - token:/token
-    ports:
-      - 1883:1883
-      - 9001:9001
-networks:
-  internal:
-    driver: bridge
-volumes:
-  token:
+# User can pass specific config to the container using this lines:
+#    volumes:
+#      - ./gateway_example_config.json:/config.json
+    command: /opt/gateway/gateway "$MQTT_HOST" /config.json
 
