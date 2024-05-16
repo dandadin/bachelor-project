@@ -14,14 +14,17 @@ Rychlé spuštění celé aplikace (s daty na testování):
 
 3)  inicializace databáze
 
-        docker exec -ti webserver_db_1 mysql < webserver/db-example.sql
+        mysql -h iothome.cz -P 3366 -u root -proot-heslo < db-example.sql
 
 4)  spuštění brány
 
         cd gateway
-        ./example.sh
+        bash ./example.sh
 
-5) otevřít prohlížeč na http://iothome.cz
+5) otevřít prohlížeč na http://iothome.cz pomocí účtu:
+   
+       login=developer
+       heslo=developer
 
 
 
@@ -43,8 +46,8 @@ Spuštění celé aplikace (s minimálními počátečními daty):
 
 3)  inicializace databáze
 
-        docker exec -ti webserver_db_1 mysql < webserver/db-schema.sql
-        docker exec -ti webserver_db_1 mysql < webserver/db-init-data.sql
+        mysql -h iothome.cz -P 3366 -u root -proot-heslo < db-schema.sql
+        mysql -h iothome.cz -P 3366 -u root -proot-heslo < db-init-data.sql
 
 4)  spuštění brány
 
