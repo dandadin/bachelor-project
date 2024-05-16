@@ -1,0 +1,60 @@
+\doxysection{MRTRUser\+Role\+In\+Dom.\+php}
+\hypertarget{MRTRUserRoleInDom_8php_source}{}\label{MRTRUserRoleInDom_8php_source}\index{php/app/model/MRTRUserRoleInDom.php@{php/app/model/MRTRUserRoleInDom.php}}
+\mbox{\hyperlink{MRTRUserRoleInDom_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00005}\mbox{\hyperlink{classMRTRUserRoleInDom}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRUserRoleInDom}{MRTRUserRoleInDom}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00010}\mbox{\hyperlink{classMRTRUserRoleInDom_a94f6c59dabb06036b387fc52b3a1b811}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a94f6c59dabb06036b387fc52b3a1b811}{\$login}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00015}\mbox{\hyperlink{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00020}\mbox{\hyperlink{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}{00020}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}{\$roleId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00027}\mbox{\hyperlink{classMRTRUserRoleInDom_a973b46ae6601cd379aac883a42d57b88}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a973b46ae6601cd379aac883a42d57b88}{\_\_construct}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}{\$userId}}\ =\ 0,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}{\$roleId}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \$this-\/>userId\ =\ \mbox{\hyperlink{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \$this-\/>login\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \$this-\/>roleId\ =\ \mbox{\hyperlink{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}{\$roleId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00038}\mbox{\hyperlink{classMRTRUserRoleInDom_ae5efe0986eff3632ec217b4def89cb10}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUserRoleInDom_ae5efe0986eff3632ec217b4def89cb10}{store}}(\textcolor{keywordtype}{int}\ \$domainId\ =\ 0,\ \textcolor{keywordtype}{int}\ \$index\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ if\ (!\$domainId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ Empty\ domainId"{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}SELECT\ id\ FROM\ users\ WHERE\ id=:userId\ OR\ (:userId\ =\ 0\ AND\ login=:login)"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}userId"{}}\ =>\ \$this-\/>userId,\ \textcolor{stringliteral}{"{}login"{}}\ =>\ \$this-\/>login]);}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>userId\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>login\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ Warning:\ User\ not\ found.\ (id:\$this-\/>userId,\ login:\$this-\/>login)"{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \$this-\/>userId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Provedlo\ se\ nastaveni:userId\ =\ o-\/>id;\ \$this-\/>userId\ =\ \$o-\/>id;"{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ domain\_users\ (domain\_id,\ user\_id,\ role\_id)\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ :domainId,:userId,id\ FROM\ roles\ WHERE\ id=:roleId"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}domainId"{}}\ =>\ \$domainId,\ \textcolor{stringliteral}{"{}userId"{}}\ =>\ \$this-\/>userId,\ \textcolor{stringliteral}{"{}roleId"{}}\ =>\ \$this-\/>roleId]);}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserRoleInDom_8php_source_l00079}00079\ \}}
+
+\end{DoxyCode}

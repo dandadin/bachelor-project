@@ -1,0 +1,29 @@
+\doxysection{MObject\+Model.\+php}
+\hypertarget{MObjectModel_8php_source}{}\label{MObjectModel_8php_source}\index{php/framework/model/MObjectModel.php@{php/framework/model/MObjectModel.php}}
+\mbox{\hyperlink{MObjectModel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00005}\mbox{\hyperlink{classMObjectModel}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMObjectModel}{MObjectModel}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00010}\mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{00010}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{urlPrefix}}\ =\ \textcolor{stringliteral}{'object'};}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00015}\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}};}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \$PageId;}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00026}\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00034}\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{getUrl}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}/"{}}.static::urlPrefix.\textcolor{stringliteral}{"{}/"{}}.(\$this-\/>\textcolor{keywordtype}{id}\ ?\ \$this-\/>\textcolor{keywordtype}{id}.\textcolor{stringliteral}{"{}/edit"{}}\ :\ \textcolor{stringliteral}{"{}new"{}});}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00042}\mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{getPageId}}()\ :\ string\ \{}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ if(!isset(static::\$PageId))\ static::\$PageId=md5(microtime().\textcolor{stringliteral}{'/'}.\$\_SERVER[\textcolor{stringliteral}{'REMOTE\_ADDR'}].\textcolor{stringliteral}{'/'}.\$\_SERVER[\textcolor{stringliteral}{'REMOTE\_PORT'}]);}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::\$PageId;}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00052}\mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{setPageId}}(\textcolor{keywordtype}{string}\ \$pageId)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ static::\$PageId\ =\ \$pageId;}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MObjectModel_8php_source_l00055}00055\ \}}
+
+\end{DoxyCode}

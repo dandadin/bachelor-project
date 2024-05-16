@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoTHome Webserver: /win/Users/dansi/bachelor-project/implementation/webserver/php/ui/handler.php File Reference</title>
+<title>IoTHome Webserver: php/handler.php File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,18 +99,89 @@ $(document).ready(function(){initNavTree('handler_8php.html',''); initResizable(
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:acf215f34a917d014776ce684a9ee8909"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url($_SERVER[&quot;REQUEST_URI&quot;], PHP_URL_PATH)</td></tr>
-<tr class="separator:acf215f34a917d014776ce684a9ee8909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a8a4009b02e49717caa88b128affc5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a> = explode('/', parse_url($_SERVER[&quot;REQUEST_URI&quot;], PHP_URL_PATH))</td></tr>
+<tr class="separator:a49a8a4009b02e49717caa88b128affc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255f6b6db4c45b1418e9c15cf4e2bcdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler_8php.html#a255f6b6db4c45b1418e9c15cf4e2bcdd">$objects</a></td></tr>
+<tr class="separator:a255f6b6db4c45b1418e9c15cf4e2bcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97941710d863131c700f069b109991e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a> = <a class="el" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a>($res)</td></tr>
+<tr class="separator:ae97941710d863131c700f069b109991e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5553a328d2837d4abcc8dea65f7e2b"><td class="memItemLeft" align="right" valign="top">foreach($objects as $urlName=&gt; $cname)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handler_8php.html#a9d5553a328d2837d4abcc8dea65f7e2b">$otherPages</a></td></tr>
+<tr class="separator:a9d5553a328d2837d4abcc8dea65f7e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="acf215f34a917d014776ce684a9ee8909" name="acf215f34a917d014776ce684a9ee8909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf215f34a917d014776ce684a9ee8909">&#9670;&#160;</a></span>$url</h2>
+<a id="ae97941710d863131c700f069b109991e" name="ae97941710d863131c700f069b109991e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae97941710d863131c700f069b109991e">&#9670;&#160;</a></span>$id</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">$url = parse_url($_SERVER[&quot;REQUEST_URI&quot;], PHP_URL_PATH)</td>
+          <td class="memname">$id = <a class="el" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a>($res)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="handler_8php_source.html#l00019">19</a> of file <a class="el" href="handler_8php_source.html">handler.php</a>.</p>
+
+</div>
+</div>
+<a id="a255f6b6db4c45b1418e9c15cf4e2bcdd" name="a255f6b6db4c45b1418e9c15cf4e2bcdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255f6b6db4c45b1418e9c15cf4e2bcdd">&#9670;&#160;</a></span>$objects</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$objects</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= [</div>
+<div class="line">    <span class="stringliteral">&quot;user&quot;</span> =&gt; <span class="stringliteral">&quot;User&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;domain&quot;</span> =&gt; <span class="stringliteral">&quot;Domain&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;collection&quot;</span> =&gt; <span class="stringliteral">&quot;Collection&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;device&quot;</span> =&gt; <span class="stringliteral">&quot;Device&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;channel&quot;</span> =&gt; <span class="stringliteral">&quot;Channel&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;gateway&quot;</span> =&gt; <span class="stringliteral">&quot;Gateway&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;role&quot;</span> =&gt; <span class="stringliteral">&quot;Role&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;sequence&quot;</span> =&gt; <span class="stringliteral">&quot;Sequence&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;step&quot;</span> =&gt; <span class="stringliteral">&quot;Step&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;instance&quot;</span> =&gt; <span class="stringliteral">&quot;Instance&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;plan&quot;</span> =&gt; <span class="stringliteral">&quot;Plan&quot;</span>]</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="handler_8php_source.html#l00006">6</a> of file <a class="el" href="handler_8php_source.html">handler.php</a>.</p>
+
+</div>
+</div>
+<a id="a9d5553a328d2837d4abcc8dea65f7e2b" name="a9d5553a328d2837d4abcc8dea65f7e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5553a328d2837d4abcc8dea65f7e2b">&#9670;&#160;</a></span>$otherPages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">foreach ( $objects as $urlName=&gt; $cname) $otherPages</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= [</div>
+<div class="line">        <span class="stringliteral">&quot;login&quot;</span> =&gt; <span class="stringliteral">&quot;VPageLogin&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;logout&quot;</span> =&gt; <span class="stringliteral">&quot;VPageLogout&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;&quot;</span> =&gt; <span class="stringliteral">&quot;VPageHome&quot;</span></div>
+<div class="line">    ]</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="handler_8php_source.html#l00064">64</a> of file <a class="el" href="handler_8php_source.html">handler.php</a>.</p>
+
+</div>
+</div>
+<a id="a49a8a4009b02e49717caa88b128affc5" name="a49a8a4009b02e49717caa88b128affc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a8a4009b02e49717caa88b128affc5">&#9670;&#160;</a></span>$res</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">$res = explode('/', parse_url($_SERVER[&quot;REQUEST_URI&quot;], PHP_URL_PATH))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -124,7 +195,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c479e8412035211390d4f9dec63c1f88.html">webserver</a></li><li class="navelem"><a class="el" href="dir_08a7cbcc41efe9bb1ff2aacd6915c6c1.html">php</a></li><li class="navelem"><a class="el" href="dir_f56207ff7803472ff3fd57f03694973f.html">ui</a></li><li class="navelem"><a class="el" href="handler_8php.html">handler.php</a></li>
+    <li class="navelem"><a class="el" href="dir_05194b7bb14e4bdbd759acf3e4294839.html">php</a></li><li class="navelem"><a class="el" href="handler_8php.html">handler.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

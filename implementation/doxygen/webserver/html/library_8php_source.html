@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoTHome Webserver: /win/Users/dansi/bachelor-project/implementation/webserver/php/app/library.php Source File</title>
+<title>IoTHome Webserver: php/app/library.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,44 +93,51 @@ $(document).ready(function(){initNavTree('library_8php_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="library_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>    session_start();</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">    4</a></span>    <span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">autoload</a>($name) {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>        $dir = <span class="keyword">new</span> RecursiveDirectoryIterator($_SERVER[<span class="stringliteral">&quot;DOCUMENT_ROOT&quot;</span>]);</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        $locations = [<span class="stringliteral">&quot;app&quot;</span>, <span class="stringliteral">&quot;app/model&quot;</span>, <span class="stringliteral">&quot;app/view&quot;</span>,</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>            <span class="stringliteral">&quot;framework&quot;</span>, <span class="stringliteral">&quot;framework/model&quot;</span>, <span class="stringliteral">&quot;framework/view&quot;</span>,</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>            <span class="stringliteral">&quot;framework/controller&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>];</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">foreach</span> ($locations as $l) {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            $file = $_SERVER[<span class="stringliteral">&quot;DOCUMENT_ROOT&quot;</span>].<span class="stringliteral">&quot;/&quot;</span>.$l.<span class="stringliteral">&quot;/&quot;</span>.$name.<span class="stringliteral">&quot;.php&quot;</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            <span class="keywordflow">if</span>(file_exists($file)) {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                require_once $file;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    spl_autoload_register(<span class="stringliteral">&quot;autoload&quot;</span>);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">   20</a></span>    <span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">genFieldId</a>() {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (!isset($_SESSION[<span class="stringliteral">&quot;genId&quot;</span>])) $_SESSION[<span class="stringliteral">&quot;genId&quot;</span>] = 0;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;f&quot;</span>.++$_SESSION[<span class="stringliteral">&quot;genId&quot;</span>];</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span>(!isset($_SESSION[<span class="stringliteral">&quot;loginId&quot;</span>]) || !$_SESSION[<span class="stringliteral">&quot;loginId&quot;</span>]) {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">if</span> ($_SERVER[<span class="stringliteral">&quot;REQUEST_URI&quot;</span>] != <span class="stringliteral">&quot;/login.php&quot;</span>) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            header(<span class="stringliteral">&quot;Location: /login.php&quot;</span>);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            exit();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">    3</a></span><span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">autoload</a>($name) {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    $dir = <span class="keyword">new</span> RecursiveDirectoryIterator($_SERVER[<span class="stringliteral">&quot;DOCUMENT_ROOT&quot;</span>]);</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    $locations = [<span class="stringliteral">&quot;app&quot;</span>, <span class="stringliteral">&quot;app/model&quot;</span>, <span class="stringliteral">&quot;app/view&quot;</span>,</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        <span class="stringliteral">&quot;framework&quot;</span>, <span class="stringliteral">&quot;framework/model&quot;</span>, <span class="stringliteral">&quot;framework/view&quot;</span>,</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="stringliteral">&quot;framework/controller&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>];</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">foreach</span> ($locations as $l) {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        $file = $_SERVER[<span class="stringliteral">&quot;DOCUMENT_ROOT&quot;</span>].<span class="stringliteral">&quot;/&quot;</span>.$l.<span class="stringliteral">&quot;/&quot;</span>.$name.<span class="stringliteral">&quot;.php&quot;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">if</span>(file_exists($file)) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            require_once $file;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">   17</a></span><span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">genFieldId</a>() {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span> (!isset($_SESSION[<span class="stringliteral">&quot;genId&quot;</span>])) $_SESSION[<span class="stringliteral">&quot;genId&quot;</span>] = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;f&quot;</span>.++$_SESSION[<span class="stringliteral">&quot;genId&quot;</span>];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="library_8php.html#a7989581885dadb053205310374c46763">   28</a></span><span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#a7989581885dadb053205310374c46763">timetostr</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="executor_8php.html#a78db1a0602e3b6ac1d9a1b5ec103c160">$time</a>) : string {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    return gmdate(<span class="stringliteral">&quot;Y-m-d H:i:s&quot;</span>, <a class="code hl_variable" href="executor_8php.html#a78db1a0602e3b6ac1d9a1b5ec103c160">$time</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="ttc" id="alibrary_8php_html_a7971fc21278bd2af708ff322e5d2d6c0"><div class="ttname"><a href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">genFieldId</a></div><div class="ttdeci">genFieldId()</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00020">library.php:20</a></div></div>
-<div class="ttc" id="alibrary_8php_html_aaadcc924acfd96de4f0f2afefe771f5d"><div class="ttname"><a href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">autoload</a></div><div class="ttdeci">autoload($name)</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00004">library.php:4</a></div></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">   40</a></span><span class="keyword">function</span> <a class="code hl_function" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a>(array $urlArray) : int {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    if (isset($urlArray[2]) &amp;&amp; is_numeric($urlArray[2])) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> $urlArray[2];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span> (isset($urlArray[2]) &amp;&amp; $urlArray[2] == <span class="stringliteral">&quot;new&quot;</span>) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="ttc" id="aexecutor_8php_html_a78db1a0602e3b6ac1d9a1b5ec103c160"><div class="ttname"><a href="executor_8php.html#a78db1a0602e3b6ac1d9a1b5ec103c160">$time</a></div><div class="ttdeci">$time</div><div class="ttdef"><b>Definition</b> <a href="executor_8php_source.html#l00003">executor.php:3</a></div></div>
+<div class="ttc" id="alibrary_8php_html_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"><div class="ttname"><a href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a></div><div class="ttdeci">extractId(array $urlArray)</div><div class="ttdoc">Tries to extract id from requested url (required in a format of an array of parts of url,...</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00040">library.php:40</a></div></div>
+<div class="ttc" id="alibrary_8php_html_a7971fc21278bd2af708ff322e5d2d6c0"><div class="ttname"><a href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">genFieldId</a></div><div class="ttdeci">genFieldId()</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00017">library.php:17</a></div></div>
+<div class="ttc" id="alibrary_8php_html_a7989581885dadb053205310374c46763"><div class="ttname"><a href="library_8php.html#a7989581885dadb053205310374c46763">timetostr</a></div><div class="ttdeci">timetostr(int $time)</div><div class="ttdoc">Inverse function for strtotime().</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00028">library.php:28</a></div></div>
+<div class="ttc" id="alibrary_8php_html_aaadcc924acfd96de4f0f2afefe771f5d"><div class="ttname"><a href="library_8php.html#aaadcc924acfd96de4f0f2afefe771f5d">autoload</a></div><div class="ttdeci">autoload($name)</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00003">library.php:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c479e8412035211390d4f9dec63c1f88.html">webserver</a></li><li class="navelem"><a class="el" href="dir_08a7cbcc41efe9bb1ff2aacd6915c6c1.html">php</a></li><li class="navelem"><a class="el" href="dir_831f0e0995c16cac6e8eb51a4964e4f8.html">app</a></li><li class="navelem"><a class="el" href="library_8php.html">library.php</a></li>
+    <li class="navelem"><a class="el" href="dir_05194b7bb14e4bdbd759acf3e4294839.html">php</a></li><li class="navelem"><a class="el" href="dir_0623e9d793428cf5139452ed7a3df4c0.html">app</a></li><li class="navelem"><a class="el" href="library_8php.html">library.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

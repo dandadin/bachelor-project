@@ -3,19 +3,19 @@
 Inheritance diagram for VForm\+Field\+Dropdown\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.240000cm]{classVFormFieldDropdown}
+\includegraphics[height=12.000000cm]{classVFormFieldDropdown}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVFormFieldDropdown_ab5128990f5ccb63bf277e709f3d34c4f}{\+\_\+\+\_\+construct}} (\&\$model=NULL, \$label=NULL, \$filter=\"{}1=1\"{})
+\mbox{\hyperlink{classVFormFieldDropdown_acd6c93dac07af607570a511dab009d89}{\+\_\+\+\_\+construct}} (\&\$model=NULL, \$label=NULL)
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVFormFieldDropdown_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVFormFieldDropdown_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
@@ -25,16 +25,22 @@ Inheritance diagram for VForm\+Field\+Dropdown\+:\begin{figure}[H]
 \mbox{\hyperlink{classVFormField_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
 \mbox{\hyperlink{classVFormField_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVFormField_a88d6d7d8b3718d5ecd428a7153be78c5}{disable}} (bool \$disabled=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{classVFormFieldDropdown_a872c4c148f5fe90476da42325f643be9}{Sql}} = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM table\"{}
+\item 
+const \mbox{\hyperlink{classVFormFieldDropdown_a09df3cedce3a19744850f066f29fbb44}{Perm\+Name}} = \"{}\"{}
 \item 
 const \mbox{\hyperlink{classVFormFieldDropdown_a941256cf9742dc81ec2bcea45cf89f53}{Label\+Column}} = \"{}name\"{}
 \item 
@@ -44,6 +50,8 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVFormFieldDropdown_a5c96ad32310965cf6f7de32fa987a1e1}{build\+Sql}} ()
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,13 +61,9 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classVFormFieldDropdown_aac53bdb48bdd96ff9c20e2a86f48ce5f}{\$filter}}
-\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -68,6 +72,8 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \mbox{\hyperlink{classVFormField_a177af2bf70bede02de3d05a425fb8e43}{\$label}}
 \item 
 \mbox{\hyperlink{classVFormField_a08fdd91bde255dbe3e2d15a22d9663e8}{\$model}}
+\item 
+\mbox{\hyperlink{classVFormField_a6c108f5b26242d862f6e51869fbfd271}{\$disabled}}
 \end{DoxyCompactItemize}
 
 
@@ -79,11 +85,15 @@ Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00003}{3}} o
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classVFormFieldDropdown_ab5128990f5ccb63bf277e709f3d34c4f}\label{classVFormFieldDropdown_ab5128990f5ccb63bf277e709f3d34c4f} 
+\Hypertarget{classVFormFieldDropdown_acd6c93dac07af607570a511dab009d89}\label{classVFormFieldDropdown_acd6c93dac07af607570a511dab009d89} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!\_\_construct@{\_\_construct}}
 \index{\_\_construct@{\_\_construct}!VFormFieldDropdown@{VFormFieldDropdown}}
 \doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$model = {\ttfamily NULL},  }\item[{}]{\$label = {\ttfamily NULL},  }\item[{}]{\$filter = {\ttfamily \"{}1=1\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$model = {\ttfamily NULL},  }\item[{}]{\$label = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classVFormField_acd6c93dac07af607570a511dab009d89}{VForm\+Field}}.
 
 
 
@@ -92,19 +102,29 @@ Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00009}{9}} o
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classVFormFieldDropdown_aa35132660532f73611e650ffb8402f8a}\label{classVFormFieldDropdown_aa35132660532f73611e650ffb8402f8a} 
+\Hypertarget{classVFormFieldDropdown_a5c96ad32310965cf6f7de32fa987a1e1}\label{classVFormFieldDropdown_a5c96ad32310965cf6f7de32fa987a1e1} 
+\index{VFormFieldDropdown@{VFormFieldDropdown}!buildSql@{buildSql}}
+\index{buildSql@{buildSql}!VFormFieldDropdown@{VFormFieldDropdown}}
+\doxysubsubsection{\texorpdfstring{buildSql()}{buildSql()}}
+{\footnotesize\ttfamily build\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00050}{50}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+
+\Hypertarget{classVFormFieldDropdown_a6c42a72add1e6afb5ff60b9f9a9356cd}\label{classVFormFieldDropdown_a6c42a72add1e6afb5ff60b9f9a9356cd} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!registerController@{registerController}}
 \index{registerController@{registerController}!VFormFieldDropdown@{VFormFieldDropdown}}
 \doxysubsubsection{\texorpdfstring{registerController()}{registerController()}}
-{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}}}]{\$cc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormContext}{Form\+Context}}}]{\$c }\end{DoxyParamCaption})}
 
 
 
-Reimplemented from \mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{VView}}.
+Reimplemented from \mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{VView}}.
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00044}{44}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00045}{45}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
 
 \Hypertarget{classVFormFieldDropdown_ab20fd770855c31512e92d9b31f379b87}\label{classVFormFieldDropdown_ab20fd770855c31512e92d9b31f379b87} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!renderBody@{renderBody}}
@@ -118,7 +138,11 @@ Reimplemented from \mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00021}{21}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+Reimplemented in \mbox{\hyperlink{classVFfDdInstanceSteps_ab20fd770855c31512e92d9b31f379b87}{VFf\+Dd\+Instance\+Steps}}, and \mbox{\hyperlink{classVFfDdSequenceSteps_ab20fd770855c31512e92d9b31f379b87}{VFf\+Dd\+Sequence\+Steps}}.
+
+
+
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00020}{20}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
 
 \Hypertarget{classVFormFieldDropdown_aeed6253e9e242751c7beb12a5c541b1e}\label{classVFormFieldDropdown_aeed6253e9e242751c7beb12a5c541b1e} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!renderFooter@{renderFooter}}
@@ -132,7 +156,7 @@ Reimplemented from \mbox{\hyperlink{classVFormField_aeed6253e9e242751c7beb12a5c5
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00038}{38}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00039}{39}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
 
 \Hypertarget{classVFormFieldDropdown_aa776ee561a32e9eb2c76a5a7f9cc1a74}\label{classVFormFieldDropdown_aa776ee561a32e9eb2c76a5a7f9cc1a74} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!renderHeader@{renderHeader}}
@@ -146,26 +170,26 @@ Reimplemented from \mbox{\hyperlink{classVFormField_aa776ee561a32e9eb2c76a5a7f9c
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00016}{16}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00015}{15}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
 
 
 
 \doxysubsection{Field Documentation}
-\Hypertarget{classVFormFieldDropdown_aac53bdb48bdd96ff9c20e2a86f48ce5f}\label{classVFormFieldDropdown_aac53bdb48bdd96ff9c20e2a86f48ce5f} 
-\index{VFormFieldDropdown@{VFormFieldDropdown}!\$filter@{\$filter}}
-\index{\$filter@{\$filter}!VFormFieldDropdown@{VFormFieldDropdown}}
-\doxysubsubsection{\texorpdfstring{\$filter}{\$filter}}
-{\footnotesize\ttfamily \$filter\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00007}{7}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
-
 \Hypertarget{classVFormFieldDropdown_a941256cf9742dc81ec2bcea45cf89f53}\label{classVFormFieldDropdown_a941256cf9742dc81ec2bcea45cf89f53} 
 \index{VFormFieldDropdown@{VFormFieldDropdown}!LabelColumn@{LabelColumn}}
 \index{LabelColumn@{LabelColumn}!VFormFieldDropdown@{VFormFieldDropdown}}
 \doxysubsubsection{\texorpdfstring{LabelColumn}{LabelColumn}}
 {\footnotesize\ttfamily const Label\+Column = \"{}name\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00006}{6}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+
+\Hypertarget{classVFormFieldDropdown_a09df3cedce3a19744850f066f29fbb44}\label{classVFormFieldDropdown_a09df3cedce3a19744850f066f29fbb44} 
+\index{VFormFieldDropdown@{VFormFieldDropdown}!PermName@{PermName}}
+\index{PermName@{PermName}!VFormFieldDropdown@{VFormFieldDropdown}}
+\doxysubsubsection{\texorpdfstring{PermName}{PermName}}
+{\footnotesize\ttfamily const Perm\+Name = \"{}\"{}}
 
 
 
@@ -189,10 +213,10 @@ Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00004}{4}} o
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00006}{6}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
+Definition at line \mbox{\hyperlink{VFormFieldDropdown_8php_source_l00007}{7}} of file \mbox{\hyperlink{VFormFieldDropdown_8php_source}{VForm\+Field\+Dropdown.\+php}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VFormFieldDropdown_8php}{VForm\+Field\+Dropdown.\+php}}\end{DoxyCompactItemize}
+php/framework/view/\mbox{\hyperlink{VFormFieldDropdown_8php}{VForm\+Field\+Dropdown.\+php}}\end{DoxyCompactItemize}

@@ -23,6 +23,8 @@ Inheritance diagram for VPage\+Edit\+Gateway\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classVPageHollow_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
+\mbox{\hyperlink{classVPageHollow_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
 \mbox{\hyperlink{classVPageHollow_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
@@ -31,21 +33,33 @@ Inheritance diagram for VPage\+Edit\+Gateway\+:\begin{figure}[H]
 \mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
 \item 
 \mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\item 
+\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classVPageHollow}{VPage\+Hollow}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classVPageHollow_a74b3ab979b209bbd6fe99d60ba10542e}{load\+Notifications}} ()
+\item 
+static \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{add\+Notification}} (\mbox{\hyperlink{classVNotification}{VNotification}} \$notification)
+\item 
+static \mbox{\hyperlink{classVPageHollow_afa3cb7dd3eef03b62763c25426f770c8}{check\+Permissions}} (int\texorpdfstring{$\vert$}{|}null \$id=null)
+\begin{DoxyCompactList}\small\item\em Checks if currently logged-\/in user can view the page. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
 \item 
 \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
-\item 
-\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,14 +69,18 @@ Inheritance diagram for VPage\+Edit\+Gateway\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVPageHollow}{VPage\+Hollow}}}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{classVPageHollow_aa4e423fc694f0790f1f2484a49b354c7}{Title}} = \"{}Io\+THome\"{}
 \item 
+const \mbox{\hyperlink{classVPageHollow_a4b231d793043b3f162c456c04f82b37e}{Header}} = \"{}\"{}
+\item 
 \mbox{\hyperlink{classVPageHollow_ada57e7bb7c152edad18fe2f166188691}{\$title}}
+\item 
+\mbox{\hyperlink{classVPageHollow_a4f44601f2b9dc8a1644bce53c94ce622}{\$header}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
@@ -93,4 +111,4 @@ Definition at line \mbox{\hyperlink{VPageEditGateway_8php_source_l00004}{4}} of 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/\mbox{\hyperlink{VPageEditGateway_8php}{VPage\+Edit\+Gateway.\+php}}\end{DoxyCompactItemize}
+php/app/view/\mbox{\hyperlink{VPageEditGateway_8php}{VPage\+Edit\+Gateway.\+php}}\end{DoxyCompactItemize}

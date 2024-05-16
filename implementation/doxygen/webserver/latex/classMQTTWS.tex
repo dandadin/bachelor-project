@@ -1,0 +1,112 @@
+\doxysection{MQTTWS Class Reference}
+\hypertarget{classMQTTWS}{}\label{classMQTTWS}\index{MQTTWS@{MQTTWS}}
+Inheritance diagram for MQTTWS\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMQTTWS}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMQTTWS_aead959ec188ddcc7c01d99f05225752d}{create\+GW}} (string \$gw\+Name, string \$token)
+\item 
+static \mbox{\hyperlink{classMQTTWS_aca2f3e1d526ba86b959fe4daf99ec676}{remove\+GW}} (string \$gw\+Name)
+\item 
+static \mbox{\hyperlink{classMQTTWS_a319f7d61e4d0aed0923f7501b9ff01fb}{get\+Configs}} ()
+\item 
+static \mbox{\hyperlink{classMQTTWS_a5371bf8305b3cf9c9b26ff11e55c80a7}{send\+Step}} (string \$gw\+MAC, string \$device\+Name, string \$channel\+Name, string \$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMQTT}{MQTT}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{send}} (string \$topic, string \$msg, bool \$retain=false)
+\item 
+static \mbox{\hyperlink{classMQTT_a823631c2954a553f6efbb3a032547552}{get}} (string \$tpc)
+\item 
+static \mbox{\hyperlink{classMQTT_a861bae552da5b62d80f745cd8bf93d85}{create\+Client}} (string \$client, string \$token, string \$role)
+\item 
+static \mbox{\hyperlink{classMQTT_a46f8b61f7b66b608ca1426a650b28df3}{create\+Role}} (string \$role, array \$acls)
+\item 
+static \mbox{\hyperlink{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d}{remove\+Role}} (string \$role)
+\item 
+static \mbox{\hyperlink{classMQTT_a2dc0cf2161744710bbc127a76548e07b}{remove\+Client}} (string \$client)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMQTT}{MQTT}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMQTT_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{classMQTT_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMQTT}{MQTT}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMQTT_ab448dffe230973693ab5b6904a9528c6}{service\+Topic}} = \textquotesingle{}\$CONTROL/dynamic-\/security/v1\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classMQTT}{MQTT}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}{\$\+Instance}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classMQTT}{MQTT}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqtt\+Cli}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{MQTTWS_8php_source_l00002}{2}} of file \mbox{\hyperlink{MQTTWS_8php_source}{MQTTWS.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMQTTWS_aead959ec188ddcc7c01d99f05225752d}\label{classMQTTWS_aead959ec188ddcc7c01d99f05225752d} 
+\index{MQTTWS@{MQTTWS}!createGW@{createGW}}
+\index{createGW@{createGW}!MQTTWS@{MQTTWS}}
+\doxysubsubsection{\texorpdfstring{createGW()}{createGW()}}
+{\footnotesize\ttfamily static create\+GW (\begin{DoxyParamCaption}\item[{string}]{\$gw\+Name,  }\item[{string}]{\$token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTTWS_8php_source_l00004}{4}} of file \mbox{\hyperlink{MQTTWS_8php_source}{MQTTWS.\+php}}.
+
+\Hypertarget{classMQTTWS_a319f7d61e4d0aed0923f7501b9ff01fb}\label{classMQTTWS_a319f7d61e4d0aed0923f7501b9ff01fb} 
+\index{MQTTWS@{MQTTWS}!getConfigs@{getConfigs}}
+\index{getConfigs@{getConfigs}!MQTTWS@{MQTTWS}}
+\doxysubsubsection{\texorpdfstring{getConfigs()}{getConfigs()}}
+{\footnotesize\ttfamily static get\+Configs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTTWS_8php_source_l00031}{31}} of file \mbox{\hyperlink{MQTTWS_8php_source}{MQTTWS.\+php}}.
+
+\Hypertarget{classMQTTWS_aca2f3e1d526ba86b959fe4daf99ec676}\label{classMQTTWS_aca2f3e1d526ba86b959fe4daf99ec676} 
+\index{MQTTWS@{MQTTWS}!removeGW@{removeGW}}
+\index{removeGW@{removeGW}!MQTTWS@{MQTTWS}}
+\doxysubsubsection{\texorpdfstring{removeGW()}{removeGW()}}
+{\footnotesize\ttfamily static remove\+GW (\begin{DoxyParamCaption}\item[{string}]{\$gw\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTTWS_8php_source_l00024}{24}} of file \mbox{\hyperlink{MQTTWS_8php_source}{MQTTWS.\+php}}.
+
+\Hypertarget{classMQTTWS_a5371bf8305b3cf9c9b26ff11e55c80a7}\label{classMQTTWS_a5371bf8305b3cf9c9b26ff11e55c80a7} 
+\index{MQTTWS@{MQTTWS}!sendStep@{sendStep}}
+\index{sendStep@{sendStep}!MQTTWS@{MQTTWS}}
+\doxysubsubsection{\texorpdfstring{sendStep()}{sendStep()}}
+{\footnotesize\ttfamily static send\+Step (\begin{DoxyParamCaption}\item[{string}]{\$gw\+MAC,  }\item[{string}]{\$device\+Name,  }\item[{string}]{\$channel\+Name,  }\item[{string}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTTWS_8php_source_l00049}{49}} of file \mbox{\hyperlink{MQTTWS_8php_source}{MQTTWS.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/\mbox{\hyperlink{MQTTWS_8php}{MQTTWS.\+php}}\end{DoxyCompactItemize}

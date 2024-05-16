@@ -1,0 +1,17 @@
+\doxysection{VJson\+Table.\+php}
+\hypertarget{VJsonTable_8php_source}{}\label{VJsonTable_8php_source}\index{php/app/view/VJsonTable.php@{php/app/view/VJsonTable.php}}
+\mbox{\hyperlink{VJsonTable_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00006}\mbox{\hyperlink{classVJsonTable}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVJsonTable}{VJsonTable}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVTable}{VTable}}\ \{}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00008}\mbox{\hyperlink{classVJsonTable_add54c98bb8234363320b013e73a9b343}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVJsonTable_add54c98bb8234363320b013e73a9b343}{\_\_construct}}(\$heading,\ \$jsonArray,\ \$rowClass,\ \$label\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$jsonArray)\ \{}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ parent::\_\_construct(\$heading,\ \textcolor{stringliteral}{"{}"{}},\ \$label);}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$jsonArray\ as\ \$jsonItem)\ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \$rowClass(\$jsonItem));}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VJsonTable_8php_source_l00014}00014\ \}}
+
+\end{DoxyCode}

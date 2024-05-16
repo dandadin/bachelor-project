@@ -9,7 +9,7 @@ Inheritance diagram for VLink\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVLink_af8fb1b08594de6b18ba011fe9f123cd6}{\+\_\+\+\_\+construct}} (\$title, \$url)
+\mbox{\hyperlink{classVLink_ab09af1cfaaea1dcbb9ba3fd3872e56af}{\+\_\+\+\_\+construct}} (\mbox{\hyperlink{classVView}{VView}} \$title, \$url, \$class=\"{}\"{})
 \item 
 \mbox{\hyperlink{classVLink_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
 \end{DoxyCompactItemize}
@@ -17,13 +17,17 @@ Inheritance diagram for VLink\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVLink_ada57e7bb7c152edad18fe2f166188691}{\$title}}
+\mbox{\hyperlink{classVView}{VView}} \mbox{\hyperlink{classVLink_a5a722c5b3fb64f73e8baaf4f5238a640}{\$title}}
 \item 
 \mbox{\hyperlink{classVLink_acf215f34a917d014776ce684a9ee8909}{\$url}}
+\item 
+\mbox{\hyperlink{classVLink_a252ba022809910ea710a068fc1bab657}{\$class}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
@@ -35,7 +39,7 @@ Inheritance diagram for VLink\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 
 
@@ -47,15 +51,15 @@ Definition at line \mbox{\hyperlink{VLink_8php_source_l00003}{3}} of file \mbox{
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classVLink_af8fb1b08594de6b18ba011fe9f123cd6}\label{classVLink_af8fb1b08594de6b18ba011fe9f123cd6} 
+\Hypertarget{classVLink_ab09af1cfaaea1dcbb9ba3fd3872e56af}\label{classVLink_ab09af1cfaaea1dcbb9ba3fd3872e56af} 
 \index{VLink@{VLink}!\_\_construct@{\_\_construct}}
 \index{\_\_construct@{\_\_construct}!VLink@{VLink}}
 \doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$title,  }\item[{}]{\$url }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVView}{VView}}}]{\$title,  }\item[{}]{\$url,  }\item[{}]{\$class = {\ttfamily \"{}\"{}} }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{VLink_8php_source_l00007}{7}} of file \mbox{\hyperlink{VLink_8php_source}{VLink.\+php}}.
+Definition at line \mbox{\hyperlink{VLink_8php_source_l00008}{8}} of file \mbox{\hyperlink{VLink_8php_source}{VLink.\+php}}.
 
 
 
@@ -72,16 +76,26 @@ Reimplemented from \mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87
 
 
 
-Definition at line \mbox{\hyperlink{VLink_8php_source_l00013}{13}} of file \mbox{\hyperlink{VLink_8php_source}{VLink.\+php}}.
+Definition at line \mbox{\hyperlink{VLink_8php_source_l00015}{15}} of file \mbox{\hyperlink{VLink_8php_source}{VLink.\+php}}.
 
 
 
 \doxysubsection{Field Documentation}
-\Hypertarget{classVLink_ada57e7bb7c152edad18fe2f166188691}\label{classVLink_ada57e7bb7c152edad18fe2f166188691} 
+\Hypertarget{classVLink_a252ba022809910ea710a068fc1bab657}\label{classVLink_a252ba022809910ea710a068fc1bab657} 
+\index{VLink@{VLink}!\$class@{\$class}}
+\index{\$class@{\$class}!VLink@{VLink}}
+\doxysubsubsection{\texorpdfstring{\$class}{\$class}}
+{\footnotesize\ttfamily \$class\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{VLink_8php_source_l00006}{6}} of file \mbox{\hyperlink{VLink_8php_source}{VLink.\+php}}.
+
+\Hypertarget{classVLink_a5a722c5b3fb64f73e8baaf4f5238a640}\label{classVLink_a5a722c5b3fb64f73e8baaf4f5238a640} 
 \index{VLink@{VLink}!\$title@{\$title}}
 \index{\$title@{\$title}!VLink@{VLink}}
 \doxysubsubsection{\texorpdfstring{\$title}{\$title}}
-{\footnotesize\ttfamily \$title\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVView}{VView}} \$title\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -101,4 +115,4 @@ Definition at line \mbox{\hyperlink{VLink_8php_source_l00005}{5}} of file \mbox{
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VLink_8php}{VLink.\+php}}\end{DoxyCompactItemize}
+php/framework/view/\mbox{\hyperlink{VLink_8php}{VLink.\+php}}\end{DoxyCompactItemize}

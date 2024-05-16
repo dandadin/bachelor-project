@@ -1,37 +1,41 @@
 \doxysection{library.\+php}
-\hypertarget{library_8php_source}{}\label{library_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/library.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/library.php}}
+\hypertarget{library_8php_source}{}\label{library_8php_source}\index{php/app/library.php@{php/app/library.php}}
 \mbox{\hyperlink{library_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{library_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00002}00002\ \ \ \ \ session\_start();}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00004}\mbox{\hyperlink{library_8php_aaadcc924acfd96de4f0f2afefe771f5d}{00004}}\ \ \ \ \ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_aaadcc924acfd96de4f0f2afefe771f5d}{autoload}}(\$name)\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$dir\ =\ \textcolor{keyword}{new}\ RecursiveDirectoryIterator(\$\_SERVER[\textcolor{stringliteral}{"{}DOCUMENT\_ROOT"{}}]);}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$locations\ =\ [\textcolor{stringliteral}{"{}app"{}},\ \textcolor{stringliteral}{"{}app/model"{}},\ \textcolor{stringliteral}{"{}app/view"{}},}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}framework"{}},\ \textcolor{stringliteral}{"{}framework/model"{}},\ \textcolor{stringliteral}{"{}framework/view"{}},}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}framework/controller"{}},\ \textcolor{stringliteral}{"{}."{}}];}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$locations\ as\ \$l)\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \$file\ =\ \$\_SERVER[\textcolor{stringliteral}{"{}DOCUMENT\_ROOT"{}}].\textcolor{stringliteral}{"{}/"{}}.\$l.\textcolor{stringliteral}{"{}/"{}}.\$name.\textcolor{stringliteral}{"{}.php"{}};}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_exists(\$file))\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ require\_once\ \$file;}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00016}00016\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00018}00018\ \ \ \ \ spl\_autoload\_register(\textcolor{stringliteral}{"{}autoload"{}});}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00019}00019\ }
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00020}\mbox{\hyperlink{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}{00020}}\ \ \ \ \ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}{genFieldId}}()\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}]))\ \$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}]\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}f"{}}.++\$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}];}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00023}00023\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}(!isset(\$\_SESSION[\textcolor{stringliteral}{"{}loginId"{}}])\ ||\ !\$\_SESSION[\textcolor{stringliteral}{"{}loginId"{}}])\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$\_SERVER[\textcolor{stringliteral}{"{}REQUEST\_URI"{}}]\ !=\ \textcolor{stringliteral}{"{}/login.php"{}})\ \{}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}Location:\ /login.php"{}});}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{library_8php_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00003}\mbox{\hyperlink{library_8php_aaadcc924acfd96de4f0f2afefe771f5d}{00003}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_aaadcc924acfd96de4f0f2afefe771f5d}{autoload}}(\$name)\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00004}00004\ \ \ \ \ \$dir\ =\ \textcolor{keyword}{new}\ RecursiveDirectoryIterator(\$\_SERVER[\textcolor{stringliteral}{"{}DOCUMENT\_ROOT"{}}]);}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00005}00005\ \ \ \ \ \$locations\ =\ [\textcolor{stringliteral}{"{}app"{}},\ \textcolor{stringliteral}{"{}app/model"{}},\ \textcolor{stringliteral}{"{}app/view"{}},}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}framework"{}},\ \textcolor{stringliteral}{"{}framework/model"{}},\ \textcolor{stringliteral}{"{}framework/view"{}},}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}framework/controller"{}},\ \textcolor{stringliteral}{"{}."{}}];}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$locations\ as\ \$l)\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$file\ =\ \$\_SERVER[\textcolor{stringliteral}{"{}DOCUMENT\_ROOT"{}}].\textcolor{stringliteral}{"{}/"{}}.\$l.\textcolor{stringliteral}{"{}/"{}}.\$name.\textcolor{stringliteral}{"{}.php"{}};}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_exists(\$file))\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ require\_once\ \$file;}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00017}\mbox{\hyperlink{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}{00017}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}{genFieldId}}()\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}]))\ \$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}f"{}}.++\$\_SESSION[\textcolor{stringliteral}{"{}genId"{}}];}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00028}\mbox{\hyperlink{library_8php_a7989581885dadb053205310374c46763}{00028}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_a7989581885dadb053205310374c46763}{timetostr}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{executor_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}{\$time}})\ :\ string\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00029}00029\ \ \ \ \ return\ gmdate(\textcolor{stringliteral}{"{}Y-\/m-\/d\ H:i:s"{}},\ \mbox{\hyperlink{executor_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}{\$time}});}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00030}00030\ \}}
 \DoxyCodeLine{\Hypertarget{library_8php_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00040}\mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{00040}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{extractId}}(array\ \$urlArray)\ :\ int\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00041}00041\ \ \ \ \ if\ (isset(\$urlArray[2])\ \&\&\ is\_numeric(\$urlArray[2]))\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$urlArray[2];}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$urlArray[2])\ \&\&\ \$urlArray[2]\ ==\ \textcolor{stringliteral}{"{}new"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{library_8php_source_l00048}00048\ \}}
 
 \end{DoxyCode}

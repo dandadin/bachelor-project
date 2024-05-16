@@ -1,5 +1,5 @@
 \doxysection{VPage\+List\+Roles.\+php}
-\hypertarget{VPageListRoles_8php_source}{}\label{VPageListRoles_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListRoles.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListRoles.php}}
+\hypertarget{VPageListRoles_8php_source}{}\label{VPageListRoles_8php_source}\index{php/app/view/VPageListRoles.php@{php/app/view/VPageListRoles.php}}
 \mbox{\hyperlink{VPageListRoles_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00001}00001\ <?php}
@@ -7,10 +7,14 @@
 \DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00003}\mbox{\hyperlink{classVPageListRoles}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListRoles}{VPageListRoles}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00004}\mbox{\hyperlink{classVPageListRoles_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListRoles_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
-\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVRoleList}{VRoleList}}());}
-\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}add\ new"{}},\ \textcolor{stringliteral}{"{}/edit.php?type=ro\&id=0"{}}));}
-\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00008}00008\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Roles</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Can\ List\ Collections"{}},\ \textcolor{stringliteral}{"{}Can\ Edit\ Collections"{}},}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Can\ List\ Users"{}},\ \textcolor{stringliteral}{"{}Can\ Edit\ Users"{}},\ \textcolor{stringliteral}{"{}Can\ List\ Devices"{}},\ \textcolor{stringliteral}{"{}Can\ Edit\ Devices"{}},}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Can\ List\ Gateways"{}},\ \textcolor{stringliteral}{"{}Can\ Edit\ Gateways"{}},\ \textcolor{stringliteral}{"{}Can\ Edit\ All"{}}],}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ roles"{}},\ VPTRRole::class));}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/role/new"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{VPageListRoles_8php_source_l00014}00014\ \}}
 
 \end{DoxyCode}

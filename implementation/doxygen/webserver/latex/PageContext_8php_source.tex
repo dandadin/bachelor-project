@@ -1,0 +1,52 @@
+\doxysection{Page\+Context.\+php}
+\hypertarget{PageContext_8php_source}{}\label{PageContext_8php_source}\index{php/framework/PageContext.php@{php/framework/PageContext.php}}
+\mbox{\hyperlink{PageContext_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00006}\mbox{\hyperlink{classPageContext}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPageContext}{PageContext}}\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00011}\mbox{\hyperlink{classPageContext_a6b84eefa75375eb4cec761b40110f522}{00011}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classPageContext_a6b84eefa75375eb4cec761b40110f522}{TTL}}\ =\ 60*60;\ \textcolor{comment}{//\ [s]\ =\ 1h}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00016}\mbox{\hyperlink{classPageContext_ac5aa33e68454db537d9004805a650a2e}{00016}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPageContext_ac5aa33e68454db537d9004805a650a2e}{\$timeout}};}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00021}\mbox{\hyperlink{classPageContext_a62ddcb894058d84b4b76748d121e9454}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ array\ \mbox{\hyperlink{classPageContext_a62ddcb894058d84b4b76748d121e9454}{\$contexts}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00028}\mbox{\hyperlink{classPageContext_aad54dc0fbfffab8d9810ec782edf882d}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPageContext_aad54dc0fbfffab8d9810ec782edf882d}{loadAllModels}}():\mbox{\hyperlink{classMModel}{MModel}}|null\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ if\ (isset(\$\_POST[\textcolor{stringliteral}{"{}pageId"{}}]))\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \$pageId\ =\ \$\_POST[\textcolor{stringliteral}{"{}pageId"{}}];}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ static::getPageContext(\$pageId)-\/>loadPageModels();}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00042}\mbox{\hyperlink{classPageContext_ab704d89a4a50d1270024ebf171144595}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPageContext_ab704d89a4a50d1270024ebf171144595}{add}}(\textcolor{keywordtype}{string}\ \$formId,\ \textcolor{keywordtype}{string}\ \$data)\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \$this-\/>contexts[\$formId]\ =\ \$data;}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \$this-\/>timeout\ =\ time()+static::TTL;}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00052}\mbox{\hyperlink{classPageContext_a76c56d6a92f3f0c157e3f3eabed7a0ee}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPageContext_a76c56d6a92f3f0c157e3f3eabed7a0ee}{loadPageModels}}()\ :\ \mbox{\hyperlink{classMModel}{MModel}}|null\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \$ret\ =\ null;}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}(\$this-\/>contexts\ as\ \$formId=>\$ctx)\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \$context\ =\ unserialize(\$ctx);\ \textcolor{comment}{//FormContext}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_POST[\textcolor{stringliteral}{"{}formId"{}}])\ \&\&\ \$\_POST[\textcolor{stringliteral}{"{}formId"{}}]==\$formId)\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ret\ =\ \$context-\/>updateModel();}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFormContext_ab83f8de44819eec5dc535153a322a10b}{FormContext::setFormModel}}(\$formId,\ \$context-\/>model);}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ret;}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00069}\mbox{\hyperlink{classPageContext_afd1b8780c9349d22e819dcf0ee01623b}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPageContext_afd1b8780c9349d22e819dcf0ee01623b}{getPageContext}}(\textcolor{keywordtype}{string}\ \$pageId)\ :\ \mbox{\hyperlink{classPageContext}{PageContext}}\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ if(!isset(\$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}]))\ \$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}]\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!isset(\$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}][\$pageId]))\ \$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}][\$pageId]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPageContext}{PageContext}}();}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}][\$pageId];}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00079}\mbox{\hyperlink{classPageContext_ac4dd0cb38112e22ce4a62fbcd8cbc467}{00079}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPageContext_ac4dd0cb38112e22ce4a62fbcd8cbc467}{cleanup}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ if(!isset(\$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}]))\ return;}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}]\ as\ \$idx\ =>\ \$pageContext)\ \{}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (time()\ >\ \$pageContext-\/>timeout)\ unset(\$\_SESSION[\textcolor{stringliteral}{"{}pageContexts"{}}][\$idx]);}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PageContext_8php_source_l00085}00085\ \}}
+
+\end{DoxyCode}

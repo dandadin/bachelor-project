@@ -1,0 +1,18 @@
+\doxysection{VPage\+List\+Sequences.\+php}
+\hypertarget{VPageListSequences_8php_source}{}\label{VPageListSequences_8php_source}\index{php/app/view/VPageListSequences.php@{php/app/view/VPageListSequences.php}}
+\mbox{\hyperlink{VPageListSequences_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00003}\mbox{\hyperlink{classVPageListSequences}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListSequences}{VPageListSequences}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00004}\mbox{\hyperlink{classVPageListSequences_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListSequences_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Sequences</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Name"{}}],\ \textcolor{stringliteral}{"{}SELECT\ sequences.*\ FROM\ sequences"{}}.}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ (\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll()\ ?\ \textcolor{stringliteral}{"{}"{}}\ :\ \textcolor{stringliteral}{"{}\ WHERE\ user\_id="{}}.\$\_SESSION[\textcolor{stringliteral}{"{}loginId"{}}]),}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ VPTRSequence::class));}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/sequence/new"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListSequences_8php_source_l00012}00012\ \}}
+
+\end{DoxyCode}

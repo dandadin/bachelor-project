@@ -1,0 +1,19 @@
+\doxysection{VPlain\+Table.\+php}
+\hypertarget{VPlainTable_8php_source}{}\label{VPlainTable_8php_source}\index{php/framework/view/VPlainTable.php@{php/framework/view/VPlainTable.php}}
+\mbox{\hyperlink{VPlainTable_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00006}\mbox{\hyperlink{classVPlainTable}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPlainTable}{VPlainTable}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVTable}{VTable}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00008}\mbox{\hyperlink{classVPlainTable_ae5af8f5e408c023c2597f465efe99584}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPlainTable_ae5af8f5e408c023c2597f465efe99584}{\_\_construct}}(\$heading,\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}},\ \$rowClass,\ \$deleteCol\ =\ \textcolor{stringliteral}{"{}delete"{}},\ \$label\ =\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$heading,\ \$deleteCol,\ \$label);}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \$rowClass(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}));}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPlainTable_8php_source_l00016}00016\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,176 @@
+\doxysection{MQTT Class Reference}
+\hypertarget{classMQTT}{}\label{classMQTT}\index{MQTT@{MQTT}}
+Inheritance diagram for MQTT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMQTT}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMQTT_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{classMQTT_a421831a265621325e1fdd19aace0c758}{\+\_\+\+\_\+destruct}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{send}} (string \$topic, string \$msg, bool \$retain=false)
+\item 
+static \mbox{\hyperlink{classMQTT_a823631c2954a553f6efbb3a032547552}{get}} (string \$tpc)
+\item 
+static \mbox{\hyperlink{classMQTT_a861bae552da5b62d80f745cd8bf93d85}{create\+Client}} (string \$client, string \$token, string \$role)
+\item 
+static \mbox{\hyperlink{classMQTT_a46f8b61f7b66b608ca1426a650b28df3}{create\+Role}} (string \$role, array \$acls)
+\item 
+static \mbox{\hyperlink{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d}{remove\+Role}} (string \$role)
+\item 
+static \mbox{\hyperlink{classMQTT_a2dc0cf2161744710bbc127a76548e07b}{remove\+Client}} (string \$client)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMQTT_ab448dffe230973693ab5b6904a9528c6}{service\+Topic}} = \textquotesingle{}\$CONTROL/dynamic-\/security/v1\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}{\$\+Instance}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqtt\+Cli}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00002}{2}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMQTT_a095c5d389db211932136b53f25f39685}\label{classMQTT_a095c5d389db211932136b53f25f39685} 
+\index{MQTT@{MQTT}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00008}{8}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a421831a265621325e1fdd19aace0c758}\label{classMQTT_a421831a265621325e1fdd19aace0c758} 
+\index{MQTT@{MQTT}!\_\_destruct@{\_\_destruct}}
+\index{\_\_destruct@{\_\_destruct}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{\_\_destruct()}{\_\_destruct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00028}{28}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMQTT_a861bae552da5b62d80f745cd8bf93d85}\label{classMQTT_a861bae552da5b62d80f745cd8bf93d85} 
+\index{MQTT@{MQTT}!createClient@{createClient}}
+\index{createClient@{createClient}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{createClient()}{createClient()}}
+{\footnotesize\ttfamily static create\+Client (\begin{DoxyParamCaption}\item[{string}]{\$client,  }\item[{string}]{\$token,  }\item[{string}]{\$role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00054}{54}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a46f8b61f7b66b608ca1426a650b28df3}\label{classMQTT_a46f8b61f7b66b608ca1426a650b28df3} 
+\index{MQTT@{MQTT}!createRole@{createRole}}
+\index{createRole@{createRole}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{createRole()}{createRole()}}
+{\footnotesize\ttfamily static create\+Role (\begin{DoxyParamCaption}\item[{string}]{\$role,  }\item[{array}]{\$acls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00073}{73}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a823631c2954a553f6efbb3a032547552}\label{classMQTT_a823631c2954a553f6efbb3a032547552} 
+\index{MQTT@{MQTT}!get@{get}}
+\index{get@{get}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static get (\begin{DoxyParamCaption}\item[{string}]{\$tpc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00040}{40}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a2dc0cf2161744710bbc127a76548e07b}\label{classMQTT_a2dc0cf2161744710bbc127a76548e07b} 
+\index{MQTT@{MQTT}!removeClient@{removeClient}}
+\index{removeClient@{removeClient}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{removeClient()}{removeClient()}}
+{\footnotesize\ttfamily static remove\+Client (\begin{DoxyParamCaption}\item[{string}]{\$client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00107}{107}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d}\label{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d} 
+\index{MQTT@{MQTT}!removeRole@{removeRole}}
+\index{removeRole@{removeRole}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{removeRole()}{removeRole()}}
+{\footnotesize\ttfamily static remove\+Role (\begin{DoxyParamCaption}\item[{string}]{\$role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00093}{93}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a98051b3f0fc11f42009de844dd39bdad}\label{classMQTT_a98051b3f0fc11f42009de844dd39bdad} 
+\index{MQTT@{MQTT}!send@{send}}
+\index{send@{send}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily static send (\begin{DoxyParamCaption}\item[{string}]{\$topic,  }\item[{string}]{\$msg,  }\item[{bool}]{\$retain = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00034}{34}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}\label{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5} 
+\index{MQTT@{MQTT}!\$Instance@{\$Instance}}
+\index{\$Instance@{\$Instance}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{\$Instance}{\$Instance}}
+{\footnotesize\ttfamily \$Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00004}{4}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_a8773fc66c29277b75613710d79608b83}\label{classMQTT_a8773fc66c29277b75613710d79608b83} 
+\index{MQTT@{MQTT}!\$mqttCli@{\$mqttCli}}
+\index{\$mqttCli@{\$mqttCli}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{\$mqttCli}{\$mqttCli}}
+{\footnotesize\ttfamily \$mqtt\+Cli\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00003}{3}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+\Hypertarget{classMQTT_ab448dffe230973693ab5b6904a9528c6}\label{classMQTT_ab448dffe230973693ab5b6904a9528c6} 
+\index{MQTT@{MQTT}!serviceTopic@{serviceTopic}}
+\index{serviceTopic@{serviceTopic}!MQTT@{MQTT}}
+\doxysubsubsection{\texorpdfstring{serviceTopic}{serviceTopic}}
+{\footnotesize\ttfamily const service\+Topic = \textquotesingle{}\$CONTROL/dynamic-\/security/v1\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{MQTT_8php_source_l00006}{6}} of file \mbox{\hyperlink{MQTT_8php_source}{MQTT.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/\mbox{\hyperlink{MQTT_8php}{MQTT.\+php}}\end{DoxyCompactItemize}

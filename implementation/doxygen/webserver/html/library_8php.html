@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoTHome Webserver: /win/Users/dansi/bachelor-project/implementation/webserver/php/app/library.php File Reference</title>
+<title>IoTHome Webserver: php/app/library.php File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,6 +103,12 @@ Functions</h2></td></tr>
 <tr class="separator:aaadcc924acfd96de4f0f2afefe771f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7971fc21278bd2af708ff322e5d2d6c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_8php.html#a7971fc21278bd2af708ff322e5d2d6c0">genFieldId</a> ()</td></tr>
 <tr class="separator:a7971fc21278bd2af708ff322e5d2d6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7989581885dadb053205310374c46763"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_8php.html#a7989581885dadb053205310374c46763">timetostr</a> (int $time)</td></tr>
+<tr class="memdesc:a7989581885dadb053205310374c46763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse function for strtotime().  <br /></td></tr>
+<tr class="separator:a7989581885dadb053205310374c46763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a> (array $urlArray)</td></tr>
+<tr class="memdesc:a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to extract id from requested url (required in a format of an array of parts of url, separated by '/').  <br /></td></tr>
+<tr class="separator:a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aaadcc924acfd96de4f0f2afefe771f5d" name="aaadcc924acfd96de4f0f2afefe771f5d"></a>
@@ -121,7 +127,44 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00004">4</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00003">3</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
+
+</div>
+</div>
+<a id="a05c38f21d9adf2f5ca5a4bdb5cdc1c0a" name="a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">&#9670;&#160;</a></span>extractId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">extractId </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$urlArray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to extract id from requested url (required in a format of an array of parts of url, separated by '/'). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$urlArray</td><td>Requested url. (Can by obtained by string-&gt;explode()); </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Id from url (if possible). </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Request was for a creation of a new object (that doesnt have an id yet). </td></tr>
+    <tr><td class="paramname">-1</td><td>Request did not specify an id. </td></tr>
+    <tr><td class="paramname">ELSE</td><td>Id from url. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00040">40</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
 
 </div>
 </div>
@@ -140,7 +183,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00020">20</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00017">17</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
+
+</div>
+</div>
+<a id="a7989581885dadb053205310374c46763" name="a7989581885dadb053205310374c46763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7989581885dadb053205310374c46763">&#9670;&#160;</a></span>timetostr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">timetostr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inverse function for strtotime(). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$time</td><td>Time in [s] from Unix epoch. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string Time in format for TIMESTAMP data type for MySQL. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="library_8php_source.html#l00028">28</a> of file <a class="el" href="library_8php_source.html">library.php</a>.</p>
 
 </div>
 </div>
@@ -149,7 +221,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c479e8412035211390d4f9dec63c1f88.html">webserver</a></li><li class="navelem"><a class="el" href="dir_08a7cbcc41efe9bb1ff2aacd6915c6c1.html">php</a></li><li class="navelem"><a class="el" href="dir_831f0e0995c16cac6e8eb51a4964e4f8.html">app</a></li><li class="navelem"><a class="el" href="library_8php.html">library.php</a></li>
+    <li class="navelem"><a class="el" href="dir_05194b7bb14e4bdbd759acf3e4294839.html">php</a></li><li class="navelem"><a class="el" href="dir_0623e9d793428cf5139452ed7a3df4c0.html">app</a></li><li class="navelem"><a class="el" href="library_8php.html">library.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

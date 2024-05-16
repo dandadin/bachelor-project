@@ -1,0 +1,186 @@
+\doxysection{Form\+Context Class Reference}
+\hypertarget{classFormContext}{}\label{classFormContext}\index{FormContext@{FormContext}}
+
+
+Class for keeping models (and other data) of single form between page loads.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFormContext_ac1fad6138a64e79112d1a554daf23f3d}{\+\_\+\+\_\+construct}} (\&\$model)
+\item 
+\mbox{\hyperlink{classFormContext_a3ee4196e82ed0c7cde160607fd90f506}{store}} (\$form\+Id)
+\item 
+\mbox{\hyperlink{classFormContext_abeb611ec7298baef6897076402cec1ec}{update\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Calls update method for every controller of this form. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFormContext_a93ef6035b3d18b03ffa16fdbda5f1f28}{add}} (\mbox{\hyperlink{classController}{Controller}} \$c)
+\begin{DoxyCompactList}\small\item\em Registers new controller of formfield to specific form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classFormContext_ac45390ea6212f727084ff1ab37b3bc63}{get\+Form\+Model}} (string \$form\+Id)
+\begin{DoxyCompactList}\small\item\em Returns model for specific form, defined by \$form\+Id. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classFormContext_ab83f8de44819eec5dc535153a322a10b}{set\+Form\+Model}} (string \$form\+Id, \mbox{\hyperlink{classMModel}{MModel}} \$model)
+\begin{DoxyCompactList}\small\item\em Saves model of specific form, identified by \$form\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel}{MModel}} \mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{\$model}}
+\begin{DoxyCompactList}\small\item\em Model of specific form. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFormContext_ac2b250a3f0c2f1d70e35759d7131c0d3}{\$controller\+Collection}} = array()
+\begin{DoxyCompactList}\small\item\em Array of controllers of fields in a specific form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for keeping models (and other data) of single form between page loads. 
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00006}{6}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFormContext_ac1fad6138a64e79112d1a554daf23f3d}\label{classFormContext_ac1fad6138a64e79112d1a554daf23f3d} 
+\index{FormContext@{FormContext}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{\&}]{\$model }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00023}{23}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFormContext_a93ef6035b3d18b03ffa16fdbda5f1f28}\label{classFormContext_a93ef6035b3d18b03ffa16fdbda5f1f28} 
+\index{FormContext@{FormContext}!add@{add}}
+\index{add@{add}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classController}{Controller}}}]{\$c }\end{DoxyParamCaption})}
+
+
+
+Registers new controller of formfield to specific form. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classController}{Controller} & {\em \$c} & \doxylink{classController}{Controller} of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00065}{65}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+\Hypertarget{classFormContext_ac45390ea6212f727084ff1ab37b3bc63}\label{classFormContext_ac45390ea6212f727084ff1ab37b3bc63} 
+\index{FormContext@{FormContext}!getFormModel@{getFormModel}}
+\index{getFormModel@{getFormModel}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{getFormModel()}{getFormModel()}}
+{\footnotesize\ttfamily static get\+Form\+Model (\begin{DoxyParamCaption}\item[{string}]{\$form\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns model for specific form, defined by \$form\+Id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$form\+Id} & Id of specific form we want the model of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MModel\texorpdfstring{$\vert$}{|}null Model of specific form, null if model not found. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00046}{46}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+\Hypertarget{classFormContext_ab83f8de44819eec5dc535153a322a10b}\label{classFormContext_ab83f8de44819eec5dc535153a322a10b} 
+\index{FormContext@{FormContext}!setFormModel@{setFormModel}}
+\index{setFormModel@{setFormModel}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{setFormModel()}{setFormModel()}}
+{\footnotesize\ttfamily static set\+Form\+Model (\begin{DoxyParamCaption}\item[{string}]{\$form\+Id,  }\item[{\mbox{\hyperlink{classMModel}{MModel}}}]{\$model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves model of specific form, identified by \$form\+Id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$form\+Id} & Id of form. \\
+\hline
+\doxylink{classMObjectModel}{MObject\+Model} & {\em \$model} & Model of form. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00056}{56}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+\Hypertarget{classFormContext_a3ee4196e82ed0c7cde160607fd90f506}\label{classFormContext_a3ee4196e82ed0c7cde160607fd90f506} 
+\index{FormContext@{FormContext}!store@{store}}
+\index{store@{store}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$form\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00027}{27}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+\Hypertarget{classFormContext_abeb611ec7298baef6897076402cec1ec}\label{classFormContext_abeb611ec7298baef6897076402cec1ec} 
+\index{FormContext@{FormContext}!updateModel@{updateModel}}
+\index{updateModel@{updateModel}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{updateModel()}{updateModel()}}
+{\footnotesize\ttfamily update\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls update method for every controller of this form. 
+
+The controllers load new data from \$\+\_\+\+POST and save it to \$this-\/\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}model. \begin{DoxyReturn}{Returns}
+\doxylink{classMModel}{MModel} Updated model of this form. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00036}{36}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classFormContext_ac2b250a3f0c2f1d70e35759d7131c0d3}\label{classFormContext_ac2b250a3f0c2f1d70e35759d7131c0d3} 
+\index{FormContext@{FormContext}!\$controllerCollection@{\$controllerCollection}}
+\index{\$controllerCollection@{\$controllerCollection}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{\$controllerCollection}{\$controllerCollection}}
+{\footnotesize\ttfamily array \$controller\+Collection = array()}
+
+
+
+Array of controllers of fields in a specific form. 
+
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00016}{16}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+\Hypertarget{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}\label{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6} 
+\index{FormContext@{FormContext}!\$model@{\$model}}
+\index{\$model@{\$model}!FormContext@{FormContext}}
+\doxysubsubsection{\texorpdfstring{\$model}{\$model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMModel}{MModel}} \$model}
+
+
+
+Model of specific form. 
+
+
+
+Definition at line \mbox{\hyperlink{FormContext_8php_source_l00011}{11}} of file \mbox{\hyperlink{FormContext_8php_source}{Form\+Context.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/framework/\mbox{\hyperlink{FormContext_8php}{Form\+Context.\+php}}\end{DoxyCompactItemize}

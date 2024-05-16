@@ -1,0 +1,80 @@
+\doxysection{Communicator Class Reference}
+\hypertarget{classCommunicator}{}\label{classCommunicator}\index{Communicator@{Communicator}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classCommunicator_aabd6267d011efe753083fc0809fd4a77}{send\+Step}} (int \$step\+Id)
+\item 
+static \mbox{\hyperlink{classCommunicator_a1f220ebbf1d6a3d69450bb849ab062fa}{send}} (int \$channel\+Id, string \$data)
+\item 
+static \mbox{\hyperlink{classCommunicator_abbcd37d0dec5a003ffab6b70efdd3c3c}{load\+Gateway\+Config}} (\mbox{\hyperlink{classMGateway}{MGateway}} \$gateway\+Model)
+\begin{DoxyCompactList}\small\item\em Loads config from gateway device over \doxylink{classMQTT}{MQTT}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classCommunicator_ad994e8cd682a162f9b28074fd65e0831}{load\+Gateway}} (int \$gateway\+Id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Communicator_8php_source_l00003}{3}} of file \mbox{\hyperlink{Communicator_8php_source}{Communicator.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCommunicator_ad994e8cd682a162f9b28074fd65e0831}\label{classCommunicator_ad994e8cd682a162f9b28074fd65e0831} 
+\index{Communicator@{Communicator}!loadGateway@{loadGateway}}
+\index{loadGateway@{loadGateway}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{loadGateway()}{loadGateway()}}
+{\footnotesize\ttfamily static load\+Gateway (\begin{DoxyParamCaption}\item[{int}]{\$gateway\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{Communicator_8php_source_l00051}{51}} of file \mbox{\hyperlink{Communicator_8php_source}{Communicator.\+php}}.
+
+\Hypertarget{classCommunicator_abbcd37d0dec5a003ffab6b70efdd3c3c}\label{classCommunicator_abbcd37d0dec5a003ffab6b70efdd3c3c} 
+\index{Communicator@{Communicator}!loadGatewayConfig@{loadGatewayConfig}}
+\index{loadGatewayConfig@{loadGatewayConfig}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{loadGatewayConfig()}{loadGatewayConfig()}}
+{\footnotesize\ttfamily static load\+Gateway\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMGateway}{MGateway}}}]{\$gateway\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads config from gateway device over \doxylink{classMQTT}{MQTT}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classMGateway}{MGateway} & {\em \$gateway\+Model} & Model of gateway the config should be loaded from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Loading was successful. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Communicator_8php_source_l00024}{24}} of file \mbox{\hyperlink{Communicator_8php_source}{Communicator.\+php}}.
+
+\Hypertarget{classCommunicator_a1f220ebbf1d6a3d69450bb849ab062fa}\label{classCommunicator_a1f220ebbf1d6a3d69450bb849ab062fa} 
+\index{Communicator@{Communicator}!send@{send}}
+\index{send@{send}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily static send (\begin{DoxyParamCaption}\item[{int}]{\$channel\+Id,  }\item[{string}]{\$data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{Communicator_8php_source_l00010}{10}} of file \mbox{\hyperlink{Communicator_8php_source}{Communicator.\+php}}.
+
+\Hypertarget{classCommunicator_aabd6267d011efe753083fc0809fd4a77}\label{classCommunicator_aabd6267d011efe753083fc0809fd4a77} 
+\index{Communicator@{Communicator}!sendStep@{sendStep}}
+\index{sendStep@{sendStep}!Communicator@{Communicator}}
+\doxysubsubsection{\texorpdfstring{sendStep()}{sendStep()}}
+{\footnotesize\ttfamily static send\+Step (\begin{DoxyParamCaption}\item[{int}]{\$step\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{Communicator_8php_source_l00004}{4}} of file \mbox{\hyperlink{Communicator_8php_source}{Communicator.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/\mbox{\hyperlink{Communicator_8php}{Communicator.\+php}}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 \doxysection{VPage\+Edit\+Domain.\+php}
-\hypertarget{VPageEditDomain_8php_source}{}\label{VPageEditDomain_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageEditDomain.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageEditDomain.php}}
+\hypertarget{VPageEditDomain_8php_source}{}\label{VPageEditDomain_8php_source}\index{php/app/view/VPageEditDomain.php@{php/app/view/VPageEditDomain.php}}
 \mbox{\hyperlink{VPageEditDomain_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00001}00001\ <?php}
@@ -9,7 +9,19 @@
 \DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
 \DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormDomain}{VFormDomain}}(\$domainId));}
 \DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00007}00007\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00008}\mbox{\hyperlink{classVPageEditDomain_a9b080c1abd965fa84b1bc0d872617a07}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageEditDomain_a9b080c1abd965fa84b1bc0d872617a07}{checkPermissions}}(?\textcolor{keywordtype}{int}\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \textcolor{keyword}{null}):\ string\ \{}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ if\ (\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ===\ null\ ||\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ==\ -\/1)\ return\ \textcolor{stringliteral}{"{}/domains"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ===\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll())\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$domains\ =\ \ \mbox{\hyperlink{classPermissionManager_a5ff83454dc6e8cfe71720005064f2a29}{PermissionManager::arrayToSQL}}(\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>getDomainsByPerm(\textcolor{stringliteral}{"{}can\_edit\_devices"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}SELECT\ 1\ FROM\ dual\ WHERE\ EXISTS\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}(\ SELECT\ 1\ FROM\ channels\ LEFT\ JOIN\ devices\ ON\ channels.device\_id\ =\ devices.id\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LEFT\ JOIN\ domains\ on\ domains.id\ =\ devices.domain\_id\ WHERE\ channels.id="{}}.\$id.\textcolor{stringliteral}{"{}\ AND\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}domains.id\ IN\ "{}}.\ \$domains\ .\textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}\ =\ \mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageEditDomain_8php_source_l00021}00021\ \}}
 
 \end{DoxyCode}

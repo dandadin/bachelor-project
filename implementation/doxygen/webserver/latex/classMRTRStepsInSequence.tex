@@ -1,0 +1,216 @@
+\doxysection{MRTRSteps\+In\+Sequence Class Reference}
+\hypertarget{classMRTRStepsInSequence}{}\label{classMRTRStepsInSequence}\index{MRTRStepsInSequence@{MRTRStepsInSequence}}
+
+
+Model of table-\/row of relative table of steps in a sequence.  
+
+
+Inheritance diagram for MRTRSteps\+In\+Sequence\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRTRStepsInSequence}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890}{store}} (int \$seq\+Id=0, int \$index=0)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of step loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_aa3c29026f3104d290f7224128edbc1fa}{\$channel\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of channel this step should be sent to, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_a0f298096f322952a72a50f98a74c7b60}{\$value}}
+\begin{DoxyCompactList}\small\item\em Value of step, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRStepsInSequence_a223a0e7e12d51850578e3c80b118fad1}{\$delay\+Before}}
+\begin{DoxyCompactList}\small\item\em Delay (in seconds) before this step should be spplied, loaded from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model of table-\/row of relative table of steps in a sequence. 
+
+Stores single step. 
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTRStepsInSequence_a4e176c3a661053094339903c5cfc7942}\label{classMRTRStepsInSequence_a4e176c3a661053094339903c5cfc7942} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of step in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00037}{37}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTRStepsInSequence_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMRTRStepsInSequence_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!delete@{delete}}
+\index{delete@{delete}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00091}{91}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+\Hypertarget{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890}\label{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!store@{store}}
+\index{store@{store}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$seq\+Id = {\ttfamily 0},  }\item[{int}]{\$index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00055}{55}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+\Hypertarget{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e}\label{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00082}{82}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTRStepsInSequence_aa3c29026f3104d290f7224128edbc1fa}\label{classMRTRStepsInSequence_aa3c29026f3104d290f7224128edbc1fa} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!\$channelId@{\$channelId}}
+\index{\$channelId@{\$channelId}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\$channelId}{\$channelId}}
+{\footnotesize\ttfamily \$channel\+Id}
+
+
+
+Id of channel this step should be sent to, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00016}{16}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+\Hypertarget{classMRTRStepsInSequence_a223a0e7e12d51850578e3c80b118fad1}\label{classMRTRStepsInSequence_a223a0e7e12d51850578e3c80b118fad1} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!\$delayBefore@{\$delayBefore}}
+\index{\$delayBefore@{\$delayBefore}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\$delayBefore}{\$delayBefore}}
+{\footnotesize\ttfamily \$delay\+Before}
+
+
+
+Delay (in seconds) before this step should be spplied, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00026}{26}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+\Hypertarget{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}\label{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!\$id@{\$id}}
+\index{\$id@{\$id}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \$id}
+
+
+
+Id of step loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+\Hypertarget{classMRTRStepsInSequence_a0f298096f322952a72a50f98a74c7b60}\label{classMRTRStepsInSequence_a0f298096f322952a72a50f98a74c7b60} 
+\index{MRTRStepsInSequence@{MRTRStepsInSequence}!\$value@{\$value}}
+\index{\$value@{\$value}!MRTRStepsInSequence@{MRTRStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\$value}{\$value}}
+{\footnotesize\ttfamily \$value}
+
+
+
+Value of step, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRStepsInSequence_8php_source_l00021}{21}} of file \mbox{\hyperlink{MRTRStepsInSequence_8php_source}{MRTRSteps\+In\+Sequence.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MRTRStepsInSequence_8php}{MRTRSteps\+In\+Sequence.\+php}}\end{DoxyCompactItemize}

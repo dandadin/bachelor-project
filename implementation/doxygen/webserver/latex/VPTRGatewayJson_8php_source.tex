@@ -1,0 +1,25 @@
+\doxysection{VPTRGateway\+Json.\+php}
+\hypertarget{VPTRGatewayJson_8php_source}{}\label{VPTRGatewayJson_8php_source}\index{php/app/view/VPTRGatewayJson.php@{php/app/view/VPTRGatewayJson.php}}
+\mbox{\hyperlink{VPTRGatewayJson_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00006}\mbox{\hyperlink{classVPTRGatewayJson}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPTRGatewayJson}{VPTRGatewayJson}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPTableRow}{VPTableRow}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00012}\mbox{\hyperlink{classVPTRGatewayJson_a4c42917fb3b52f327f9bbadf0a99b15c}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPTRGatewayJson_a4c42917fb3b52f327f9bbadf0a99b15c}{\_\_construct}}(\$json)\ \{}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$json)\ error\_log(\textcolor{stringliteral}{"{}Error!\ Json\ not\ provided."{}});}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\$json[\textcolor{stringliteral}{"{}name"{}}]));}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\$json[\textcolor{stringliteral}{"{}location"{}}]));}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$channels\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$first\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$json[\textcolor{stringliteral}{"{}channels"{}}]\ as\ \$channel)\ \{}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$first)\ \$first\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$channels\ .=\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \$channels\ .=\ \$channel[\textcolor{stringliteral}{"{}name"{}}];}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\$channels));}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPTRGatewayJson_8php_source_l00026}00026\ \}}
+
+\end{DoxyCode}

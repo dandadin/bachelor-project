@@ -1,0 +1,143 @@
+\doxysection{MRTUser\+Role\+In\+Dom Class Reference}
+\hypertarget{classMRTUserRoleInDom}{}\label{classMRTUserRoleInDom}\index{MRTUserRoleInDom@{MRTUserRoleInDom}}
+
+
+Model for relative table of users and roles.  
+
+
+Inheritance diagram for MRTUser\+Role\+In\+Dom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMRTUserRoleInDom}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTUserRoleInDom_a15fd1e840e1d03b3f34eefff64403c2d}{\+\_\+\+\_\+construct}} (\$domain\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}{store}} (int \$domain\+Id=0)
+\begin{DoxyCompactList}\small\item\em If domain\+Id is supplied, removes all records between this domain and any user and their role, and then re-\/adds them using data supplied in POST by user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}{store}} (int \$id=0)
+\begin{DoxyCompactList}\small\item\em If id is supplied, calls store method for every row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a08f0bc1c30336c9983b29c97a8f86ff9}{delete\+Item}} (\&\$item\+Model)
+\begin{DoxyCompactList}\small\item\em Removes one specific row from the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a5efb5dcde452935a8fda7d00e3ce2fbe}{add\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Adds new default row to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMRTUserRoleInDom_ac67a600527d436e1f64193d61a5f7e66}{Row\+Model\+Class}} = MRTRUser\+Role\+In\+Dom\+::class
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\begin{DoxyCompactList}\small\item\em Array of table-\/row models. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classMRelTable_ac67a600527d436e1f64193d61a5f7e66}{Row\+Model\+Class}} = \"{}\"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for relative table of users and roles. 
+
+Used to store list of users that are included in specific collection. 
+
+Definition at line \mbox{\hyperlink{MRTUserRoleInDom_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRTUserRoleInDom_8php_source}{MRTUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTUserRoleInDom_a15fd1e840e1d03b3f34eefff64403c2d}\label{classMRTUserRoleInDom_a15fd1e840e1d03b3f34eefff64403c2d} 
+\index{MRTUserRoleInDom@{MRTUserRoleInDom}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTUserRoleInDom@{MRTUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$domain\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$domain\+Id} & Id of domain this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTUserRoleInDom_8php_source_l00012}{12}} of file \mbox{\hyperlink{MRTUserRoleInDom_8php_source}{MRTUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}\label{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c} 
+\index{MRTUserRoleInDom@{MRTUserRoleInDom}!store@{store}}
+\index{store@{store}!MRTUserRoleInDom@{MRTUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$domain\+Id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+If domain\+Id is supplied, removes all records between this domain and any user and their role, and then re-\/adds them using data supplied in POST by user. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$domain\+Id} & Id of domain this model is created for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}{MRel\+Table}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRTUserRoleInDom_8php_source_l00028}{28}} of file \mbox{\hyperlink{MRTUserRoleInDom_8php_source}{MRTUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTUserRoleInDom_ac67a600527d436e1f64193d61a5f7e66}\label{classMRTUserRoleInDom_ac67a600527d436e1f64193d61a5f7e66} 
+\index{MRTUserRoleInDom@{MRTUserRoleInDom}!RowModelClass@{RowModelClass}}
+\index{RowModelClass@{RowModelClass}!MRTUserRoleInDom@{MRTUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{RowModelClass}{RowModelClass}}
+{\footnotesize\ttfamily const Row\+Model\+Class = MRTRUser\+Role\+In\+Dom\+::class}
+
+
+
+Definition at line \mbox{\hyperlink{MRTUserRoleInDom_8php_source_l00007}{7}} of file \mbox{\hyperlink{MRTUserRoleInDom_8php_source}{MRTUser\+Role\+In\+Dom.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MRTUserRoleInDom_8php}{MRTUser\+Role\+In\+Dom.\+php}}\end{DoxyCompactItemize}

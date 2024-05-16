@@ -1,0 +1,25 @@
+\doxysection{VForm\+Step.\+php}
+\hypertarget{VFormStep_8php_source}{}\label{VFormStep_8php_source}\index{php/app/view/VFormStep.php@{php/app/view/VFormStep.php}}
+\mbox{\hyperlink{VFormStep_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00003}\mbox{\hyperlink{classVFormStep}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVFormStep}{VFormStep}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVForm}{VForm}}\ \{}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00004}\mbox{\hyperlink{classVFormStep_a61cc4fd27dff496fc2cb2b400beacf8b}{00004}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormStep_a61cc4fd27dff496fc2cb2b400beacf8b}{FormId}}\ =\ \textcolor{stringliteral}{"{}editStep"{}};}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00005}\mbox{\hyperlink{classVFormStep_aa79a0809d73a53f7a593685678c08569}{00005}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFormStep_aa79a0809d73a53f7a593685678c08569}{ModelClass}}\ =\ MStep::class;}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00007}\mbox{\hyperlink{classVFormStep_acaf7b2e26801f88e54f9d8d811fa0cc0}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVFormStep_acaf7b2e26801f88e54f9d8d811fa0cc0}{\_\_construct}}(\$stepId)\ \{}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$stepId);}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdStepSequences}{VFfDdStepSequences}}(\$this-\/>model-\/>seqId,\ \textcolor{stringliteral}{"{}Sequence"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldNumber}{VFormFieldNumber}}(\$this-\/>model-\/>index,\ \textcolor{stringliteral}{"{}Index\ in\ Sequence"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdStepChannels}{VFfDdStepChannels}}(\$this-\/>model-\/>channelId,\ \textcolor{stringliteral}{"{}Channel"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldText}{VFormFieldText}}(\$this-\/>model-\/>value,\ \textcolor{stringliteral}{"{}Value"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldNumber}{VFormFieldNumber}}(\$this-\/>model-\/>delayBefore,\ \textcolor{stringliteral}{"{}Delay\ Before"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldButtonSubmit}{VFormFieldButtonSubmit}}(\$this-\/>model,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Apply"{}}),\ \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{VFormStep_8php_source_l00019}00019\ \}}
+
+\end{DoxyCode}

@@ -1,18 +1,79 @@
-\doxysection{/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php File Reference}
-\hypertarget{handler_8php}{}\label{handler_8php}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php}}
+\doxysection{php/handler.php File Reference}
+\hypertarget{handler_8php}{}\label{handler_8php}\index{php/handler.php@{php/handler.php}}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}} = parse\+\_\+url(\$\+\_\+\+SERVER\mbox{[}\"{}REQUEST\+\_\+\+URI\"{}\mbox{]}, PHP\+\_\+\+URL\+\_\+\+PATH)
+\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}} = explode(\textquotesingle{}/\textquotesingle{}, parse\+\_\+url(\$\+\_\+\+SERVER\mbox{[}\"{}REQUEST\+\_\+\+URI\"{}\mbox{]}, PHP\+\_\+\+URL\+\_\+\+PATH))
+\item 
+\mbox{\hyperlink{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd}{\$objects}}
+\item 
+\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}} = \mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{extract\+Id}}(\$res)
+\item 
+foreach(\$objects as \$url\+Name=$>$ \$cname) \mbox{\hyperlink{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b}{\$other\+Pages}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Variable Documentation}
-\Hypertarget{handler_8php_acf215f34a917d014776ce684a9ee8909}\label{handler_8php_acf215f34a917d014776ce684a9ee8909} 
-\index{handler.php@{handler.php}!\$url@{\$url}}
-\index{\$url@{\$url}!handler.php@{handler.php}}
-\doxysubsubsection{\texorpdfstring{\$url}{\$url}}
-{\footnotesize\ttfamily \$url = parse\+\_\+url(\$\+\_\+\+SERVER\mbox{[}\"{}REQUEST\+\_\+\+URI\"{}\mbox{]}, PHP\+\_\+\+URL\+\_\+\+PATH)}
+\Hypertarget{handler_8php_ae97941710d863131c700f069b109991e}\label{handler_8php_ae97941710d863131c700f069b109991e} 
+\index{handler.php@{handler.php}!\$id@{\$id}}
+\index{\$id@{\$id}!handler.php@{handler.php}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \$id = \mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{extract\+Id}}(\$res)}
+
+
+
+Definition at line \mbox{\hyperlink{handler_8php_source_l00019}{19}} of file \mbox{\hyperlink{handler_8php_source}{handler.\+php}}.
+
+\Hypertarget{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd}\label{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd} 
+\index{handler.php@{handler.php}!\$objects@{\$objects}}
+\index{\$objects@{\$objects}!handler.php@{handler.php}}
+\doxysubsubsection{\texorpdfstring{\$objects}{\$objects}}
+{\footnotesize\ttfamily \$objects}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}user"{}}\ =>\ \textcolor{stringliteral}{"{}User"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}domain"{}}\ =>\ \textcolor{stringliteral}{"{}Domain"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}collection"{}}\ =>\ \textcolor{stringliteral}{"{}Collection"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}device"{}}\ =>\ \textcolor{stringliteral}{"{}Device"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}channel"{}}\ =>\ \textcolor{stringliteral}{"{}Channel"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}gateway"{}}\ =>\ \textcolor{stringliteral}{"{}Gateway"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}role"{}}\ =>\ \textcolor{stringliteral}{"{}Role"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}sequence"{}}\ =>\ \textcolor{stringliteral}{"{}Sequence"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}step"{}}\ =>\ \textcolor{stringliteral}{"{}Step"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}instance"{}}\ =>\ \textcolor{stringliteral}{"{}Instance"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}plan"{}}\ =>\ \textcolor{stringliteral}{"{}Plan"{}}]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{handler_8php_source_l00006}{6}} of file \mbox{\hyperlink{handler_8php_source}{handler.\+php}}.
+
+\Hypertarget{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b}\label{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b} 
+\index{handler.php@{handler.php}!\$otherPages@{\$otherPages}}
+\index{\$otherPages@{\$otherPages}!handler.php@{handler.php}}
+\doxysubsubsection{\texorpdfstring{\$otherPages}{\$otherPages}}
+{\footnotesize\ttfamily foreach ( \$objects as \$url\+Name=$>$ \$cname) \$other\+Pages}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}login"{}}\ =>\ \textcolor{stringliteral}{"{}VPageLogin"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}logout"{}}\ =>\ \textcolor{stringliteral}{"{}VPageLogout"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}\ =>\ \textcolor{stringliteral}{"{}VPageHome"{}}}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{handler_8php_source_l00064}{64}} of file \mbox{\hyperlink{handler_8php_source}{handler.\+php}}.
+
+\Hypertarget{handler_8php_a49a8a4009b02e49717caa88b128affc5}\label{handler_8php_a49a8a4009b02e49717caa88b128affc5} 
+\index{handler.php@{handler.php}!\$res@{\$res}}
+\index{\$res@{\$res}!handler.php@{handler.php}}
+\doxysubsubsection{\texorpdfstring{\$res}{\$res}}
+{\footnotesize\ttfamily \$res = explode(\textquotesingle{}/\textquotesingle{}, parse\+\_\+url(\$\+\_\+\+SERVER\mbox{[}\"{}REQUEST\+\_\+\+URI\"{}\mbox{]}, PHP\+\_\+\+URL\+\_\+\+PATH))}
 
 
 

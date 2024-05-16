@@ -1,7 +1,6 @@
 var classVForm =
 [
     [ "__construct", "classVForm.html#a98c7d5e78e625eec7cd7b80f9cabe1d1", null ],
-    [ "buildControllers", "classVForm.html#a995cf3656e96a382e9c9bc215672d016", null ],
     [ "render", "classVForm.html#afde88292c44dc59faf017738dae6dffb", null ],
     [ "renderFooter", "classVForm.html#aeed6253e9e242751c7beb12a5c541b1e", null ],
     [ "renderHeader", "classVForm.html#aa776ee561a32e9eb2c76a5a7f9cc1a74", null ],

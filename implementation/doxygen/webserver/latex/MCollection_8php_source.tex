@@ -1,61 +1,76 @@
 \doxysection{MCollection.\+php}
-\hypertarget{MCollection_8php_source}{}\label{MCollection_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MCollection.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/MCollection.php}}
+\hypertarget{MCollection_8php_source}{}\label{MCollection_8php_source}\index{php/app/model/MCollection.php@{php/app/model/MCollection.php}}
 \mbox{\hyperlink{MCollection_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00006}\mbox{\hyperlink{classMCollection}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMCollection}{MCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00011}\mbox{\hyperlink{classMCollection_ae97941710d863131c700f069b109991e}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMCollection_ae97941710d863131c700f069b109991e}{\$id}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00006}\mbox{\hyperlink{classMCollection}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMCollection}{MCollection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMObjectModel}{MObjectModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00011}\mbox{\hyperlink{classMCollection_acd6fd195bd93f36d6b5b50d6a72e32e9}{00011}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMCollection_acd6fd195bd93f36d6b5b50d6a72e32e9}{urlPrefix}}\ =\ \textcolor{stringliteral}{'collection'};}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00016}\mbox{\hyperlink{classMCollection_ab2fc40d43824ea3e1ce5d86dee0d763b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMCollection_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}};}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00021}\mbox{\hyperlink{classMCollection_a4c4d1fdf4ffaaa31cdebb0fc6a5dd797}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMCollection_a4c4d1fdf4ffaaa31cdebb0fc6a5dd797}{\$domainId}};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00026}\mbox{\hyperlink{classMCollection_af3dea85892e1457b450d397b0ca3c21f}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMCollection_af3dea85892e1457b450d397b0ca3c21f}{\$users}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00026}\mbox{\hyperlink{classMCollection_a797345a0aa724ad83d035d4d2c7f8b5c}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMCollection_a797345a0aa724ad83d035d4d2c7f8b5c}{\$users}};}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00037}\mbox{\hyperlink{classMCollection_a1340871f436b81e1f225567b6cce4e79}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_a1340871f436b81e1f225567b6cce4e79}{\_\_construct}}(\mbox{\hyperlink{classMCollection_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMCollection_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collections\ WHERE\ id=\$id"{}});}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \$o=\$sqls-\/>fetchObject();}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$o)\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$o-\/>id;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>name\ =\ \$o-\/>name;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>domainId\ =\ \$o-\/>domain\_id;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00037}\mbox{\hyperlink{classMCollection_a4e176c3a661053094339903c5cfc7942}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_a4e176c3a661053094339903c5cfc7942}{\_\_construct}}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collections\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>name\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>name;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>domainId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id;}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \$this-\/>users\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRelTableUser}{MRelTableUser}}(\mbox{\hyperlink{classMCollection_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \$this-\/>users\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTUserInColl}{MRTUserInColl}}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}});}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00048}00048\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00055}\mbox{\hyperlink{classMCollection_aae32a9dc4dc7eefbcb86bd32477cb67c}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}}(\$arg\ =\ NULL)\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!parent::store())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \$sql\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \$sql.=\textcolor{stringliteral}{"{}\ collections\ SET\ name=:name,\ domain\_id=:domain\_id"{}};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \$sql.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \$sqls=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\$sql);}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$sqls-\/>execute([\textcolor{stringliteral}{"{}name"{}}\ =>\ \$this-\/>name,\ \textcolor{stringliteral}{"{}domain\_id"{}}\ =>\ \$this-\/>domainId]))}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00068}00068\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00074}\mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ parent::storeCommit();}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00077}00077\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00078}00078\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00083}\mbox{\hyperlink{classMCollection_ab0ead11b6d715bce13bdec33c24e5d05}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \textcolor{keywordflow}{return}\ TRUE;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \$sql\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ collections\ WHERE\ id=\$this-\/>id"{}};}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\$sql))\ \textcolor{keywordflow}{return}\ FALSE;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00090}00090\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00091}00091\ }
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00097}\mbox{\hyperlink{classMCollection_ac4c6197ed4b50517efa72f4a50f1a7ab}{00097}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}}();}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00099}00099\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00055}\mbox{\hyperlink{classMCollection_a8192334dea04253155bccd4121139183}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_a8192334dea04253155bccd4121139183}{store}}(\textcolor{keywordtype}{int}\ \$arg\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ if\ (!parent::\mbox{\hyperlink{classMCollection_a8192334dea04253155bccd4121139183}{store}}())\ return\ false;\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ collections\ SET\ name=:name,\ domain\_id=:domain\_id"{}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}name"{}}\ =>\ \$this-\/>name,\ \textcolor{stringliteral}{"{}domain\_id"{}}\ =>\ \$this-\/>domainId]);}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$this-\/>id}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\$this-\/>users-\/>store(\$this-\/>tmpId))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00081}\mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00090}\mbox{\hyperlink{classMCollection_ab0ead11b6d715bce13bdec33c24e5d05}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ if\ (!\$this-\/>id)\ return\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ collections\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00104}\mbox{\hyperlink{classMCollection_ac4c6197ed4b50517efa72f4a50f1a7ab}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>persist())\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Collection\ was\ saved."{}}));}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Collection\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00114}\mbox{\hyperlink{classMCollection_ac89238396e58c30f1cfd2e86e4516cd6}{00114}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMCollection_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}}()\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \$ret\ =\ parent::unpersist();}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ret)\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Collection\ was\ deleted."{}}));}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Collection\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ret;}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MCollection_8php_source_l00120}00120\ \}}
 
 \end{DoxyCode}

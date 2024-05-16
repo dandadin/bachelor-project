@@ -23,26 +23,29 @@ Inheritance diagram for VMenu\+Bar\+:\begin{figure}[H]
 \mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
 \item 
 \mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\item 
+\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Data Fields}
+\doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-const \mbox{\hyperlink{classVMenuBar_a53d8320dda2b9faeab20d307d7259748}{Menu}} = \mbox{[}$\,$\mbox{]}
+\mbox{\hyperlink{classVMenuBar_a637e84e2e9e99a87ea9b5f1771551af4}{get\+Menu}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
 \item 
 \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
-\item 
-\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,8 +55,9 @@ const \mbox{\hyperlink{classVMenuBar_a53d8320dda2b9faeab20d307d7259748}{Menu}} =
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -77,11 +81,25 @@ Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00003}{3}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00006}{6}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
+Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00005}{5}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classVMenuBar_a637e84e2e9e99a87ea9b5f1771551af4}\label{classVMenuBar_a637e84e2e9e99a87ea9b5f1771551af4} 
+\index{VMenuBar@{VMenuBar}!getMenu@{getMenu}}
+\index{getMenu@{getMenu}!VMenuBar@{VMenuBar}}
+\doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
+{\footnotesize\ttfamily get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classVMenuBarUser_a637e84e2e9e99a87ea9b5f1771551af4}{VMenu\+Bar\+User}}.
+
+
+
+Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00032}{32}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
+
 \Hypertarget{classVMenuBar_aeed6253e9e242751c7beb12a5c541b1e}\label{classVMenuBar_aeed6253e9e242751c7beb12a5c541b1e} 
 \index{VMenuBar@{VMenuBar}!renderFooter@{renderFooter}}
 \index{renderFooter@{renderFooter}!VMenuBar@{VMenuBar}}
@@ -94,7 +112,7 @@ Reimplemented from \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e
 
 
 
-Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00020}{20}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
+Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00019}{19}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
 
 \Hypertarget{classVMenuBar_aa776ee561a32e9eb2c76a5a7f9cc1a74}\label{classVMenuBar_aa776ee561a32e9eb2c76a5a7f9cc1a74} 
 \index{VMenuBar@{VMenuBar}!renderHeader@{renderHeader}}
@@ -108,7 +126,7 @@ Reimplemented from \mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74
 
 
 
-Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00012}{12}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
+Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00011}{11}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
 
 \Hypertarget{classVMenuBar_a14a421516c24b7d17bbeb0f2d325750d}\label{classVMenuBar_a14a421516c24b7d17bbeb0f2d325750d} 
 \index{VMenuBar@{VMenuBar}!renderItem@{renderItem}}
@@ -122,23 +140,10 @@ Reimplemented from \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d
 
 
 
-Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00027}{27}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
-
-
-
-\doxysubsection{Field Documentation}
-\Hypertarget{classVMenuBar_a53d8320dda2b9faeab20d307d7259748}\label{classVMenuBar_a53d8320dda2b9faeab20d307d7259748} 
-\index{VMenuBar@{VMenuBar}!Menu@{Menu}}
-\index{Menu@{Menu}!VMenuBar@{VMenuBar}}
-\doxysubsubsection{\texorpdfstring{Menu}{Menu}}
-{\footnotesize\ttfamily const Menu = \mbox{[}$\,$\mbox{]}}
-
-
-
-Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00004}{4}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
+Definition at line \mbox{\hyperlink{VMenuBar_8php_source_l00026}{26}} of file \mbox{\hyperlink{VMenuBar_8php_source}{VMenu\+Bar.\+php}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VMenuBar_8php}{VMenu\+Bar.\+php}}\end{DoxyCompactItemize}
+php/framework/view/\mbox{\hyperlink{VMenuBar_8php}{VMenu\+Bar.\+php}}\end{DoxyCompactItemize}

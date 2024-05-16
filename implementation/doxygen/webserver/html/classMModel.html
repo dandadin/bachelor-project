@@ -104,33 +104,48 @@ Inheritance diagram for MModel:</div>
  <div class="center">
   <img src="classMModel.png" usemap="#MModel_map" alt=""/>
   <map id="MModel_map" name="MModel_map">
-<area href="classMChannel.html" title="Model for channel object." alt="MChannel" shape="rect" coords="138,56,266,80"/>
-<area href="classMCollection.html" title="Model for collection object." alt="MCollection" shape="rect" coords="138,112,266,136"/>
-<area href="classMDevice.html" title="Model for collection object." alt="MDevice" shape="rect" coords="138,168,266,192"/>
-<area href="classMDomain.html" alt="MDomain" shape="rect" coords="138,224,266,248"/>
-<area href="classMGateway.html" title="Model for gateway object." alt="MGateway" shape="rect" coords="138,280,266,304"/>
-<area href="classMLogin.html" title="Model for login object." alt="MLogin" shape="rect" coords="138,336,266,360"/>
-<area href="classMRTRCollection.html" title="Model of table-row of relative table of collections." alt="MRTRCollection" shape="rect" coords="138,392,266,416"/>
-<area href="classMRTRUser.html" title="Model of table-row of relative table of users." alt="MRTRUser" shape="rect" coords="138,448,266,472"/>
-<area href="classMRelTableCollection.html" title="Model for relative table of collections." alt="MRelTableCollection" shape="rect" coords="138,504,266,528"/>
-<area href="classMRelTableUser.html" title="Model for relative table of users." alt="MRelTableUser" shape="rect" coords="138,560,266,584"/>
-<area href="classMRole.html" title="Model for role object." alt="MRole" shape="rect" coords="138,616,266,640"/>
-<area href="classMUser.html" title="Model for user object." alt="MUser" shape="rect" coords="138,672,266,696"/>
+<area href="classMLogin.html" title="Model for login object." alt="MLogin" shape="rect" coords="0,56,143,80"/>
+<area href="classMObjectModel.html" title="Universal model class for each editable object, that is used for storing objects between loads." alt="MObjectModel" shape="rect" coords="153,56,296,80"/>
+<area href="classMRTRCollInDevice.html" title="Model of table-row of relative table of collections." alt="MRTRCollInDevice" shape="rect" coords="306,56,449,80"/>
+<area href="classMRTRStepsInSequence.html" title="Model of table-row of relative table of steps in a sequence." alt="MRTRStepsInSequence" shape="rect" coords="459,56,602,80"/>
+<area href="classMRTRUserInColl.html" title="Model of table-row of relative table of users." alt="MRTRUserInColl" shape="rect" coords="612,56,755,80"/>
+<area href="classMRTRUserRoleInDom.html" title="Model of table-row of relative table of users and their roles." alt="MRTRUserRoleInDom" shape="rect" coords="765,56,908,80"/>
+<area href="classMRelTable.html" title="Model for default relative table." alt="MRelTable" shape="rect" coords="918,56,1061,80"/>
+<area href="classMChannel.html" title="Model for channel object." alt="MChannel" shape="rect" coords="306,112,449,136"/>
+<area href="classMCollection.html" title="Model for collection object." alt="MCollection" shape="rect" coords="306,168,449,192"/>
+<area href="classMDevice.html" title="Model for device object." alt="MDevice" shape="rect" coords="306,224,449,248"/>
+<area href="classMDomain.html" alt="MDomain" shape="rect" coords="306,280,449,304"/>
+<area href="classMGateway.html" title="Model for gateway object." alt="MGateway" shape="rect" coords="306,336,449,360"/>
+<area href="classMInstance.html" title="Model for instance object." alt="MInstance" shape="rect" coords="306,392,449,416"/>
+<area href="classMPlan.html" title="Model for plan object." alt="MPlan" shape="rect" coords="306,448,449,472"/>
+<area href="classMRole.html" title="Model for role object." alt="MRole" shape="rect" coords="306,504,449,528"/>
+<area href="classMSequence.html" title="Model for sequence object." alt="MSequence" shape="rect" coords="306,560,449,584"/>
+<area href="classMStep.html" title="Model for step object." alt="MStep" shape="rect" coords="306,616,449,640"/>
+<area href="classMUser.html" title="Model for user object." alt="MUser" shape="rect" coords="306,672,449,696"/>
+<area href="classMRTCollInDevice.html" title="Model for relative table of collections." alt="MRTCollInDevice" shape="rect" coords="1071,112,1214,136"/>
+<area href="classMRTStepsInSequence.html" title="Model for relative table of steps." alt="MRTStepsInSequence" shape="rect" coords="1071,168,1214,192"/>
+<area href="classMRTUserInColl.html" title="Model for relative table of users." alt="MRTUserInColl" shape="rect" coords="1071,224,1214,248"/>
+<area href="classMRTUserRoleInDom.html" title="Model for relative table of users and roles." alt="MRTUserRoleInDom" shape="rect" coords="1071,280,1214,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae32a9dc4dc7eefbcb86bd32477cb67c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#aae32a9dc4dc7eefbcb86bd32477cb67c">store</a> ($arg=NULL)</td></tr>
-<tr class="separator:aae32a9dc4dc7eefbcb86bd32477cb67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02d2c9c72b394f734cea3181fc76719e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#a02d2c9c72b394f734cea3181fc76719e">storeCommit</a> ()</td></tr>
-<tr class="memdesc:a02d2c9c72b394f734cea3181fc76719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used when storing in database was successful.  <br /></td></tr>
-<tr class="separator:a02d2c9c72b394f734cea3181fc76719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8192334dea04253155bccd4121139183"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#a8192334dea04253155bccd4121139183">store</a> (int $arg=0)</td></tr>
+<tr class="separator:a8192334dea04253155bccd4121139183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0ead11b6d715bce13bdec33c24e5d05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#ab0ead11b6d715bce13bdec33c24e5d05">delete</a> ($arg=NULL)</td></tr>
 <tr class="separator:ab0ead11b6d715bce13bdec33c24e5d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89238396e58c30f1cfd2e86e4516cd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#ac89238396e58c30f1cfd2e86e4516cd6">unpersist</a> ()</td></tr>
+<tr class="memdesc:ac89238396e58c30f1cfd2e86e4516cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to remove data from database.  <br /></td></tr>
+<tr class="separator:ac89238396e58c30f1cfd2e86e4516cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a02d2c9c72b394f734cea3181fc76719e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#a02d2c9c72b394f734cea3181fc76719e">storeCommit</a> ()</td></tr>
+<tr class="memdesc:a02d2c9c72b394f734cea3181fc76719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used when storing in database was successful.  <br /></td></tr>
+<tr class="separator:a02d2c9c72b394f734cea3181fc76719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54c8132f5caa0df292077f97d3e6ba9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#af54c8132f5caa0df292077f97d3e6ba9">deleteCommit</a> ()</td></tr>
+<tr class="separator:af54c8132f5caa0df292077f97d3e6ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ea8510f21be99e0602d0cf7f452b15e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMModel.html#a7ea8510f21be99e0602d0cf7f452b15e">persist</a> ()</td></tr>
 <tr class="memdesc:a7ea8510f21be99e0602d0cf7f452b15e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to store data from model to database.  <br /></td></tr>
 <tr class="separator:a7ea8510f21be99e0602d0cf7f452b15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,7 +171,34 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classMChannel.html#ab0ead11b6d715bce13bdec33c24e5d05">MChannel</a>, <a class="el" href="classMCollection.html#ab0ead11b6d715bce13bdec33c24e5d05">MCollection</a>, <a class="el" href="classMDevice.html#ab0ead11b6d715bce13bdec33c24e5d05">MDevice</a>, <a class="el" href="classMDomain.html#ab0ead11b6d715bce13bdec33c24e5d05">MDomain</a>, <a class="el" href="classMGateway.html#ab0ead11b6d715bce13bdec33c24e5d05">MGateway</a>, <a class="el" href="classMLogin.html#ab0ead11b6d715bce13bdec33c24e5d05">MLogin</a>, <a class="el" href="classMRole.html#ab0ead11b6d715bce13bdec33c24e5d05">MRole</a>, and <a class="el" href="classMUser.html#ab0ead11b6d715bce13bdec33c24e5d05">MUser</a>.</p>
+<p>Reimplemented in <a class="el" href="classMChannel.html#ab0ead11b6d715bce13bdec33c24e5d05">MChannel</a>, <a class="el" href="classMCollection.html#ab0ead11b6d715bce13bdec33c24e5d05">MCollection</a>, <a class="el" href="classMDevice.html#ab0ead11b6d715bce13bdec33c24e5d05">MDevice</a>, <a class="el" href="classMDomain.html#ab0ead11b6d715bce13bdec33c24e5d05">MDomain</a>, <a class="el" href="classMGateway.html#ab0ead11b6d715bce13bdec33c24e5d05">MGateway</a>, <a class="el" href="classMInstance.html#ab0ead11b6d715bce13bdec33c24e5d05">MInstance</a>, <a class="el" href="classMLogin.html#ab0ead11b6d715bce13bdec33c24e5d05">MLogin</a>, <a class="el" href="classMPlan.html#ab0ead11b6d715bce13bdec33c24e5d05">MPlan</a>, <a class="el" href="classMRole.html#ab0ead11b6d715bce13bdec33c24e5d05">MRole</a>, <a class="el" href="classMRTRStepsInSequence.html#ab0ead11b6d715bce13bdec33c24e5d05">MRTRStepsInSequence</a>, <a class="el" href="classMSequence.html#ab0ead11b6d715bce13bdec33c24e5d05">MSequence</a>, <a class="el" href="classMStep.html#ab0ead11b6d715bce13bdec33c24e5d05">MStep</a>, and <a class="el" href="classMUser.html#ab0ead11b6d715bce13bdec33c24e5d05">MUser</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00015">15</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
+
+</div>
+</div>
+<a id="af54c8132f5caa0df292077f97d3e6ba9" name="af54c8132f5caa0df292077f97d3e6ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54c8132f5caa0df292077f97d3e6ba9">&#9670;&#160;</a></span>deleteCommit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteCommit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00013">13</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
 
@@ -188,12 +230,12 @@ Protected Member Functions</h2></td></tr>
 <p>Used to store data from model to database. </p>
 <p>If storing fails, reverts back. </p><dl class="section return"><dt>Returns</dt><dd>bool Storing was successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00018">18</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00020">20</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
 
 </div>
 </div>
-<a id="aae32a9dc4dc7eefbcb86bd32477cb67c" name="aae32a9dc4dc7eefbcb86bd32477cb67c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae32a9dc4dc7eefbcb86bd32477cb67c">&#9670;&#160;</a></span>store()</h2>
+<a id="a8192334dea04253155bccd4121139183" name="a8192334dea04253155bccd4121139183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8192334dea04253155bccd4121139183">&#9670;&#160;</a></span>store()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,14 +243,14 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">store </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$arg</em> = <code>NULL</code></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$arg</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classMChannel.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MChannel</a>, <a class="el" href="classMCollection.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MCollection</a>, <a class="el" href="classMDevice.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MDevice</a>, <a class="el" href="classMDomain.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MDomain</a>, <a class="el" href="classMGateway.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MGateway</a>, <a class="el" href="classMLogin.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MLogin</a>, <a class="el" href="classMRole.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MRole</a>, <a class="el" href="classMUser.html#aae32a9dc4dc7eefbcb86bd32477cb67c">MUser</a>, <a class="el" href="classMRelTableUser.html#a42c299d5822c331fa62331a75427aa59">MRelTableUser</a>, <a class="el" href="classMRTRUser.html#a42c299d5822c331fa62331a75427aa59">MRTRUser</a>, <a class="el" href="classMRelTableCollection.html#a0a8249dc6b247691b6661b5193ae9f74">MRelTableCollection</a>, and <a class="el" href="classMRTRCollection.html#a0a8249dc6b247691b6661b5193ae9f74">MRTRCollection</a>.</p>
+<p>Reimplemented in <a class="el" href="classMChannel.html#a8192334dea04253155bccd4121139183">MChannel</a>, <a class="el" href="classMCollection.html#a8192334dea04253155bccd4121139183">MCollection</a>, <a class="el" href="classMDevice.html#a8192334dea04253155bccd4121139183">MDevice</a>, <a class="el" href="classMDomain.html#a8192334dea04253155bccd4121139183">MDomain</a>, <a class="el" href="classMGateway.html#a8192334dea04253155bccd4121139183">MGateway</a>, <a class="el" href="classMInstance.html#a8192334dea04253155bccd4121139183">MInstance</a>, <a class="el" href="classMLogin.html#a8192334dea04253155bccd4121139183">MLogin</a>, <a class="el" href="classMPlan.html#a8192334dea04253155bccd4121139183">MPlan</a>, <a class="el" href="classMRole.html#a8192334dea04253155bccd4121139183">MRole</a>, <a class="el" href="classMSequence.html#a8192334dea04253155bccd4121139183">MSequence</a>, <a class="el" href="classMStep.html#a8192334dea04253155bccd4121139183">MStep</a>, <a class="el" href="classMUser.html#a8192334dea04253155bccd4121139183">MUser</a>, <a class="el" href="classMRTUserInColl.html#a9585663d60e8c386b44c660a70050e64">MRTUserInColl</a>, <a class="el" href="classMRTCollInDevice.html#ae9d104e1f65cde95a55fee116f9583cd">MRTCollInDevice</a>, <a class="el" href="classMRTUserRoleInDom.html#a6204f0eeb9adb826f1c8621e7f775f6c">MRTUserRoleInDom</a>, and <a class="el" href="classMRelTable.html#aa3f2e0643647ea44ba1daddf231e97a8">MRelTable</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00006">6</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
 
@@ -219,6 +261,9 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">storeCommit </td>
@@ -227,19 +272,48 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Used when storing in database was successful. </p>
 <p>Usually commits changes to model and database. </p><dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classMChannel.html#a02d2c9c72b394f734cea3181fc76719e">MChannel</a>, <a class="el" href="classMCollection.html#a02d2c9c72b394f734cea3181fc76719e">MCollection</a>, <a class="el" href="classMDevice.html#a02d2c9c72b394f734cea3181fc76719e">MDevice</a>, <a class="el" href="classMDomain.html#a02d2c9c72b394f734cea3181fc76719e">MDomain</a>, <a class="el" href="classMGateway.html#a02d2c9c72b394f734cea3181fc76719e">MGateway</a>, <a class="el" href="classMRole.html#a02d2c9c72b394f734cea3181fc76719e">MRole</a>, and <a class="el" href="classMUser.html#a02d2c9c72b394f734cea3181fc76719e">MUser</a>.</p>
+<p>Reimplemented in <a class="el" href="classMChannel.html#a02d2c9c72b394f734cea3181fc76719e">MChannel</a>, <a class="el" href="classMCollection.html#a02d2c9c72b394f734cea3181fc76719e">MCollection</a>, <a class="el" href="classMDevice.html#a02d2c9c72b394f734cea3181fc76719e">MDevice</a>, <a class="el" href="classMDomain.html#a02d2c9c72b394f734cea3181fc76719e">MDomain</a>, <a class="el" href="classMGateway.html#a02d2c9c72b394f734cea3181fc76719e">MGateway</a>, <a class="el" href="classMInstance.html#a02d2c9c72b394f734cea3181fc76719e">MInstance</a>, <a class="el" href="classMPlan.html#a02d2c9c72b394f734cea3181fc76719e">MPlan</a>, <a class="el" href="classMRole.html#a02d2c9c72b394f734cea3181fc76719e">MRole</a>, <a class="el" href="classMRTRStepsInSequence.html#a02d2c9c72b394f734cea3181fc76719e">MRTRStepsInSequence</a>, <a class="el" href="classMSequence.html#a02d2c9c72b394f734cea3181fc76719e">MSequence</a>, <a class="el" href="classMStep.html#a02d2c9c72b394f734cea3181fc76719e">MStep</a>, <a class="el" href="classMUser.html#a02d2c9c72b394f734cea3181fc76719e">MUser</a>, and <a class="el" href="classMRelTable.html#a02d2c9c72b394f734cea3181fc76719e">MRelTable</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00011">11</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
 
 </div>
 </div>
+<a id="ac89238396e58c30f1cfd2e86e4516cd6" name="ac89238396e58c30f1cfd2e86e4516cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89238396e58c30f1cfd2e86e4516cd6">&#9670;&#160;</a></span>unpersist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unpersist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to remove data from database. </p>
+<p>If removing fails, reverts back. </p><dl class="section return"><dt>Returns</dt><dd>bool Removal was successful </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classMChannel.html#ac89238396e58c30f1cfd2e86e4516cd6">MChannel</a>, <a class="el" href="classMCollection.html#ac89238396e58c30f1cfd2e86e4516cd6">MCollection</a>, <a class="el" href="classMDevice.html#ac89238396e58c30f1cfd2e86e4516cd6">MDevice</a>, <a class="el" href="classMDomain.html#ac89238396e58c30f1cfd2e86e4516cd6">MDomain</a>, <a class="el" href="classMGateway.html#ac89238396e58c30f1cfd2e86e4516cd6">MGateway</a>, <a class="el" href="classMInstance.html#ac89238396e58c30f1cfd2e86e4516cd6">MInstance</a>, <a class="el" href="classMPlan.html#ac89238396e58c30f1cfd2e86e4516cd6">MPlan</a>, <a class="el" href="classMRole.html#ac89238396e58c30f1cfd2e86e4516cd6">MRole</a>, <a class="el" href="classMSequence.html#ac89238396e58c30f1cfd2e86e4516cd6">MSequence</a>, <a class="el" href="classMStep.html#ac89238396e58c30f1cfd2e86e4516cd6">MStep</a>, and <a class="el" href="classMUser.html#ac89238396e58c30f1cfd2e86e4516cd6">MUser</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="MModel_8php_source.html#l00035">35</a> of file <a class="el" href="MModel_8php_source.html">MModel.php</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/win/Users/dansi/bachelor-project/implementation/webserver/php/framework/model/<a class="el" href="MModel_8php_source.html">MModel.php</a></li>
+<li>php/framework/model/<a class="el" href="MModel_8php_source.html">MModel.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

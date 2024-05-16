@@ -1,0 +1,280 @@
+\doxysection{MInstance Class Reference}
+\hypertarget{classMInstance}{}\label{classMInstance}\index{MInstance@{MInstance}}
+
+
+Model for instance object.  
+
+
+Inheritance diagram for MInstance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMInstance}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMInstance_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMInstance_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}instance\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_ac183dc92249f6f917ac27d66ee9b43c1}{\$seq\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of sequence this is an instance of, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_a5934f792b987633dc0e8c982307cb59d}{\$step\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of currently waiting step, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMInstance_abf587d322585f909037b0500d439d6ee}{\$step\+Ts}}
+\begin{DoxyCompactList}\small\item\em Timestamp when currently waiting step should be applied, loaded from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for instance object. 
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00006}{6}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMInstance_a4e176c3a661053094339903c5cfc7942}\label{classMInstance_a4e176c3a661053094339903c5cfc7942} 
+\index{MInstance@{MInstance}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of instance in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00037}{37}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMInstance_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMInstance_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MInstance@{MInstance}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00105}{105}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMInstance_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MInstance@{MInstance}!delete@{delete}}
+\index{delete@{delete}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00091}{91}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_a8192334dea04253155bccd4121139183}\label{classMInstance_a8192334dea04253155bccd4121139183} 
+\index{MInstance@{MInstance}!store@{store}}
+\index{store@{store}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00056}{56}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_a02d2c9c72b394f734cea3181fc76719e}\label{classMInstance_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MInstance@{MInstance}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00082}{82}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MInstance@{MInstance}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00115}{115}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMInstance_ac183dc92249f6f917ac27d66ee9b43c1}\label{classMInstance_ac183dc92249f6f917ac27d66ee9b43c1} 
+\index{MInstance@{MInstance}!\$seqId@{\$seqId}}
+\index{\$seqId@{\$seqId}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{\$seqId}{\$seqId}}
+{\footnotesize\ttfamily \$seq\+Id}
+
+
+
+Id of sequence this is an instance of, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00016}{16}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_a5934f792b987633dc0e8c982307cb59d}\label{classMInstance_a5934f792b987633dc0e8c982307cb59d} 
+\index{MInstance@{MInstance}!\$stepId@{\$stepId}}
+\index{\$stepId@{\$stepId}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{\$stepId}{\$stepId}}
+{\footnotesize\ttfamily \$step\+Id}
+
+
+
+Id of currently waiting step, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00021}{21}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_abf587d322585f909037b0500d439d6ee}\label{classMInstance_abf587d322585f909037b0500d439d6ee} 
+\index{MInstance@{MInstance}!\$stepTs@{\$stepTs}}
+\index{\$stepTs@{\$stepTs}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{\$stepTs}{\$stepTs}}
+{\footnotesize\ttfamily \$step\+Ts}
+
+
+
+Timestamp when currently waiting step should be applied, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00026}{26}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+\Hypertarget{classMInstance_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMInstance_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MInstance@{MInstance}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MInstance@{MInstance}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}instance\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MInstance_8php_source_l00011}{11}} of file \mbox{\hyperlink{MInstance_8php_source}{MInstance.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MInstance_8php}{MInstance.\+php}}\end{DoxyCompactItemize}

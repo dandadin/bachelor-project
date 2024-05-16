@@ -1,12 +1,16 @@
-\doxysection{/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/library.php File Reference}
-\hypertarget{library_8php}{}\label{library_8php}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/library.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/library.php}}
+\doxysection{php/app/library.php File Reference}
+\hypertarget{library_8php}{}\label{library_8php}\index{php/app/library.php@{php/app/library.php}}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{library_8php_aaadcc924acfd96de4f0f2afefe771f5d}{autoload}} (\$name)
 \item 
 \mbox{\hyperlink{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}{gen\+Field\+Id}} ()
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{library_8php_a7989581885dadb053205310374c46763}{timetostr}} (int \$time)
+\begin{DoxyCompactList}\small\item\em Inverse function for strtotime(). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{extract\+Id}} (array \$url\+Array)
+\begin{DoxyCompactList}\small\item\em Tries to extract id from requested url (required in a format of an array of parts of url, separated by \textquotesingle{}/\textquotesingle{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -18,7 +22,38 @@
 
 
 
-Definition at line \mbox{\hyperlink{library_8php_source_l00004}{4}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
+Definition at line \mbox{\hyperlink{library_8php_source_l00003}{3}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
+
+\Hypertarget{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}\label{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a} 
+\index{library.php@{library.php}!extractId@{extractId}}
+\index{extractId@{extractId}!library.php@{library.php}}
+\doxysubsubsection{\texorpdfstring{extractId()}{extractId()}}
+{\footnotesize\ttfamily extract\+Id (\begin{DoxyParamCaption}\item[{array}]{\$url\+Array }\end{DoxyParamCaption})}
+
+
+
+Tries to extract id from requested url (required in a format of an array of parts of url, separated by \textquotesingle{}/\textquotesingle{}). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$url\+Array} & Requested url. (Can by obtained by string-\/\texorpdfstring{$>$}{>}explode()); \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Id from url (if possible). 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & Request was for a creation of a new object (that doesnt have an id yet). \\
+\hline
+{\em -\/1} & Request did not specify an id. \\
+\hline
+{\em ELSE} & Id from url. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{library_8php_source_l00040}{40}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
 
 \Hypertarget{library_8php_a7971fc21278bd2af708ff322e5d2d6c0}\label{library_8php_a7971fc21278bd2af708ff322e5d2d6c0} 
 \index{library.php@{library.php}!genFieldId@{genFieldId}}
@@ -28,5 +63,27 @@ Definition at line \mbox{\hyperlink{library_8php_source_l00004}{4}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{library_8php_source_l00020}{20}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
+Definition at line \mbox{\hyperlink{library_8php_source_l00017}{17}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
+
+\Hypertarget{library_8php_a7989581885dadb053205310374c46763}\label{library_8php_a7989581885dadb053205310374c46763} 
+\index{library.php@{library.php}!timetostr@{timetostr}}
+\index{timetostr@{timetostr}!library.php@{library.php}}
+\doxysubsubsection{\texorpdfstring{timetostr()}{timetostr()}}
+{\footnotesize\ttfamily timetostr (\begin{DoxyParamCaption}\item[{int}]{\$time }\end{DoxyParamCaption})}
+
+
+
+Inverse function for strtotime(). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$time} & Time in \mbox{[}s\mbox{]} from Unix epoch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Time in format for TIMESTAMP data type for My\+SQL. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{library_8php_source_l00028}{28}} of file \mbox{\hyperlink{library_8php_source}{library.\+php}}.
 

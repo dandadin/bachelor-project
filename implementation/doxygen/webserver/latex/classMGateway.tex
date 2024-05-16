@@ -8,42 +8,73 @@ Model for gateway object.
 Inheritance diagram for MGateway\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classMGateway}
+\includegraphics[height=3.000000cm]{classMGateway}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMGateway_a1340871f436b81e1f225567b6cce4e79}{\+\_\+\+\_\+construct}} (\$id)
+\mbox{\hyperlink{classMGateway_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
 \begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMGateway_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMGateway_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
 \begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMGateway_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
 \begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
 \begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMGateway_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
-\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMGateway_a386835724fd4175499013b2d89fab9ce}{clicked\+Load}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMGateway_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
-\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
 \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMGateway_ae97941710d863131c700f069b109991e}{\$id}}
-\begin{DoxyCompactList}\small\item\em Id of gateway loaded form database. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classMGateway_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}gateway\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMGateway_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}}
 \begin{DoxyCompactList}\small\item\em Name of gateway loaded from database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMGateway_afaef812b1a73e88089d4b7e5e151bc29}{\$address}}
+\item 
+\mbox{\hyperlink{classMGateway_a49c7011be9c979d9174c52a8b83e5d8e}{\$config}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
 \item 
 \mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
 \begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -57,11 +88,11 @@ Definition at line \mbox{\hyperlink{MGateway_8php_source_l00006}{6}} of file \mb
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classMGateway_a1340871f436b81e1f225567b6cce4e79}\label{classMGateway_a1340871f436b81e1f225567b6cce4e79} 
+\Hypertarget{classMGateway_a4e176c3a661053094339903c5cfc7942}\label{classMGateway_a4e176c3a661053094339903c5cfc7942} 
 \index{MGateway@{MGateway}!\_\_construct@{\_\_construct}}
 \index{\_\_construct@{\_\_construct}!MGateway@{MGateway}}
 \doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -74,11 +105,28 @@ Constructs model using data from database.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00031}{31}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00035}{35}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classMGateway_a386835724fd4175499013b2d89fab9ce}\label{classMGateway_a386835724fd4175499013b2d89fab9ce} 
+\index{MGateway@{MGateway}!clickedLoad@{clickedLoad}}
+\index{clickedLoad@{clickedLoad}!MGateway@{MGateway}}
+\doxysubsubsection{\texorpdfstring{clickedLoad()}{clickedLoad()}}
+{\footnotesize\ttfamily clicked\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00114}{114}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+
 \Hypertarget{classMGateway_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMGateway_ac4c6197ed4b50517efa72f4a50f1a7ab} 
 \index{MGateway@{MGateway}!clickedSubmit@{clickedSubmit}}
 \index{clickedSubmit@{clickedSubmit}!MGateway@{MGateway}}
@@ -89,12 +137,12 @@ Definition at line \mbox{\hyperlink{MGateway_8php_source_l00031}{31}} of file \m
 
 Starts saving process to database. 
 
-Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00090}{90}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00103}{103}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
 \Hypertarget{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05} 
 \index{MGateway@{MGateway}!delete@{delete}}
@@ -115,13 +163,13 @@ Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d0
 
 
 
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00076}{76}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00087}{87}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
-\Hypertarget{classMGateway_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMGateway_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\Hypertarget{classMGateway_a8192334dea04253155bccd4121139183}\label{classMGateway_a8192334dea04253155bccd4121139183} 
 \index{MGateway@{MGateway}!store@{store}}
 \index{store@{store}!MGateway@{MGateway}}
 \doxysubsubsection{\texorpdfstring{store()}{store()}}
-{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -137,11 +185,11 @@ bool Storing was successful.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
 
 
 
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00048}{48}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00053}{53}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
 \Hypertarget{classMGateway_a02d2c9c72b394f734cea3181fc76719e}\label{classMGateway_a02d2c9c72b394f734cea3181fc76719e} 
 \index{MGateway@{MGateway}!storeCommit@{storeCommit}}
@@ -162,7 +210,28 @@ Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719
 
 
 
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00067}{67}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00078}{78}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+
+\Hypertarget{classMGateway_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMGateway_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MGateway@{MGateway}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MGateway@{MGateway}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00124}{124}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
 
 
@@ -177,19 +246,15 @@ Definition at line \mbox{\hyperlink{MGateway_8php_source_l00067}{67}} of file \m
 
 Definition at line \mbox{\hyperlink{MGateway_8php_source_l00020}{20}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
-\Hypertarget{classMGateway_ae97941710d863131c700f069b109991e}\label{classMGateway_ae97941710d863131c700f069b109991e} 
-\index{MGateway@{MGateway}!\$id@{\$id}}
-\index{\$id@{\$id}!MGateway@{MGateway}}
-\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
-{\footnotesize\ttfamily \$id}
+\Hypertarget{classMGateway_a49c7011be9c979d9174c52a8b83e5d8e}\label{classMGateway_a49c7011be9c979d9174c52a8b83e5d8e} 
+\index{MGateway@{MGateway}!\$config@{\$config}}
+\index{\$config@{\$config}!MGateway@{MGateway}}
+\doxysubsubsection{\texorpdfstring{\$config}{\$config}}
+{\footnotesize\ttfamily \$config}
 
 
 
-Id of gateway loaded form database. 
-
-
-
-Definition at line \mbox{\hyperlink{MGateway_8php_source_l00011}{11}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00024}{24}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
 \Hypertarget{classMGateway_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{classMGateway_ab2fc40d43824ea3e1ce5d86dee0d763b} 
 \index{MGateway@{MGateway}!\$name@{\$name}}
@@ -205,8 +270,22 @@ Name of gateway loaded from database.
 
 Definition at line \mbox{\hyperlink{MGateway_8php_source_l00016}{16}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
 
+\Hypertarget{classMGateway_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMGateway_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MGateway@{MGateway}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MGateway@{MGateway}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}gateway\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MGateway_8php_source_l00011}{11}} of file \mbox{\hyperlink{MGateway_8php_source}{MGateway.\+php}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MGateway_8php}{MGateway.\+php}}\end{DoxyCompactItemize}
+php/app/model/\mbox{\hyperlink{MGateway_8php}{MGateway.\+php}}\end{DoxyCompactItemize}

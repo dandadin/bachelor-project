@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoTHome Webserver: /win/Users/dansi/bachelor-project/implementation/webserver/php/ui/handler.php Source File</title>
+<title>IoTHome Webserver: php/handler.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,20 +93,106 @@ $(document).ready(function(){initNavTree('handler_8php_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="handler_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">    3</a></span>    <a class="code hl_variable" href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = parse_url($_SERVER[<span class="stringliteral">&quot;REQUEST_URI&quot;</span>], PHP_URL_PATH);</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="comment">//header(&quot;Location: $url&quot;);</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> == <span class="stringliteral">&quot;/&quot;</span>) <a class="code hl_variable" href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a> = <span class="stringliteral">&quot;/index.php&quot;</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    include <span class="stringliteral">&quot;.&quot;</span>.$url;</div>
-<div class="ttc" id="ahandler_8php_html_acf215f34a917d014776ce684a9ee8909"><div class="ttname"><a href="handler_8php.html#acf215f34a917d014776ce684a9ee8909">$url</a></div><div class="ttdeci">$url</div><div class="ttdef"><b>Definition</b> <a href="handler_8php_source.html#l00003">handler.php:3</a></div></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>    require_once <span class="stringliteral">&quot;./app/library.php&quot;</span>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">    3</a></span>    <a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a> = explode(<span class="charliteral">&#39;/&#39;</span>, parse_url($_SERVER[<span class="stringliteral">&quot;REQUEST_URI&quot;</span>], PHP_URL_PATH));</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    require_once <span class="stringliteral">&quot;./app/init.php&quot;</span>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="handler_8php.html#a255f6b6db4c45b1418e9c15cf4e2bcdd">    6</a></span>    <a class="code hl_variable" href="handler_8php.html#a255f6b6db4c45b1418e9c15cf4e2bcdd">$objects</a> = [</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="stringliteral">&quot;user&quot;</span> =&gt; <span class="stringliteral">&quot;User&quot;</span>,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="stringliteral">&quot;domain&quot;</span> =&gt; <span class="stringliteral">&quot;Domain&quot;</span>,</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="stringliteral">&quot;collection&quot;</span> =&gt; <span class="stringliteral">&quot;Collection&quot;</span>,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="stringliteral">&quot;device&quot;</span> =&gt; <span class="stringliteral">&quot;Device&quot;</span>,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="stringliteral">&quot;channel&quot;</span> =&gt; <span class="stringliteral">&quot;Channel&quot;</span>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="stringliteral">&quot;gateway&quot;</span> =&gt; <span class="stringliteral">&quot;Gateway&quot;</span>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="stringliteral">&quot;role&quot;</span> =&gt; <span class="stringliteral">&quot;Role&quot;</span>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="stringliteral">&quot;sequence&quot;</span> =&gt; <span class="stringliteral">&quot;Sequence&quot;</span>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="stringliteral">&quot;step&quot;</span> =&gt; <span class="stringliteral">&quot;Step&quot;</span>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="stringliteral">&quot;instance&quot;</span> =&gt; <span class="stringliteral">&quot;Instance&quot;</span>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="stringliteral">&quot;plan&quot;</span> =&gt; <span class="stringliteral">&quot;Plan&quot;</span>];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="handler_8php.html#ae97941710d863131c700f069b109991e">   19</a></span>    <a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a> = <a class="code hl_function" href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a>(<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">foreach</span>(<a class="code hl_variable" href="handler_8php.html#a255f6b6db4c45b1418e9c15cf4e2bcdd">$objects</a> as $urlName =&gt; $cname) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[1]==$urlName) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">if</span> (!isset(<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[2])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[2]==<span class="stringliteral">&#39;new&#39;</span>) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                $className = <span class="stringliteral">&quot;VPageEdit&quot;</span>.$cname;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                $newUrl = $className::checkPermissions(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                <span class="keywordflow">if</span> ($newUrl !== <span class="stringliteral">&quot;&quot;</span>) {header(<span class="stringliteral">&quot;Location: &quot;</span>.$newUrl); exit();}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                $page = <span class="keyword">new</span> $className(0);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                $page-&gt;render();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                exit();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>=intval(<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[2]);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordflow">if</span> (!<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">if</span> (!isset(<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[3])) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[3]==<span class="stringliteral">&#39;edit&#39;</span>) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    $className = <span class="stringliteral">&quot;VPageEdit&quot;</span>.$cname;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    $newUrl = $className::checkPermissions(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    <span class="keywordflow">if</span> ($newUrl != <span class="stringliteral">&quot;&quot;</span>) {header(<span class="stringliteral">&quot;Location: &quot;</span>.$newUrl); exit();}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    $page = <span class="keyword">new</span> $className(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    $page-&gt;render();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    exit();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                } elseif (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[3]==<span class="stringliteral">&#39;delete&#39;</span>) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    $className = <span class="stringliteral">&quot;VPageEdit&quot;</span>.$cname;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    $newUrl = $className::checkPermissions(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordflow">if</span> ($newUrl != <span class="stringliteral">&quot;&quot;</span>) {header(<span class="stringliteral">&quot;Location: &quot;</span>.$newUrl); exit();}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    $modelName = <span class="stringliteral">&quot;M&quot;</span>.$cname;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    $model = <span class="keyword">new</span> $modelName(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    $model-&gt;unpersist();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    header(<span class="stringliteral">&quot;Location: /{$urlName}s&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    exit();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        } elseif (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[1]==$urlName.<span class="stringliteral">&quot;s&quot;</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            $className = <span class="stringliteral">&quot;VPageList&quot;</span>.$cname.<span class="stringliteral">&quot;s&quot;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            $newUrl = $className::checkPermissions(<a class="code hl_variable" href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            error_log(<span class="stringliteral">&quot;NEWURL:[&quot;</span>.$newUrl.<span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> ($newUrl != <span class="stringliteral">&quot;&quot;</span>) {header(<span class="stringliteral">&quot;Location: &quot;</span>.$newUrl); exit();}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            $page = <span class="keyword">new</span> $className();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            $page-&gt;render();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            exit();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="handler_8php.html#a9d5553a328d2837d4abcc8dea65f7e2b">   64</a></span>    <a class="code hl_variable" href="handler_8php.html#a9d5553a328d2837d4abcc8dea65f7e2b">$otherPages</a> = [</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="stringliteral">&quot;login&quot;</span> =&gt; <span class="stringliteral">&quot;VPageLogin&quot;</span>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="stringliteral">&quot;logout&quot;</span> =&gt; <span class="stringliteral">&quot;VPageLogout&quot;</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="stringliteral">&quot;&quot;</span> =&gt; <span class="stringliteral">&quot;VPageHome&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    ];</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//error_log(&quot;res[1] je &#39;$res[1]&#39;&quot;);</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">foreach</span> (<a class="code hl_variable" href="handler_8php.html#a9d5553a328d2837d4abcc8dea65f7e2b">$otherPages</a> as $urlName =&gt; $cname) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a>[1]==$urlName) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            $page = <span class="keyword">new</span> $cname();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            $page-&gt;render();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            exit();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    header(<span class="stringliteral">&quot;Location: /&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>   <span class="comment">/*</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    /devices</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    /device/35/edit</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    /device/35/delete</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">    /device/new</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"></span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">    /</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">    /login</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">    /logout</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">   */</span></div>
+<div class="ttc" id="ahandler_8php_html_a255f6b6db4c45b1418e9c15cf4e2bcdd"><div class="ttname"><a href="handler_8php.html#a255f6b6db4c45b1418e9c15cf4e2bcdd">$objects</a></div><div class="ttdeci">$objects</div><div class="ttdef"><b>Definition</b> <a href="handler_8php_source.html#l00006">handler.php:6</a></div></div>
+<div class="ttc" id="ahandler_8php_html_a49a8a4009b02e49717caa88b128affc5"><div class="ttname"><a href="handler_8php.html#a49a8a4009b02e49717caa88b128affc5">$res</a></div><div class="ttdeci">$res</div><div class="ttdef"><b>Definition</b> <a href="handler_8php_source.html#l00003">handler.php:3</a></div></div>
+<div class="ttc" id="ahandler_8php_html_a9d5553a328d2837d4abcc8dea65f7e2b"><div class="ttname"><a href="handler_8php.html#a9d5553a328d2837d4abcc8dea65f7e2b">$otherPages</a></div><div class="ttdeci">foreach($objects as $urlName=&gt; $cname) $otherPages</div><div class="ttdef"><b>Definition</b> <a href="handler_8php_source.html#l00064">handler.php:64</a></div></div>
+<div class="ttc" id="ahandler_8php_html_ae97941710d863131c700f069b109991e"><div class="ttname"><a href="handler_8php.html#ae97941710d863131c700f069b109991e">$id</a></div><div class="ttdeci">$id</div><div class="ttdef"><b>Definition</b> <a href="handler_8php_source.html#l00019">handler.php:19</a></div></div>
+<div class="ttc" id="alibrary_8php_html_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a"><div class="ttname"><a href="library_8php.html#a05c38f21d9adf2f5ca5a4bdb5cdc1c0a">extractId</a></div><div class="ttdeci">extractId(array $urlArray)</div><div class="ttdoc">Tries to extract id from requested url (required in a format of an array of parts of url,...</div><div class="ttdef"><b>Definition</b> <a href="library_8php_source.html#l00040">library.php:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c479e8412035211390d4f9dec63c1f88.html">webserver</a></li><li class="navelem"><a class="el" href="dir_08a7cbcc41efe9bb1ff2aacd6915c6c1.html">php</a></li><li class="navelem"><a class="el" href="dir_f56207ff7803472ff3fd57f03694973f.html">ui</a></li><li class="navelem"><a class="el" href="handler_8php.html">handler.php</a></li>
+    <li class="navelem"><a class="el" href="dir_05194b7bb14e4bdbd759acf3e4294839.html">php</a></li><li class="navelem"><a class="el" href="handler_8php.html">handler.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

@@ -1,5 +1,5 @@
 \doxysection{VPage\+List\+Devices.\+php}
-\hypertarget{VPageListDevices_8php_source}{}\label{VPageListDevices_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListDevices.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListDevices.php}}
+\hypertarget{VPageListDevices_8php_source}{}\label{VPageListDevices_8php_source}\index{php/app/view/VPageListDevices.php@{php/app/view/VPageListDevices.php}}
 \mbox{\hyperlink{VPageListDevices_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00001}00001\ <?php}
@@ -7,10 +7,16 @@
 \DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00003}\mbox{\hyperlink{classVPageListDevices}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListDevices}{VPageListDevices}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00004}\mbox{\hyperlink{classVPageListDevices_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListDevices_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
-\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVDeviceList}{VDeviceList}}());}
-\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}add\ new"{}},\ \textcolor{stringliteral}{"{}/edit.php?type=de\&id=0"{}}));}
-\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00008}00008\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Devices</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Location"{}},\ \textcolor{stringliteral}{"{}Gateway"{}},\ \textcolor{stringliteral}{"{}Created\ At"{}},\ \textcolor{stringliteral}{"{}Last\ Changed\ At"{}}],}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ devices.*,\ g.name\ AS\ gname\ FROM\ devices\ LEFT\ JOIN\ gateways\ g\ on\ devices.gateway\_id\ =\ g.id"{}}.}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ (\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll()\ ?\ \textcolor{stringliteral}{"{}"{}}\ :}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ WHERE\ domain\_id\ IN\ "{}}}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ .PermissionManager::arrayToSQL(\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>getDomainsByPerm(\textcolor{stringliteral}{"{}can\_list\_devices"{}}))),}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ VPTRDevice::class));}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/device/new"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{VPageListDevices_8php_source_l00016}00016\ \}}
 
 \end{DoxyCode}

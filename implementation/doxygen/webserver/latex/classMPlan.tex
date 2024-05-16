@@ -1,0 +1,296 @@
+\doxysection{MPlan Class Reference}
+\hypertarget{classMPlan}{}\label{classMPlan}\index{MPlan@{MPlan}}
+
+
+Model for plan object.  
+
+
+Inheritance diagram for MPlan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMPlan}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMPlan_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMPlan_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}plan\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_ac183dc92249f6f917ac27d66ee9b43c1}{\$seq\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of sequence planned in this model, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_a899c92c791cb5d68252e06e5a432d985}{\$period}}
+\begin{DoxyCompactList}\small\item\em Period of time after which this plan is repeated, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_aec4de82415d7f05cb9748d12d3a95a87}{\$offset}}
+\begin{DoxyCompactList}\small\item\em Offset (in seconds) after the period, at which this plan is repeated, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMPlan_a77e0ee83a7d5101a4b6ddd835103c78d}{\$last\+Ts}}
+\begin{DoxyCompactList}\small\item\em Timestamp of moment this plan was started last time, loaded from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for plan object. 
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00006}{6}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMPlan_a4e176c3a661053094339903c5cfc7942}\label{classMPlan_a4e176c3a661053094339903c5cfc7942} 
+\index{MPlan@{MPlan}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of plan in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00044}{44}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMPlan_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMPlan_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MPlan@{MPlan}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00113}{113}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMPlan_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MPlan@{MPlan}!delete@{delete}}
+\index{delete@{delete}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00099}{99}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_a8192334dea04253155bccd4121139183}\label{classMPlan_a8192334dea04253155bccd4121139183} 
+\index{MPlan@{MPlan}!store@{store}}
+\index{store@{store}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00064}{64}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_a02d2c9c72b394f734cea3181fc76719e}\label{classMPlan_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MPlan@{MPlan}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00090}{90}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MPlan@{MPlan}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00123}{123}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMPlan_a77e0ee83a7d5101a4b6ddd835103c78d}\label{classMPlan_a77e0ee83a7d5101a4b6ddd835103c78d} 
+\index{MPlan@{MPlan}!\$lastTs@{\$lastTs}}
+\index{\$lastTs@{\$lastTs}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{\$lastTs}{\$lastTs}}
+{\footnotesize\ttfamily \$last\+Ts}
+
+
+
+Timestamp of moment this plan was started last time, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00033}{33}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_aec4de82415d7f05cb9748d12d3a95a87}\label{classMPlan_aec4de82415d7f05cb9748d12d3a95a87} 
+\index{MPlan@{MPlan}!\$offset@{\$offset}}
+\index{\$offset@{\$offset}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{\$offset}{\$offset}}
+{\footnotesize\ttfamily \$offset}
+
+
+
+Offset (in seconds) after the period, at which this plan is repeated, loaded from database. 
+
+Example\+: If every day at 13\+:23, \$period is (day) and \$offset is 13\texorpdfstring{$\ast$}{*}3600+23\texorpdfstring{$\ast$}{*}60. 
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00028}{28}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_a899c92c791cb5d68252e06e5a432d985}\label{classMPlan_a899c92c791cb5d68252e06e5a432d985} 
+\index{MPlan@{MPlan}!\$period@{\$period}}
+\index{\$period@{\$period}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{\$period}{\$period}}
+{\footnotesize\ttfamily \$period}
+
+
+
+Period of time after which this plan is repeated, loaded from database. 
+
+The period is only a number describing the period, not actual time. 
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00022}{22}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_ac183dc92249f6f917ac27d66ee9b43c1}\label{classMPlan_ac183dc92249f6f917ac27d66ee9b43c1} 
+\index{MPlan@{MPlan}!\$seqId@{\$seqId}}
+\index{\$seqId@{\$seqId}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{\$seqId}{\$seqId}}
+{\footnotesize\ttfamily \$seq\+Id}
+
+
+
+Id of sequence planned in this model, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00016}{16}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+\Hypertarget{classMPlan_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMPlan_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MPlan@{MPlan}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MPlan@{MPlan}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}plan\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MPlan_8php_source_l00011}{11}} of file \mbox{\hyperlink{MPlan_8php_source}{MPlan.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MPlan_8php}{MPlan.\+php}}\end{DoxyCompactItemize}

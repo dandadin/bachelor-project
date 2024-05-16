@@ -9,12 +9,16 @@ Inheritance diagram for VFf\+Dd\+Channel\+Devices\+:\begin{figure}[H]
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-const \mbox{\hyperlink{classVFfDdChannelDevices_a872c4c148f5fe90476da42325f643be9}{Sql}} = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM devices\"{}
+const \mbox{\hyperlink{classVFfDdChannelDevices_a872c4c148f5fe90476da42325f643be9}{Sql}} = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM devices WHERE domain\+\_\+id IN \"{}
+\item 
+const \mbox{\hyperlink{classVFfDdChannelDevices_a09df3cedce3a19744850f066f29fbb44}{Perm\+Name}} = \"{}can\+\_\+edit\+\_\+devices\"{}
 \end{DoxyCompactItemize}
 \doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classVFormFieldDropdown}{VForm\+Field\+Dropdown}}}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{classVFormFieldDropdown_a872c4c148f5fe90476da42325f643be9}{Sql}} = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM table\"{}
+\item 
+const \mbox{\hyperlink{classVFormFieldDropdown_a09df3cedce3a19744850f066f29fbb44}{Perm\+Name}} = \"{}\"{}
 \item 
 const \mbox{\hyperlink{classVFormFieldDropdown_a941256cf9742dc81ec2bcea45cf89f53}{Label\+Column}} = \"{}name\"{}
 \item 
@@ -24,13 +28,13 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVFormFieldDropdown}{VForm\+Field\+Dropdown}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVFormFieldDropdown_ab5128990f5ccb63bf277e709f3d34c4f}{\+\_\+\+\_\+construct}} (\&\$model=NULL, \$label=NULL, \$filter=\"{}1=1\"{})
+\mbox{\hyperlink{classVFormFieldDropdown_acd6c93dac07af607570a511dab009d89}{\+\_\+\+\_\+construct}} (\&\$model=NULL, \$label=NULL)
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVFormFieldDropdown_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVFormFieldDropdown_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
@@ -40,16 +44,22 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \mbox{\hyperlink{classVFormField_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
 \mbox{\hyperlink{classVFormField_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVFormField_a88d6d7d8b3718d5ecd428a7153be78c5}{disable}} (bool \$disabled=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVFormFieldDropdown}{VForm\+Field\+Dropdown}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVFormFieldDropdown_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVFormFieldDropdown_a5c96ad32310965cf6f7de32fa987a1e1}{build\+Sql}} ()
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,12 +69,7 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVFormFieldDropdown}{VForm\+Field\+Dropdown}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classVFormFieldDropdown_aac53bdb48bdd96ff9c20e2a86f48ce5f}{\$filter}}
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
@@ -74,6 +79,8 @@ const \mbox{\hyperlink{classVFormFieldDropdown_a09effb47e6883e5c0db61b123f12bcf4
 \mbox{\hyperlink{classVFormField_a177af2bf70bede02de3d05a425fb8e43}{\$label}}
 \item 
 \mbox{\hyperlink{classVFormField_a08fdd91bde255dbe3e2d15a22d9663e8}{\$model}}
+\item 
+\mbox{\hyperlink{classVFormField_a6c108f5b26242d862f6e51869fbfd271}{\$disabled}}
 \end{DoxyCompactItemize}
 
 
@@ -85,11 +92,21 @@ Definition at line \mbox{\hyperlink{VFfDdChannelDevices_8php_source_l00003}{3}} 
 
 
 \doxysubsection{Field Documentation}
+\Hypertarget{classVFfDdChannelDevices_a09df3cedce3a19744850f066f29fbb44}\label{classVFfDdChannelDevices_a09df3cedce3a19744850f066f29fbb44} 
+\index{VFfDdChannelDevices@{VFfDdChannelDevices}!PermName@{PermName}}
+\index{PermName@{PermName}!VFfDdChannelDevices@{VFfDdChannelDevices}}
+\doxysubsubsection{\texorpdfstring{PermName}{PermName}}
+{\footnotesize\ttfamily const Perm\+Name = \"{}can\+\_\+edit\+\_\+devices\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{VFfDdChannelDevices_8php_source_l00005}{5}} of file \mbox{\hyperlink{VFfDdChannelDevices_8php_source}{VFf\+Dd\+Channel\+Devices.\+php}}.
+
 \Hypertarget{classVFfDdChannelDevices_a872c4c148f5fe90476da42325f643be9}\label{classVFfDdChannelDevices_a872c4c148f5fe90476da42325f643be9} 
 \index{VFfDdChannelDevices@{VFfDdChannelDevices}!Sql@{Sql}}
 \index{Sql@{Sql}!VFfDdChannelDevices@{VFfDdChannelDevices}}
 \doxysubsubsection{\texorpdfstring{Sql}{Sql}}
-{\footnotesize\ttfamily const Sql = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM devices\"{}}
+{\footnotesize\ttfamily const Sql = \"{}SELECT \texorpdfstring{$\ast$}{*} FROM devices WHERE domain\+\_\+id IN \"{}}
 
 
 
@@ -99,4 +116,4 @@ Definition at line \mbox{\hyperlink{VFfDdChannelDevices_8php_source_l00004}{4}} 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/\mbox{\hyperlink{VFfDdChannelDevices_8php}{VFf\+Dd\+Channel\+Devices.\+php}}\end{DoxyCompactItemize}
+php/app/view/\mbox{\hyperlink{VFfDdChannelDevices_8php}{VFf\+Dd\+Channel\+Devices.\+php}}\end{DoxyCompactItemize}

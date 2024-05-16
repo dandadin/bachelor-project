@@ -1,0 +1,280 @@
+\doxysection{MSequence Class Reference}
+\hypertarget{classMSequence}{}\label{classMSequence}\index{MSequence@{MSequence}}
+
+
+Model for sequence object.  
+
+
+Inheritance diagram for MSequence\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMSequence}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMSequence_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMSequence_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}sequence\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}}
+\begin{DoxyCompactList}\small\item\em Name of sequence loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_a84651f4070d04080f6c5fd3c98cc9104}{\$user\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of user that created this sequence, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMSequence_af6145b0339660c9f1915bee92929dcbb}{\$steps}}
+\begin{DoxyCompactList}\small\item\em List of models of every step that is a part of this sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for sequence object. 
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00006}{6}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMSequence_a4e176c3a661053094339903c5cfc7942}\label{classMSequence_a4e176c3a661053094339903c5cfc7942} 
+\index{MSequence@{MSequence}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of sequence in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00037}{37}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMSequence_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMSequence_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MSequence@{MSequence}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00113}{113}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMSequence_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MSequence@{MSequence}!delete@{delete}}
+\index{delete@{delete}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00092}{92}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_a8192334dea04253155bccd4121139183}\label{classMSequence_a8192334dea04253155bccd4121139183} 
+\index{MSequence@{MSequence}!store@{store}}
+\index{store@{store}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00056}{56}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_a02d2c9c72b394f734cea3181fc76719e}\label{classMSequence_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MSequence@{MSequence}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00082}{82}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMSequence_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MSequence@{MSequence}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00123}{123}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMSequence_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{classMSequence_ab2fc40d43824ea3e1ce5d86dee0d763b} 
+\index{MSequence@{MSequence}!\$name@{\$name}}
+\index{\$name@{\$name}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{\$name}{\$name}}
+{\footnotesize\ttfamily \$name}
+
+
+
+Name of sequence loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00016}{16}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_af6145b0339660c9f1915bee92929dcbb}\label{classMSequence_af6145b0339660c9f1915bee92929dcbb} 
+\index{MSequence@{MSequence}!\$steps@{\$steps}}
+\index{\$steps@{\$steps}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{\$steps}{\$steps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMRTStepsInSequence}{MRTSteps\+In\+Sequence}} \$steps}
+
+
+
+List of models of every step that is a part of this sequence. 
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00026}{26}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_a84651f4070d04080f6c5fd3c98cc9104}\label{classMSequence_a84651f4070d04080f6c5fd3c98cc9104} 
+\index{MSequence@{MSequence}!\$userId@{\$userId}}
+\index{\$userId@{\$userId}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{\$userId}{\$userId}}
+{\footnotesize\ttfamily \$user\+Id}
+
+
+
+Id of user that created this sequence, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00021}{21}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+\Hypertarget{classMSequence_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMSequence_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MSequence@{MSequence}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MSequence@{MSequence}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}sequence\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MSequence_8php_source_l00011}{11}} of file \mbox{\hyperlink{MSequence_8php_source}{MSequence.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MSequence_8php}{MSequence.\+php}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var classVMenuBarUser =
 [
-    [ "Menu", "classVMenuBarUser.html#a53d8320dda2b9faeab20d307d7259748", null ]
+    [ "getMenu", "classVMenuBarUser.html#a637e84e2e9e99a87ea9b5f1771551af4", null ]
 ];

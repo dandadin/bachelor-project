@@ -1,0 +1,88 @@
+\doxysection{php/executor.php File Reference}
+\hypertarget{executor_8php}{}\label{executor_8php}\index{php/executor.php@{php/executor.php}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{executor_8php_aa48ae07a8f1b6a9bf7cdce13b233f5fc}{next\+Step}} (int \$instance\+Id, int \$time\+Now)
+\begin{DoxyCompactList}\small\item\em Tries to push instance \$instance\+Id to the next step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{executor_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}{\$time}} = time()
+\item 
+\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}} =\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB\+::query}}(\"{}SELECT \texorpdfstring{$\ast$}{*} FROM instances WHERE step\+\_\+ts$<$\textquotesingle{}\"{}.timetostr(\$time).\"{}\textquotesingle{} ORDER BY step\+\_\+ts\"{})
+\item 
+while(\$o=\$sqls-\/$>$fetch\+Object()) \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}} =\"{}SELECT instances.\texorpdfstring{$\ast$}{*}, UNIX\+\_\+\+TIMESTAMP(step\+\_\+ts)-\/\"{}.\$time.\"{} AS reload FROM instances ORDER BY reload LIMIT 1\"{}
+\item 
+\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}} =\$sqls-\/$>$fetch\+Object()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{executor_8php_aa48ae07a8f1b6a9bf7cdce13b233f5fc}\label{executor_8php_aa48ae07a8f1b6a9bf7cdce13b233f5fc} 
+\index{executor.php@{executor.php}!nextStep@{nextStep}}
+\index{nextStep@{nextStep}!executor.php@{executor.php}}
+\doxysubsubsection{\texorpdfstring{nextStep()}{nextStep()}}
+{\footnotesize\ttfamily next\+Step (\begin{DoxyParamCaption}\item[{int}]{\$instance\+Id,  }\item[{int}]{\$time\+Now }\end{DoxyParamCaption})}
+
+
+
+Tries to push instance \$instance\+Id to the next step. 
+
+If no next step found, deletes the instance. 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$instance\+Id} & Id of instance to be pushed. \\
+\hline
+int & {\em \$time\+Now} & Time of recently completed active step. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Success of persisting. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{executor_8php_source_l00024}{24}} of file \mbox{\hyperlink{executor_8php_source}{executor.\+php}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}\label{executor_8php_ac6c49291f92291a3cece8066d68e5f5e} 
+\index{executor.php@{executor.php}!\$o@{\$o}}
+\index{\$o@{\$o}!executor.php@{executor.php}}
+\doxysubsubsection{\texorpdfstring{\$o}{\$o}}
+{\footnotesize\ttfamily \$o =\$sqls-\/$>$fetch\+Object()}
+
+
+
+Definition at line \mbox{\hyperlink{executor_8php_source_l00013}{13}} of file \mbox{\hyperlink{executor_8php_source}{executor.\+php}}.
+
+\Hypertarget{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}\label{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae} 
+\index{executor.php@{executor.php}!\$sql@{\$sql}}
+\index{\$sql@{\$sql}!executor.php@{executor.php}}
+\doxysubsubsection{\texorpdfstring{\$sql}{\$sql}}
+{\footnotesize\ttfamily while ( \$o=\$sqls-\/$>$fetch\+Object()) \$sql =\"{}SELECT instances.\texorpdfstring{$\ast$}{*}, UNIX\+\_\+\+TIMESTAMP(step\+\_\+ts)-\/\"{}.\$time.\"{} AS reload FROM instances ORDER BY reload LIMIT 1\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{executor_8php_source_l00011}{11}} of file \mbox{\hyperlink{executor_8php_source}{executor.\+php}}.
+
+\Hypertarget{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}\label{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb} 
+\index{executor.php@{executor.php}!\$sqls@{\$sqls}}
+\index{\$sqls@{\$sqls}!executor.php@{executor.php}}
+\doxysubsubsection{\texorpdfstring{\$sqls}{\$sqls}}
+{\footnotesize\ttfamily \$sqls =\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB\+::query}}(\"{}SELECT \texorpdfstring{$\ast$}{*} FROM instances WHERE step\+\_\+ts$<$\textquotesingle{}\"{}.timetostr(\$time).\"{}\textquotesingle{} ORDER BY step\+\_\+ts\"{})}
+
+
+
+Definition at line \mbox{\hyperlink{executor_8php_source_l00004}{4}} of file \mbox{\hyperlink{executor_8php_source}{executor.\+php}}.
+
+\Hypertarget{executor_8php_a78db1a0602e3b6ac1d9a1b5ec103c160}\label{executor_8php_a78db1a0602e3b6ac1d9a1b5ec103c160} 
+\index{executor.php@{executor.php}!\$time@{\$time}}
+\index{\$time@{\$time}!executor.php@{executor.php}}
+\doxysubsubsection{\texorpdfstring{\$time}{\$time}}
+{\footnotesize\ttfamily \$time = time()}
+
+
+
+Definition at line \mbox{\hyperlink{executor_8php_source_l00003}{3}} of file \mbox{\hyperlink{executor_8php_source}{executor.\+php}}.
+

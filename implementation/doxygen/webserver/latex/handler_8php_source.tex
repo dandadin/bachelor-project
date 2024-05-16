@@ -1,14 +1,96 @@
 \doxysection{handler.\+php}
-\hypertarget{handler_8php_source}{}\label{handler_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/ui/handler.php}}
+\hypertarget{handler_8php_source}{}\label{handler_8php_source}\index{php/handler.php@{php/handler.php}}
 \mbox{\hyperlink{handler_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{handler_8php_source_l00001}00001\ <?php}
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00003}\mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{00003}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ parse\_url(\$\_SERVER[\textcolor{stringliteral}{"{}REQUEST\_URI"{}}],\ PHP\_URL\_PATH);}
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00005}00005\ \ \ \ \ \textcolor{comment}{//header("{}Location:\ \$url"{});}}
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ ==\ \textcolor{stringliteral}{"{}/"{}})\ \mbox{\hyperlink{handler_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{"{}/index.php"{}};}
-\DoxyCodeLine{\Hypertarget{handler_8php_source_l00008}00008\ \ \ \ \ include\ \textcolor{stringliteral}{"{}."{}}.\$url;}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00002}00002\ \ \ \ \ require\_once\ \textcolor{stringliteral}{"{}./app/library.php"{}};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00003}\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{00003}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}\ =\ explode(\textcolor{charliteral}{'/'},\ parse\_url(\$\_SERVER[\textcolor{stringliteral}{"{}REQUEST\_URI"{}}],\ PHP\_URL\_PATH));}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00004}00004\ \ \ \ \ require\_once\ \textcolor{stringliteral}{"{}./app/init.php"{}};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00006}\mbox{\hyperlink{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd}{00006}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd}{\$objects}}\ =\ [}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00007}00007\ \ \ \ \ \textcolor{stringliteral}{"{}user"{}}\ =>\ \textcolor{stringliteral}{"{}User"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00008}00008\ \ \ \ \ \textcolor{stringliteral}{"{}domain"{}}\ =>\ \textcolor{stringliteral}{"{}Domain"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00009}00009\ \ \ \ \ \textcolor{stringliteral}{"{}collection"{}}\ =>\ \textcolor{stringliteral}{"{}Collection"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00010}00010\ \ \ \ \ \textcolor{stringliteral}{"{}device"{}}\ =>\ \textcolor{stringliteral}{"{}Device"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00011}00011\ \ \ \ \ \textcolor{stringliteral}{"{}channel"{}}\ =>\ \textcolor{stringliteral}{"{}Channel"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00012}00012\ \ \ \ \ \textcolor{stringliteral}{"{}gateway"{}}\ =>\ \textcolor{stringliteral}{"{}Gateway"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00013}00013\ \ \ \ \ \textcolor{stringliteral}{"{}role"{}}\ =>\ \textcolor{stringliteral}{"{}Role"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00014}00014\ \ \ \ \ \textcolor{stringliteral}{"{}sequence"{}}\ =>\ \textcolor{stringliteral}{"{}Sequence"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00015}00015\ \ \ \ \ \textcolor{stringliteral}{"{}step"{}}\ =>\ \textcolor{stringliteral}{"{}Step"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00016}00016\ \ \ \ \ \textcolor{stringliteral}{"{}instance"{}}\ =>\ \textcolor{stringliteral}{"{}Instance"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00017}00017\ \ \ \ \ \textcolor{stringliteral}{"{}plan"{}}\ =>\ \textcolor{stringliteral}{"{}Plan"{}}];}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00019}\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{00019}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \mbox{\hyperlink{library_8php_a05c38f21d9adf2f5ca5a4bdb5cdc1c0a}{extractId}}(\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{handler_8php_a255f6b6db4c45b1418e9c15cf4e2bcdd}{\$objects}}\ as\ \$urlName\ =>\ \$cname)\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[1]==\$urlName)\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[2]))\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[2]==\textcolor{stringliteral}{'new'})\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$className\ =\ \textcolor{stringliteral}{"{}VPageEdit"{}}.\$cname;}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newUrl\ =\ \$className::checkPermissions(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$newUrl\ !==\ \textcolor{stringliteral}{"{}"{}})\ \{header(\textcolor{stringliteral}{"{}Location:\ "{}}.\$newUrl);\ exit();\}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ =\ \textcolor{keyword}{new}\ \$className(0);}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$page-\/>render();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}=intval(\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[2]);}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[3]))\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[3]==\textcolor{stringliteral}{'edit'})\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$className\ =\ \textcolor{stringliteral}{"{}VPageEdit"{}}.\$cname;}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newUrl\ =\ \$className::checkPermissions(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$newUrl\ !=\ \textcolor{stringliteral}{"{}"{}})\ \{header(\textcolor{stringliteral}{"{}Location:\ "{}}.\$newUrl);\ exit();\}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ =\ \textcolor{keyword}{new}\ \$className(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$page-\/>render();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ elseif\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[3]==\textcolor{stringliteral}{'delete'})\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$className\ =\ \textcolor{stringliteral}{"{}VPageEdit"{}}.\$cname;}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newUrl\ =\ \$className::checkPermissions(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$newUrl\ !=\ \textcolor{stringliteral}{"{}"{}})\ \{header(\textcolor{stringliteral}{"{}Location:\ "{}}.\$newUrl);\ exit();\}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$modelName\ =\ \textcolor{stringliteral}{"{}M"{}}.\$cname;}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$model\ =\ \textcolor{keyword}{new}\ \$modelName(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$model-\/>unpersist();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}Location:\ /\{\$urlName\}s"{}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \}\ elseif\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[1]==\$urlName.\textcolor{stringliteral}{"{}s"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \$className\ =\ \textcolor{stringliteral}{"{}VPageList"{}}.\$cname.\textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \$newUrl\ =\ \$className::checkPermissions(\mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}NEWURL:["{}}.\$newUrl.\textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$newUrl\ !=\ \textcolor{stringliteral}{"{}"{}})\ \{header(\textcolor{stringliteral}{"{}Location:\ "{}}.\$newUrl);\ exit();\}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ =\ \textcolor{keyword}{new}\ \$className();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \$page-\/>render();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00064}\mbox{\hyperlink{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b}{00064}}\ \ \ \ \ \mbox{\hyperlink{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b}{\$otherPages}}\ =\ [}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}login"{}}\ =>\ \textcolor{stringliteral}{"{}VPageLogin"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}logout"{}}\ =>\ \textcolor{stringliteral}{"{}VPageLogout"{}},}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}\ =>\ \textcolor{stringliteral}{"{}VPageHome"{}}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00068}00068\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//error\_log("{}res[1]\ je\ '\$res[1]'"{});}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{handler_8php_a9d5553a328d2837d4abcc8dea65f7e2b}{\$otherPages}}\ as\ \$urlName\ =>\ \$cname)\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{handler_8php_a49a8a4009b02e49717caa88b128affc5}{\$res}}[1]==\$urlName)\ \{}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ =\ \textcolor{keyword}{new}\ \$cname();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \$page-\/>render();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00079}00079\ \ \ \ \ header(\textcolor{stringliteral}{"{}Location:\ /"{}});}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00081}00081\ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00082}00082\ \textcolor{comment}{\ \ \ \ /devices}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00083}00083\ \textcolor{comment}{\ \ \ \ /device/35/edit}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00084}00084\ \textcolor{comment}{\ \ \ \ /device/35/delete}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00085}00085\ \textcolor{comment}{\ \ \ \ /device/new}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00086}00086\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00087}00087\ \textcolor{comment}{\ \ \ \ /}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00088}00088\ \textcolor{comment}{\ \ \ \ /login}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00089}00089\ \textcolor{comment}{\ \ \ \ /logout}}
+\DoxyCodeLine{\Hypertarget{handler_8php_source_l00090}00090\ \textcolor{comment}{\ \ \ */}}
 
 \end{DoxyCode}

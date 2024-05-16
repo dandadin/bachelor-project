@@ -1,0 +1,100 @@
+\doxysection{VPlain\+Table Class Reference}
+\hypertarget{classVPlainTable}{}\label{classVPlainTable}\index{VPlainTable@{VPlainTable}}
+
+
+View for default table.  
+
+
+Inheritance diagram for VPlain\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classVPlainTable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVPlainTable_ae5af8f5e408c023c2597f465efe99584}{\+\_\+\+\_\+construct}} (\$heading, \$sql, \$row\+Class, \$delete\+Col=\"{}delete\"{}, \$label=NULL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVTable}{VTable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a393f4106ac71afa6285e0dd6a9e927b5}{\+\_\+\+\_\+construct}} (\$heading, \$remove\+Col=\"{}\"{}, \$label=NULL)
+\begin{DoxyCompactList}\small\item\em Creates view for header of the table and adds rows for items passed in \$model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\item 
+\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVTable}{VTable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\begin{DoxyCompactList}\small\item\em Renders single row of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Renders the beginning of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\item 
+\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for default table. 
+
+This table\textquotesingle{}s rows show single entity details. 
+
+Definition at line \mbox{\hyperlink{VPlainTable_8php_source_l00006}{6}} of file \mbox{\hyperlink{VPlainTable_8php_source}{VPlain\+Table.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVPlainTable_ae5af8f5e408c023c2597f465efe99584}\label{classVPlainTable_ae5af8f5e408c023c2597f465efe99584} 
+\index{VPlainTable@{VPlainTable}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!VPlainTable@{VPlainTable}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$heading,  }\item[{}]{\$sql,  }\item[{}]{\$row\+Class,  }\item[{}]{\$delete\+Col = {\ttfamily \"{}delete\"{}},  }\item[{}]{\$label = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{VPlainTable_8php_source_l00008}{8}} of file \mbox{\hyperlink{VPlainTable_8php_source}{VPlain\+Table.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/framework/view/\mbox{\hyperlink{VPlainTable_8php}{VPlain\+Table.\+php}}\end{DoxyCompactItemize}

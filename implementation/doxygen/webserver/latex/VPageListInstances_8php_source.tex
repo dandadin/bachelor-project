@@ -1,0 +1,22 @@
+\doxysection{VPage\+List\+Instances.\+php}
+\hypertarget{VPageListInstances_8php_source}{}\label{VPageListInstances_8php_source}\index{php/app/view/VPageListInstances.php@{php/app/view/VPageListInstances.php}}
+\mbox{\hyperlink{VPageListInstances_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00003}\mbox{\hyperlink{classVPageListInstances}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListInstances}{VPageListInstances}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00004}\mbox{\hyperlink{classVPageListInstances_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListInstances_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Instances</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Sequence\ Name"{}},\ \textcolor{stringliteral}{"{}Current\ Step\ ID"{}},\ \textcolor{stringliteral}{"{}Step\ Planned\ Time"{}}],}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ instances.*,\ s.name\ AS\ sname\ FROM\ instances\ LEFT\ JOIN\ sequences\ s\ on\ instances.seq\_id\ =\ s.id"{}},}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ VPTRInstance::class));}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/instance/new"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00012}\mbox{\hyperlink{classVPageListInstances_a9b080c1abd965fa84b1bc0d872617a07}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListInstances_a9b080c1abd965fa84b1bc0d872617a07}{checkPermissions}}(?\textcolor{keywordtype}{int}\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \textcolor{keyword}{null}):\ string\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ if\ (!\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll())\ return\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00015}00015\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListInstances_8php_source_l00016}00016\ \}}
+
+\end{DoxyCode}

@@ -1,5 +1,5 @@
 \doxysection{VPage\+Hollow.\+php}
-\hypertarget{VPageHollow_8php_source}{}\label{VPageHollow_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VPageHollow.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VPageHollow.php}}
+\hypertarget{VPageHollow_8php_source}{}\label{VPageHollow_8php_source}\index{php/framework/view/VPageHollow.php@{php/framework/view/VPageHollow.php}}
 \mbox{\hyperlink{VPageHollow_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00001}00001\ <?php}
@@ -7,26 +7,52 @@
 \DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00003}\mbox{\hyperlink{classVPageHollow}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageHollow}{VPageHollow}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVList}{VList}}\ \{}
 \DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00004}00004\ }
 \DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00005}\mbox{\hyperlink{classVPageHollow_aa4e423fc694f0790f1f2484a49b354c7}{00005}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVPageHollow_aa4e423fc694f0790f1f2484a49b354c7}{Title}}\ =\ \textcolor{stringliteral}{"{}IoTHome"{}};}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00006}\mbox{\hyperlink{classVPageHollow_ada57e7bb7c152edad18fe2f166188691}{00006}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classVPageHollow_ada57e7bb7c152edad18fe2f166188691}{\$title}};}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00008}\mbox{\hyperlink{classVPageHollow_a095c5d389db211932136b53f25f39685}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \$this-\/>title\ =\ static::Title;}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00010}00010\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00012}\mbox{\hyperlink{classVPageHollow_aa776ee561a32e9eb2c76a5a7f9cc1a74}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_aa776ee561a32e9eb2c76a5a7f9cc1a74}{renderHeader}}()\ \{}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ echo\ <<<END}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ <html>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ <head>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <title>\$this-\/>title</title>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <link\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ href=\textcolor{stringliteral}{"{}/css/style.css"{}}>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ </head>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ <body>}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00020}00020\ END;}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00021}00021\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00023}\mbox{\hyperlink{classVPageHollow_aeed6253e9e242751c7beb12a5c541b1e}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_aeed6253e9e242751c7beb12a5c541b1e}{renderFooter}}()\ \{}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}</body></html>\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00025}00025\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00006}\mbox{\hyperlink{classVPageHollow_a4b231d793043b3f162c456c04f82b37e}{00006}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVPageHollow_a4b231d793043b3f162c456c04f82b37e}{Header}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00007}\mbox{\hyperlink{classVPageHollow_ada57e7bb7c152edad18fe2f166188691}{00007}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classVPageHollow_ada57e7bb7c152edad18fe2f166188691}{\$title}};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00008}\mbox{\hyperlink{classVPageHollow_a4f44601f2b9dc8a1644bce53c94ce622}{00008}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classVPageHollow_a4f44601f2b9dc8a1644bce53c94ce622}{\$header}};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00010}\mbox{\hyperlink{classVPageHollow_a095c5d389db211932136b53f25f39685}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>title\ =\ static::Title;}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$this-\/>header\ =\ static::Header;}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]);}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00016}\mbox{\hyperlink{classVPageHollow_aa776ee561a32e9eb2c76a5a7f9cc1a74}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_aa776ee561a32e9eb2c76a5a7f9cc1a74}{renderHeader}}():\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ echo\ <<<END}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00018}00018\ <html>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00019}00019\ \ \ \ \ <head>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ <title>\$this-\/>title</title>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ <meta\ name=\textcolor{stringliteral}{"{}viewport"{}}\ content=\textcolor{stringliteral}{"{}width=device-\/width,\ initial-\/scale=1"{}}>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ <script\ src=\textcolor{stringliteral}{"{}https://kit.fontawesome.com/7313c0d6d7.js"{}}\ crossorigin=\textcolor{stringliteral}{"{}anonymous"{}}></script>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ <link\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ href=\textcolor{stringliteral}{"{}/css/style.css"{}}/>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$this-\/>header}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00025}00025\ \ \ \ \ </head>}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00026}00026\ \ \ \ \ <body>\(\backslash\)n}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00027}00027\ END;}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00030}\mbox{\hyperlink{classVPageHollow_afde88292c44dc59faf017738dae6dffb}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_afde88292c44dc59faf017738dae6dffb}{render}}():\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ parent::render();}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVList}{VList}}();}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00035}\mbox{\hyperlink{classVPageHollow_aeed6253e9e242751c7beb12a5c541b1e}{00035}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_aeed6253e9e242751c7beb12a5c541b1e}{renderFooter}}():\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}\ \ \ \ </body></html>\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00039}\mbox{\hyperlink{classVPageHollow_a74b3ab979b209bbd6fe99d60ba10542e}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_a74b3ab979b209bbd6fe99d60ba10542e}{loadNotifications}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isset(\$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]))\ \textcolor{keywordflow}{if}\ (\$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]\ instanceof\ \mbox{\hyperlink{classVList}{VList}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classVList}{VList}}();}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00045}\mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{addNotification}}(\mbox{\hyperlink{classVNotification}{VNotification}}\ \$notification)\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{"{}notifications"{}}]-\/>add(\$notification);}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00056}\mbox{\hyperlink{classVPageHollow_afa3cb7dd3eef03b62763c25426f770c8}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageHollow_afa3cb7dd3eef03b62763c25426f770c8}{checkPermissions}}(\textcolor{keywordtype}{int}|\textcolor{keyword}{null}\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \textcolor{keyword}{null})\ :\ string\ \{}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ return\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageHollow_8php_source_l00059}00059\ \}}
 
 \end{DoxyCode}

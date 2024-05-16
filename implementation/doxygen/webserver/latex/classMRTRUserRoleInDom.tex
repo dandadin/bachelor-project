@@ -1,0 +1,156 @@
+\doxysection{MRTRUser\+Role\+In\+Dom Class Reference}
+\hypertarget{classMRTRUserRoleInDom}{}\label{classMRTRUserRoleInDom}\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+
+
+Model of table-\/row of relative table of users and their roles.  
+
+
+Inheritance diagram for MRTRUser\+Role\+In\+Dom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRTRUserRoleInDom}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRUserRoleInDom_a973b46ae6601cd379aac883a42d57b88}{\+\_\+\+\_\+construct}} (int \$user\+Id=0, int \$role\+Id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRUserRoleInDom_ae5efe0986eff3632ec217b4def89cb10}{store}} (int \$domain\+Id=0, int \$index=0)
+\begin{DoxyCompactList}\small\item\em If domain\+Id is specified, inserts this row into database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classMRTRUserRoleInDom_a94f6c59dabb06036b387fc52b3a1b811}{\$login}}
+\begin{DoxyCompactList}\small\item\em Username of user this row used for creation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}{\$user\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of user this row used for creation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}{\$role\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of role this row used for creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model of table-\/row of relative table of users and their roles. 
+
+Stores single combination of user and role. 
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00005}{5}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTRUserRoleInDom_a973b46ae6601cd379aac883a42d57b88}\label{classMRTRUserRoleInDom_a973b46ae6601cd379aac883a42d57b88} 
+\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$user\+Id = {\ttfamily 0},  }\item[{int}]{\$role\+Id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$user\+Id} & Id of user this model is created for. \\
+\hline
+int & {\em \$role\+Id} & Id of role this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00027}{27}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTRUserRoleInDom_ae5efe0986eff3632ec217b4def89cb10}\label{classMRTRUserRoleInDom_ae5efe0986eff3632ec217b4def89cb10} 
+\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}!store@{store}}
+\index{store@{store}!MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$domain\+Id = {\ttfamily 0},  }\item[{int}]{\$index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+If domain\+Id is specified, inserts this row into database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$domain\+Id} & Id of domain this user and role should be paired with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00038}{38}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTRUserRoleInDom_a94f6c59dabb06036b387fc52b3a1b811}\label{classMRTRUserRoleInDom_a94f6c59dabb06036b387fc52b3a1b811} 
+\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}!\$login@{\$login}}
+\index{\$login@{\$login}!MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{\$login}{\$login}}
+{\footnotesize\ttfamily string \$login}
+
+
+
+Username of user this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00010}{10}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+\Hypertarget{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7}\label{classMRTRUserRoleInDom_a75b5875df0e7fa36f8c4dc76df0445f7} 
+\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}!\$roleId@{\$roleId}}
+\index{\$roleId@{\$roleId}!MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{\$roleId}{\$roleId}}
+{\footnotesize\ttfamily int \$role\+Id}
+
+
+
+Id of role this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00020}{20}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+\Hypertarget{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5}\label{classMRTRUserRoleInDom_a7a3fa75c4235b1f1d97d1438986972f5} 
+\index{MRTRUserRoleInDom@{MRTRUserRoleInDom}!\$userId@{\$userId}}
+\index{\$userId@{\$userId}!MRTRUserRoleInDom@{MRTRUserRoleInDom}}
+\doxysubsubsection{\texorpdfstring{\$userId}{\$userId}}
+{\footnotesize\ttfamily int \$user\+Id}
+
+
+
+Id of user this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRUserRoleInDom_8php_source_l00015}{15}} of file \mbox{\hyperlink{MRTRUserRoleInDom_8php_source}{MRTRUser\+Role\+In\+Dom.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MRTRUserRoleInDom_8php}{MRTRUser\+Role\+In\+Dom.\+php}}\end{DoxyCompactItemize}

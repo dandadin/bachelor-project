@@ -1,0 +1,30 @@
+\doxysection{MRTUser\+Role\+In\+Dom.\+php}
+\hypertarget{MRTUserRoleInDom_8php_source}{}\label{MRTUserRoleInDom_8php_source}\index{php/app/model/MRTUserRoleInDom.php@{php/app/model/MRTUserRoleInDom.php}}
+\mbox{\hyperlink{MRTUserRoleInDom_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00006}\mbox{\hyperlink{classMRTUserRoleInDom}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTUserRoleInDom}{MRTUserRoleInDom}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMRelTable}{MRelTable}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00007}\mbox{\hyperlink{classMRTUserRoleInDom_ac67a600527d436e1f64193d61a5f7e66}{00007}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMRTUserRoleInDom_ac67a600527d436e1f64193d61a5f7e66}{RowModelClass}}\ =\ MRTRUserRoleInDom::class;}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00012}\mbox{\hyperlink{classMRTUserRoleInDom_a15fd1e840e1d03b3f34eefff64403c2d}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTUserRoleInDom_a15fd1e840e1d03b3f34eefff64403c2d}{\_\_construct}}(\$domainId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$domainId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ domain\_users\ LEFT\ JOIN\ users\ u\ ON\ domain\_users.user\_id\ =\ u.id\ WHERE\ domain\_id=\$domainId"{}}\ );}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRUserRoleInDom}{MRTRUserRoleInDom}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>user\_id,\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>role\_id);}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00028}\mbox{\hyperlink{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}{store}}(\textcolor{keywordtype}{int}\ \$domainId\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ if\ (!\$domainId)\ return\ false;}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ domain\_users\ WHERE\ domain\_id=\$domainId"{}};}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!parent::store(\$domainId))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTUserRoleInDom_8php_source_l00037}00037\ \}}
+
+\end{DoxyCode}

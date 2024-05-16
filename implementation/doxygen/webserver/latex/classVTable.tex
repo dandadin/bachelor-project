@@ -1,0 +1,185 @@
+\doxysection{VTable Class Reference}
+\hypertarget{classVTable}{}\label{classVTable}\index{VTable@{VTable}}
+
+
+View for default table.  
+
+
+Inheritance diagram for VTable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.971631cm]{classVTable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a393f4106ac71afa6285e0dd6a9e927b5}{\+\_\+\+\_\+construct}} (\$heading, \$remove\+Col=\"{}\"{}, \$label=NULL)
+\begin{DoxyCompactList}\small\item\em Creates view for header of the table and adds rows for items passed in \$model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\item 
+\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\begin{DoxyCompactList}\small\item\em Renders single row of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Renders the beginning of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\item 
+\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
+\item 
+\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for default table. 
+
+This table\textquotesingle{}s rows show single entity details. 
+
+Definition at line \mbox{\hyperlink{VTable_8php_source_l00006}{6}} of file \mbox{\hyperlink{VTable_8php_source}{VTable.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVTable_a393f4106ac71afa6285e0dd6a9e927b5}\label{classVTable_a393f4106ac71afa6285e0dd6a9e927b5} 
+\index{VTable@{VTable}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!VTable@{VTable}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$heading,  }\item[{}]{\$remove\+Col = {\ttfamily \"{}\"{}},  }\item[{}]{\$label = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Creates view for header of the table and adds rows for items passed in \$model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$model} & An instance of model MT$<$type$>$. Member \$items stores an array of MR$<$type$>$ models. \\
+\hline
+{\em \$label} & Not used. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{VTable_8php_source_l00012}{12}} of file \mbox{\hyperlink{VTable_8php_source}{VTable.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVTable_aeed6253e9e242751c7beb12a5c541b1e}\label{classVTable_aeed6253e9e242751c7beb12a5c541b1e} 
+\index{VTable@{VTable}!renderFooter@{renderFooter}}
+\index{renderFooter@{renderFooter}!VTable@{VTable}}
+\doxysubsubsection{\texorpdfstring{renderFooter()}{renderFooter()}}
+{\footnotesize\ttfamily render\+Footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Renders the end of the table and the button for adding new rows. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{VView}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classVRelTable_aeed6253e9e242751c7beb12a5c541b1e}{VRel\+Table}}.
+
+
+
+Definition at line \mbox{\hyperlink{VTable_8php_source_l00039}{39}} of file \mbox{\hyperlink{VTable_8php_source}{VTable.\+php}}.
+
+\Hypertarget{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}\label{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74} 
+\index{VTable@{VTable}!renderHeader@{renderHeader}}
+\index{renderHeader@{renderHeader}!VTable@{VTable}}
+\doxysubsubsection{\texorpdfstring{renderHeader()}{renderHeader()}}
+{\footnotesize\ttfamily render\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Renders the beginning of the table. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{VView}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classVRelTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{VRel\+Table}}.
+
+
+
+Definition at line \mbox{\hyperlink{VTable_8php_source_l00030}{30}} of file \mbox{\hyperlink{VTable_8php_source}{VTable.\+php}}.
+
+\Hypertarget{classVTable_a14a421516c24b7d17bbeb0f2d325750d}\label{classVTable_a14a421516c24b7d17bbeb0f2d325750d} 
+\index{VTable@{VTable}!renderItem@{renderItem}}
+\index{renderItem@{renderItem}!VTable@{VTable}}
+\doxysubsubsection{\texorpdfstring{renderItem()}{renderItem()}}
+{\footnotesize\ttfamily render\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVView}{VView}}}]{\$v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Renders single row of the table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxylink{classVView}{VView} & {\em \$v} & View of single row of table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{VList}}.
+
+
+
+Definition at line \mbox{\hyperlink{VTable_8php_source_l00020}{20}} of file \mbox{\hyperlink{VTable_8php_source}{VTable.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/framework/view/\mbox{\hyperlink{VTable_8php}{VTable.\+php}}\end{DoxyCompactItemize}

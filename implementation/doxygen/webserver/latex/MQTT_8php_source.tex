@@ -1,0 +1,126 @@
+\doxysection{MQTT.\+php}
+\hypertarget{MQTT_8php_source}{}\label{MQTT_8php_source}\index{php/app/MQTT.php@{php/app/MQTT.php}}
+\mbox{\hyperlink{MQTT_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00002}\mbox{\hyperlink{classMQTT}{00002}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMQTT}{MQTT}}\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00003}\mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{00003}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqttCli}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00004}\mbox{\hyperlink{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}{00004}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}{\$Instance}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00006}\mbox{\hyperlink{classMQTT_ab448dffe230973693ab5b6904a9528c6}{00006}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMQTT_ab448dffe230973693ab5b6904a9528c6}{serviceTopic}}\ =\ \textcolor{stringliteral}{'\$CONTROL/dynamic-\/security/v1'};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00008}\mbox{\hyperlink{classMQTT_a095c5d389db211932136b53f25f39685}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (static::\$Instance)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Warn:\ MQTT\ Connection\ already\ established."{}});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$server\ \ \ =\ \textcolor{stringliteral}{'mqttbroker'};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$port\ \ \ \ \ =\ 1883;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$clientId\ =\ \textcolor{stringliteral}{'webserver'};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqttCli}}\ =\ new\ \(\backslash\)PhpMqtt\(\backslash\)Client\(\backslash\)MqttClient(\$server,\ \$port,\ \$clientId);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$connectionSettings\ =\ (new\ \(\backslash\)PhpMqtt\(\backslash\)Client\(\backslash\)ConnectionSettings)}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ -\/>setReconnectAutomatically(\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ -\/>setUsername(\textcolor{stringliteral}{"{}webserver"{}})}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ -\/>setPassword(\textcolor{stringliteral}{"{}revresbew"{}});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqttCli}}-\/>connect(\$connectionSettings);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ static::\$Instance\ =\ \$this;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$this-\/>mqttCli\ =\ \mbox{\hyperlink{classMQTT_a8773fc66c29277b75613710d79608b83}{\$mqttCli}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Info:\ MQTT\ Connection\ successfully\ established."{}});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00028}\mbox{\hyperlink{classMQTT_a421831a265621325e1fdd19aace0c758}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a421831a265621325e1fdd19aace0c758}{\_\_destruct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \$this-\/>mqttCli?-\/>disconnect();}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (static::\$Instance\ ==\ \$this)\ static::\$Instance\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00034}\mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{00034}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{send}}(\textcolor{keywordtype}{string}\ \$topic,\ \textcolor{keywordtype}{string}\ \$msg,\ \textcolor{keywordtype}{bool}\ \$retain\ =\ \textcolor{keyword}{false})\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//error\_log(var\_export(static::\$Instance-\/>mqttCli,\ true));}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ while\ (!static::\mbox{\hyperlink{classMQTT_a6c4e0a29f611caca3b5f4f17129308d5}{\$Instance}}-\/>mqttCli)\ usleep(500);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>publish(\$topic,\ \$msg,\ 0,\ \$retain);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00040}\mbox{\hyperlink{classMQTT_a823631c2954a553f6efbb3a032547552}{00040}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \textcolor{keyword}{get}(\textcolor{keywordtype}{string}\ \$tpc)\ :\ string\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \$msg\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>subscribe(\$tpc,\ \textcolor{keyword}{function}\ (\$topic,\ \$message,\ \$retained,\ \$matchedWildcards)\ use\ (\$msg)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ echo\ sprintf(\textcolor{stringliteral}{"{}Received\ message\ on\ topic\ [\%s]:\ \%s\(\backslash\)n"{}},\ \$topic,\ \$message);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \$msg\ =\ \$message;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ global\ \$mqtt;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>interrupt();}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \},\ 0);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>loop(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>unsubscribe(\$tpc);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$msg;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00054}\mbox{\hyperlink{classMQTT_a861bae552da5b62d80f745cd8bf93d85}{00054}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a861bae552da5b62d80f745cd8bf93d85}{createClient}}(\textcolor{keywordtype}{string}\ \$client,\ \textcolor{keywordtype}{string}\ \$token,\ \textcolor{keywordtype}{string}\ \$role)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \$msg\ =\ <<<END}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00056}00056\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00057}00057\ \ \ \ \ \textcolor{stringliteral}{"{}commands"{}}:[}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}command"{}}:\ \textcolor{stringliteral}{"{}createClient"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}username"{}}:\ \textcolor{stringliteral}{"{}\$client"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}password"{}}:\ \textcolor{stringliteral}{"{}\$token"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}roles"{}}:\ [}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}rolename"{}}:\ \textcolor{stringliteral}{"{}\$role"{}},\ \textcolor{stringliteral}{"{}priority"{}}:\ -\/1\ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00066}00066\ \ \ \ \ ]}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00068}00068\ END;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ static::send(static::serviceTopic,\ \$msg);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Info:\ CREATE\ CLIENT\ MQTT:\ \(\backslash\)n"{}}.\$msg.\textcolor{stringliteral}{"{}\(\backslash\)n>>END"{}});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00073}\mbox{\hyperlink{classMQTT_a46f8b61f7b66b608ca1426a650b28df3}{00073}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a46f8b61f7b66b608ca1426a650b28df3}{createRole}}(\textcolor{keywordtype}{string}\ \$role,\ array\ \$acls)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \$msg\ =\ <<<END}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00075}00075\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00076}00076\ \ \ \ \ \textcolor{stringliteral}{"{}commands"{}}:[}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}command"{}}:\ \textcolor{stringliteral}{"{}createRole"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}rolename"{}}:\ \textcolor{stringliteral}{"{}\$role"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}acls"{}}:\ [}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00081}00081\ END;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \$first\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$acls\ as\ \$acl)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$first)\ \$first\ =\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{else}\ \$msg.=\textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \$msg\ .=\ \textcolor{stringliteral}{"{}\{\(\backslash\)"{}acltype\(\backslash\)"{}:\ \(\backslash\)"{}\$acl[0]\(\backslash\)"{},\ \(\backslash\)"{}topic\(\backslash\)"{}:\ \(\backslash\)"{}\$acl[1]\(\backslash\)"{},\ \(\backslash\)"{}priority\(\backslash\)"{}:\ -\/1,\ \(\backslash\)"{}allow\(\backslash\)"{}:\ true\ \}"{}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \$msg\ .=\ \textcolor{stringliteral}{"{}]\}]\}"{}};}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ static::send(static::serviceTopic,\ \$msg);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Info:\ CREATE\ ROLE\ MQTT:\ \(\backslash\)n"{}}.\$msg.\textcolor{stringliteral}{"{}\(\backslash\)n>>END"{}});}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00093}\mbox{\hyperlink{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d}{00093}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a9014f36ffe5d1754ba879c4c63604c8d}{removeRole}}(\textcolor{keywordtype}{string}\ \$role)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \$msg\ =\ <<<END}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00096}00096\ \ \ \ \ \textcolor{stringliteral}{"{}commands"{}}:[}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}command"{}}:\ \textcolor{stringliteral}{"{}deleteRole"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}rolename"{}}:\ \textcolor{stringliteral}{"{}\$role"{}}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00101}00101\ \ \ \ \ ]}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00103}00103\ END;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ static::send(static::serviceTopic,\ \$msg);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00107}\mbox{\hyperlink{classMQTT_a2dc0cf2161744710bbc127a76548e07b}{00107}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTT_a2dc0cf2161744710bbc127a76548e07b}{removeClient}}(\textcolor{keywordtype}{string}\ \$client)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \$msg\ =\ <<<END}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00109}00109\ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00110}00110\ \ \ \ \ \textcolor{stringliteral}{"{}commands"{}}:[}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}command"{}}:\ \textcolor{stringliteral}{"{}deleteClient"{}},}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}username"{}}:\ \textcolor{stringliteral}{"{}\$client"{}}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00115}00115\ \ \ \ \ ]}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00117}00117\ END;}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00118}00118\ \ \ \ \ \ \ \ \ static::send(static::serviceTopic,\ \$msg);}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTT_8php_source_l00120}00120\ \}}
+
+\end{DoxyCode}

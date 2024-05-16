@@ -1,0 +1,82 @@
+\doxysection{MStep.\+php}
+\hypertarget{MStep_8php_source}{}\label{MStep_8php_source}\index{php/app/model/MStep.php@{php/app/model/MStep.php}}
+\mbox{\hyperlink{MStep_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00006}\mbox{\hyperlink{classMStep}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMStep}{MStep}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMObjectModel}{MObjectModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00011}\mbox{\hyperlink{classMStep_acd6fd195bd93f36d6b5b50d6a72e32e9}{00011}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMStep_acd6fd195bd93f36d6b5b50d6a72e32e9}{urlPrefix}}\ =\ \textcolor{stringliteral}{'step'};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00016}\mbox{\hyperlink{classMStep_a23e53dfd2b001b81c9946fa05ec90e6f}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMStep_a23e53dfd2b001b81c9946fa05ec90e6f}{\$index}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00021}\mbox{\hyperlink{classMStep_ac183dc92249f6f917ac27d66ee9b43c1}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMStep_ac183dc92249f6f917ac27d66ee9b43c1}{\$seqId}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00026}\mbox{\hyperlink{classMStep_aa3c29026f3104d290f7224128edbc1fa}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMStep_aa3c29026f3104d290f7224128edbc1fa}{\$channelId}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00031}\mbox{\hyperlink{classMStep_a0f298096f322952a72a50f98a74c7b60}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMStep_a0f298096f322952a72a50f98a74c7b60}{\$value}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00036}\mbox{\hyperlink{classMStep_a223a0e7e12d51850578e3c80b118fad1}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMStep_a223a0e7e12d51850578e3c80b118fad1}{\$delayBefore}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00047}\mbox{\hyperlink{classMStep_a4e176c3a661053094339903c5cfc7942}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMStep_a4e176c3a661053094339903c5cfc7942}{\_\_construct}}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ steps\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>index\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>idx;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>seqId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>seq\_id;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>channelId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>channel\_id;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>value\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>value;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>delayBefore\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>delay\_before;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00068}\mbox{\hyperlink{classMStep_a8192334dea04253155bccd4121139183}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMStep_a8192334dea04253155bccd4121139183}{store}}(\textcolor{keywordtype}{int}\ \$arg\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ if\ (!parent::\mbox{\hyperlink{classMStep_a8192334dea04253155bccd4121139183}{store}}())\ return\ false;\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\ \ \textcolor{stringliteral}{"{}\ steps\ SET\ idx=:idx,\ seq\_id=:seq\_id,\ channel\_id=:channel\_id,"{}}.}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ value=:value,\ delay\_before=:delay\_before"{}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}idx"{}}\ =>\ \$this-\/>index,\ \textcolor{stringliteral}{"{}seq\_id"{}}\ =>\ \$this-\/>seqId,\ \textcolor{stringliteral}{"{}channel\_id"{}}\ =>\ \$this-\/>channelId,}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}value"{}}\ =>\ \$this-\/>value,\ \textcolor{stringliteral}{"{}delay\_before"{}}\ =>\ \$this-\/>delayBefore]);}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$this-\/>id}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00095}\mbox{\hyperlink{classMStep_a02d2c9c72b394f734cea3181fc76719e}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMStep_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00104}\mbox{\hyperlink{classMStep_ab0ead11b6d715bce13bdec33c24e5d05}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ if\ (!\$this-\/>id)\ return\ TRUE;;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ steps\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00118}\mbox{\hyperlink{classMStep_ac4c6197ed4b50517efa72f4a50f1a7ab}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMStep_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>persist())\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Step\ was\ saved."{}}));}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Step\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00128}\mbox{\hyperlink{classMStep_ac89238396e58c30f1cfd2e86e4516cd6}{00128}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMStep_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}}()\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \$ret\ =\ parent::unpersist();}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ret)\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Step\ was\ deleted."{}}));}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Step\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ret;}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MStep_8php_source_l00134}00134\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,185 @@
+\doxysection{Page\+Context Class Reference}
+\hypertarget{classPageContext}{}\label{classPageContext}\index{PageContext@{PageContext}}
+
+
+Class keeping models (and other data) that should be kept between page loads.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPageContext_ab704d89a4a50d1270024ebf171144595}{add}} (string \$form\+Id, string \$data)
+\begin{DoxyCompactList}\small\item\em Adds new serialized model data \$data of form \$form\+Id to current \doxylink{classPageContext}{Page\+Context}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPageContext_a76c56d6a92f3f0c157e3f3eabed7a0ee}{load\+Page\+Models}} ()
+\begin{DoxyCompactList}\small\item\em Unserializes all models of this page (stored in \$contexts, previously loaded from \$\+\_\+\+SESSION), then updates their data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classPageContext_aad54dc0fbfffab8d9810ec782edf882d}{load\+All\+Models}} ()
+\begin{DoxyCompactList}\small\item\em Checks which page was sent to server, then loads all models of that page. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classPageContext_afd1b8780c9349d22e819dcf0ee01623b}{get\+Page\+Context}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Loads \doxylink{classPageContext}{Page\+Context} from \$\+\_\+\+SESSION, if not set, creates new. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classPageContext_ac4dd0cb38112e22ce4a62fbcd8cbc467}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Checks timeout of all page contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classPageContext_a6b84eefa75375eb4cec761b40110f522}{TTL}} = 60\texorpdfstring{$\ast$}{*}60
+\begin{DoxyCompactList}\small\item\em @const TTL Time\+To\+Live of single model in \$\+\_\+\+SESSION -\/ how long should the session keep a model before deleting it. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPageContext_ac5aa33e68454db537d9004805a650a2e}{\$timeout}}
+\item 
+array \mbox{\hyperlink{classPageContext_a62ddcb894058d84b4b76748d121e9454}{\$contexts}} = array()
+\begin{DoxyCompactList}\small\item\em Array of serialized models belonging to this page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class keeping models (and other data) that should be kept between page loads. 
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00006}{6}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPageContext_ab704d89a4a50d1270024ebf171144595}\label{classPageContext_ab704d89a4a50d1270024ebf171144595} 
+\index{PageContext@{PageContext}!add@{add}}
+\index{add@{add}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily add (\begin{DoxyParamCaption}\item[{string}]{\$form\+Id,  }\item[{string}]{\$data }\end{DoxyParamCaption})}
+
+
+
+Adds new serialized model data \$data of form \$form\+Id to current \doxylink{classPageContext}{Page\+Context}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$form\+Id} & Id of model\textquotesingle{}s form. \\
+\hline
+string & {\em \$data} & Serialized model. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00042}{42}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_ac4dd0cb38112e22ce4a62fbcd8cbc467}\label{classPageContext_ac4dd0cb38112e22ce4a62fbcd8cbc467} 
+\index{PageContext@{PageContext}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily static cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks timeout of all page contexts. 
+
+If passed, it is removed from \$\+\_\+\+SESSION. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00079}{79}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_afd1b8780c9349d22e819dcf0ee01623b}\label{classPageContext_afd1b8780c9349d22e819dcf0ee01623b} 
+\index{PageContext@{PageContext}!getPageContext@{getPageContext}}
+\index{getPageContext@{getPageContext}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{getPageContext()}{getPageContext()}}
+{\footnotesize\ttfamily static get\+Page\+Context (\begin{DoxyParamCaption}\item[{string}]{\$page\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads \doxylink{classPageContext}{Page\+Context} from \$\+\_\+\+SESSION, if not set, creates new. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$page\+Id} & Id of page we want \doxylink{classPageContext}{Page\+Context} for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classPageContext}{Page\+Context} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00069}{69}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_aad54dc0fbfffab8d9810ec782edf882d}\label{classPageContext_aad54dc0fbfffab8d9810ec782edf882d} 
+\index{PageContext@{PageContext}!loadAllModels@{loadAllModels}}
+\index{loadAllModels@{loadAllModels}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{loadAllModels()}{loadAllModels()}}
+{\footnotesize\ttfamily static load\+All\+Models (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks which page was sent to server, then loads all models of that page. 
+
+\begin{DoxyReturn}{Returns}
+MModel\texorpdfstring{$\vert$}{|}null Model matching submitted form. Null if form\+Id was not found in \$\+\_\+\+POST. (Bad/no form submitted). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00028}{28}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_a76c56d6a92f3f0c157e3f3eabed7a0ee}\label{classPageContext_a76c56d6a92f3f0c157e3f3eabed7a0ee} 
+\index{PageContext@{PageContext}!loadPageModels@{loadPageModels}}
+\index{loadPageModels@{loadPageModels}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{loadPageModels()}{loadPageModels()}}
+{\footnotesize\ttfamily load\+Page\+Models (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unserializes all models of this page (stored in \$contexts, previously loaded from \$\+\_\+\+SESSION), then updates their data. 
+
+\begin{DoxyReturn}{Returns}
+MModel\texorpdfstring{$\vert$}{|}null Model matching submitted form. Null if form\+Id was not found in \$\+\_\+\+POST. (Bad/no form submitted). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00052}{52}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classPageContext_a62ddcb894058d84b4b76748d121e9454}\label{classPageContext_a62ddcb894058d84b4b76748d121e9454} 
+\index{PageContext@{PageContext}!\$contexts@{\$contexts}}
+\index{\$contexts@{\$contexts}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{\$contexts}{\$contexts}}
+{\footnotesize\ttfamily array \$contexts\mbox{[}\mbox{\hyperlink{classFormContext}{Form\+Context}}\mbox{]} = array()}
+
+
+
+Array of serialized models belonging to this page. 
+
+Key to this array is form\+Id. 
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00021}{21}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_ac5aa33e68454db537d9004805a650a2e}\label{classPageContext_ac5aa33e68454db537d9004805a650a2e} 
+\index{PageContext@{PageContext}!\$timeout@{\$timeout}}
+\index{\$timeout@{\$timeout}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{\$timeout}{\$timeout}}
+{\footnotesize\ttfamily int \$timeout}
+
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00016}{16}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+\Hypertarget{classPageContext_a6b84eefa75375eb4cec761b40110f522}\label{classPageContext_a6b84eefa75375eb4cec761b40110f522} 
+\index{PageContext@{PageContext}!TTL@{TTL}}
+\index{TTL@{TTL}!PageContext@{PageContext}}
+\doxysubsubsection{\texorpdfstring{TTL}{TTL}}
+{\footnotesize\ttfamily const TTL = 60\texorpdfstring{$\ast$}{*}60}
+
+
+
+@const TTL Time\+To\+Live of single model in \$\+\_\+\+SESSION -\/ how long should the session keep a model before deleting it. 
+
+
+
+Definition at line \mbox{\hyperlink{PageContext_8php_source_l00011}{11}} of file \mbox{\hyperlink{PageContext_8php_source}{Page\+Context.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/framework/\mbox{\hyperlink{PageContext_8php}{Page\+Context.\+php}}\end{DoxyCompactItemize}

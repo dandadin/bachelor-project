@@ -8,35 +8,44 @@ Model for channel object.
 Inheritance diagram for MChannel\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classMChannel}
+\includegraphics[height=3.000000cm]{classMChannel}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMChannel_a1340871f436b81e1f225567b6cce4e79}{\+\_\+\+\_\+construct}} (\$id)
+\mbox{\hyperlink{classMChannel_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
 \begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMChannel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
 \begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
 \begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
 \begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
-\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMChannel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
-\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
 \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMChannel_ae97941710d863131c700f069b109991e}{\$id}}
-\begin{DoxyCompactList}\small\item\em Id of channel loaded from database. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classMChannel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}channel\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_ab2fc40d43824ea3e1ce5d86dee0d763b}{\$name}}
 \begin{DoxyCompactList}\small\item\em Name od channel loaded from database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_ab19700be224849027add3fdde9222a9a}{\$device\+Id}}
@@ -47,9 +56,27 @@ Inheritance diagram for MChannel\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em Type of value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMChannel_acda38927a520140430ef36e961f70e22}{\$update\+Freq}}
 \begin{DoxyCompactList}\small\item\em Frequency of updates of this channel in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
 \item 
 \mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
 \begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -63,11 +90,11 @@ Definition at line \mbox{\hyperlink{MChannel_8php_source_l00006}{6}} of file \mb
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classMChannel_a1340871f436b81e1f225567b6cce4e79}\label{classMChannel_a1340871f436b81e1f225567b6cce4e79} 
+\Hypertarget{classMChannel_a4e176c3a661053094339903c5cfc7942}\label{classMChannel_a4e176c3a661053094339903c5cfc7942} 
 \index{MChannel@{MChannel}!\_\_construct@{\_\_construct}}
 \index{\_\_construct@{\_\_construct}!MChannel@{MChannel}}
 \doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -95,12 +122,12 @@ Definition at line \mbox{\hyperlink{MChannel_8php_source_l00051}{51}} of file \m
 
 Starts saving process to database. 
 
-Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{MChannel_8php_source_l00115}{115}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00126}{126}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
 \Hypertarget{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05} 
 \index{MChannel@{MChannel}!delete@{delete}}
@@ -121,13 +148,13 @@ Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d0
 
 
 
-Definition at line \mbox{\hyperlink{MChannel_8php_source_l00101}{101}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00107}{107}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
-\Hypertarget{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\Hypertarget{classMChannel_a8192334dea04253155bccd4121139183}\label{classMChannel_a8192334dea04253155bccd4121139183} 
 \index{MChannel@{MChannel}!store@{store}}
 \index{store@{store}!MChannel@{MChannel}}
 \doxysubsubsection{\texorpdfstring{store()}{store()}}
-{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -138,11 +165,11 @@ bool Storing was successful.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
 
 
 
-Definition at line \mbox{\hyperlink{MChannel_8php_source_l00070}{70}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00071}{71}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
 \Hypertarget{classMChannel_a02d2c9c72b394f734cea3181fc76719e}\label{classMChannel_a02d2c9c72b394f734cea3181fc76719e} 
 \index{MChannel@{MChannel}!storeCommit@{storeCommit}}
@@ -163,7 +190,28 @@ Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719
 
 
 
-Definition at line \mbox{\hyperlink{MChannel_8php_source_l00092}{92}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00098}{98}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+
+\Hypertarget{classMChannel_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMChannel_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MChannel@{MChannel}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MChannel@{MChannel}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00136}{136}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
 
 
@@ -195,20 +243,6 @@ ID of device of this channel.
 
 
 Definition at line \mbox{\hyperlink{MChannel_8php_source_l00021}{21}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
-
-\Hypertarget{classMChannel_ae97941710d863131c700f069b109991e}\label{classMChannel_ae97941710d863131c700f069b109991e} 
-\index{MChannel@{MChannel}!\$id@{\$id}}
-\index{\$id@{\$id}!MChannel@{MChannel}}
-\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
-{\footnotesize\ttfamily \$id}
-
-
-
-Id of channel loaded from database. 
-
-
-
-Definition at line \mbox{\hyperlink{MChannel_8php_source_l00011}{11}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
 \Hypertarget{classMChannel_ab2fc40d43824ea3e1ce5d86dee0d763b}\label{classMChannel_ab2fc40d43824ea3e1ce5d86dee0d763b} 
 \index{MChannel@{MChannel}!\$name@{\$name}}
@@ -252,8 +286,22 @@ Type of value.
 
 Definition at line \mbox{\hyperlink{MChannel_8php_source_l00035}{35}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
 
+\Hypertarget{classMChannel_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMChannel_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MChannel@{MChannel}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MChannel@{MChannel}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}channel\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MChannel_8php_source_l00011}{11}} of file \mbox{\hyperlink{MChannel_8php_source}{MChannel.\+php}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MChannel_8php}{MChannel.\+php}}\end{DoxyCompactItemize}
+php/app/model/\mbox{\hyperlink{MChannel_8php}{MChannel.\+php}}\end{DoxyCompactItemize}

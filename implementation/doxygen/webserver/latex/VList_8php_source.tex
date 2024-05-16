@@ -1,36 +1,43 @@
 \doxysection{VList.\+php}
-\hypertarget{VList_8php_source}{}\label{VList_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VList.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VList.php}}
+\hypertarget{VList_8php_source}{}\label{VList_8php_source}\index{php/framework/view/VList.php@{php/framework/view/VList.php}}
 \mbox{\hyperlink{VList_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00003}\mbox{\hyperlink{classVList}{00003}}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVList}{VList}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVView}{VView}}\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00003}\mbox{\hyperlink{classVList}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVList}{VList}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVView}{VView}}\ \{}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00004}\mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{00004}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classVList_a737abdef83dabb219182c1e88887c6c3}{\$items}}\ =\ array();}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00006}\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00006}\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ :\ void\ \{}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \$v;}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00008}00008\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00010}\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{remove}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00010}\mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{remove}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ :\ void\ \{}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$index\ =\ array\_search(\$v,\ \$this-\/>items);}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$index\ !==\ \textcolor{keyword}{false})\ unset(\$this-\/>items[\$index]);}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00013}00013\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00015}\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{00015}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{renderBody}}()\ \{}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>items\ as\ \$i)\ \{}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{renderItem}}(\$i);}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00015}\mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{00015}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{renderBody}}():\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ foreach\ (\$this-\/>items\ as\ \$i)\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>renderItem(\$i);}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00019}00019\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00021}\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{00021}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{renderItem}}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ \{}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \$v-\/>\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}}();}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00021}\mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{00021}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{renderItem}}(\mbox{\hyperlink{classVView}{VView}}\ \$v)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \$v-\/>render();}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00023}00023\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00025}\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{00025}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{registerController}}(\mbox{\hyperlink{classControllerCollection}{ControllerCollection}}\ \$cc)\ \{}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>items\ as\ \$i)\ \{}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \$i-\/>registerController(\$cc);}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00025}\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{registerController}}(\mbox{\hyperlink{classFormContext}{FormContext}}\ \$c)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ foreach\ (\$this-\/>items\ as\ \$i)\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \$i-\/>registerController(\$c);}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VList_8php_source_l00029}00029\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VList_8php_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00031}\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}}(\textcolor{keywordtype}{bool}\ \$disable\ =\ \textcolor{keyword}{true})\ :\ \mbox{\hyperlink{classVView}{VView}}\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ foreach(\$this-\/>items\ as\ \$item)\ \{}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \$item-\/>\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}}(\$disable);}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this;}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VList_8php_source_l00037}00037\ \}}
 
 \end{DoxyCode}

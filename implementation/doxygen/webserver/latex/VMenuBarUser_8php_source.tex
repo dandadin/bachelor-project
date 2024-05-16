@@ -1,12 +1,14 @@
 \doxysection{VMenu\+Bar\+User.\+php}
-\hypertarget{VMenuBarUser_8php_source}{}\label{VMenuBarUser_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VMenuBarUser.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VMenuBarUser.php}}
+\hypertarget{VMenuBarUser_8php_source}{}\label{VMenuBarUser_8php_source}\index{php/app/view/VMenuBarUser.php@{php/app/view/VMenuBarUser.php}}
 \mbox{\hyperlink{VMenuBarUser_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00003}\mbox{\hyperlink{classVMenuBarUser}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVMenuBarUser}{VMenuBarUser}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVMenuBar}{VMenuBar}}\ \{}
-\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00004}\mbox{\hyperlink{classVMenuBarUser_a53d8320dda2b9faeab20d307d7259748}{00004}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVMenuBarUser_a53d8320dda2b9faeab20d307d7259748}{Menu}}\ =\ [\textcolor{stringliteral}{"{}Home"{}}\ =>\ \textcolor{stringliteral}{"{}/"{}},\ \textcolor{stringliteral}{"{}Devices"{}}\ =>\ \textcolor{stringliteral}{"{}/list.php?type=de"{}},\ \textcolor{stringliteral}{"{}Sequences"{}}\ =>\ \textcolor{stringliteral}{"{}/list.php?type=se"{}},}
-\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Day\ Plan"{}}\ =>\ \textcolor{stringliteral}{"{}/plan"{}},\ \textcolor{stringliteral}{"{}My\ Profile"{}}\ =>\ \textcolor{stringliteral}{"{}/profile"{}},\ \textcolor{stringliteral}{"{}Logout"{}}\ =>\ \textcolor{stringliteral}{"{}/logout.php"{}}];}
-\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00004}\mbox{\hyperlink{classVMenuBarUser_a637e84e2e9e99a87ea9b5f1771551af4}{00004}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVMenuBarUser_a637e84e2e9e99a87ea9b5f1771551af4}{getMenu}}():\ array\ \{}
+\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ return\ [\textcolor{stringliteral}{"{}Home"{}}\ =>\ \textcolor{stringliteral}{"{}/"{}},\ \textcolor{stringliteral}{"{}Devices"{}}\ =>\ \textcolor{stringliteral}{"{}/devices"{}},\ \textcolor{stringliteral}{"{}Sequences"{}}\ =>\ \textcolor{stringliteral}{"{}/sequences"{}},}
+\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Day\ Plan"{}}\ =>\ \textcolor{stringliteral}{"{}/plans"{}},\ \textcolor{stringliteral}{"{}My\ Profile"{}}\ =>\ \textcolor{stringliteral}{"{}/user/"{}}.\$\_SESSION[\textcolor{stringliteral}{"{}loginId"{}}].\textcolor{stringliteral}{"{}/edit"{}},\ \textcolor{stringliteral}{"{}Logout"{}}\ =>\ \textcolor{stringliteral}{"{}/logout"{}}];}
+\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00007}00007\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VMenuBarUser_8php_source_l00008}00008\ \}}
 
 \end{DoxyCode}

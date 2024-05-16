@@ -1,0 +1,30 @@
+\doxysection{MRTColl\+In\+Device.\+php}
+\hypertarget{MRTCollInDevice_8php_source}{}\label{MRTCollInDevice_8php_source}\index{php/app/model/MRTCollInDevice.php@{php/app/model/MRTCollInDevice.php}}
+\mbox{\hyperlink{MRTCollInDevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00006}\mbox{\hyperlink{classMRTCollInDevice}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTCollInDevice}{MRTCollInDevice}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMRelTable}{MRelTable}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00007}\mbox{\hyperlink{classMRTCollInDevice_ac67a600527d436e1f64193d61a5f7e66}{00007}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMRTCollInDevice_ac67a600527d436e1f64193d61a5f7e66}{RowModelClass}}\ =\ MRTRCollInDevice::class;}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00012}\mbox{\hyperlink{classMRTCollInDevice_ae53e66405dec54fedc24469a7cd9cb93}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTCollInDevice_ae53e66405dec54fedc24469a7cd9cb93}{\_\_construct}}(\$deviceId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$deviceId)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collection\_devices\ WHERE\ device\_id=\$deviceId\ "{}});}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>items[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMRTRCollInDevice}{MRTRCollInDevice}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>coll\_id);}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00028}\mbox{\hyperlink{classMRTCollInDevice_ae9d104e1f65cde95a55fee116f9583cd}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTCollInDevice_ae9d104e1f65cde95a55fee116f9583cd}{store}}(\textcolor{keywordtype}{int}\ \$deviceId\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ if\ (!\$deviceId)\ return\ false;}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ collection\_devices\ WHERE\ device\_id=\$deviceId"{}};}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{false}===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!parent::store(\$deviceId))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTCollInDevice_8php_source_l00037}00037\ \}}
+
+\end{DoxyCode}

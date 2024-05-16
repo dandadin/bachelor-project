@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sql_0',['Sql',['../classVFfDdChannelDevices.html#a872c4c148f5fe90476da42325f643be9',1,'VFfDdChannelDevices\Sql'],['../classVFfDdCollectionDomains.html#a872c4c148f5fe90476da42325f643be9',1,'VFfDdCollectionDomains\Sql'],['../classVFfDdDeviceGateways.html#a872c4c148f5fe90476da42325f643be9',1,'VFfDdDeviceGateways\Sql'],['../classVFormFieldDropdownCollection.html#a872c4c148f5fe90476da42325f643be9',1,'VFormFieldDropdownCollection\Sql'],['../classVFormFieldDropdownUser.html#a872c4c148f5fe90476da42325f643be9',1,'VFormFieldDropdownUser\Sql'],['../classVFormFieldDropdown.html#a872c4c148f5fe90476da42325f643be9',1,'VFormFieldDropdown\Sql']]]
+  ['pageid_0',['PageId',['../classVPageId.html#aadb9ed54e462c8603eccd16c8d78ecb1',1,'VPageId']]],
+  ['permname_1',['PermName',['../classVFfDdChannelDevices.html#a09df3cedce3a19744850f066f29fbb44',1,'VFfDdChannelDevices\PermName'],['../classVFormFieldDropdown.html#a09df3cedce3a19744850f066f29fbb44',1,'VFormFieldDropdown\PermName']]]
 ];

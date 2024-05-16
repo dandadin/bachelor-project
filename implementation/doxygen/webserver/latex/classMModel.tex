@@ -8,20 +8,24 @@ Universal model class template, that is used for storing objects between loads.
 Inheritance diagram for MModel\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=12.000000cm]{classMModel}
+\includegraphics[height=6.026490cm]{classMModel}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
 \begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
 \item 
 \mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
 \begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -43,7 +47,17 @@ Definition at line \mbox{\hyperlink{MModel_8php_source_l00005}{5}} of file \mbox
 
 
 
-Reimplemented in \mbox{\hyperlink{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}{MChannel}}, \mbox{\hyperlink{classMCollection_ab0ead11b6d715bce13bdec33c24e5d05}{MCollection}}, \mbox{\hyperlink{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}{MDevice}}, \mbox{\hyperlink{classMDomain_ab0ead11b6d715bce13bdec33c24e5d05}{MDomain}}, \mbox{\hyperlink{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05}{MGateway}}, \mbox{\hyperlink{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}{MLogin}}, \mbox{\hyperlink{classMRole_ab0ead11b6d715bce13bdec33c24e5d05}{MRole}}, and \mbox{\hyperlink{classMUser_ab0ead11b6d715bce13bdec33c24e5d05}{MUser}}.
+Reimplemented in \mbox{\hyperlink{classMChannel_ab0ead11b6d715bce13bdec33c24e5d05}{MChannel}}, \mbox{\hyperlink{classMCollection_ab0ead11b6d715bce13bdec33c24e5d05}{MCollection}}, \mbox{\hyperlink{classMDevice_ab0ead11b6d715bce13bdec33c24e5d05}{MDevice}}, \mbox{\hyperlink{classMDomain_ab0ead11b6d715bce13bdec33c24e5d05}{MDomain}}, \mbox{\hyperlink{classMGateway_ab0ead11b6d715bce13bdec33c24e5d05}{MGateway}}, \mbox{\hyperlink{classMInstance_ab0ead11b6d715bce13bdec33c24e5d05}{MInstance}}, \mbox{\hyperlink{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}{MLogin}}, \mbox{\hyperlink{classMPlan_ab0ead11b6d715bce13bdec33c24e5d05}{MPlan}}, \mbox{\hyperlink{classMRole_ab0ead11b6d715bce13bdec33c24e5d05}{MRole}}, \mbox{\hyperlink{classMRTRStepsInSequence_ab0ead11b6d715bce13bdec33c24e5d05}{MRTRSteps\+In\+Sequence}}, \mbox{\hyperlink{classMSequence_ab0ead11b6d715bce13bdec33c24e5d05}{MSequence}}, \mbox{\hyperlink{classMStep_ab0ead11b6d715bce13bdec33c24e5d05}{MStep}}, and \mbox{\hyperlink{classMUser_ab0ead11b6d715bce13bdec33c24e5d05}{MUser}}.
+
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00015}{15}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
+\Hypertarget{classMModel_af54c8132f5caa0df292077f97d3e6ba9}\label{classMModel_af54c8132f5caa0df292077f97d3e6ba9} 
+\index{MModel@{MModel}!deleteCommit@{deleteCommit}}
+\index{deleteCommit@{deleteCommit}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{deleteCommit()}{deleteCommit()}}
+{\footnotesize\ttfamily delete\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -64,17 +78,17 @@ bool Storing was successful
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{MModel_8php_source_l00018}{18}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00020}{20}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
 
-\Hypertarget{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\Hypertarget{classMModel_a8192334dea04253155bccd4121139183}\label{classMModel_a8192334dea04253155bccd4121139183} 
 \index{MModel@{MModel}!store@{store}}
 \index{store@{store}!MModel@{MModel}}
 \doxysubsubsection{\texorpdfstring{store()}{store()}}
-{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
-Reimplemented in \mbox{\hyperlink{classMChannel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MChannel}}, \mbox{\hyperlink{classMCollection_aae32a9dc4dc7eefbcb86bd32477cb67c}{MCollection}}, \mbox{\hyperlink{classMDevice_aae32a9dc4dc7eefbcb86bd32477cb67c}{MDevice}}, \mbox{\hyperlink{classMDomain_aae32a9dc4dc7eefbcb86bd32477cb67c}{MDomain}}, \mbox{\hyperlink{classMGateway_aae32a9dc4dc7eefbcb86bd32477cb67c}{MGateway}}, \mbox{\hyperlink{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}{MLogin}}, \mbox{\hyperlink{classMRole_aae32a9dc4dc7eefbcb86bd32477cb67c}{MRole}}, \mbox{\hyperlink{classMUser_aae32a9dc4dc7eefbcb86bd32477cb67c}{MUser}}, \mbox{\hyperlink{classMRelTableUser_a42c299d5822c331fa62331a75427aa59}{MRel\+Table\+User}}, \mbox{\hyperlink{classMRTRUser_a42c299d5822c331fa62331a75427aa59}{MRTRUser}}, \mbox{\hyperlink{classMRelTableCollection_a0a8249dc6b247691b6661b5193ae9f74}{MRel\+Table\+Collection}}, and \mbox{\hyperlink{classMRTRCollection_a0a8249dc6b247691b6661b5193ae9f74}{MRTRCollection}}.
+Reimplemented in \mbox{\hyperlink{classMChannel_a8192334dea04253155bccd4121139183}{MChannel}}, \mbox{\hyperlink{classMCollection_a8192334dea04253155bccd4121139183}{MCollection}}, \mbox{\hyperlink{classMDevice_a8192334dea04253155bccd4121139183}{MDevice}}, \mbox{\hyperlink{classMDomain_a8192334dea04253155bccd4121139183}{MDomain}}, \mbox{\hyperlink{classMGateway_a8192334dea04253155bccd4121139183}{MGateway}}, \mbox{\hyperlink{classMInstance_a8192334dea04253155bccd4121139183}{MInstance}}, \mbox{\hyperlink{classMLogin_a8192334dea04253155bccd4121139183}{MLogin}}, \mbox{\hyperlink{classMPlan_a8192334dea04253155bccd4121139183}{MPlan}}, \mbox{\hyperlink{classMRole_a8192334dea04253155bccd4121139183}{MRole}}, \mbox{\hyperlink{classMSequence_a8192334dea04253155bccd4121139183}{MSequence}}, \mbox{\hyperlink{classMStep_a8192334dea04253155bccd4121139183}{MStep}}, \mbox{\hyperlink{classMUser_a8192334dea04253155bccd4121139183}{MUser}}, \mbox{\hyperlink{classMRTUserInColl_a9585663d60e8c386b44c660a70050e64}{MRTUser\+In\+Coll}}, \mbox{\hyperlink{classMRTCollInDevice_ae9d104e1f65cde95a55fee116f9583cd}{MRTColl\+In\+Device}}, \mbox{\hyperlink{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}{MRTUser\+Role\+In\+Dom}}, and \mbox{\hyperlink{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}{MRel\+Table}}.
 
 
 
@@ -84,7 +98,7 @@ Definition at line \mbox{\hyperlink{MModel_8php_source_l00006}{6}} of file \mbox
 \index{MModel@{MModel}!storeCommit@{storeCommit}}
 \index{storeCommit@{storeCommit}!MModel@{MModel}}
 \doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
-{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -95,14 +109,35 @@ void
 \end{DoxyReturn}
 
 
-Reimplemented in \mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{MChannel}}, \mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{MCollection}}, \mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{MDevice}}, \mbox{\hyperlink{classMDomain_a02d2c9c72b394f734cea3181fc76719e}{MDomain}}, \mbox{\hyperlink{classMGateway_a02d2c9c72b394f734cea3181fc76719e}{MGateway}}, \mbox{\hyperlink{classMRole_a02d2c9c72b394f734cea3181fc76719e}{MRole}}, and \mbox{\hyperlink{classMUser_a02d2c9c72b394f734cea3181fc76719e}{MUser}}.
+Reimplemented in \mbox{\hyperlink{classMChannel_a02d2c9c72b394f734cea3181fc76719e}{MChannel}}, \mbox{\hyperlink{classMCollection_a02d2c9c72b394f734cea3181fc76719e}{MCollection}}, \mbox{\hyperlink{classMDevice_a02d2c9c72b394f734cea3181fc76719e}{MDevice}}, \mbox{\hyperlink{classMDomain_a02d2c9c72b394f734cea3181fc76719e}{MDomain}}, \mbox{\hyperlink{classMGateway_a02d2c9c72b394f734cea3181fc76719e}{MGateway}}, \mbox{\hyperlink{classMInstance_a02d2c9c72b394f734cea3181fc76719e}{MInstance}}, \mbox{\hyperlink{classMPlan_a02d2c9c72b394f734cea3181fc76719e}{MPlan}}, \mbox{\hyperlink{classMRole_a02d2c9c72b394f734cea3181fc76719e}{MRole}}, \mbox{\hyperlink{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e}{MRTRSteps\+In\+Sequence}}, \mbox{\hyperlink{classMSequence_a02d2c9c72b394f734cea3181fc76719e}{MSequence}}, \mbox{\hyperlink{classMStep_a02d2c9c72b394f734cea3181fc76719e}{MStep}}, \mbox{\hyperlink{classMUser_a02d2c9c72b394f734cea3181fc76719e}{MUser}}, and \mbox{\hyperlink{classMRelTable_a02d2c9c72b394f734cea3181fc76719e}{MRel\+Table}}.
 
 
 
 Definition at line \mbox{\hyperlink{MModel_8php_source_l00011}{11}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
 
+\Hypertarget{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMModel_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MModel@{MModel}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MModel@{MModel}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used to remove data from database. 
+
+If removing fails, reverts back. \begin{DoxyReturn}{Returns}
+bool Removal was successful 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classMChannel_ac89238396e58c30f1cfd2e86e4516cd6}{MChannel}}, \mbox{\hyperlink{classMCollection_ac89238396e58c30f1cfd2e86e4516cd6}{MCollection}}, \mbox{\hyperlink{classMDevice_ac89238396e58c30f1cfd2e86e4516cd6}{MDevice}}, \mbox{\hyperlink{classMDomain_ac89238396e58c30f1cfd2e86e4516cd6}{MDomain}}, \mbox{\hyperlink{classMGateway_ac89238396e58c30f1cfd2e86e4516cd6}{MGateway}}, \mbox{\hyperlink{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6}{MInstance}}, \mbox{\hyperlink{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6}{MPlan}}, \mbox{\hyperlink{classMRole_ac89238396e58c30f1cfd2e86e4516cd6}{MRole}}, \mbox{\hyperlink{classMSequence_ac89238396e58c30f1cfd2e86e4516cd6}{MSequence}}, \mbox{\hyperlink{classMStep_ac89238396e58c30f1cfd2e86e4516cd6}{MStep}}, and \mbox{\hyperlink{classMUser_ac89238396e58c30f1cfd2e86e4516cd6}{MUser}}.
+
+
+
+Definition at line \mbox{\hyperlink{MModel_8php_source_l00035}{35}} of file \mbox{\hyperlink{MModel_8php_source}{MModel.\+php}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/model/\mbox{\hyperlink{MModel_8php}{MModel.\+php}}\end{DoxyCompactItemize}
+php/framework/model/\mbox{\hyperlink{MModel_8php}{MModel.\+php}}\end{DoxyCompactItemize}

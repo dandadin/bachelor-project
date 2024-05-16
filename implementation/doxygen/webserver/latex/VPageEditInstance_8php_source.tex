@@ -1,0 +1,19 @@
+\doxysection{VPage\+Edit\+Instance.\+php}
+\hypertarget{VPageEditInstance_8php_source}{}\label{VPageEditInstance_8php_source}\index{php/app/view/VPageEditInstance.php@{php/app/view/VPageEditInstance.php}}
+\mbox{\hyperlink{VPageEditInstance_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00003}\mbox{\hyperlink{classVPageEditInstance}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageEditInstance}{VPageEditInstance}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00004}\mbox{\hyperlink{classVPageEditInstance_a16bc879c4204e3116a403494bb2287e5}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageEditInstance_a16bc879c4204e3116a403494bb2287e5}{\_\_construct}}(\$instanceId)\ \{}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormInstance}{VFormInstance}}(\$instanceId));}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00007}00007\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00009}\mbox{\hyperlink{classVPageEditInstance_a9b080c1abd965fa84b1bc0d872617a07}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageEditInstance_a9b080c1abd965fa84b1bc0d872617a07}{checkPermissions}}(?\textcolor{keywordtype}{int}\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \textcolor{keyword}{null}):\ string\ \{}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ if\ (!\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll())\ return\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageEditInstance_8php_source_l00013}00013\ \}}
+
+\end{DoxyCode}

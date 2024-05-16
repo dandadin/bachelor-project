@@ -1,0 +1,112 @@
+\doxysection{MRTSteps\+In\+Sequence Class Reference}
+\hypertarget{classMRTStepsInSequence}{}\label{classMRTStepsInSequence}\index{MRTStepsInSequence@{MRTStepsInSequence}}
+
+
+Model for relative table of steps.  
+
+
+Inheritance diagram for MRTSteps\+In\+Sequence\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMRTStepsInSequence}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTStepsInSequence_a72ecfffcacd735a10fd699b81ca53d2d}{\+\_\+\+\_\+construct}} (\$seq\+Id)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}{store}} (int \$id=0)
+\begin{DoxyCompactList}\small\item\em If id is supplied, calls store method for every row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a08f0bc1c30336c9983b29c97a8f86ff9}{delete\+Item}} (\&\$item\+Model)
+\begin{DoxyCompactList}\small\item\em Removes one specific row from the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a5efb5dcde452935a8fda7d00e3ce2fbe}{add\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Adds new default row to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMRTStepsInSequence_ac67a600527d436e1f64193d61a5f7e66}{Row\+Model\+Class}} = MRTRSteps\+In\+Sequence\+::class
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\begin{DoxyCompactList}\small\item\em Array of table-\/row models. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classMRelTable_ac67a600527d436e1f64193d61a5f7e66}{Row\+Model\+Class}} = \"{}\"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMRelTable}{MRel\+Table}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for relative table of steps. 
+
+Used to store list of steps that are part of specific sequence. 
+
+Definition at line \mbox{\hyperlink{MRTStepsInSequence_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRTStepsInSequence_8php_source}{MRTSteps\+In\+Sequence.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTStepsInSequence_a72ecfffcacd735a10fd699b81ca53d2d}\label{classMRTStepsInSequence_a72ecfffcacd735a10fd699b81ca53d2d} 
+\index{MRTStepsInSequence@{MRTStepsInSequence}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTStepsInSequence@{MRTStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$seq\+Id }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$seq\+Id} & Id of sequence this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTStepsInSequence_8php_source_l00012}{12}} of file \mbox{\hyperlink{MRTStepsInSequence_8php_source}{MRTSteps\+In\+Sequence.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTStepsInSequence_ac67a600527d436e1f64193d61a5f7e66}\label{classMRTStepsInSequence_ac67a600527d436e1f64193d61a5f7e66} 
+\index{MRTStepsInSequence@{MRTStepsInSequence}!RowModelClass@{RowModelClass}}
+\index{RowModelClass@{RowModelClass}!MRTStepsInSequence@{MRTStepsInSequence}}
+\doxysubsubsection{\texorpdfstring{RowModelClass}{RowModelClass}}
+{\footnotesize\ttfamily const Row\+Model\+Class = MRTRSteps\+In\+Sequence\+::class}
+
+
+
+Definition at line \mbox{\hyperlink{MRTStepsInSequence_8php_source_l00007}{7}} of file \mbox{\hyperlink{MRTStepsInSequence_8php_source}{MRTSteps\+In\+Sequence.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MRTStepsInSequence_8php}{MRTSteps\+In\+Sequence.\+php}}\end{DoxyCompactItemize}

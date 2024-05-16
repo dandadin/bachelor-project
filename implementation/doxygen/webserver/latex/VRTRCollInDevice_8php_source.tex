@@ -1,0 +1,19 @@
+\doxysection{VRTRColl\+In\+Device.\+php}
+\hypertarget{VRTRCollInDevice_8php_source}{}\label{VRTRCollInDevice_8php_source}\index{php/app/view/VRTRCollInDevice.php@{php/app/view/VRTRCollInDevice.php}}
+\mbox{\hyperlink{VRTRCollInDevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00006}\mbox{\hyperlink{classVRTRCollInDevice}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVRTRCollInDevice}{VRTRCollInDevice}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVRelTabRow}{VRelTabRow}}\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00013}\mbox{\hyperlink{classVRTRCollInDevice_addbc1491d5e10e3a8ae50c809ec47c1b}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVRTRCollInDevice_addbc1491d5e10e3a8ae50c809ec47c1b}{\_\_construct}}(\&\$itemModel,\ \&\$tableModel)\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ collections\ WHERE\ id=\$itemModel-\/>collId"{}});}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>name));}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdCollection}{VFfDdCollection}}(\$itemModel-\/>collId));}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$itemModel,\ \$tableModel);}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VRTRCollInDevice_8php_source_l00021}00021\ \}}
+
+\end{DoxyCode}

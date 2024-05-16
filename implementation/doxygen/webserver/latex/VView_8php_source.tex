@@ -1,22 +1,24 @@
 \doxysection{VView.\+php}
-\hypertarget{VView_8php_source}{}\label{VView_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VView.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/VView.php}}
+\hypertarget{VView_8php_source}{}\label{VView_8php_source}\index{php/framework/view/VView.php@{php/framework/view/VView.php}}
 \mbox{\hyperlink{VView_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00001}00001\ <?php}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00003}\mbox{\hyperlink{classVView}{00003}}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVView}{VView}}\ \{}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00005}\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00005}\mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{00005}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}}()\ :\ void\ \{}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{renderHeader}}();}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{renderBody}}();}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{renderFooter}}();}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00009}00009\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00010}00010\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00011}\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{00011}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{renderHeader}}()\ \{\}}
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00012}\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{00012}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{renderBody}}()\ \{\}}
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00013}\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{00013}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{renderFooter}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00011}\mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{00011}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{renderHeader}}()\ :\ void\ \{\}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00012}\mbox{\hyperlink{classVView_ab20fd770855c31512e92d9b31f379b87}{00012}}\ \ \ \ \ protected\ function\ renderBody()\ :\ void\ \{\}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00013}\mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{00013}}\ \ \ \ \ protected\ function\ renderFooter()\ :\ void\ \{\}}
 \DoxyCodeLine{\Hypertarget{VView_8php_source_l00014}00014\ }
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00015}\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{00015}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{registerController}}(\mbox{\hyperlink{classControllerCollection}{ControllerCollection}}\ \$cc)\ \{\}}
-\DoxyCodeLine{\Hypertarget{VView_8php_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00015}\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{00015}}\ \ \ \ \ protected\ function\ registerController(\mbox{\hyperlink{classFormContext}{FormContext}}\ \$c)\ :\ void\ \{\}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00017}\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{00017}}\ \ \ \ \ public\ function\ disable(bool\ \$disable\ =\ true)\ :\ \mbox{\hyperlink{classVView}{VView}}\ \{return\ \$this;\}}
+\DoxyCodeLine{\Hypertarget{VView_8php_source_l00018}00018\ \}}
 
 \end{DoxyCode}

@@ -1,0 +1,186 @@
+\doxysection{MRel\+Table Class Reference}
+\hypertarget{classMRelTable}{}\label{classMRelTable}\index{MRelTable@{MRelTable}}
+
+
+Model for default relative table.  
+
+
+Inheritance diagram for MRel\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.937063cm]{classMRelTable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}{store}} (int \$id=0)
+\begin{DoxyCompactList}\small\item\em If id is supplied, calls store method for every row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a08f0bc1c30336c9983b29c97a8f86ff9}{delete\+Item}} (\&\$item\+Model)
+\begin{DoxyCompactList}\small\item\em Removes one specific row from the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRelTable_a5efb5dcde452935a8fda7d00e3ce2fbe}{add\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Adds new default row to the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a737abdef83dabb219182c1e88887c6c3}{\$items}} = array()
+\begin{DoxyCompactList}\small\item\em Array of table-\/row models. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classMRelTable_ac67a600527d436e1f64193d61a5f7e66}{Row\+Model\+Class}} = \"{}\"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRelTable_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for default relative table. 
+
+Used to store list of table-\/row models. 
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRelTable_a5efb5dcde452935a8fda7d00e3ce2fbe}\label{classMRelTable_a5efb5dcde452935a8fda7d00e3ce2fbe} 
+\index{MRelTable@{MRelTable}!addItem@{addItem}}
+\index{addItem@{addItem}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily add\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds new default row to the table. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00048}{48}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+\Hypertarget{classMRelTable_a08f0bc1c30336c9983b29c97a8f86ff9}\label{classMRelTable_a08f0bc1c30336c9983b29c97a8f86ff9} 
+\index{MRelTable@{MRelTable}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{deleteItem()}{deleteItem()}}
+{\footnotesize\ttfamily delete\+Item (\begin{DoxyParamCaption}\item[{\&}]{\$item\+Model }\end{DoxyParamCaption})}
+
+
+
+Removes one specific row from the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MRTR$<$type$>$} & \$item\+Model Model of the deleted row. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00038}{38}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+\Hypertarget{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8}\label{classMRelTable_aa3f2e0643647ea44ba1daddf231e97a8} 
+\index{MRelTable@{MRelTable}!store@{store}}
+\index{store@{store}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+If id is supplied, calls store method for every row. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Id of main-\/model this model is created for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMRTUserInColl_a9585663d60e8c386b44c660a70050e64}{MRTUser\+In\+Coll}}, \mbox{\hyperlink{classMRTCollInDevice_ae9d104e1f65cde95a55fee116f9583cd}{MRTColl\+In\+Device}}, and \mbox{\hyperlink{classMRTUserRoleInDom_a6204f0eeb9adb826f1c8621e7f775f6c}{MRTUser\+Role\+In\+Dom}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00018}{18}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+\Hypertarget{classMRelTable_a02d2c9c72b394f734cea3181fc76719e}\label{classMRelTable_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MRelTable@{MRelTable}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used when storing in database was successful. 
+
+Usually commits changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00027}{27}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRelTable_a737abdef83dabb219182c1e88887c6c3}\label{classMRelTable_a737abdef83dabb219182c1e88887c6c3} 
+\index{MRelTable@{MRelTable}!\$items@{\$items}}
+\index{\$items@{\$items}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{\$items}{\$items}}
+{\footnotesize\ttfamily \$items = array()}
+
+
+
+Array of table-\/row models. 
+
+One table-\/row is of type MRTR$<$type$>$. 
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+\Hypertarget{classMRelTable_ac67a600527d436e1f64193d61a5f7e66}\label{classMRelTable_ac67a600527d436e1f64193d61a5f7e66} 
+\index{MRelTable@{MRelTable}!RowModelClass@{RowModelClass}}
+\index{RowModelClass@{RowModelClass}!MRelTable@{MRelTable}}
+\doxysubsubsection{\texorpdfstring{RowModelClass}{RowModelClass}}
+{\footnotesize\ttfamily const Row\+Model\+Class = \"{}\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{MRelTable_8php_source_l00012}{12}} of file \mbox{\hyperlink{MRelTable_8php_source}{MRel\+Table.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/framework/model/\mbox{\hyperlink{MRelTable_8php}{MRel\+Table.\+php}}\end{DoxyCompactItemize}

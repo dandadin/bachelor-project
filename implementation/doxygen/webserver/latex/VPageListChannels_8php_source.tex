@@ -1,5 +1,5 @@
 \doxysection{VPage\+List\+Channels.\+php}
-\hypertarget{VPageListChannels_8php_source}{}\label{VPageListChannels_8php_source}\index{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListChannels.php@{/win/Users/dansi/bachelor-\/project/implementation/webserver/php/app/view/VPageListChannels.php}}
+\hypertarget{VPageListChannels_8php_source}{}\label{VPageListChannels_8php_source}\index{php/app/view/VPageListChannels.php@{php/app/view/VPageListChannels.php}}
 \mbox{\hyperlink{VPageListChannels_8php}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00001}00001\ <?php}
@@ -7,10 +7,15 @@
 \DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00003}\mbox{\hyperlink{classVPageListChannels}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListChannels}{VPageListChannels}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00004}\mbox{\hyperlink{classVPageListChannels_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListChannels_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
 \DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
-\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVChannelList}{VChannelList}}());}
-\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{stringliteral}{"{}add\ new"{}},\ \textcolor{stringliteral}{"{}/edit.php?type=ch\&id=0"{}}));}
-\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00008}00008\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Channels</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Device"{}},\ \textcolor{stringliteral}{"{}Communication\ Type"{}},\ \textcolor{stringliteral}{"{}Value\ Type"{}},\ \textcolor{stringliteral}{"{}Update\ Frequency\ [s]"{}}],}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ channels.*,\ d.name\ AS\ dname,\ d.domain\_id\ AS\ domid\ FROM\ channels\ LEFT\ JOIN\ devices\ d\ on\ d.id\ =\ channels.device\_id"{}}.}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ (\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll()\ ?\ \textcolor{stringliteral}{"{}"{}}\ :}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ WHERE\ d.domain\_id\ IN\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPermissionManager_a5ff83454dc6e8cfe71720005064f2a29}{PermissionManager::arrayToSQL}}(\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>getDomainsByPerm(\textcolor{stringliteral}{"{}can\_list\_devices"{}}))),}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ VPTRChannel::class));}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/channel/new"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListChannels_8php_source_l00015}00015\ \}}
 
 \end{DoxyCode}

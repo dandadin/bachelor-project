@@ -1,0 +1,312 @@
+\doxysection{MStep Class Reference}
+\hypertarget{classMStep}{}\label{classMStep}\index{MStep@{MStep}}
+
+
+Model for step object.  
+
+
+Inheritance diagram for MStep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMStep}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMStep_a4e176c3a661053094339903c5cfc7942}{\+\_\+\+\_\+construct}} (\$id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\begin{DoxyCompactList}\small\item\em Tries to store data to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\begin{DoxyCompactList}\small\item\em Deletes corresponding record from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
+\begin{DoxyCompactList}\small\item\em Starts saving process to database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Starts deleting process in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMObjectModel_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\begin{DoxyCompactList}\small\item\em Constructs instance, sets id to default value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates accurate url to access the object, based on current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMStep_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}step\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_a23e53dfd2b001b81c9946fa05ec90e6f}{\$index}}
+\begin{DoxyCompactList}\small\item\em Index of this step in its sequence, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_ac183dc92249f6f917ac27d66ee9b43c1}{\$seq\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of sequence this step is a part of, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_aa3c29026f3104d290f7224128edbc1fa}{\$channel\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of channel this step should be sent to, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_a0f298096f322952a72a50f98a74c7b60}{\$value}}
+\begin{DoxyCompactList}\small\item\em Value of step, loaded from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMStep_a223a0e7e12d51850578e3c80b118fad1}{\$delay\+Before}}
+\begin{DoxyCompactList}\small\item\em Delay (in seconds) before this step should be spplied, loaded from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classMObjectModel_acd6fd195bd93f36d6b5b50d6a72e32e9}{url\+Prefix}} = \textquotesingle{}object\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em @const url\+Prefix Used for generating url for this model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}
+\begin{DoxyCompactList}\small\item\em Id of this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classMObjectModel}{MObject\+Model}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{get\+Page\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Checks if Page\+Id of current page is set, if not, generates it using current time and url location. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classMObjectModel_a82eea94f3e262484675b551efeffaf11}{set\+Page\+Id}} (string \$page\+Id)
+\begin{DoxyCompactList}\small\item\em Sets current Page\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model for step object. 
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00006}{6}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMStep_a4e176c3a661053094339903c5cfc7942}\label{classMStep_a4e176c3a661053094339903c5cfc7942} 
+\index{MStep@{MStep}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & Id of step in database. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00047}{47}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMStep_ac4c6197ed4b50517efa72f4a50f1a7ab}\label{classMStep_ac4c6197ed4b50517efa72f4a50f1a7ab} 
+\index{MStep@{MStep}!clickedSubmit@{clickedSubmit}}
+\index{clickedSubmit@{clickedSubmit}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{clickedSubmit()}{clickedSubmit()}}
+{\footnotesize\ttfamily clicked\+Submit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts saving process to database. 
+
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00118}{118}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMStep_ab0ead11b6d715bce13bdec33c24e5d05} 
+\index{MStep@{MStep}!delete@{delete}}
+\index{delete@{delete}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Deletes corresponding record from database. 
+
+\begin{DoxyReturn}{Returns}
+bool Deletion was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00104}{104}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_a8192334dea04253155bccd4121139183}\label{classMStep_a8192334dea04253155bccd4121139183} 
+\index{MStep@{MStep}!store@{store}}
+\index{store@{store}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Tries to store data to database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+null & {\em \$arg} & Universal argument, not used here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00068}{68}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_a02d2c9c72b394f734cea3181fc76719e}\label{classMStep_a02d2c9c72b394f734cea3181fc76719e} 
+\index{MStep@{MStep}!storeCommit@{storeCommit}}
+\index{storeCommit@{storeCommit}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{storeCommit()}{storeCommit()}}
+{\footnotesize\ttfamily store\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Used when storing in database was successful. 
+
+Commits all changes to model and database. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00095}{95}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_ac89238396e58c30f1cfd2e86e4516cd6}\label{classMStep_ac89238396e58c30f1cfd2e86e4516cd6} 
+\index{MStep@{MStep}!unpersist@{unpersist}}
+\index{unpersist@{unpersist}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{unpersist()}{unpersist()}}
+{\footnotesize\ttfamily unpersist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts deleting process in database. 
+
+If not successful, reverts changes made. Adds notification to user about result. \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{MModel}}.
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00128}{128}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMStep_aa3c29026f3104d290f7224128edbc1fa}\label{classMStep_aa3c29026f3104d290f7224128edbc1fa} 
+\index{MStep@{MStep}!\$channelId@{\$channelId}}
+\index{\$channelId@{\$channelId}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\$channelId}{\$channelId}}
+{\footnotesize\ttfamily \$channel\+Id}
+
+
+
+Id of channel this step should be sent to, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00026}{26}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_a223a0e7e12d51850578e3c80b118fad1}\label{classMStep_a223a0e7e12d51850578e3c80b118fad1} 
+\index{MStep@{MStep}!\$delayBefore@{\$delayBefore}}
+\index{\$delayBefore@{\$delayBefore}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\$delayBefore}{\$delayBefore}}
+{\footnotesize\ttfamily \$delay\+Before}
+
+
+
+Delay (in seconds) before this step should be spplied, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00036}{36}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_a23e53dfd2b001b81c9946fa05ec90e6f}\label{classMStep_a23e53dfd2b001b81c9946fa05ec90e6f} 
+\index{MStep@{MStep}!\$index@{\$index}}
+\index{\$index@{\$index}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\$index}{\$index}}
+{\footnotesize\ttfamily \$index}
+
+
+
+Index of this step in its sequence, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00016}{16}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_ac183dc92249f6f917ac27d66ee9b43c1}\label{classMStep_ac183dc92249f6f917ac27d66ee9b43c1} 
+\index{MStep@{MStep}!\$seqId@{\$seqId}}
+\index{\$seqId@{\$seqId}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\$seqId}{\$seqId}}
+{\footnotesize\ttfamily \$seq\+Id}
+
+
+
+Id of sequence this step is a part of, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00021}{21}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_a0f298096f322952a72a50f98a74c7b60}\label{classMStep_a0f298096f322952a72a50f98a74c7b60} 
+\index{MStep@{MStep}!\$value@{\$value}}
+\index{\$value@{\$value}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{\$value}{\$value}}
+{\footnotesize\ttfamily \$value}
+
+
+
+Value of step, loaded from database. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00031}{31}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+\Hypertarget{classMStep_acd6fd195bd93f36d6b5b50d6a72e32e9}\label{classMStep_acd6fd195bd93f36d6b5b50d6a72e32e9} 
+\index{MStep@{MStep}!urlPrefix@{urlPrefix}}
+\index{urlPrefix@{urlPrefix}!MStep@{MStep}}
+\doxysubsubsection{\texorpdfstring{urlPrefix}{urlPrefix}}
+{\footnotesize\ttfamily const url\+Prefix = \textquotesingle{}step\textquotesingle{}}
+
+
+
+@const url\+Prefix Used for generating url for this model. 
+
+
+
+Definition at line \mbox{\hyperlink{MStep_8php_source_l00011}{11}} of file \mbox{\hyperlink{MStep_8php_source}{MStep.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MStep_8php}{MStep.\+php}}\end{DoxyCompactItemize}

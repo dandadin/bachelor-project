@@ -1,0 +1,58 @@
+\doxysection{MQTTWS.\+php}
+\hypertarget{MQTTWS_8php_source}{}\label{MQTTWS_8php_source}\index{php/app/MQTTWS.php@{php/app/MQTTWS.php}}
+\mbox{\hyperlink{MQTTWS_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00002}\mbox{\hyperlink{classMQTTWS}{00002}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMQTTWS}{MQTTWS}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMQTT}{MQTT}}\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00004}\mbox{\hyperlink{classMQTTWS_aead959ec188ddcc7c01d99f05225752d}{00004}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTTWS_aead959ec188ddcc7c01d99f05225752d}{createGW}}(\textcolor{keywordtype}{string}\ \$gwName,\ \textcolor{keywordtype}{string}\ \$token)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \$name\ =\ \textcolor{stringliteral}{"{}GW/"{}}.\$gwName;}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$topic\ =\ \textcolor{stringliteral}{"{}GW/"{}}.\$gwName.\textcolor{stringliteral}{"{}/\#"{}};}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ parent::createRole(\$name,\ [}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}subscribePattern"{}},\ \$topic],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}unsubscribePattern"{}},\ \$topic],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}publishClientSend"{}},\ \$topic],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}publishClientReceive"{}},\ \$topic],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}subscribePattern"{}},\ \textcolor{stringliteral}{"{}GetConfigs"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}unsubscribePattern"{}},\ \textcolor{stringliteral}{"{}GetConfigs"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}publishClientSend"{}},\ \textcolor{stringliteral}{"{}Configs"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}publishClientReceive"{}},\ \textcolor{stringliteral}{"{}GetConfigs"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}subscribePattern"{}},\ \textcolor{stringliteral}{"{}RegisteredGW"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}unsubscribePattern"{}},\ \textcolor{stringliteral}{"{}RegisteredGW"{}}],}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}publishClientReceive"{}},\ \textcolor{stringliteral}{"{}RegisteredGW"{}}]]\ );}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ parent::createClient(\$name,\ \$token,\ \$name);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{self::send}}(\textcolor{stringliteral}{"{}RegisteredGW"{}},\ \$gwName);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Info:\ MQTT\ 'RegisteredGW'\ message\ sent\ ("{}}.\$gwName.\textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00024}\mbox{\hyperlink{classMQTTWS_aca2f3e1d526ba86b959fe4daf99ec676}{00024}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTTWS_aca2f3e1d526ba86b959fe4daf99ec676}{removeGW}}(\textcolor{keywordtype}{string}\ \$gwName)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \$name\ =\ \textcolor{stringliteral}{"{}GW/"{}}.\$gwName;}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ parent::removeClient(\$gwName);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ parent::removeRole(\$name);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00031}\mbox{\hyperlink{classMQTTWS_a319f7d61e4d0aed0923f7501b9ff01fb}{00031}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTTWS_a319f7d61e4d0aed0923f7501b9ff01fb}{getConfigs}}()\ :\ array\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \$msgs\ =\ array();}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>subscribe(\textcolor{stringliteral}{"{}Configs"{}},\ \textcolor{keyword}{function}\ (\$topic,\ \$message,\ \$retained,\ \$matchedWildcards)\ use\ (\&\$msgs)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Received\ message\ on\ topic\ ["{}}.\$topic.\textcolor{stringliteral}{"{}]:\ "{}}.\$message.\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$msgs[]\ =\ \$message;}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \},\ 0);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{MQTTWS::send}}(\textcolor{stringliteral}{"{}GetConfigs"{}},\ \textcolor{stringliteral}{"{}publish"{}});}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>loop(\textcolor{keyword}{true},\ \textcolor{keyword}{false},\ 2);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ static::\$Instance-\/>mqttCli-\/>unsubscribe(\textcolor{stringliteral}{"{}Configs"{}});}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \$configs\ =\ array();}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$msgs\ as\ \$msg)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \$config\ =\ json\_decode(\$msg,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \$configs[]\ =\ \$config;}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$configs;}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00049}\mbox{\hyperlink{classMQTTWS_a5371bf8305b3cf9c9b26ff11e55c80a7}{00049}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMQTTWS_a5371bf8305b3cf9c9b26ff11e55c80a7}{sendStep}}(\textcolor{keywordtype}{string}\ \$gwMAC,\ \textcolor{keywordtype}{string}\ \$deviceName,\ \textcolor{keywordtype}{string}\ \$channelName,\ \textcolor{keywordtype}{string}\ \$data)\ \{}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMQTT_a98051b3f0fc11f42009de844dd39bdad}{MQTTWS::send}}(\textcolor{stringliteral}{"{}GW/"{}}.\$gwMAC.\textcolor{stringliteral}{"{}/"{}}.\$deviceName.\textcolor{stringliteral}{"{}/"{}}.\$channelName,\ \$data);}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MQTTWS_8php_source_l00052}00052\ \}}
+
+\end{DoxyCode}

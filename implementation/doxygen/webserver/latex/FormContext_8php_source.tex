@@ -1,0 +1,38 @@
+\doxysection{Form\+Context.\+php}
+\hypertarget{FormContext_8php_source}{}\label{FormContext_8php_source}\index{php/framework/FormContext.php@{php/framework/FormContext.php}}
+\mbox{\hyperlink{FormContext_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00006}\mbox{\hyperlink{classFormContext}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFormContext}{FormContext}}\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00011}\mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMModel}{MModel}}\ \mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{\$model}};}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00016}\mbox{\hyperlink{classFormContext_ac2b250a3f0c2f1d70e35759d7131c0d3}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFormContext_ac2b250a3f0c2f1d70e35759d7131c0d3}{\$controllerCollection}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \$modelCollection\ =\ array();}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00023}\mbox{\hyperlink{classFormContext_ac1fad6138a64e79112d1a554daf23f3d}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_ac1fad6138a64e79112d1a554daf23f3d}{\_\_construct}}(\&\mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{\$model}})\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$this-\/>model\ =\ \&\mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{\$model}};}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00027}\mbox{\hyperlink{classFormContext_a3ee4196e82ed0c7cde160607fd90f506}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_a3ee4196e82ed0c7cde160607fd90f506}{store}}(\$formId)\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPageContext_afd1b8780c9349d22e819dcf0ee01623b}{PageContext::getPageContext}}(\mbox{\hyperlink{classMObjectModel_a6c79959f638a268efe28c611a58c7730}{MObjectModel::getPageId}}())-\/>add(\$formId,\ serialize(\$this));}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00036}\mbox{\hyperlink{classFormContext_abeb611ec7298baef6897076402cec1ec}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_abeb611ec7298baef6897076402cec1ec}{updateModel}}()\ :\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ foreach\ (\$this-\/>controllerCollection\ as\ \$c)\ \$c-\/>update();}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classFormContext_a76e4b35c55d9bdcf1452eac229f886b6}{\$this-\/>model}};}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00046}\mbox{\hyperlink{classFormContext_ac45390ea6212f727084ff1ab37b3bc63}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_ac45390ea6212f727084ff1ab37b3bc63}{getFormModel}}(\textcolor{keywordtype}{string}\ \$formId)\ :\ \mbox{\hyperlink{classMModel}{MModel}}|null\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ return\ static::\$modelCollection[\$formId]\ ??\ null;}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00056}\mbox{\hyperlink{classFormContext_ab83f8de44819eec5dc535153a322a10b}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_ab83f8de44819eec5dc535153a322a10b}{setFormModel}}(\textcolor{keywordtype}{string}\ \$formId,\ \mbox{\hyperlink{classMModel}{MModel}}\ \$model)\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ static::\$modelCollection[\$formId]\ =\ \$model;}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00065}\mbox{\hyperlink{classFormContext_a93ef6035b3d18b03ffa16fdbda5f1f28}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classFormContext_a93ef6035b3d18b03ffa16fdbda5f1f28}{add}}(\mbox{\hyperlink{classController}{Controller}}\ \$c)\ \{}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \$this-\/>controllerCollection[]\ =\ \$c;}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FormContext_8php_source_l00068}00068\ \}}
+
+\end{DoxyCode}

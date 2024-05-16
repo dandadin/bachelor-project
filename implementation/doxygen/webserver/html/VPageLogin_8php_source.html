@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoTHome Webserver: /win/Users/dansi/bachelor-project/implementation/webserver/php/app/view/VPageLogin.php Source File</title>
+<title>IoTHome Webserver: php/app/view/VPageLogin.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,26 +96,31 @@ $(document).ready(function(){initNavTree('VPageLogin_8php_source.html',''); init
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classVPageLogin.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="classVPageLogin.html">VPageLogin</a> <span class="keyword">extends</span> <a class="code hl_class" href="classVPageHollow.html">VPageHollow</a> {</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classVPageLogin.html#aa4e423fc694f0790f1f2484a49b354c7">    4</a></span>    <span class="keyword">protected</span> <span class="keyword">const</span> <a class="code hl_variable" href="classVPageLogin.html#aa4e423fc694f0790f1f2484a49b354c7">Title</a> = <span class="stringliteral">&quot;Login&quot;</span>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">    6</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">__construct</a>() {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        parent::__construct();</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        <span class="keywordflow">if</span>(isset($_SESSION[<span class="stringliteral">&quot;loginId&quot;</span>])) $this-&gt;<a class="code hl_function" href="classVList.html#a00b047939500650b99141a4896eb853b">add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classVPageHome.html">VPageHome</a>());</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">else</span> $this-&gt;<a class="code hl_function" href="classVList.html#a00b047939500650b99141a4896eb853b">add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classVFormLogin.html">VFormLogin</a>());</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classVPageLogin.html#a4b231d793043b3f162c456c04f82b37e">    5</a></span>    <span class="keyword">protected</span> <span class="keyword">const</span> <a class="code hl_variable" href="classVPageLogin.html#a4b231d793043b3f162c456c04f82b37e">Header</a> = <span class="stringliteral">&quot;&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;/css/login.css\&quot;/&gt;&quot;</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">    7</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">__construct</a>() {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        parent::__construct();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">if</span>(isset($_SESSION[<span class="stringliteral">&quot;loginId&quot;</span>])) {header(<span class="stringliteral">&quot;Location: /&quot;</span>); exit();}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>            $this-&gt;<a class="code hl_function" href="classVList.html#a00b047939500650b99141a4896eb853b">add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classVText.html">VText</a>(<span class="stringliteral">&quot;&lt;h1&gt;IoTHome&lt;/h1&gt;&quot;</span>));</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            $this-&gt;<a class="code hl_function" href="classVList.html#a00b047939500650b99141a4896eb853b">add</a>(<span class="keyword">new</span> <a class="code hl_class" href="classVFormLogin.html">VFormLogin</a>());</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="ttc" id="aclassVFormLogin_html"><div class="ttname"><a href="classVFormLogin.html">VFormLogin</a></div><div class="ttdef"><b>Definition</b> <a href="VFormLogin_8php_source.html#l00003">VFormLogin.php:3</a></div></div>
 <div class="ttc" id="aclassVList_html_a00b047939500650b99141a4896eb853b"><div class="ttname"><a href="classVList.html#a00b047939500650b99141a4896eb853b">VList\add</a></div><div class="ttdeci">add(VView $v)</div><div class="ttdef"><b>Definition</b> <a href="VList_8php_source.html#l00006">VList.php:6</a></div></div>
 <div class="ttc" id="aclassVPageHollow_html"><div class="ttname"><a href="classVPageHollow.html">VPageHollow</a></div><div class="ttdef"><b>Definition</b> <a href="VPageHollow_8php_source.html#l00003">VPageHollow.php:3</a></div></div>
-<div class="ttc" id="aclassVPageHome_html"><div class="ttname"><a href="classVPageHome.html">VPageHome</a></div><div class="ttdef"><b>Definition</b> <a href="VPageHome_8php_source.html#l00003">VPageHome.php:3</a></div></div>
 <div class="ttc" id="aclassVPageLogin_html"><div class="ttname"><a href="classVPageLogin.html">VPageLogin</a></div><div class="ttdef"><b>Definition</b> <a href="VPageLogin_8php_source.html#l00003">VPageLogin.php:3</a></div></div>
-<div class="ttc" id="aclassVPageLogin_html_a095c5d389db211932136b53f25f39685"><div class="ttname"><a href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">VPageLogin\__construct</a></div><div class="ttdeci">__construct()</div><div class="ttdef"><b>Definition</b> <a href="VPageLogin_8php_source.html#l00006">VPageLogin.php:6</a></div></div>
+<div class="ttc" id="aclassVPageLogin_html_a095c5d389db211932136b53f25f39685"><div class="ttname"><a href="classVPageLogin.html#a095c5d389db211932136b53f25f39685">VPageLogin\__construct</a></div><div class="ttdeci">__construct()</div><div class="ttdef"><b>Definition</b> <a href="VPageLogin_8php_source.html#l00007">VPageLogin.php:7</a></div></div>
+<div class="ttc" id="aclassVPageLogin_html_a4b231d793043b3f162c456c04f82b37e"><div class="ttname"><a href="classVPageLogin.html#a4b231d793043b3f162c456c04f82b37e">VPageLogin\Header</a></div><div class="ttdeci">const Header</div><div class="ttdef"><b>Definition</b> <a href="VPageLogin_8php_source.html#l00005">VPageLogin.php:5</a></div></div>
 <div class="ttc" id="aclassVPageLogin_html_aa4e423fc694f0790f1f2484a49b354c7"><div class="ttname"><a href="classVPageLogin.html#aa4e423fc694f0790f1f2484a49b354c7">VPageLogin\Title</a></div><div class="ttdeci">const Title</div><div class="ttdef"><b>Definition</b> <a href="VPageLogin_8php_source.html#l00004">VPageLogin.php:4</a></div></div>
+<div class="ttc" id="aclassVText_html"><div class="ttname"><a href="classVText.html">VText</a></div><div class="ttdef"><b>Definition</b> <a href="VText_8php_source.html#l00003">VText.php:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c479e8412035211390d4f9dec63c1f88.html">webserver</a></li><li class="navelem"><a class="el" href="dir_08a7cbcc41efe9bb1ff2aacd6915c6c1.html">php</a></li><li class="navelem"><a class="el" href="dir_831f0e0995c16cac6e8eb51a4964e4f8.html">app</a></li><li class="navelem"><a class="el" href="dir_bfa5c4b7e52364529ab692741d399884.html">view</a></li><li class="navelem"><a class="el" href="VPageLogin_8php.html">VPageLogin.php</a></li>
+    <li class="navelem"><a class="el" href="dir_05194b7bb14e4bdbd759acf3e4294839.html">php</a></li><li class="navelem"><a class="el" href="dir_0623e9d793428cf5139452ed7a3df4c0.html">app</a></li><li class="navelem"><a class="el" href="dir_acc51d6d9867fd3ab81f815adaef3097.html">view</a></li><li class="navelem"><a class="el" href="VPageLogin_8php.html">VPageLogin.php</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

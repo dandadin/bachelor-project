@@ -1,0 +1,79 @@
+\doxysection{MPlan.\+php}
+\hypertarget{MPlan_8php_source}{}\label{MPlan_8php_source}\index{php/app/model/MPlan.php@{php/app/model/MPlan.php}}
+\mbox{\hyperlink{MPlan_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00006}\mbox{\hyperlink{classMPlan}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMPlan}{MPlan}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMObjectModel}{MObjectModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00011}\mbox{\hyperlink{classMPlan_acd6fd195bd93f36d6b5b50d6a72e32e9}{00011}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMPlan_acd6fd195bd93f36d6b5b50d6a72e32e9}{urlPrefix}}\ =\ \textcolor{stringliteral}{'plan'};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00016}\mbox{\hyperlink{classMPlan_ac183dc92249f6f917ac27d66ee9b43c1}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMPlan_ac183dc92249f6f917ac27d66ee9b43c1}{\$seqId}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00022}\mbox{\hyperlink{classMPlan_a899c92c791cb5d68252e06e5a432d985}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMPlan_a899c92c791cb5d68252e06e5a432d985}{\$period}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00028}\mbox{\hyperlink{classMPlan_aec4de82415d7f05cb9748d12d3a95a87}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMPlan_aec4de82415d7f05cb9748d12d3a95a87}{\$offset}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00033}\mbox{\hyperlink{classMPlan_a77e0ee83a7d5101a4b6ddd835103c78d}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMPlan_a77e0ee83a7d5101a4b6ddd835103c78d}{\$lastTs}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00044}\mbox{\hyperlink{classMPlan_a4e176c3a661053094339903c5cfc7942}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMPlan_a4e176c3a661053094339903c5cfc7942}{\_\_construct}}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ plans\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>seqId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>seq\_id;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>period\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>period;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>offset\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>offset;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>lastTs\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>last\_ts;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00064}\mbox{\hyperlink{classMPlan_a8192334dea04253155bccd4121139183}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMPlan_a8192334dea04253155bccd4121139183}{store}}(\textcolor{keywordtype}{int}\ \$arg\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ if\ (!parent::\mbox{\hyperlink{classMPlan_a8192334dea04253155bccd4121139183}{store}}())\ return\ false;\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ plans\ SET\ seq\_id=:seq\_id,\ period=:period,\ offset=:offset,\ last\_ts=:last\_ts"{}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}seq\_id"{}}\ =>\ \$this-\/>seqId,\ \textcolor{stringliteral}{"{}period"{}}\ =>\ \$this-\/>period,}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}offset"{}}\ =>\ \$this-\/>offset,\ \textcolor{stringliteral}{"{}last\_ts"{}}\ =>\ \$this-\/>lastTs]);}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$this-\/>id}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00090}\mbox{\hyperlink{classMPlan_a02d2c9c72b394f734cea3181fc76719e}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMPlan_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00099}\mbox{\hyperlink{classMPlan_ab0ead11b6d715bce13bdec33c24e5d05}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ if\ (!\$this-\/>id)\ return\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ plans\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00113}\mbox{\hyperlink{classMPlan_ac4c6197ed4b50517efa72f4a50f1a7ab}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMPlan_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>persist())\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Plan\ was\ saved."{}}));}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Plan\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00123}\mbox{\hyperlink{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6}{00123}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMPlan_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}}()\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ \$ret\ =\ parent::unpersist();}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ret)\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Plan\ was\ deleted."{}}));}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Plan\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ret;}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00128}00128\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MPlan_8php_source_l00129}00129\ \}}
+
+\end{DoxyCode}

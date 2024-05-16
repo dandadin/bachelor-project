@@ -1,0 +1,32 @@
+\doxysection{MRTRUser\+In\+Coll.\+php}
+\hypertarget{MRTRUserInColl_8php_source}{}\label{MRTRUserInColl_8php_source}\index{php/app/model/MRTRUserInColl.php@{php/app/model/MRTRUserInColl.php}}
+\mbox{\hyperlink{MRTRUserInColl_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00005}\mbox{\hyperlink{classMRTRUserInColl}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRUserInColl}{MRTRUserInColl}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00010}\mbox{\hyperlink{classMRTRUserInColl_a84651f4070d04080f6c5fd3c98cc9104}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRUserInColl_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00016}\mbox{\hyperlink{classMRTRUserInColl_a97f4a5f78273be026f99c408274a233b}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUserInColl_a97f4a5f78273be026f99c408274a233b}{\_\_construct}}(\mbox{\hyperlink{classMRTRUserInColl_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$this-\/>userId\ =\ \mbox{\hyperlink{classMRTRUserInColl_a84651f4070d04080f6c5fd3c98cc9104}{\$userId}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00025}\mbox{\hyperlink{classMRTRUserInColl_a1bb594d25e7b85b8479da770e14463ff}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRUserInColl_a1bb594d25e7b85b8479da770e14463ff}{store}}(\textcolor{keywordtype}{int}\ \$collId\ =\ 0,\ \textcolor{keywordtype}{int}\ \$index\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ if\ (!\$collId)\ return\ false;}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ collection\_users\ (coll\_id,\ user\_id)\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ :collId,id\ FROM\ users\ WHERE\ id=:userId\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ON\ DUPLICATE\ KEY\ UPDATE\ user\_id=user\_id"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}collId"{}}\ =>\ \$collId,\ \textcolor{stringliteral}{"{}userId"{}}\ =>\ \$this-\/>userId]);}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRUserInColl_8php_source_l00042}00042\ \}}
+
+\end{DoxyCode}

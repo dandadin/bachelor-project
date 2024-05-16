@@ -1,0 +1,20 @@
+\doxysection{VPTRChannel.\+php}
+\hypertarget{VPTRChannel_8php_source}{}\label{VPTRChannel_8php_source}\index{php/app/view/VPTRChannel.php@{php/app/view/VPTRChannel.php}}
+\mbox{\hyperlink{VPTRChannel_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00006}\mbox{\hyperlink{classVPTRChannel}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPTRChannel}{VPTRChannel}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPTableRow}{VPTableRow}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00012}\mbox{\hyperlink{classVPTRChannel_a49460e9905f73efc8030a6a970f7cc03}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPTRChannel_a49460e9905f73efc8030a6a970f7cc03}{\_\_construct}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>name),\ \textcolor{stringliteral}{"{}/channel/\$o-\/>id/edit"{}}));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>dname),\ \textcolor{stringliteral}{"{}/device/\$o-\/>device\_id/edit"{}}));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>comm\_type));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>value\_type));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>update\_freq));}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ parent::\_\_construct(\ \$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>checkDomainPerm(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domid,\ \textcolor{stringliteral}{"{}can\_edit\_devices"{}})\ ?\ \textcolor{stringliteral}{"{}/channel/\$o-\/>id/delete"{}}\ :\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPTRChannel_8php_source_l00021}00021\ \}}
+
+\end{DoxyCode}

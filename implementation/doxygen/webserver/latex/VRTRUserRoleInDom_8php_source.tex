@@ -1,0 +1,29 @@
+\doxysection{VRTRUser\+Role\+In\+Dom.\+php}
+\hypertarget{VRTRUserRoleInDom_8php_source}{}\label{VRTRUserRoleInDom_8php_source}\index{php/app/view/VRTRUserRoleInDom.php@{php/app/view/VRTRUserRoleInDom.php}}
+\mbox{\hyperlink{VRTRUserRoleInDom_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00006}\mbox{\hyperlink{classVRTRUserRoleInDom}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVRTRUserRoleInDom}{VRTRUserRoleInDom}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVRelTabRow}{VRelTabRow}}\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00013}\mbox{\hyperlink{classVRTRUserRoleInDom_addbc1491d5e10e3a8ae50c809ec47c1b}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVRTRUserRoleInDom_addbc1491d5e10e3a8ae50c809ec47c1b}{\_\_construct}}(\&\$itemModel,\ \&\$tableModel)\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ users\ WHERE\ id=\$itemModel-\/>userId"{}});}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>login));}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \$itemModel-\/>userId\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFormFieldText}{VFormFieldText}}(\$itemModel-\/>login));}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ roles\ WHERE\ id=\$itemModel-\/>roleId"{}});}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>name));}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVFfDdRole}{VFfDdRole}}(\$itemModel-\/>roleId));}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ parent::\_\_construct(\$itemModel,\ \$tableModel);}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VRTRUserRoleInDom_8php_source_l00031}00031\ \}}
+
+\end{DoxyCode}

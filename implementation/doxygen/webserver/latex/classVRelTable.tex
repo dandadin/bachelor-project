@@ -8,13 +8,20 @@ View for default relative table.
 Inheritance diagram for VRel\+Table\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{classVRelTable}
+\includegraphics[height=4.964539cm]{classVRelTable}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVRelTable_ab788b378e5b13a2e371debf561a5e1ba}{\+\_\+\+\_\+construct}} (\&\$model, \$label=NULL)
+\begin{DoxyCompactList}\small\item\em Creates view for header of the table and adds rows for items passed in \$model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVRelTable_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\begin{DoxyCompactList}\small\item\em Registers controller of the adding button for parsing POST input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVTable}{VTable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a393f4106ac71afa6285e0dd6a9e927b5}{\+\_\+\+\_\+construct}} (\$heading, \$remove\+Col=\"{}\"{}, \$label=NULL)
 \begin{DoxyCompactList}\small\item\em Creates view for header of the table and adds rows for items passed in \$model. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
@@ -22,11 +29,17 @@ Inheritance diagram for VRel\+Table\+:\begin{figure}[H]
 \mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}} (\mbox{\hyperlink{classVView}{VView}} \$v)
 \item 
 \mbox{\hyperlink{classVList_a98e5fc638347224a6490e665252b7a63}{remove}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\item 
+\mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
+\item 
+\mbox{\hyperlink{classVList_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
@@ -38,22 +51,25 @@ const \mbox{\hyperlink{classVRelTable_a090afbd6365b2f67eb8d738e5c2e7afd}{Row\+Cl
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classVRelTable_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
-\begin{DoxyCompactList}\small\item\em Renders single row of the table. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVRelTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \begin{DoxyCompactList}\small\item\em Renders the beginning of the table. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVRelTable_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
-\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classVRelTable_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
-\begin{DoxyCompactList}\small\item\em Registers controller of the adding button for parsing POST input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVTable}{VTable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVTable_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
+\begin{DoxyCompactList}\small\item\em Renders single row of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
+\begin{DoxyCompactList}\small\item\em Renders the beginning of the table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVTable_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\begin{DoxyCompactList}\small\item\em Renders the end of the table and the button for adding new rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classVList}{VList}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVList_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
 \item 
 \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{render\+Item}} (\mbox{\hyperlink{classVView}{VView}} \$v)
-\item 
-\mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
 \end{DoxyCompactItemize}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,7 +79,7 @@ const \mbox{\hyperlink{classVRelTable_a090afbd6365b2f67eb8d738e5c2e7afd}{Row\+Cl
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVList}{VList}}}
@@ -107,11 +123,11 @@ Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00025}{25}} of file \
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classVRelTable_aa35132660532f73611e650ffb8402f8a}\label{classVRelTable_aa35132660532f73611e650ffb8402f8a} 
+\Hypertarget{classVRelTable_a6c42a72add1e6afb5ff60b9f9a9356cd}\label{classVRelTable_a6c42a72add1e6afb5ff60b9f9a9356cd} 
 \index{VRelTable@{VRelTable}!registerController@{registerController}}
 \index{registerController@{registerController}!VRelTable@{VRelTable}}
 \doxysubsubsection{\texorpdfstring{registerController()}{registerController()}}
-{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}}}]{\$cc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormContext}{Form\+Context}}}]{\$c }\end{DoxyParamCaption})}
 
 
 
@@ -119,7 +135,7 @@ Registers controller of the adding button for parsing POST input.
 
 
 \begin{DoxyParams}{Parameters}
-{\em \$cc} & \doxylink{classControllerCollection}{Controller\+Collection} Collection of all registered controllers. \\
+{\em \$c} & \doxylink{classFormContext}{Form\+Context} Coontext containing collection of all registered controllers. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -127,11 +143,11 @@ void
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classVList_aa35132660532f73611e650ffb8402f8a}{VList}}.
+Reimplemented from \mbox{\hyperlink{classVList_a6c42a72add1e6afb5ff60b9f9a9356cd}{VList}}.
 
 
 
-Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00069}{69}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
+Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00058}{58}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
 
 \Hypertarget{classVRelTable_aeed6253e9e242751c7beb12a5c541b1e}\label{classVRelTable_aeed6253e9e242751c7beb12a5c541b1e} 
 \index{VRelTable@{VRelTable}!renderFooter@{renderFooter}}
@@ -148,11 +164,11 @@ void
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{VView}}.
+Reimplemented from \mbox{\hyperlink{classVTable_aeed6253e9e242751c7beb12a5c541b1e}{VTable}}.
 
 
 
-Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00058}{58}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
+Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00047}{47}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
 
 \Hypertarget{classVRelTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}\label{classVRelTable_aa776ee561a32e9eb2c76a5a7f9cc1a74} 
 \index{VRelTable@{VRelTable}!renderHeader@{renderHeader}}
@@ -169,37 +185,11 @@ void
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classVView_aa776ee561a32e9eb2c76a5a7f9cc1a74}{VView}}.
+Reimplemented from \mbox{\hyperlink{classVTable_aa776ee561a32e9eb2c76a5a7f9cc1a74}{VTable}}.
 
 
 
-Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00049}{49}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
-
-\Hypertarget{classVRelTable_a14a421516c24b7d17bbeb0f2d325750d}\label{classVRelTable_a14a421516c24b7d17bbeb0f2d325750d} 
-\index{VRelTable@{VRelTable}!renderItem@{renderItem}}
-\index{renderItem@{renderItem}!VRelTable@{VRelTable}}
-\doxysubsubsection{\texorpdfstring{renderItem()}{renderItem()}}
-{\footnotesize\ttfamily render\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVView}{VView}}}]{\$v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Renders single row of the table. 
-
-
-\begin{DoxyParams}[1]{Parameters}
-\doxylink{classVView}{VView} & {\em \$v} & View of single row of table. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-void 
-\end{DoxyReturn}
-
-
-Reimplemented from \mbox{\hyperlink{classVList_a14a421516c24b7d17bbeb0f2d325750d}{VList}}.
-
-
-
-Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00039}{39}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
+Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00038}{38}} of file \mbox{\hyperlink{VRelTable_8php_source}{VRel\+Table.\+php}}.
 
 
 
@@ -236,4 +226,4 @@ Definition at line \mbox{\hyperlink{VRelTable_8php_source_l00014}{14}} of file \
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VRelTable_8php}{VRel\+Table.\+php}}\end{DoxyCompactItemize}
+php/framework/view/\mbox{\hyperlink{VRelTable_8php}{VRel\+Table.\+php}}\end{DoxyCompactItemize}

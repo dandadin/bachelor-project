@@ -1,0 +1,82 @@
+\doxysection{MInstance.\+php}
+\hypertarget{MInstance_8php_source}{}\label{MInstance_8php_source}\index{php/app/model/MInstance.php@{php/app/model/MInstance.php}}
+\mbox{\hyperlink{MInstance_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00006}\mbox{\hyperlink{classMInstance}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMInstance}{MInstance}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMObjectModel}{MObjectModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00011}\mbox{\hyperlink{classMInstance_acd6fd195bd93f36d6b5b50d6a72e32e9}{00011}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMInstance_acd6fd195bd93f36d6b5b50d6a72e32e9}{urlPrefix}}\ =\ \textcolor{stringliteral}{'instance'};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00016}\mbox{\hyperlink{classMInstance_ac183dc92249f6f917ac27d66ee9b43c1}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMInstance_ac183dc92249f6f917ac27d66ee9b43c1}{\$seqId}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00021}\mbox{\hyperlink{classMInstance_a5934f792b987633dc0e8c982307cb59d}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMInstance_a5934f792b987633dc0e8c982307cb59d}{\$stepId}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00026}\mbox{\hyperlink{classMInstance_abf587d322585f909037b0500d439d6ee}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMInstance_abf587d322585f909037b0500d439d6ee}{\$stepTs}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00037}\mbox{\hyperlink{classMInstance_a4e176c3a661053094339903c5cfc7942}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMInstance_a4e176c3a661053094339903c5cfc7942}{\_\_construct}}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ instances\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>seqId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>seq\_id;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>stepId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>step\_id;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>stepTs\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>step\_ts;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00056}\mbox{\hyperlink{classMInstance_a8192334dea04253155bccd4121139183}{00056}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMInstance_a8192334dea04253155bccd4121139183}{store}}(\textcolor{keywordtype}{int}\ \$arg\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ if\ (!parent::\mbox{\hyperlink{classMInstance_a8192334dea04253155bccd4121139183}{store}}())\ return\ false;\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ instances\ SET\ seq\_id=:seq\_id,\ step\_id=:step\_id,\ step\_ts=:step\_ts"{}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}.=\textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}seq\_id"{}}\ =>\ \$this-\/>seqId,\ \textcolor{stringliteral}{"{}step\_id"{}}\ =>\ \$this-\/>stepId,\ \textcolor{stringliteral}{"{}step\_ts"{}}\ =>\ \$this-\/>stepTs]);}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classMObjectModel_ae97941710d863131c700f069b109991e}{\$this-\/>id}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \$this-\/>triggerExecutor();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00082}\mbox{\hyperlink{classMInstance_a02d2c9c72b394f734cea3181fc76719e}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMInstance_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00091}\mbox{\hyperlink{classMInstance_ab0ead11b6d715bce13bdec33c24e5d05}{00091}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ if\ (!\$this-\/>id)\ return\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ instances\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===\mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE===parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00105}\mbox{\hyperlink{classMInstance_ac4c6197ed4b50517efa72f4a50f1a7ab}{00105}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMInstance_ac4c6197ed4b50517efa72f4a50f1a7ab}{clickedSubmit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>persist())\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Instance\ was\ saved."{}}));}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Instance\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00115}\mbox{\hyperlink{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMInstance_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}}()\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \$ret\ =\ parent::unpersist();}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ret)\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_a93a476f8a3cc6f0b09775d41b2ec9dcb}{VNotification::NT\_Success}},\ \textcolor{stringliteral}{"{}Instance\ was\ deleted."{}}));}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{classVPageHollow_ac03db71b928325ed0d6c940e58a25246}{VPageHollow::addNotification}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVNotification}{VNotification}}(\mbox{\hyperlink{classVNotification_ad438d3d069b305663b6fdf04997f9760}{VNotification::NT\_Error}},\ \textcolor{stringliteral}{"{}Instance\ could\ not\ have\ been\ saved!"{}}));}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ret;}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00122}00122\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{function}\ triggerExecutor()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \$sock\ =\ socket\_create(AF\_INET,\ SOCK\_DGRAM,\ SOL\_UDP);}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ socket\_sendto(\$sock,\ \textcolor{stringliteral}{"{}reload"{}},\ 6,\ 0,\ \textcolor{stringliteral}{"{}executor"{}},\ 9999);}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MInstance_8php_source_l00126}00126\ \}}
+
+\end{DoxyCode}

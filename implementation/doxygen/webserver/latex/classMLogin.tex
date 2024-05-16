@@ -14,21 +14,28 @@ Inheritance diagram for MLogin\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMLogin_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
 \begin{DoxyCompactList}\small\item\em Tries to find inputted data in database. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
 \begin{DoxyCompactList}\small\item\em Used for logging off. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMLogin_ac4c6197ed4b50517efa72f4a50f1a7ab}{clicked\+Submit}} ()
-\begin{DoxyCompactList}\small\item\em Starts checking process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts checking process. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMLogin_accd14bda49a1044b4d8dd93f020f11ee}{get\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates url for this page. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{store}} (\$arg=NULL)
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
 \item 
-\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
-\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classMLogin_ae932aaa175c97b8e484cea768595cadb}{reload\+Perms}} ()
+\begin{DoxyCompactList}\small\item\em Loads active roles of logged-\/in user and saves their permissions to \$\+\_\+\+SESSION\mbox{[}\"{}perms\"{}\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,6 +46,10 @@ Inheritance diagram for MLogin\+:\begin{figure}[H]
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
 \item 
 \mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
 \begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -64,12 +75,12 @@ Definition at line \mbox{\hyperlink{MLogin_8php_source_l00006}{6}} of file \mbox
 
 Starts checking process. 
 
-Called when button in edit form using this model is pressed. \begin{DoxyReturn}{Returns}
+Called when button in edit form using this model is pressed. Adds notification to user about result. \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{MLogin_8php_source_l00057}{57}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00069}{69}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
 
 \Hypertarget{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05}\label{classMLogin_ab0ead11b6d715bce13bdec33c24e5d05} 
 \index{MLogin@{MLogin}!delete@{delete}}
@@ -90,13 +101,47 @@ Reimplemented from \mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d0
 
 
 
-Definition at line \mbox{\hyperlink{MLogin_8php_source_l00047}{47}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00056}{56}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
 
-\Hypertarget{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c}\label{classMLogin_aae32a9dc4dc7eefbcb86bd32477cb67c} 
+\Hypertarget{classMLogin_accd14bda49a1044b4d8dd93f020f11ee}\label{classMLogin_accd14bda49a1044b4d8dd93f020f11ee} 
+\index{MLogin@{MLogin}!getUrl@{getUrl}}
+\index{getUrl@{getUrl}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{getUrl()}{getUrl()}}
+{\footnotesize\ttfamily get\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates url for this page. 
+
+\begin{DoxyReturn}{Returns}
+string Url that should be loaded. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00091}{91}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+\Hypertarget{classMLogin_ae932aaa175c97b8e484cea768595cadb}\label{classMLogin_ae932aaa175c97b8e484cea768595cadb} 
+\index{MLogin@{MLogin}!reloadPerms@{reloadPerms}}
+\index{reloadPerms@{reloadPerms}!MLogin@{MLogin}}
+\doxysubsubsection{\texorpdfstring{reloadPerms()}{reloadPerms()}}
+{\footnotesize\ttfamily static reload\+Perms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads active roles of logged-\/in user and saves their permissions to \$\+\_\+\+SESSION\mbox{[}\"{}perms\"{}\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MLogin_8php_source_l00078}{78}} of file \mbox{\hyperlink{MLogin_8php_source}{MLogin.\+php}}.
+
+\Hypertarget{classMLogin_a8192334dea04253155bccd4121139183}\label{classMLogin_a8192334dea04253155bccd4121139183} 
 \index{MLogin@{MLogin}!store@{store}}
 \index{store@{store}!MLogin@{MLogin}}
 \doxysubsubsection{\texorpdfstring{store()}{store()}}
-{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{}]{\$arg = {\ttfamily NULL} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$arg = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -112,7 +157,7 @@ bool Check was successful.
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classMModel_aae32a9dc4dc7eefbcb86bd32477cb67c}{MModel}}.
+Reimplemented from \mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{MModel}}.
 
 
 
@@ -145,4 +190,4 @@ Definition at line \mbox{\hyperlink{MLogin_8php_source_l00014}{14}} of file \mbo
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/app/model/\mbox{\hyperlink{MLogin_8php}{MLogin.\+php}}\end{DoxyCompactItemize}
+php/app/model/\mbox{\hyperlink{MLogin_8php}{MLogin.\+php}}\end{DoxyCompactItemize}

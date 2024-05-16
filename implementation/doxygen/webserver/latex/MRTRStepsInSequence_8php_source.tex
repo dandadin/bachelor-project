@@ -1,0 +1,65 @@
+\doxysection{MRTRSteps\+In\+Sequence.\+php}
+\hypertarget{MRTRStepsInSequence_8php_source}{}\label{MRTRStepsInSequence_8php_source}\index{php/app/model/MRTRStepsInSequence.php@{php/app/model/MRTRStepsInSequence.php}}
+\mbox{\hyperlink{MRTRStepsInSequence_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00006}\mbox{\hyperlink{classMRTRStepsInSequence}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRStepsInSequence}{MRTRStepsInSequence}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00011}\mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{\$id}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00016}\mbox{\hyperlink{classMRTRStepsInSequence_aa3c29026f3104d290f7224128edbc1fa}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRStepsInSequence_aa3c29026f3104d290f7224128edbc1fa}{\$channelId}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00021}\mbox{\hyperlink{classMRTRStepsInSequence_a0f298096f322952a72a50f98a74c7b60}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRStepsInSequence_a0f298096f322952a72a50f98a74c7b60}{\$value}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00026}\mbox{\hyperlink{classMRTRStepsInSequence_a223a0e7e12d51850578e3c80b118fad1}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRStepsInSequence_a223a0e7e12d51850578e3c80b118fad1}{\$delayBefore}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}\ \$tmpId;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00037}\mbox{\hyperlink{classMRTRStepsInSequence_a4e176c3a661053094339903c5cfc7942}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRStepsInSequence_a4e176c3a661053094339903c5cfc7942}{\_\_construct}}(\mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{\$id}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{\$id}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}\ =\ \mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\textcolor{stringliteral}{"{}SELECT\ *\ FROM\ steps\ WHERE\ id=\$id"{}});}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject();}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>id;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>channelId\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>channel\_id;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>value\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>value;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>delayBefore\ =\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>delay\_before;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00055}\mbox{\hyperlink{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890}{store}}(\textcolor{keywordtype}{int}\ \$seqId\ =\ 0,\ \textcolor{keywordtype}{int}\ \$index\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ if\ (!parent::\mbox{\hyperlink{classMRTRStepsInSequence_a66d0f27333d81e78678f8fd8ad438890}{store}}())\ return\ false;\ \textcolor{comment}{//\ TODO:\ Change\ the\ autogenerated\ stub}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \$this-\/>\textcolor{keywordtype}{id}\ ?\ \textcolor{stringliteral}{"{}UPDATE"{}}\ :\ \textcolor{stringliteral}{"{}INSERT\ INTO"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ .=\ \textcolor{stringliteral}{"{}\ steps\ SET\ idx=:idx,\ seq\_id=:seq\_id,\ channel\_id=:channel\_id,"{}}\ .}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ value=:value,\ delay\_before=:delay\_before"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\textcolor{keywordtype}{id})\ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ .=\ \textcolor{stringliteral}{"{}\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}\ =\ \mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}idx"{}}\ =>\ \$index,\ \textcolor{stringliteral}{"{}seq\_id"{}}\ =>\ \$seqId,\ \textcolor{stringliteral}{"{}channel\_id"{}}\ =>\ \$this-\/>channelId,}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}value"{}}\ =>\ \$this-\/>value,\ \textcolor{stringliteral}{"{}delay\_before"{}}\ =>\ \$this-\/>delayBefore]);}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class()\ .\ \textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classDB_a1238a6edaba21787d8f72e975bef0843}{DB::lastInsertId}}();}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \$this-\/>tmpId\ =\ \mbox{\hyperlink{classMRTRStepsInSequence_ae97941710d863131c700f069b109991e}{\$this-\/>id}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00082}\mbox{\hyperlink{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRStepsInSequence_a02d2c9c72b394f734cea3181fc76719e}{storeCommit}}()\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ parent::storeCommit();}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\textcolor{keywordtype}{id})\ \$this-\/>\textcolor{keywordtype}{id}\ =\ \$this-\/>tmpId;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00091}\mbox{\hyperlink{classMRTRStepsInSequence_ab0ead11b6d715bce13bdec33c24e5d05}{00091}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{delete}(\$arg\ =\ NULL)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ if\ (!\$this-\/>id)\ return\ TRUE;;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ steps\ WHERE\ id=\$this-\/>id"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE\ ===\ \mbox{\hyperlink{classDB_af703d1bcf602808980cb4b5c3b372236}{DB::exec}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}))\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FALSE\ ===\ parent::delete())\ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \$this-\/>tmpId\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRStepsInSequence_8php_source_l00099}00099\ \}}
+
+\end{DoxyCode}

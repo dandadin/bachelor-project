@@ -1,0 +1,122 @@
+\doxysection{MRTRColl\+In\+Device Class Reference}
+\hypertarget{classMRTRCollInDevice}{}\label{classMRTRCollInDevice}\index{MRTRCollInDevice@{MRTRCollInDevice}}
+
+
+Model of table-\/row of relative table of collections.  
+
+
+Inheritance diagram for MRTRColl\+In\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMRTRCollInDevice}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRCollInDevice_af0f1ba1f74778d381e1bb293d456c8d4}{\+\_\+\+\_\+construct}} (int \$coll\+Id=0)
+\begin{DoxyCompactList}\small\item\em Constructs model using data from database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMRTRCollInDevice_a0e53cc00afeffa01b915633eea5bcf14}{store}} (int \$device\+Id=0, int \$index=0)
+\begin{DoxyCompactList}\small\item\em If device\+Id is specified, inserts this row into database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a8192334dea04253155bccd4121139183}{store}} (int \$arg=0)
+\item 
+\mbox{\hyperlink{classMModel_ab0ead11b6d715bce13bdec33c24e5d05}{delete}} (\$arg=NULL)
+\item 
+\mbox{\hyperlink{classMModel_ac89238396e58c30f1cfd2e86e4516cd6}{unpersist}} ()
+\begin{DoxyCompactList}\small\item\em Used to remove data from database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}{\$coll\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of collection this row used for creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classMModel}{MModel}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMModel_a02d2c9c72b394f734cea3181fc76719e}{store\+Commit}} ()
+\begin{DoxyCompactList}\small\item\em Used when storing in database was successful. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMModel_af54c8132f5caa0df292077f97d3e6ba9}{delete\+Commit}} ()
+\item 
+\mbox{\hyperlink{classMModel_a7ea8510f21be99e0602d0cf7f452b15e}{persist}} ()
+\begin{DoxyCompactList}\small\item\em Used to store data from model to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Model of table-\/row of relative table of collections. 
+
+Stores single collection. 
+
+Definition at line \mbox{\hyperlink{MRTRCollInDevice_8php_source_l00006}{6}} of file \mbox{\hyperlink{MRTRCollInDevice_8php_source}{MRTRColl\+In\+Device.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMRTRCollInDevice_af0f1ba1f74778d381e1bb293d456c8d4}\label{classMRTRCollInDevice_af0f1ba1f74778d381e1bb293d456c8d4} 
+\index{MRTRCollInDevice@{MRTRCollInDevice}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!MRTRCollInDevice@{MRTRCollInDevice}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{int}]{\$coll\+Id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs model using data from database. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$coll\+Id} & Id of collection this model is created for. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MRTRCollInDevice_8php_source_l00017}{17}} of file \mbox{\hyperlink{MRTRCollInDevice_8php_source}{MRTRColl\+In\+Device.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMRTRCollInDevice_a0e53cc00afeffa01b915633eea5bcf14}\label{classMRTRCollInDevice_a0e53cc00afeffa01b915633eea5bcf14} 
+\index{MRTRCollInDevice@{MRTRCollInDevice}!store@{store}}
+\index{store@{store}!MRTRCollInDevice@{MRTRCollInDevice}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{int}]{\$device\+Id = {\ttfamily 0},  }\item[{int}]{\$index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+If device\+Id is specified, inserts this row into database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$device\+Id} & Id of device this collection should be paired with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Storing was successful. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MRTRCollInDevice_8php_source_l00026}{26}} of file \mbox{\hyperlink{MRTRCollInDevice_8php_source}{MRTRColl\+In\+Device.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}\label{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0} 
+\index{MRTRCollInDevice@{MRTRCollInDevice}!\$collId@{\$collId}}
+\index{\$collId@{\$collId}!MRTRCollInDevice@{MRTRCollInDevice}}
+\doxysubsubsection{\texorpdfstring{\$collId}{\$collId}}
+{\footnotesize\ttfamily \$coll\+Id}
+
+
+
+Id of collection this row used for creation. 
+
+
+
+Definition at line \mbox{\hyperlink{MRTRCollInDevice_8php_source_l00011}{11}} of file \mbox{\hyperlink{MRTRCollInDevice_8php_source}{MRTRColl\+In\+Device.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+php/app/model/\mbox{\hyperlink{MRTRCollInDevice_8php}{MRTRColl\+In\+Device.\+php}}\end{DoxyCompactItemize}

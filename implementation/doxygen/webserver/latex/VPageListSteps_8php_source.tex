@@ -1,0 +1,25 @@
+\doxysection{VPage\+List\+Steps.\+php}
+\hypertarget{VPageListSteps_8php_source}{}\label{VPageListSteps_8php_source}\index{php/app/view/VPageListSteps.php@{php/app/view/VPageListSteps.php}}
+\mbox{\hyperlink{VPageListSteps_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00003}\mbox{\hyperlink{classVPageListSteps}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVPageListSteps}{VPageListSteps}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVPage}{VPage}}\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00004}\mbox{\hyperlink{classVPageListSteps_a095c5d389db211932136b53f25f39685}{00004}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListSteps_a095c5d389db211932136b53f25f39685}{\_\_construct}}()\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ parent::\_\_construct();}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}<h1>Steps</h1>"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVPlainTable}{VPlainTable}}([\textcolor{stringliteral}{"{}ID"{}},\ \textcolor{stringliteral}{"{}Step's\ Sequence"{}},\ \textcolor{stringliteral}{"{}Index\ In\ Sequence"{}},\ \textcolor{stringliteral}{"{}Step's\ Channel"{}},\ \textcolor{stringliteral}{"{}Value"{}},\ \textcolor{stringliteral}{"{}Delay\ Before"{}}],}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ steps.*,\ c.name\ AS\ cname,\ s.name\ AS\ sname\ FROM\ steps\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LEFT\ JOIN\ channels\ c\ on\ steps.channel\_id\ =\ c.id\ LEFT\ JOIN\ sequences\ s\ on\ steps.seq\_id=s.id"{}},}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ VPTRStep::class));}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{classVList_a00b047939500650b99141a4896eb853b}{add}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVLink}{VLink}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classVText}{VText}}(\textcolor{stringliteral}{"{}Add\ New"{}}),\ \textcolor{stringliteral}{"{}/step/0"{}},\ \textcolor{stringliteral}{"{}button-\/link"{}}));}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00015}\mbox{\hyperlink{classVPageListSteps_a9b080c1abd965fa84b1bc0d872617a07}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVPageListSteps_a9b080c1abd965fa84b1bc0d872617a07}{checkPermissions}}(?\textcolor{keywordtype}{int}\ \mbox{\hyperlink{handler_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \textcolor{keyword}{null}):\ string\ \{}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ if\ (!\$\_SESSION[\textcolor{stringliteral}{"{}perms"{}}]-\/>canEditAll())\ return\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VPageListSteps_8php_source_l00019}00019\ \}}
+
+\end{DoxyCode}

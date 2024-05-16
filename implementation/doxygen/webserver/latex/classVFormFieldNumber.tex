@@ -11,7 +11,7 @@ Inheritance diagram for VForm\+Field\+Number\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classVFormFieldNumber_ab20fd770855c31512e92d9b31f379b87}{render\+Body}} ()
 \item 
-\mbox{\hyperlink{classVFormFieldNumber_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVFormFieldNumber_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
@@ -21,11 +21,15 @@ Inheritance diagram for VForm\+Field\+Number\+:\begin{figure}[H]
 \mbox{\hyperlink{classVFormField_aa776ee561a32e9eb2c76a5a7f9cc1a74}{render\+Header}} ()
 \item 
 \mbox{\hyperlink{classVFormField_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
+\item 
+\mbox{\hyperlink{classVFormField_a88d6d7d8b3718d5ecd428a7153be78c5}{disable}} (bool \$disabled=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVView}{VView}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classVView_afde88292c44dc59faf017738dae6dffb}{render}} ()
+\item 
+\mbox{\hyperlink{classVView_a16808469c0e5706a0896364c0a776004}{disable}} (bool \$disable=true)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \begin{DoxyCompactItemize}
@@ -36,7 +40,7 @@ Inheritance diagram for VForm\+Field\+Number\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classVView_aeed6253e9e242751c7beb12a5c541b1e}{render\+Footer}} ()
 \item 
-\mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{register\+Controller}} (\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}} \$cc)
+\mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{register\+Controller}} (\mbox{\hyperlink{classFormContext}{Form\+Context}} \$c)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVFormField}{VForm\+Field}}}
 \begin{DoxyCompactItemize}
@@ -46,6 +50,8 @@ Inheritance diagram for VForm\+Field\+Number\+:\begin{figure}[H]
 \mbox{\hyperlink{classVFormField_a177af2bf70bede02de3d05a425fb8e43}{\$label}}
 \item 
 \mbox{\hyperlink{classVFormField_a08fdd91bde255dbe3e2d15a22d9663e8}{\$model}}
+\item 
+\mbox{\hyperlink{classVFormField_a6c108f5b26242d862f6e51869fbfd271}{\$disabled}}
 \end{DoxyCompactItemize}
 
 
@@ -57,19 +63,19 @@ Definition at line \mbox{\hyperlink{VFormFieldNumber_8php_source_l00003}{3}} of 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classVFormFieldNumber_aa35132660532f73611e650ffb8402f8a}\label{classVFormFieldNumber_aa35132660532f73611e650ffb8402f8a} 
+\Hypertarget{classVFormFieldNumber_a6c42a72add1e6afb5ff60b9f9a9356cd}\label{classVFormFieldNumber_a6c42a72add1e6afb5ff60b9f9a9356cd} 
 \index{VFormFieldNumber@{VFormFieldNumber}!registerController@{registerController}}
 \index{registerController@{registerController}!VFormFieldNumber@{VFormFieldNumber}}
 \doxysubsubsection{\texorpdfstring{registerController()}{registerController()}}
-{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classControllerCollection}{Controller\+Collection}}}]{\$cc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily register\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormContext}{Form\+Context}}}]{\$c }\end{DoxyParamCaption})}
 
 
 
-Reimplemented from \mbox{\hyperlink{classVView_aa35132660532f73611e650ffb8402f8a}{VView}}.
+Reimplemented from \mbox{\hyperlink{classVView_a6c42a72add1e6afb5ff60b9f9a9356cd}{VView}}.
 
 
 
-Definition at line \mbox{\hyperlink{VFormFieldNumber_8php_source_l00010}{10}} of file \mbox{\hyperlink{VFormFieldNumber_8php_source}{VForm\+Field\+Number.\+php}}.
+Definition at line \mbox{\hyperlink{VFormFieldNumber_8php_source_l00011}{11}} of file \mbox{\hyperlink{VFormFieldNumber_8php_source}{VForm\+Field\+Number.\+php}}.
 
 \Hypertarget{classVFormFieldNumber_ab20fd770855c31512e92d9b31f379b87}\label{classVFormFieldNumber_ab20fd770855c31512e92d9b31f379b87} 
 \index{VFormFieldNumber@{VFormFieldNumber}!renderBody@{renderBody}}
@@ -89,4 +95,4 @@ Definition at line \mbox{\hyperlink{VFormFieldNumber_8php_source_l00005}{5}} of 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/win/\+Users/dansi/bachelor-\/project/implementation/webserver/php/framework/view/\mbox{\hyperlink{VFormFieldNumber_8php}{VForm\+Field\+Number.\+php}}\end{DoxyCompactItemize}
+php/framework/view/\mbox{\hyperlink{VFormFieldNumber_8php}{VForm\+Field\+Number.\+php}}\end{DoxyCompactItemize}

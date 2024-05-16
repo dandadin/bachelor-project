@@ -1,0 +1,26 @@
+\doxysection{VFf\+Dd\+Instance\+Steps.\+php}
+\hypertarget{VFfDdInstanceSteps_8php_source}{}\label{VFfDdInstanceSteps_8php_source}\index{php/app/view/VFfDdInstanceSteps.php@{php/app/view/VFfDdInstanceSteps.php}}
+\mbox{\hyperlink{VFfDdInstanceSteps_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00003}\mbox{\hyperlink{classVFfDdInstanceSteps}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVFfDdInstanceSteps}{VFfDdInstanceSteps}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classVFormFieldDropdown}{VFormFieldDropdown}}\ \{}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00004}\mbox{\hyperlink{classVFfDdInstanceSteps_a872c4c148f5fe90476da42325f643be9}{00004}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVFfDdInstanceSteps_a872c4c148f5fe90476da42325f643be9}{Sql}}\ =\ \textcolor{stringliteral}{"{}SELECT\ steps.*,\ c.name\ AS\ cname,\ d.name\ AS\ dname\ FROM\ steps\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LEFT\ JOIN\ channels\ c\ on\ c.id\ =\ steps.channel\_id\ LEFT\ JOIN\ devices\ d\ on\ d.id\ =\ c.device\_id"{}};}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00007}\mbox{\hyperlink{classVFfDdInstanceSteps_ab20fd770855c31512e92d9b31f379b87}{00007}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classVFfDdInstanceSteps_ab20fd770855c31512e92d9b31f379b87}{renderBody}}():\ void\ \{}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}=static::\mbox{\hyperlink{classVFfDdInstanceSteps_a872c4c148f5fe90476da42325f643be9}{Sql}}.\textcolor{stringliteral}{"{}\ WHERE\ "{}}.\$this-\/>filter;}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([]))\ die(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$value\ =\ static::ValueColumn;}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}<option\ value='"{}}.\$o-\/>\$value.\textcolor{stringliteral}{"{}'\ "{}}.}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\$this-\/>model\ ==\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>\$value)\ ?\ \textcolor{stringliteral}{"{}selected=\(\backslash\)"{}selected\(\backslash\)"{}"{}}\ :\ \textcolor{stringliteral}{"{}"{}}).}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}>(\$o-\/>dname)[\$o-\/>cname]:\ \$o-\/>value</option>"{}};}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>closeCursor();}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{VFfDdInstanceSteps_8php_source_l00020}00020\ \}}
+
+\end{DoxyCode}

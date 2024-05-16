@@ -1,0 +1,102 @@
+\doxysection{Permission\+Manager.\+php}
+\hypertarget{PermissionManager_8php_source}{}\label{PermissionManager_8php_source}\index{php/app/PermissionManager.php@{php/app/PermissionManager.php}}
+\mbox{\hyperlink{PermissionManager_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00003}\mbox{\hyperlink{classPermissionManager}{00003}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPermissionManager}{PermissionManager}}\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00004}00004\ \ \ \ \ \textcolor{keyword}{private}\ array|\textcolor{keyword}{null}\ \$permissions;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00005}\mbox{\hyperlink{classPermissionManager_adcc9de54cecec9f2a0d838b48aeadaf3}{00005}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPermissionManager}{PermissionManager}}\ \mbox{\hyperlink{classPermissionManager_adcc9de54cecec9f2a0d838b48aeadaf3}{\$instance}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00007}\mbox{\hyperlink{classPermissionManager_af1942982ab4a3d016a61a6900c652dbc}{00007}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_af1942982ab4a3d016a61a6900c652dbc}{\_\_construct}}(\textcolor{keywordtype}{int}\ \$userId)\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPermissionManager_adcc9de54cecec9f2a0d838b48aeadaf3}{PermissionManager::\$instance}}\ =\ \$this;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$userId\ <=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$this-\/>permissions\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ from\ domain\_users\ left\ join\ roles\ r\ on\ r.id\ =\ domain\_users.role\_id\ WHERE\ user\_id="{}}.\$userId;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_aa62116a0f6706d84dc9ff084c191bdbc}{DB::query}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}=\mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>fetchObject())\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_edit\_colls"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_edit\_colls;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_edit\_users"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_edit\_users;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_edit\_devices"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_edit\_devices;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_edit\_gateways"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_edit\_gateways;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_list\_colls"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_list\_colls;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_list\_users"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_list\_users;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_list\_devices"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_list\_devices;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_list\_gateways"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_list\_gateways;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>permissions[\mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>domain\_id][\textcolor{stringliteral}{"{}can\_edit\_all"{}}]\ |=\ \mbox{\hyperlink{executor_8php_ac6c49291f92291a3cece8066d68e5f5e}{\$o}}-\/>can\_edit\_all;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00030}\mbox{\hyperlink{classPermissionManager_af79334819b6b8e71d570dbca8a4deedc}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_af79334819b6b8e71d570dbca8a4deedc}{setPermissions}}(\textcolor{keywordtype}{int}\ \$domainId,\ \textcolor{keywordtype}{bool}\ \$CLColls,\ \textcolor{keywordtype}{bool}\ \$CEColls,\ \textcolor{keywordtype}{bool}\ \$CLUsers,\ \textcolor{keywordtype}{bool}\ \$CEUsers,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \$CLDevices,\ \textcolor{keywordtype}{bool}\ \$CEDevices,\ \textcolor{keywordtype}{bool}\ \$CLGateways,\ \textcolor{keywordtype}{bool}\ \$CEGateways,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \$CEAll)\ :\ void\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ if\ (!isset(\$this-\/>permissions))\ \$this-\/>permissions\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_edit\_colls"{}}]\ |=\ \$CEColls;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_edit\_users"{}}]\ |=\ \$CEUsers;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_edit\_devices"{}}]\ |=\ \$CEDevices;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_edit\_gateways"{}}]\ |=\ \$CEGateways;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_list\_colls"{}}]\ |=\ \$CLColls;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_list\_users"{}}]\ |=\ \$CLUsers;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_list\_devices"{}}]\ |=\ \$CLDevices;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_list\_gateways"{}}]\ |=\ \$CLGateways;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \$this-\/>permissions[\$domainId][\textcolor{stringliteral}{"{}can\_edit\_all"{}}]\ |=\ \$CEAll;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00045}\mbox{\hyperlink{classPermissionManager_ad5b83539795353b2e2cfaae5e1bd87a8}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_ad5b83539795353b2e2cfaae5e1bd87a8}{getPermissions}}(\textcolor{keywordtype}{int}\ \$domainId)\ :\ array\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00046}00046\ \ \ \ \ \ \ \ \ if\ (!isset(\$this-\/>permissions)\ ||\ !isset(\$this-\/>permissions[\$domainId]))}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ return\ [\textcolor{stringliteral}{"{}can\_edit\_colls"{}}\ =>\ false,\ \textcolor{stringliteral}{"{}can\_edit\_users"{}}\ =>\ false,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}can\_edit\_devices"{}}\ =>\ false,\ \textcolor{stringliteral}{"{}can\_edit\_gateways"{}}\ =>\ false,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}can\_list\_colls"{}}\ =>\ false,\ \textcolor{stringliteral}{"{}can\_list\_users"{}}\ =>\ false,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}can\_list\_devices"{}}\ =>\ false,\ \textcolor{stringliteral}{"{}can\_list\_gateways"{}}\ =>\ false,}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}can\_edit\_all"{}}\ =>\ false];}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>permissions[\$domainId];}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00055}\mbox{\hyperlink{classPermissionManager_af0e72f0218d78e5818936d1a9fb92c1f}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_af0e72f0218d78e5818936d1a9fb92c1f}{getDomainsByPerm}}(\textcolor{keywordtype}{string}\ \$permName)\ :\ array|null\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ if\ (!\$permName)\ return\ null;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$this-\/>permissions))\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>permissions\ as\ \$key\ =>\ \$dom)\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$dom[\$permName])\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}[]\ =\ \$key;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00065}\mbox{\hyperlink{classPermissionManager_a9c49ac0420891cc0fa3ab34740317bbd}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_a9c49ac0420891cc0fa3ab34740317bbd}{canEditAll}}()\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ foreach\ (\$this-\/>permissions\ as\ \$key\ =>\ \$dom)\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$dom[\textcolor{stringliteral}{"{}can\_edit\_all"{}}])\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00072}\mbox{\hyperlink{classPermissionManager_aee6fc15c2fbe545febfeab5fbd4aa591}{00072}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_aee6fc15c2fbe545febfeab5fbd4aa591}{getAllDomains}}()\ :\ array\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ array();}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$this-\/>permissions\ as\ \$key\ =>\ \$dom)\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}[]\ =\ \$key;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00078}\mbox{\hyperlink{classPermissionManager_ab2ae90d0663555d51e777ae7d23fcb7f}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_ab2ae90d0663555d51e777ae7d23fcb7f}{checkDomainPerm}}(\textcolor{keywordtype}{int}\ \$domainId,\ \textcolor{keywordtype}{string}\ \$permName)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ if\ (!isset(\$this-\/>permissions))\ return\ false;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$this-\/>permissions[\$domainId]))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$this-\/>permissions[\$domainId][\$permName]))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>permissions[\$domainId][\$permName];}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00085}\mbox{\hyperlink{classPermissionManager_a5ff83454dc6e8cfe71720005064f2a29}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classPermissionManager_a5ff83454dc6e8cfe71720005064f2a29}{arrayToSQL}}(array|\textcolor{keyword}{null}\ \$array)\ :\ string\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ if\ (!\$array)\ return\ \textcolor{stringliteral}{"{}(-\/1)"{}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \$first\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$array\ as\ \$value)\ \{}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$first)\ \$first\ =\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ .=\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ .=\ \$value;}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ .=\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}};}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{PermissionManager_8php_source_l00096}00096\ \}}
+
+\end{DoxyCode}

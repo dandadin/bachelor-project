@@ -1,0 +1,33 @@
+\doxysection{MRTRColl\+In\+Device.\+php}
+\hypertarget{MRTRCollInDevice_8php_source}{}\label{MRTRCollInDevice_8php_source}\index{php/app/model/MRTRCollInDevice.php@{php/app/model/MRTRCollInDevice.php}}
+\mbox{\hyperlink{MRTRCollInDevice_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00006}\mbox{\hyperlink{classMRTRCollInDevice}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMRTRCollInDevice}{MRTRCollInDevice}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classMModel}{MModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00011}\mbox{\hyperlink{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}{\$collId}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00017}\mbox{\hyperlink{classMRTRCollInDevice_af0f1ba1f74778d381e1bb293d456c8d4}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRCollInDevice_af0f1ba1f74778d381e1bb293d456c8d4}{\_\_construct}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}{\$collId}}\ =\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$this-\/>collId\ =\ \mbox{\hyperlink{classMRTRCollInDevice_a90868d5b80c7c4c61fce23111def48a0}{\$collId}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00026}\mbox{\hyperlink{classMRTRCollInDevice_a0e53cc00afeffa01b915633eea5bcf14}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classMRTRCollInDevice_a0e53cc00afeffa01b915633eea5bcf14}{store}}(\textcolor{keywordtype}{int}\ \$deviceId\ =\ 0,\ \textcolor{keywordtype}{int}\ \$index\ =\ 0)\ :\ bool\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ if\ (!\$deviceId)\ return\ false;}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}}\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ collection\_devices\ (coll\_id,\ device\_id)\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SELECT\ id,:deviceId\ FROM\ collections\ WHERE\ id=:collId\ "{}}.}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ON\ DUPLICATE\ KEY\ UPDATE\ coll\_id=coll\_id"{}};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}=\mbox{\hyperlink{classDB_adf2201e5ddf88c0f658c16cdcbda3ad5}{DB::prepare}}(\mbox{\hyperlink{executor_8php_a9e8c8ccd487fdcdc782bac5cae9b27ae}{\$sql}});}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \mbox{\hyperlink{executor_8php_a4df5cfe5ef69919928b0b8eefb5b37bb}{\$sqls}}-\/>execute([\textcolor{stringliteral}{"{}deviceId"{}}\ =>\ \$deviceId,\ \textcolor{stringliteral}{"{}collId"{}}\ =>\ \$this-\/>collId]);}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException)\ \{\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}}\ =\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{init_8php_a2ef0b60a74bf1e621cfd9c054ffb0d86}{\$res}})\ \{}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(get\_called\_class().\textcolor{stringliteral}{"{}:\ SQL\ Error."{}});}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MRTRCollInDevice_8php_source_l00043}00043\ \}}
+
+\end{DoxyCode}
