@@ -25,7 +25,7 @@ class MRTUserInColl extends MRelTable {
      * @param int $collId Id of collection this model is created for.
      * @return bool Storing was successful.
      */
-    public function store(int $collId = 0) {
+    public function store(int $collId = 0) : bool {
         if (!$collId) {
             return false;
         }

@@ -13,7 +13,7 @@ $sqls=DB::query($sql);
 $o=$sqls->fetchObject();
 //echo "NEW INSTANCE ID:".$o->id.", STEP: ".$o->step_id.", TS: ".$o->step_ts."<br>";
 //echo "<h2>Dalsi reload udelej za: ".(max($o->reload, 0))."</h2>";
-echo (max($o->reload, 0));
+echo (max(min($o->reload, 30), 0));
 
 /**
  * Tries to push instance $instanceId to the next step. If no next step found, deletes the instance.

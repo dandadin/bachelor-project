@@ -8,7 +8,7 @@ class VText extends VView {
     }
 
 
-    public function renderBody() {
+    public function renderBody(): void {
         echo "$this->text";
     }
 

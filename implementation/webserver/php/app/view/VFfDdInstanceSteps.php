@@ -4,7 +4,7 @@ class VFfDdInstanceSteps extends VFormFieldDropdown {
     const Sql = "SELECT steps.*, c.name AS cname, d.name AS dname FROM steps ".
                 "LEFT JOIN channels c on c.id = steps.channel_id LEFT JOIN devices d on d.id = c.device_id";
 
-    protected function renderBody() {
+    protected function renderBody(): void {
         $sql=static::Sql." WHERE ".$this->filter;
         $sqls=DB::prepare($sql);
         if (!$sqls->execute([])) die(get_called_class().": SQL Error.");

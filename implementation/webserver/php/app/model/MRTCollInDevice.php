@@ -25,7 +25,7 @@ class MRTCollInDevice extends MRelTable {
      * @param int $deviceId Id of device this model is created for.
      * @return bool Storing was successful.
      */
-    public function store(int $deviceId = 0) {
+    public function store(int $deviceId = 0) : bool {
         if (!$deviceId) return false;
         $sql = "DELETE FROM collection_devices WHERE device_id=$deviceId";
         if (false===DB::exec($sql)) return false;

@@ -25,7 +25,7 @@ class MRTUserRoleInDom extends MRelTable {
      * @param int $domainId Id of domain this model is created for.
      * @return bool Storing was successful.
      */
-    public function store(int $domainId = 0) {
+    public function store(int $domainId = 0) : bool {
         if (!$domainId) return false;
         $sql = "DELETE FROM domain_users WHERE domain_id=$domainId";
         if (FALSE===DB::exec($sql)) return FALSE;

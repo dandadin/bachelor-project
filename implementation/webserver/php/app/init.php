@@ -9,7 +9,7 @@ new DB();
 new MQTTWS();
 
 if (isset($res[1])) if($res[1]=="execute") {
-    include "../executor.php";
+    include "executor.php";
     exit();
 }
 
@@ -26,7 +26,6 @@ if(!isset($_SESSION["loginId"]) || !$_SESSION["loginId"]) {
 }
 
 $m=PageContext::loadAllModels();
-
 if ($m) if ($m->getUrl()!=$_SERVER["REQUEST_URI"]) {
     header("Location: ".$m->getUrl());
     exit();

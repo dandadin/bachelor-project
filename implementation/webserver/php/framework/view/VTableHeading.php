@@ -8,7 +8,7 @@ class VTableHeading extends VList {
         if ($makeRemoveCol) $this->add(new VText($makeRemoveCol));
     }
 
-    protected function renderItem(VView $v) {
+    protected function renderItem(VView $v): void {
         echo "<th>";
         parent::renderItem($v);
         echo "</th>\n";

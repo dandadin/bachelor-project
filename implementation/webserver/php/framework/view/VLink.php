@@ -12,7 +12,7 @@ class VLink extends VView {
     }
 
 
-    public function renderBody() {
+    public function renderBody(): void {
         echo "<a href='$this->url'";
         if ($this->class) echo " class='$this->class'";
         echo ">";

@@ -9,7 +9,7 @@ class VIcon extends VView {
         $this->alt = $alt;
     }
 
-    protected function renderBody() {
+    protected function renderBody(): void {
         echo "<img src='$this->url' alt='$this->alt' class='icon-small'/>";
     }
 

@@ -23,7 +23,7 @@ class MRTRCollInDevice extends MModel {
      * @param $deviceId Id of device this collection should be paired with.
      * @return bool Storing was successful.
      */
-    public function store(int $deviceId = 0, int $index = 0) {
+    public function store(int $deviceId = 0, int $index = 0) : bool {
         if (!$deviceId) return false;
         $sql = "INSERT INTO collection_devices (coll_id, device_id) ".
                "SELECT id,:deviceId FROM collections WHERE id=:collId ".

@@ -8,7 +8,7 @@ class VMenuBar extends VList {
         }
     }
 
-    public function renderHeader() {
+    public function renderHeader(): void {
         echo <<<END
     <nav>
         <ul>\n
@@ -16,14 +16,14 @@ END;
 
     }
 
-    public function renderFooter() {
+    public function renderFooter(): void {
         echo <<<END
         </ul>
     </nav>\n
 END;
     }
 
-    public function renderItem(VView $v) {
+    public function renderItem(VView $v): void {
         echo "<li>";
         parent::renderItem($v);
         echo "</li>\n";

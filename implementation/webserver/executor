@@ -11,8 +11,8 @@ trap 'exit' TERM			# graceful shutdown
 while true
 do
    echo "[$$]sleeping...."
-   DELAY=10
-#  DELAY=$(wget -O - -q http://nginx/execute)
+#   DELAY=10
+   DELAY=$(wget -O - -q http://nginx/execute)
    sleep $DELAY &
    sl_pid=$!
    wait $sl_pid

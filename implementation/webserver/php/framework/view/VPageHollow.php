@@ -13,7 +13,7 @@ class VPageHollow extends VList {
         $this->add($_SESSION["notifications"]);
     }
 
-    public function renderHeader() {
+    public function renderHeader(): void {
         echo <<<END
 <html>
     <head>
@@ -27,12 +27,12 @@ class VPageHollow extends VList {
 END;
     }
 
-    public function render() {
+    public function render(): void {
         parent::render();
         $_SESSION["notifications"] = new VList();
     }
 
-    public function renderFooter() {
+    public function renderFooter(): void {
         echo "    </body></html>\n";
     }
 

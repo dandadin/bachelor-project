@@ -1,7 +1,7 @@
 <?php
-    require_once "../app/library.php";
+    require_once "./app/library.php";
     $res = explode('/', parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
-    require_once "../app/init.php";
+    require_once "./app/init.php";
 
     $objects = [
     "user" => "User",
