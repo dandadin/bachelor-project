@@ -16,6 +16,7 @@ class MRelTable extends MModel {
      * @return bool Storing was successful.
      */
     public function store(int $id = 0) : bool {
+        error_log("ID SEKV JE>".$id);
         if (!$id) return false;
         $idx = 0;
         foreach ($this->items as $item) {

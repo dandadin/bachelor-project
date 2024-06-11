@@ -6,7 +6,7 @@ class VFormDevice extends VForm {
 
     public function __construct($deviceId) {
         parent::__construct($deviceId);
-        $canEdit = (isset($_SESSION["perms"]->getDomainsByPerm("can_edit_colls")[$this->model->domainId]) || $_SESSION["perms"]->canEditAll());
+        $canEdit = (isset($_SESSION["perms"]->getDomainsByPerm("can_edit_devices")[$this->model->domainId]) || $_SESSION["perms"]->canEditAll());
         $this->add((new VFormFieldText($this->model->name, "Name"))->disable(!$canEdit));
         $this->add((new VFormFieldText($this->model->location, "Physical Location"))->disable(!$canEdit));
         $this->add((new VFfDdDeviceGateways($this->model->gatewayId, "Gateway"))->disable(!$canEdit));

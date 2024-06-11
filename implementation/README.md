@@ -10,11 +10,11 @@ Rychlé spuštění celé aplikace (s daty na testování):
 
         cd webserver
         docker-compose up -d
-        cd ..
 
 3)  inicializace databáze
 
         mysql -h iothome.cz -P 3366 -u root -proot-heslo < db-example.sql
+        cd ..
 
 4)  spuštění brány
 

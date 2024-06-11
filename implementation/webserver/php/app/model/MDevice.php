@@ -34,6 +34,8 @@ class MDevice extends MObjectModel {
      * Timestamp of last update to the device.
      */
     public $lastChanged;
+    public $domainId;
+
     /**
      * @var MRTCollInDevice $collections
      * List of models of every collection this device is a part of.
@@ -52,15 +54,16 @@ class MDevice extends MObjectModel {
     public function __construct($id = 0) {
         parent::__construct();
         if($id) {
-            $sqls=DB::query("SELECT * FROM devices WHERE id=$id");
+            $sqls=DB::query("SELECT *,UNIX_TIMESTAMP(created) AS created_epoch, UNIX_TIMESTAMP(last_changed) AS last_changed_epoch FROM devices WHERE id=$id");
             $o=$sqls->fetchObject();
             if ($o) {
                 $this->id = $o->id;
                 $this->name = $o->name;
                 $this->location = $o->location;
                 $this->gatewayId = $o->gateway_id;
-                $this->created = $o->created;
-                $this->lastChanged = $o->last_changed;
+                $this->created = timetostr($o->created_epoch);
+                $this->lastChanged = timetostr($o->last_changed_epoch);
+                $this->domainId = $o->domain_id;
             }
         }
         $this->collections = new MRTCollInDevice($id);

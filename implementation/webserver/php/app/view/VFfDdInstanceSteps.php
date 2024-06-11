@@ -5,10 +5,15 @@ class VFfDdInstanceSteps extends VFormFieldDropdown {
                 "LEFT JOIN channels c on c.id = steps.channel_id LEFT JOIN devices d on d.id = c.device_id";
 
     protected function renderBody(): void {
-        $sql=static::Sql." WHERE ".$this->filter;
+        $sql= static::Sql;
+        error_log("SQL: ".$sql);
         $sqls=DB::prepare($sql);
-        if (!$sqls->execute([])) die(get_called_class().": SQL Error.");
-
+        error_log("jsem tady");
+        try {
+            $sqls->execute([]);
+        } catch (PDOException $exception) {
+            error_log(get_called_class().": SQL Error: ".$exception->getMessage());
+        }
         $value = static::ValueColumn;
         while ($o=$sqls->fetchObject()) {
             echo "<option value='".$o->$value."' ".

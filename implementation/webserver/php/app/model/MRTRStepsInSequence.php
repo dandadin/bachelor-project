@@ -58,12 +58,16 @@ class MRTRStepsInSequence extends MModel {
         $sql .= " steps SET idx=:idx, seq_id=:seq_id, channel_id=:channel_id," .
             " value=:value, delay_before=:delay_before";
         if ($this->id) $sql .= " WHERE id=$this->id";
+        error_log($sql);
         $sqls = DB::prepare($sql);
         $res = true;
         try {
+            error_log(var_export(["idx" => $index, "seq_id" => $seqId, "channel_id" => $this->channelId,
+                "value" => $this->value, "delay_before" => $this->delayBefore], true));
             $res = $sqls->execute(["idx" => $index, "seq_id" => $seqId, "channel_id" => $this->channelId,
                 "value" => $this->value, "delay_before" => $this->delayBefore]);
-        } catch (PDOException) {
+        } catch (PDOException $e) {
+            error_log("MRTRStepsInSequence store error: " . $e);
             $res = false;
         }
         if (!$res) {

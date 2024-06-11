@@ -26,7 +26,7 @@ function genFieldId() {
  * @return string Time in format for TIMESTAMP data type for MySQL.
  */
 function timetostr(int $time) : string {
-    return gmdate("Y-m-d H:i:s", $time);
+    return date("Y-m-d H:i:s", $time);
 }
 
 /**

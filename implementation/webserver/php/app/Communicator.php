@@ -12,7 +12,7 @@ class Communicator {
         error_log($sql);
         $sqls=DB::query($sql);
         $o=$sqls->fetchObject();
-        echo ">>>>>>>>COMM: Odesilam \"$data\" na adresu \"$o->gaddress\". Prijemcem je zarizeni \"$o->dname\" na kanal \"$o->cname\".<br>";
+        error_log(">>>>>>>>COMM: Odesilam \"$data\" na adresu \"$o->gaddress\". Prijemcem je zarizeni \"$o->dname\" na kanal \"$o->cname\".");
         MQTTWS::sendStep($o->gaddress, $o->dname, $o->cname, $data);
     }
 
@@ -107,7 +107,7 @@ class Communicator {
 
         $sql = $o ? "UPDATE" : "INSERT INTO";
         $sql.=" devices SET name=:name, location=:location, gateway_id=:gateway_id,"
-            ." last_changed=:last_changed, domain_id=1";
+            ." last_changed=FROM_UNIXTIME(:last_changed), domain_id=1";
         if ($o) $sql.=" WHERE id=$o->id";
         $sqls=DB::prepare($sql);
 
@@ -115,7 +115,7 @@ class Communicator {
         try {
             $res = $sqls->execute(["name" => $device["name"], "location" => $device["location"],
                 "gateway_id" => $gatewayId,
-                "last_changed" => timetostr(time())]);
+                "last_changed" => time()]);
         } catch (PDOException $e) {
             $res = false;
             error_log($e->getMessage());

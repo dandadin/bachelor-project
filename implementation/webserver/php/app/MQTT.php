@@ -35,6 +35,7 @@ class MQTT {
         //error_log(var_export(static::$Instance->mqttCli, true));
         while (!static::$Instance->mqttCli) usleep(500);
         static::$Instance->mqttCli->publish($topic, $msg, 0, $retain);
+        error_log(">>>>>>>MQTT:send(): topic: $topic, msg: $msg, retain: $retain");
     }
 
     static function get(string $tpc) : string {

@@ -6,14 +6,6 @@
 		"unsubscribe":	true
 	},
 	"clients":	[{
-			"username":	"GW/A1:B2:C3",
-			"roles":	[{
-					"rolename":	"GW/A1:B2:C3"
-				}],
-			"password":	"d8Ss+I4eDdcqcgtjFQD1Dw+3LHPZY2B4glmMvDYSIDtuoAvGP8W7QS60q0DEsZ7/i85Rwx+ApZ4YpibOvl6ELw==",
-			"salt":	"XvDTev74gRTuWdu9",
-			"iterations":	101
-		}, {
 			"username":	"administrator",
 			"textname":	"Dynsec admin user",
 			"roles":	[{
@@ -41,64 +33,6 @@
 		}],
 	"anonymousGroup":	"anonymous",
 	"roles":	[{
-			"rolename":	"GW/A1:B2:C3",
-			"acls":	[{
-					"acltype":	"publishClientSend",
-					"topic":	"GW/A1:B2:C3/#",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientSend",
-					"topic":	"Configs",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientReceive",
-					"topic":	"GW/A1:B2:C3/#",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientReceive",
-					"topic":	"GetConfigs",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"publishClientReceive",
-					"topic":	"RegisteredGW",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"subscribePattern",
-					"topic":	"GW/A1:B2:C3/#",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"subscribePattern",
-					"topic":	"GetConfigs",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"subscribePattern",
-					"topic":	"RegisteredGW",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"unsubscribePattern",
-					"topic":	"GW/A1:B2:C3/#",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"unsubscribePattern",
-					"topic":	"GetConfigs",
-					"priority":	-1,
-					"allow":	true
-				}, {
-					"acltype":	"unsubscribePattern",
-					"topic":	"RegisteredGW",
-					"priority":	-1,
-					"allow":	true
-				}]
-		}, {
 			"rolename":	"admin",
 			"acls":	[{
 					"acltype":	"publishClientSend",
@@ -195,6 +129,11 @@
 					"acltype":	"publishClientSend",
 					"topic":	"$CONTROL/dynamic-security/#",
 					"priority":	10,
+					"allow":	true
+				}, {
+					"acltype":	"publishClientSend",
+					"topic":	"GW/#",
+					"priority":	0,
 					"allow":	true
 				}, {
 					"acltype":	"publishClientReceive",

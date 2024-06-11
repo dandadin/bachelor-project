@@ -12,7 +12,7 @@ services:
     networks:
       - internal
   php:
-    image: dandadin/iothome-php:8.3.4-v2
+    image: dandadin/iothome-php:8.3.4-v3
     restart: always
     networks:
       - internal

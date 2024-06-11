@@ -1,10 +1,12 @@
 <?php
 
 $time = time();
-$sqls=DB::query("SELECT * FROM instances WHERE step_ts<'".timetostr($time)."' ORDER BY step_ts");
+
+$sqls=DB::query("SELECT * FROM instances WHERE step_ts<FROM_UNIXTIME('".$time."') ORDER BY step_ts");
 
 
 while($o=$sqls->fetchObject()) {
+        error_log("Executor: sendingStep(".$o->step_id.")");
         Communicator::sendStep($o->step_id);
         nextStep($o->id, $time);
 }
@@ -31,9 +33,9 @@ function nextStep(int $instanceId, int $timeNow) {
     $oStep=$sqls->fetchObject();
     $res = true;
     if ($oStep) {
-        $sql = "UPDATE instances SET step_id=:step_id, step_ts=:step_ts WHERE id=$instanceId";
+        $sql = "UPDATE instances SET step_id=:step_id, step_ts=FROM_UNIXTIME(:step_ts) WHERE id=$instanceId";
         $sqls=DB::prepare($sql);
-        $newTime = timetostr($timeNow + $oStep->delay_before);
+        $newTime = $timeNow + $oStep->delay_before;
         try {$res = $sqls->execute(["step_id" => $oStep->id, "step_ts" => $newTime]);
         } catch (PDOException $e) {
 

@@ -8,6 +8,8 @@ session_start();
 new DB();
 new MQTTWS();
 
+date_default_timezone_set("Europe/Prague");
+
 if (isset($res[1])) if($res[1]=="execute") {
     include "executor.php";
     exit();

@@ -165,7 +165,7 @@ class MGateway extends MObjectModel {
 
         $sql = $o ? "UPDATE" : "INSERT INTO";
         $sql.=" devices SET name=:name, location=:location, gateway_id=:gateway_id,"
-            ." last_changed=:last_changed, domain_id=1";
+            ." last_changed=FROM_UNIXTIME(:last_changed), domain_id=1";
         if ($o) $sql.=" WHERE id=$o->id";
         $sqls=DB::prepare($sql);
 
@@ -173,7 +173,7 @@ class MGateway extends MObjectModel {
         try {
             $res = $sqls->execute(["name" => $device["name"], "location" => $device["location"],
                 "gateway_id" => $this->id,
-                "last_changed" => timetostr(time())]);
+                "last_changed" => time()]);
         } catch (PDOException $e) {
             $res = false;
             error_log($e->getMessage());

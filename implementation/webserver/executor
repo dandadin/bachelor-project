@@ -13,6 +13,7 @@ do
    DELAY=$(wget -O - -q http://iothome.cz/execute)
    echo "[$$]sleeping $DELAY s"
    [ -z "$DELAY" ] && DELAY=1
+   [ "$DELAY" = 0 ] && DELAY=1
    sleep $DELAY &
    sl_pid=$!
    wait $sl_pid
